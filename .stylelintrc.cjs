@@ -1,0 +1,21 @@
+module.exports = {
+  extends: ['stylelint-config-standard'],
+  rules: {
+    'alpha-value-notation': 'number',
+    'color-function-notation': null,
+    'color-hex-length': null,
+    'comment-empty-line-before': null,
+    'custom-property-empty-line-before': null,
+    'declaration-block-no-duplicate-properties': null,
+    'declaration-block-no-redundant-longhand-properties': null,
+    'font-family-name-quotes': null,
+    'font-family-no-missing-generic-family-keyword': null,
+    'length-zero-no-unit': null,
+    'media-feature-range-notation': null,
+    'no-descending-specificity': null,
+    'no-duplicate-selectors': null,
+    'selector-not-notation': null,
+    'shorthand-property-no-redundant-values': null,
+    'value-keyword-case': null,
+  },
+};

@@ -1,0 +1,164 @@
+/* Base: variables, resets, typography, form basics */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --teal: #0F766E;
+  --teal-dark: #0B5F58;
+  --ink: #0f172a;
+  --slate: #475569;
+  --slate-light: #94a3b8;
+  --border: #e2e8f0;
+  --bg: #ffffff;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --section-space: 83px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  padding-top: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.75rem;
+  background: #ffffff;
+  color: var(--ink);
+  border: 2px solid var(--teal);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  z-index: 10001;
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+}
+
+p {
+  margin: 0 0 1.25rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--teal);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.4);
+  outline-offset: 3px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+input.is-invalid,
+textarea.is-invalid,
+select.is-invalid {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.form-feedback {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+.form-feedback.is-success {
+  color: #15803d;
+}
+
+.form-feedback.is-error {
+  color: #dc2626;
+}
+
+.form-privacy {
+  margin-top: 0.5rem;
+  color: var(--slate);
+  font-size: 0.85rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 620px;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: #ffffff;
+  border: 0;
+  padding: 0.85rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn-primary:hover {
+  background: var(--teal-dark);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

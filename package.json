@@ -1,0 +1,24 @@
+{
+  "name": "patricia-stanca-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Developer portfolio (static HTML/CSS/JS) with automated tests and linting.",
+  "scripts": {
+    "test": "npm run lint && npm run e2e && npm run lhci",
+    "lint": "npm run lint:html && npm run lint:css",
+    "lint:html": "html-validate \"*.html\"",
+    "lint:css": "stylelint \"assets/css/**/*.css\"",
+    "e2e": "playwright test",
+    "lhci": "LHCI_BUILD_CONTEXT__CURRENT_HASH=local lhci autorun",
+    "test:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.14.0",
+    "@playwright/test": "^1.49.1",
+    "html-validate": "^8.18.1",
+    "http-server": "^14.1.1",
+    "lighthouse": "^12.1.0",
+    "stylelint": "^16.13.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
