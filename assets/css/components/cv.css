@@ -1,0 +1,77 @@
+/* CV page */
+/* Styles for .cv-embed */
+.cv-embed {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* Styles for .cv-actions */
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Styles for .cv-actions .cv-switch[aria-pressed="true"] */
+.cv-actions .cv-switch[aria-pressed="true"] {
+  background: var(--teal);
+  color: #ffffff;
+  border-color: var(--teal);
+}
+
+/* Styles for .cv-actions .cv-switch[aria-pressed="true"]:hover */
+.cv-actions .cv-switch[aria-pressed="true"]:hover {
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+}
+
+/* Styles for .btn-secondary */
+.btn-secondary {
+  background: #ffffff;
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  padding: 0.85rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* Styles for .btn-secondary:hover */
+.btn-secondary:hover {
+  background: rgba(15, 118, 110, 0.08);
+}
+
+/* Styles for .cv-embed object */
+.cv-embed object {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  min-height: 520px;
+}
+
+/* Responsive: @media (max-width: 700px) { */
+@media (max-width: 700px) {
+/* Styles for .cv-embed object */
+  .cv-embed object {
+    height: 60vh;
+    min-height: 320px;
+  }
+}
+
+/* Styles for #footer .inner */
+#footer .inner {
+  position: relative;
+  padding-top: 0.6rem;
+}
+
+/* Styles for #footer .section-title */
+#footer .section-title {
+  color: #ffffff;
+  margin-top: 0.25rem;
+  font-size: 1.35rem;
+}

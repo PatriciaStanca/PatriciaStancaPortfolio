@@ -1,0 +1,230 @@
+/* Projects accordion */
+/* Styles for .page-elements #projects > .inner */
+.page-elements #projects > .inner {
+  padding-top: calc(var(--section-space) + 24px) !important;
+}
+
+/* Styles for .page-elements #projects .project-accordion */
+.page-elements #projects .project-accordion {
+  margin-top: 1.5rem;
+}
+
+/* Styles for .project-accordion */
+.project-accordion {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Styles for .accordion-trigger */
+.accordion-trigger {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1.15rem 1.4rem;
+  border: 0;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Styles for .accordion-text */
+.accordion-text {
+  display: grid;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+/* Styles for .accordion-title */
+.accordion-title {
+  font-weight: 600;
+}
+
+/* Styles for .accordion-meta */
+.accordion-meta {
+  color: var(--slate);
+  font-size: 0.85rem;
+}
+
+/* Styles for .accordion-tag */
+.accordion-tag {
+  font-size: 0.75rem;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--teal);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  justify-self: end;
+}
+
+/* Styles for .accordion-arrow */
+.accordion-arrow {
+  width: 14px;
+  height: 14px;
+  stroke: var(--slate);
+  fill: none;
+  stroke-width: 2;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease, stroke 0.2s ease;
+}
+
+/* Styles for .accordion-trigger[aria-expanded="true"] .accordion-arrow */
+.accordion-trigger[aria-expanded="true"] .accordion-arrow {
+  transform: rotate(90deg);
+}
+
+/* Styles for .accordion-trigger:hover .accordion-arrow */
+.accordion-trigger:hover .accordion-arrow {
+  transform: rotate(0deg) translateX(3px);
+  stroke: var(--teal);
+}
+
+/* Styles for .accordion-panel */
+.accordion-panel {
+  padding: 1.2rem 1.4rem 1.6rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Styles for .accordion-content */
+.accordion-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Styles for .accordion-content .image, .accordion-content .media */
+.accordion-content .image,
+.accordion-content .media {
+  display: block;
+  margin: 0;
+}
+
+/* Styles for .accordion-content .image.left, .accordion-content .image.right, .accordion-content .media.left, .accordion-content .media.right */
+.accordion-content .image.left,
+.accordion-content .image.right,
+.accordion-content .media.left,
+.accordion-content .media.right {
+  float: none;
+}
+
+/* Styles for .accordion-content .image img, .accordion-content .media video */
+.accordion-content .image img,
+.accordion-content .media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Styles for .accordion-content .image.right, .accordion-content .media.right */
+.accordion-content .image.right,
+.accordion-content .media.right {
+  order: 2;
+}
+
+/* Styles for .accordion-content .image.right + ul, .accordion-content .media.right + ul, .accordion-content .media.right + .project-text */
+.accordion-content .image.right + ul,
+.accordion-content .media.right + ul,
+.accordion-content .media.right + .project-text {
+  order: 1;
+}
+
+/* Styles for .accordion-content ul */
+.accordion-content ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #000000;
+  margin: 0;
+}
+
+/* Styles for .accordion-content .project-text h4 */
+.accordion-content .project-text h4 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.05rem;
+}
+
+/* Styles for .accordion-content .project-section */
+.accordion-content .project-section {
+  margin-bottom: 0.85rem;
+}
+
+/* Styles for .accordion-content .project-section:last-child */
+.accordion-content .project-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Styles for .accordion-content .project-text .project-kicker */
+.accordion-content .project-text .project-kicker {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0F766E;
+}
+
+/* Styles for .accordion-content .project-text p */
+.accordion-content .project-text p {
+  margin: 0 0 0.75rem 0;
+  color: #000000;
+}
+
+/* Styles for .accordion-content .project-text p:last-child */
+.accordion-content .project-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Styles for .accordion-content .project-text a */
+.accordion-content .project-text a {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* Styles for .accordion-content .project-tools */
+.accordion-content .project-tools {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--slate);
+}
+
+/* Styles for .accordion-content .project-tools li */
+.accordion-content .project-tools li {
+  padding: 0.25rem 0.55rem;
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--teal);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Responsive: @media (max-width: 900px) { */
+@media (max-width: 900px) {
+/* Styles for .accordion-content */
+  .accordion-content {
+    grid-template-columns: 1fr;
+  }
+
+/* Styles for .accordion-content .image, .accordion-content .media, .accordion-content ul, .accordion-content .project-text */
+  .accordion-content .image,
+  .accordion-content .media,
+  .accordion-content ul,
+  .accordion-content .project-text {
+    order: initial;
+  }
+
+/* Styles for .accordion-content .image.right + ul, .accordion-content .media.right + ul, .accordion-content .media.right + .project-text */
+  .accordion-content .image.right + ul,
+  .accordion-content .media.right + ul,
+  .accordion-content .media.right + .project-text {
+    order: initial;
+  }
+}

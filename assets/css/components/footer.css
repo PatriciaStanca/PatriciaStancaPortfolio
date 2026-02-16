@@ -1,0 +1,188 @@
+/* Footer */
+/* Styles for #footer */
+#footer {
+  background: var(--teal);
+  color: #ffffff;
+}
+
+/* Footer grid */
+/* Styles for .footer-grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 1.95rem;
+  row-gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  justify-items: start;
+  align-items: start;
+  justify-content: start;
+}
+
+/* Styles for .footer-col */
+.footer-col {
+  display: grid;
+  gap: 0.5rem;
+  text-align: left;
+  align-items: start;
+}
+
+/* Styles for .footer-item */
+.footer-item {
+  display: block;
+  margin: 0;
+}
+
+/* Styles for .footer-item svg */
+.footer-item svg {
+  display: none;
+}
+
+/* Styles for .footer-title */
+.footer-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Styles for #footer p, #footer a */
+#footer p,
+#footer a {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* Styles for #footer a */
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Styles for #footer a:hover */
+#footer a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Styles for .footer-decor */
+.footer-decor {
+  margin-top: 2.5rem;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Styles for .footer-wave */
+.footer-wave {
+  width: 100%;
+  height: 40px;
+}
+
+/* Styles for .footer-wave path */
+.footer-wave path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1.25;
+}
+
+/* Styles for .footer-icon-row */
+.footer-icon-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 0 1rem;
+}
+
+/* Styles for .footer-icon */
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: none;
+  display: grid;
+  place-items: center;
+}
+
+/* Styles for .footer-icon svg */
+.footer-icon svg {
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1.25;
+}
+
+/* Styles for #footer .copyright */
+#footer .copyright {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Responsive: @media (max-width: 900px) { */
+@media (max-width: 900px) {
+/* Styles for .footer-grid */
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Responsive: @media (max-width: 600px) { */
+@media (max-width: 600px) {
+/* Styles for .footer-grid */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: left;
+  }
+
+/* Styles for .footer-col */
+  .footer-col {
+    text-align: left;
+    gap: 0.75rem;
+  }
+
+/* Styles for .footer-decor */
+  .footer-decor {
+    display: none;
+  }
+
+/* Styles for #footer .copyright */
+  #footer .copyright {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+  }
+}
+
+/* Contact list icons (inline SVG) */
+/* Styles for .contact li */
+.contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Styles for .contact-icon */
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for .contact-icon svg */
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 1.8;
+}

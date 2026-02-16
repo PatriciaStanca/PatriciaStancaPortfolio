@@ -1,5 +1,6 @@
 /* Utilities: spacing tweaks, overrides, responsive */
 /* Overrides previously in overrides.css */
+/* Styles for section:not(.stats-wide):not(.summary-band), article, .wrapper:not(.stats-wide), .wrapper > .inner */
 section:not(.stats-wide):not(.summary-band),
 article,
 .wrapper:not(.stats-wide),
@@ -10,74 +11,91 @@ article,
   padding-bottom: 0 !important;
 }
 
+/* Styles for .wrapper > .inner */
 .wrapper > .inner {
   padding-top: var(--section-space) !important;
   padding-bottom: var(--section-space) !important;
 }
 
 
+/* Styles for #footer .inner .copyright li */
 #footer .inner .copyright li {
   border-left: 0 !important;
 }
 
 /* Responsive */
+/* Responsive: @media screen and (max-width: 980px) { */
 @media screen and (max-width: 980px) {
+/* Styles for .hero-grid */
   .hero-grid {
     grid-template-columns: 1fr;
   }
 
+/* Styles for .key-achievements */
   .key-achievements {
     grid-auto-flow: column;
     grid-auto-columns: minmax(260px, 1fr);
     grid-template-columns: none;
   }
 
+/* Styles for .role-track */
   .role-track {
     grid-auto-columns: minmax(260px, 1fr);
   }
 
+/* Styles for .skill-flow */
   .skill-flow {
     justify-content: flex-start;
   }
 
+/* Styles for .highlights-grid */
   .highlights-grid {
     grid-template-columns: 1fr;
   }
 
+/* Styles for .summary-grid */
   .summary-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
 
+/* Styles for .language-list */
   .language-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* Responsive: @media screen and (max-width: 736px) { */
 @media screen and (max-width: 736px) {
+/* Styles for body.is-menu-visible */
   body.is-menu-visible {
     overflow: hidden;
   }
 
+/* Styles for body.is-menu-visible #main, body.is-menu-visible #footer */
   body.is-menu-visible #main,
   body.is-menu-visible #footer {
     visibility: hidden;
   }
 
+/* Styles for #header nav.top-nav */
   #header nav.top-nav {
     display: none;
   }
 
+/* Styles for #header .menu-toggle */
   #header .menu-toggle {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
   }
 
+/* Styles for #menu */
   #menu {
     display: block;
   }
 
+/* Styles for #menu */
   #menu {
     position: fixed;
     top: var(--header-height, 84px);
@@ -90,18 +108,22 @@ article,
     transform: translateY(-8px);
   }
 
+/* Styles for body.is-menu-visible #menu */
   body.is-menu-visible #menu {
     max-height: none;
   }
 
+/* Styles for .intro-split */
   .intro-split {
     grid-template-columns: 1fr;
   }
 
+/* Styles for .education-group */
   .education-group {
     grid-template-columns: 1fr;
   }
 
+/* Styles for .language-list */
   .language-list {
     grid-template-columns: 1fr;
   }

@@ -1,0 +1,68 @@
+/* Skill flow */
+/* Styles for .skill-flow */
+.skill-flow {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+/* Styles for .skill-node */
+.skill-node {
+  background: #ffffff;
+  border: 0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-width: 240px;
+  scroll-snap-align: start;
+}
+
+/* Styles for .skill-node-icon */
+.skill-node-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(15, 118, 110, 0.12);
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Styles for .skill-node h3 */
+.skill-node h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+}
+
+/* Styles for .skill-node-chips */
+.skill-node-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Styles for .skill-node-chips span */
+.skill-node-chips span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--teal);
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+}
+
+/* Skills: clean card look */
+/* Styles for #technical-skills .skill-node, #business-skills .skill-node */
+#technical-skills .skill-node,
+#business-skills .skill-node {
+  background: transparent;
+  padding: 0.75rem 0;
+}

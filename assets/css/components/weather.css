@@ -1,0 +1,49 @@
+/* Weather */
+/* Styles for .weather-card */
+.weather-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #ffffff;
+  max-width: 420px;
+}
+
+/* Styles for .weather-icon */
+.weather-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(15, 118, 110, 0.12);
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+}
+
+/* Styles for .weather-icon svg */
+.weather-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Styles for .weather-temp */
+.weather-temp {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Styles for .weather-meta */
+.weather-meta {
+  margin: 0.15rem 0 0 0;
+  color: var(--slate);
+}
+
+/* Styles for .weather-note */
+.weather-note {
+  margin-top: 0.6rem;
+  color: var(--slate-light);
+  font-size: 0.85rem;
+}

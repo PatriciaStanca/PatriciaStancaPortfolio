@@ -1,6 +1,7 @@
 /* Base: variables, resets, typography, form basics */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
+/* Styles for :root */
 :root {
   --teal: #0F766E;
   --teal-dark: #0B5F58;
@@ -13,15 +14,18 @@
   --section-space: 83px;
 }
 
+/* Styles for * */
 * {
   box-sizing: border-box;
 }
 
+/* Styles for html, body */
 html, body {
   margin: 0;
   padding: 0;
 }
 
+/* Styles for body */
 body {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 16px;
@@ -31,6 +35,7 @@ body {
   padding-top: 0;
 }
 
+/* Styles for .skip-link */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -43,29 +48,35 @@ body {
   z-index: 10001;
 }
 
+/* Styles for .skip-link:focus */
 .skip-link:focus {
   left: 0.75rem;
 }
 
+/* Styles for p */
 p {
   margin: 0 0 1.25rem 0;
 }
 
+/* Styles for img */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Styles for a */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Styles for a:hover */
 a:hover {
   color: var(--teal);
 }
 
+/* Styles for a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -75,12 +86,14 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
+/* Styles for label */
 label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
+/* Styles for input, textarea, select */
 input,
 textarea,
 select {
@@ -92,6 +105,7 @@ select {
   font-size: 1rem;
 }
 
+/* Styles for input:focus, textarea:focus, select:focus */
 input:focus,
 textarea:focus,
 select:focus {
@@ -100,6 +114,7 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
 }
 
+/* Styles for input.is-invalid, textarea.is-invalid, select.is-invalid */
 input.is-invalid,
 textarea.is-invalid,
 select.is-invalid {
@@ -107,41 +122,49 @@ select.is-invalid {
   box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
 }
 
+/* Styles for .form-error */
 .form-error {
   color: #dc2626;
   font-size: 0.85rem;
   margin-top: 0.25rem;
 }
 
+/* Styles for .form-feedback */
 .form-feedback {
   margin: 0.25rem 0 0 0;
   font-size: 0.9rem;
 }
 
+/* Styles for .form-feedback.is-success */
 .form-feedback.is-success {
   color: #15803d;
 }
 
+/* Styles for .form-feedback.is-error */
 .form-feedback.is-error {
   color: #dc2626;
 }
 
+/* Styles for .form-privacy */
 .form-privacy {
   margin-top: 0.5rem;
   color: var(--slate);
   font-size: 0.85rem;
 }
 
+/* Styles for textarea */
 textarea {
   resize: vertical;
 }
 
+/* Styles for .contact-form */
 .contact-form {
   display: grid;
   gap: 1rem;
   max-width: 620px;
 }
 
+/* Styles for .btn-primary */
 .btn-primary {
   background: var(--teal);
   color: #ffffff;
@@ -153,10 +176,12 @@ textarea {
   width: fit-content;
 }
 
+/* Styles for .btn-primary:hover */
 .btn-primary:hover {
   background: var(--teal-dark);
 }
 
+/* Styles for ul */
 ul {
   margin: 0;
   padding: 0;

@@ -1,4 +1,5 @@
 .DS_Store
+review_pdfs/
 node_modules/
 test-results/
 /.lighthouseci/

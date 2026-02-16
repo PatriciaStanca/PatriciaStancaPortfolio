@@ -1,0 +1,281 @@
+/* Clients slider */
+/* Styles for .logo-slider */
+.logo-slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Styles for .logo-track */
+.logo-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0.5rem 0;
+}
+
+/* Styles for .logo-track img */
+.logo-track img {
+  height: 100px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  filter: grayscale(10%);
+  opacity: 0.9;
+}
+
+/* Styles for .slider-btn */
+.slider-btn {
+  border: 0;
+  background: #ffffff;
+  border-radius: 999px;
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--teal);
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-size: 1.6rem;
+}
+
+/* Styles for .role-nav.slider-btn */
+.role-nav.slider-btn {
+  border-color: transparent;
+  width: 72px;
+  height: 72px;
+  font-size: 1.6rem;
+  background: #ffffff;
+}
+
+/* Styles for .testimonial-nav.slider-btn */
+.testimonial-nav.slider-btn {
+  width: 72px;
+  height: 72px;
+  font-size: 1.6rem;
+  background: #ffffff;
+}
+
+/* Styles for .slider-btn:hover */
+.slider-btn:hover {
+  transform: translateX(4px);
+}
+
+/* Styles for .slider-btn.left:hover */
+.slider-btn.left:hover {
+  transform: translateX(-4px);
+}
+
+/* Previous work slider */
+/* Styles for .role-slider */
+.role-slider {
+  margin-top: 2.75rem;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: auto 1fr auto;
+}
+
+/* Styles for .role-track */
+.role-track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  overflow: visible;
+  padding: 3rem 0 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for .role-card */
+.role-card {
+  border: 0;
+  border-radius: 16px;
+  padding: 1.25rem;
+  background: #ffffff;
+  min-height: 280px;
+  scroll-snap-align: start;
+}
+
+/* Styles for .role-header h4 */
+.role-header h4 {
+  margin: 0 0 0.45rem 0;
+  font-size: 1.2rem;
+}
+
+/* Styles for .role-meta */
+.role-meta {
+  margin: 0 0 1rem 0;
+  color: var(--slate);
+  font-size: 0.95rem;
+}
+
+/* Styles for .role-points */
+.role-points {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Styles for .role-chips */
+.role-chips {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* Styles for .role-chip */
+.role-chip {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--teal);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+/* Testimonials */
+/* Styles for .testimonial-slider */
+.testimonial-slider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Styles for .testimonial-grid */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Styles for .testimonial-card */
+.testimonial-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  min-width: 280px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* Styles for .testimonial-quote */
+.testimonial-quote {
+  color: var(--teal);
+  font-size: 3rem;
+  line-height: 1;
+  margin-top: 0.2rem;
+}
+
+/* Styles for .testimonial-body */
+.testimonial-body {
+  display: grid;
+  gap: 0.75rem;
+}
+
+/* Styles for .testimonial-text */
+.testimonial-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Styles for .testimonial-author */
+.testimonial-author {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin: 0;
+}
+
+/* Responsive: @media (max-width: 980px) { */
+@media (max-width: 980px) {
+/* Styles for .role-slider */
+  .role-slider {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.5rem;
+  }
+
+/* Styles for .role-track */
+  .role-track {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 2rem 0 0;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    justify-content: start;
+  }
+
+/* Styles for .role-card */
+  .role-card {
+    width: 100%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+/* Styles for .role-header h4 */
+  .role-header h4 {
+    font-size: 1.05rem;
+  }
+
+/* Styles for .role-meta */
+  .role-meta {
+    font-size: 0.85rem;
+  }
+
+/* Styles for .role-points */
+  .role-points {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+/* Styles for .role-chip */
+  .role-chip {
+    font-size: 0.7rem;
+  }
+
+/* Styles for .testimonial-grid */
+  .testimonial-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 1fr);
+  }
+}
+
+/* Responsive: @media (max-width: 700px) { */
+@media (max-width: 700px) {
+/* Styles for .role-card */
+  .role-card {
+    min-height: 280px;
+  }
+
+/* Styles for .role-points */
+  .role-points {
+    padding-left: 1rem;
+  }
+
+/* Styles for .testimonial-text */
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+/* Styles for .testimonial-author */
+  .testimonial-author {
+    font-size: 0.8rem;
+  }
+}
