@@ -6,14 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" >
 				<link rel="stylesheet" href="assets/css/base.css" >
 		<link rel="stylesheet" href="assets/css/layout.css" >
-		<link rel="stylesheet" href="assets/css/components/cards.css" >
-		<link rel="stylesheet" href="assets/css/components/sliders.css" >
-		<link rel="stylesheet" href="assets/css/components/accordion.css" >
-		<link rel="stylesheet" href="assets/css/components/timeline.css" >
-		<link rel="stylesheet" href="assets/css/components/skills.css" >
-		<link rel="stylesheet" href="assets/css/components/education-language.css" >
 		<link rel="stylesheet" href="assets/css/components/contact.css" >
-		<link rel="stylesheet" href="assets/css/components/cv.css" >
 		<link rel="stylesheet" href="assets/css/components/footer.css" >
 		<link rel="stylesheet" href="assets/css/components/weather.css" >
 		<link rel="stylesheet" href="assets/css/utilities.css" >
@@ -79,16 +72,16 @@
 <!-- Section: div.contact-hero-grid -->
 					<div class="contact-hero-grid">
 <!-- Section: div.contact-visual -->
-						<div class="contact-visual">
+						<div class="contact-visual" data-reveal-delay="280">
 							<img src="images/contact.jpg" alt="Contact illustration" loading="lazy" width="4000" height="4000" >
 						</div>
 <!-- Section: div.contact-content -->
 						<div class="contact-content">
-							<h2 class="contact-title">Curious about how I work and how I can contribute?</h2>
-							<p class="contact-lead">Share your project idea, collaboration request, or question. I’ll get back to you soon.</p>
+							<h2 class="contact-title" data-reveal-delay="0">Curious about how I work and how I can contribute?</h2>
+							<p class="contact-lead" data-reveal-delay="140">Share your project idea, collaboration request, or question. I’ll get back to you soon.</p>
 
 <!-- Section: form.contact-form -->
-							<form class="contact-form contact-card" action="https://formspree.io/f/xqedpzez" method="POST" data-formspree novalidate>
+							<form class="contact-form contact-card" action="https://formspree.io/f/xqedpzez" method="POST" data-formspree novalidate data-reveal-delay="420">
 <!-- Section: div.form-row -->
 								<div class="form-row">
 <!-- Section: div -->
@@ -119,8 +112,8 @@
 
 								<label for="contact-subject">Subject</label>
 								<select id="contact-subject" name="subject" required>
-									<option value="" selected disabled>Select a topic</option>
-									<option value="project">Project inquiry</option>
+									<option value="" disabled>Select a topic</option>
+									<option value="project" selected>Project inquiry</option>
 									<option value="collaboration">Collaboration / partnership</option>
 									<option value="speaking">Speaking / presentation</option>
 									<option value="job">Job opportunity</option>
@@ -140,25 +133,6 @@
 							</form>
 						</div>
 					</div>
-				</div>
-			</section>
-
-<!-- Section: section#weather -->
-			<section id="weather" class="wrapper">
-<!-- Section: div.inner -->
-				<div class="inner">
-					<h2 class="section-title">Weather Now</h2>
-<!-- Section: div.weather-card -->
-					<div class="weather-card" aria-live="polite">
-<!-- Section: div.weather-icon -->
-						<div class="weather-icon"><i data-lucide="cloud-sun"></i></div>
-<!-- Section: div -->
-						<div>
-							<p class="weather-temp">Loading…</p>
-							<p class="weather-meta">Gothenburg, Sweden</p>
-						</div>
-					</div>
-					<p class="weather-note">Uses Open‑Meteo (no API key).</p>
 				</div>
 			</section>
 		</main>
@@ -192,6 +166,17 @@
 					<div class="footer-col">
 						<h3 class="footer-title">Socials</h3>
 						<p class="footer-item"><i data-lucide="linkedin"></i><a href="https://linkedin.com/in/renata-patricia-stanca">LinkedIn</a></p>
+					</div>
+<!-- Section: div.footer-col -->
+					<div class="footer-col footer-weather">
+						<div class="weather-card weather-card-compact" aria-live="polite" data-weather>
+							<div class="weather-icon"><i data-lucide="cloud-sun"></i></div>
+							<div>
+								<p class="weather-temp">Loading…</p>
+								<p class="weather-meta">Gothenburg, Sweden</p>
+								<p class="weather-note">Uses Open‑Meteo (no API key).</p>
+							</div>
+						</div>
 					</div>
 				</div>
 <!-- Section: div.footer-decor -->

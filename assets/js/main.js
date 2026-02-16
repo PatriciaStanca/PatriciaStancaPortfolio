@@ -19,7 +19,7 @@
   onReady(() => {
     // Weather widget (Open-Meteo, no API key)
     (function () {
-      const weatherCard = document.querySelector('#weather .weather-card');
+      const weatherCard = document.querySelector('[data-weather], #weather .weather-card');
       if (!weatherCard) return;
       const tempEl = weatherCard.querySelector('.weather-temp');
       const metaEl = weatherCard.querySelector('.weather-meta');
@@ -287,23 +287,33 @@
 
     // Accordion (elements)
     (function () {
-      const accordion = document.querySelector('[data-accordion]');
-      if (!accordion) return;
-      const panels = accordion.querySelectorAll('.accordion-panel');
-      panels.forEach((panel) => {
-        panel.style.display = panel.classList.contains('is-open') ? 'block' : 'none';
-      });
+      const triggers = Array.from(document.querySelectorAll('[data-accordion] .accordion-trigger'));
+      if (!triggers.length) return;
 
-      accordion.addEventListener('click', (event) => {
-        const trigger = event.target.closest('.accordion-trigger');
-        if (!trigger || !accordion.contains(trigger)) return;
+      const syncPanel = (trigger) => {
         const panel = trigger.nextElementSibling;
         if (!panel || !panel.classList.contains('accordion-panel')) return;
         const isOpen = trigger.getAttribute('aria-expanded') === 'true';
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-        panel.classList.toggle('is-open', !isOpen);
-        panel.style.display = !isOpen ? 'block' : 'none';
-      });
+        panel.classList.toggle('is-open', isOpen);
+        panel.style.display = isOpen ? 'block' : 'none';
+      };
+
+      triggers.forEach((trigger) => syncPanel(trigger));
+
+      document.addEventListener(
+        'click',
+        (event) => {
+          const trigger = event.target.closest('[data-accordion] .accordion-trigger');
+          if (!trigger) return;
+          const panel = trigger.nextElementSibling;
+          if (!panel || !panel.classList.contains('accordion-panel')) return;
+          const open = trigger.getAttribute('aria-expanded') === 'true';
+          trigger.setAttribute('aria-expanded', String(!open));
+          panel.classList.toggle('is-open', !open);
+          panel.style.display = !open ? 'block' : 'none';
+        },
+        true
+      );
     })();
 
     // Header dropdown (open only on Experience hover/focus)
@@ -415,10 +425,15 @@
         '.key-card',
         '.highlight-item',
         '.skill-node',
+        '.skill-node-icon',
+        '.skill-node h3',
+        '.skill-desc',
+        '.skill-node-chips span',
         '.logo-track img',
         '.education-group',
         '.language-card',
         '.accordion-panel',
+        '.accordion-trigger',
         '.project-text',
         '.testimonial-card',
         '.role-card',
@@ -455,9 +470,31 @@
         });
       });
 
+      // Stagger inside each skill card: icon -> title -> description -> chips
+      const skillNodes = document.querySelectorAll('.skill-node');
+      skillNodes.forEach((node) => {
+        const sequence = [];
+        const icon = node.querySelector('.skill-node-icon');
+        const title = node.querySelector('h3');
+        const desc = node.querySelector('.skill-desc');
+        if (icon) sequence.push(icon);
+        if (title) sequence.push(title);
+        if (desc) sequence.push(desc);
+        const chips = Array.from(node.querySelectorAll('.skill-node-chips span'));
+        sequence.push(...chips);
+        sequence.forEach((el, idx) => {
+          groupDelay.set(el, idx * 80);
+        });
+      });
+
       elements.forEach((el, idx) => {
         if (el.classList.contains('reveal')) return;
         el.classList.add('reveal');
+        const manualDelay = el.getAttribute('data-reveal-delay');
+        if (manualDelay !== null && manualDelay !== '') {
+          el.style.transitionDelay = `${Number(manualDelay)}ms`;
+          return;
+        }
         const localDelay = groupDelay.get(el);
         const delay = typeof localDelay === 'number' ? localDelay : Math.min(idx * 30, 300);
         el.style.transitionDelay = `${delay}ms`;

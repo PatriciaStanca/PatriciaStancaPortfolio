@@ -17,6 +17,27 @@ article,
   padding-bottom: var(--section-space) !important;
 }
 
+/* Scroll reveal (global) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 420ms ease-out, transform 420ms ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 
 /* Styles for #footer .inner .copyright li */
 #footer .inner .copyright li {

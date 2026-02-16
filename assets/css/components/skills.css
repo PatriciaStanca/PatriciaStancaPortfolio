@@ -24,11 +24,17 @@
 .skill-node-icon {
   width: 44px;
   height: 44px;
-  border-radius: 12px;
-  background: rgba(15, 118, 110, 0.12);
   display: grid;
   place-items: center;
   margin-bottom: 0.75rem;
+  color: var(--teal);
+}
+
+/* Styles for .skill-node-icon svg */
+.skill-node-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
 }
 
 /* Styles for .skill-node h3 */
@@ -38,6 +44,14 @@
   text-transform: uppercase;
   letter-spacing: 0.6px;
   white-space: nowrap;
+}
+
+/* Styles for .skill-desc */
+.skill-desc {
+  margin: -0.35rem 0 0.75rem 0;
+  color: var(--slate);
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 /* Styles for .skill-node-chips */
@@ -65,4 +79,34 @@
 #business-skills .skill-node {
   background: transparent;
   padding: 0.75rem 0;
+}
+
+/* Styles for #technical-skills .skill-flow */
+#technical-skills .skill-flow {
+  flex-direction: column;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+
+/* Styles for #technical-skills .skill-node */
+#technical-skills .skill-node {
+  min-width: 0;
+}
+
+/* Styles for #business-skills .skill-flow */
+#business-skills .skill-flow {
+  flex-direction: column;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+
+/* Styles for #business-skills .skill-node */
+#business-skills .skill-node {
+  min-width: 0;
+}
+/* Styles for #technical-skills .skill-node-chips */
+#technical-skills .skill-node-chips {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }

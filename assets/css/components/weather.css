@@ -47,3 +47,35 @@
   color: var(--slate-light);
   font-size: 0.85rem;
 }
+
+/* Footer compact weather (contact page) */
+.page-contact .weather-card-compact {
+  padding: 0.6rem 0.75rem;
+  gap: 0.6rem;
+  border-radius: 12px;
+  max-width: 240px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-contact .weather-card-compact .weather-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.page-contact .weather-card-compact .weather-temp {
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.page-contact .weather-card-compact .weather-meta,
+.page-contact .weather-card-compact .weather-note {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.page-contact .weather-card-compact .weather-note {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+}

@@ -39,6 +39,34 @@
   text-align: center;
 }
 
+/* Styles for .education-items a */
+.education-items a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Styles for .education-items a::after */
+.education-items a::after {
+  content: "↗";
+  margin-left: 0.35rem;
+  font-size: 0.85em;
+}
+
+/* Styles for .education-items a:hover */
+.education-items a:hover {
+  color: var(--teal-dark);
+  text-decoration-color: var(--teal);
+}
+
+/* Styles for .education-items a:focus-visible */
+.education-items a:focus-visible {
+  outline: 2px solid rgba(15, 118, 110, 0.4);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
 /* Styles for .education-logo */
 .education-logo {
   width: 170px;

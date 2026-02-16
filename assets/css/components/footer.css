@@ -21,6 +21,16 @@
   justify-content: start;
 }
 
+/* Contact page footer: reserve space for compact weather card */
+.page-contact #footer .footer-grid {
+  grid-template-columns: repeat(4, max-content) 1fr;
+}
+
+/* Contact page footer: weather alignment */
+.page-contact #footer .footer-weather {
+  justify-self: end;
+}
+
 /* Styles for .footer-col */
 .footer-col {
   display: grid;
@@ -131,6 +141,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
+
+  .page-contact #footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Responsive: @media (max-width: 600px) { */
@@ -140,6 +154,10 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: left;
+  }
+
+  .page-contact #footer .footer-grid {
+    grid-template-columns: 1fr;
   }
 
 /* Styles for .footer-col */

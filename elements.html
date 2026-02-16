@@ -6,16 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" >
 				<link rel="stylesheet" href="assets/css/base.css" >
 		<link rel="stylesheet" href="assets/css/layout.css" >
-		<link rel="stylesheet" href="assets/css/components/cards.css" >
 		<link rel="stylesheet" href="assets/css/components/sliders.css" >
 		<link rel="stylesheet" href="assets/css/components/accordion.css" >
-		<link rel="stylesheet" href="assets/css/components/timeline.css" >
-		<link rel="stylesheet" href="assets/css/components/skills.css" >
-		<link rel="stylesheet" href="assets/css/components/education-language.css" >
-		<link rel="stylesheet" href="assets/css/components/contact.css" >
-		<link rel="stylesheet" href="assets/css/components/cv.css" >
 		<link rel="stylesheet" href="assets/css/components/footer.css" >
-		<link rel="stylesheet" href="assets/css/components/weather.css" >
 		<link rel="stylesheet" href="assets/css/utilities.css" >
 </head>
 	<body class="is-preload page-elements">
@@ -34,7 +27,8 @@
 				</ul>
 <!-- Section: nav.nav-dropdown -->
 				<nav class="nav-dropdown" aria-label="Experience">
-					<a href="elements.html#projects">Projects</a>
+					<a href="elements.html#projects">Work Projects</a>
+					<a href="elements.html#personal-projects">Personal Projects</a>
 					<a href="elements.html#previous-work">Previous Work</a>
 					<a href="elements.html#references">References</a>
 				</nav>
@@ -58,7 +52,8 @@
 							<nav class="mobile-submenu" aria-label="Experience submenu">
 <!-- Section: ul -->
 								<ul>
-								<li><a href="elements.html#projects">Projects</a></li>
+								<li><a href="elements.html#projects">Work Projects</a></li>
+								<li><a href="elements.html#personal-projects">Personal Projects</a></li>
 								<li><a href="elements.html#previous-work">Previous Work</a></li>
 								<li><a href="elements.html#references">References</a></li>
 							</ul>
@@ -83,12 +78,11 @@
 
 <!-- Section: section#projects -->
 			<section id="projects" class="wrapper">
-<!-- Section: div.inner -->
-				<div class="inner">
-					<h3 class="section-title">Projects</h3>
-<!-- Section: div.project-accordion -->
-					<div class="project-accordion" data-accordion>
-						<button class="accordion-trigger" type="button" aria-expanded="true">
+			<div class="inner">
+				<h3 class="section-title">Work Projects</h3>
+				<div class="project-accordion" data-accordion>
+
+<button class="accordion-trigger" type="button" aria-expanded="true">
 							<span class="accordion-text">
 								<span class="accordion-title">Analytics Platform Implementation</span>
 								<span class="accordion-meta">Göteborg Energi AB · 2024-11 – 2026-02</span>
@@ -141,7 +135,6 @@
 								</div>
 							</div>
 						</div>
-
 						<button class="accordion-trigger" type="button" aria-expanded="false">
 							<span class="accordion-text">
 								<span class="accordion-title">Energy Consumption Forecasting &amp; Predictive Analytics</span>
@@ -300,6 +293,682 @@
 
 						<button class="accordion-trigger" type="button" aria-expanded="false">
 							<span class="accordion-text">
+								<span class="accordion-title">Energy Consumption Prediction &amp; Clustering</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">ML &amp; Forecasting</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/predict.jpg" alt="Load profile clustering and forecasting" width="585" height="688" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Prediction of energy consumption and clustering of customer behavior using PySpark in Fabric notebooks.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To provide decision support for tariff design and proactive customer communication by identifying risk profiles and behavior shifts.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Prepared and engineered features from hourly consumption data in PySpark.</li>
+											<li>Built clustering models and validated separation with PCA + silhouette scores.</li>
+											<li>Trained prediction models to forecast peaks and flag high‑risk customers with abnormal shifts.</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Python</li>
+											<li>PySpark</li>
+											<li>Microsoft Fabric Notebooks</li>
+											<li>Scikit-learn</li>
+											<li>Random Forest</li>
+											<li>Clustering (KMeans, Agglomerative)</li>
+											<li>PCA</li>
+										</ul>
+									</div>
+									<p><a href="https://drive.google.com/file/d/1uHu7iVCUoNOmCUNSSxPgx2_2atf1gTf9/view?usp=sharing">Notebook</a></p>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">AI Training for Marketing Teams</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025-01-28</span>
+							</span>
+							<span class="accordion-tag">Workshop</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/ai1.jpg" alt="AI training session slides" width="960" height="537" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Training sessions on AI chat tools (Copilot) for marketing teams, focused on practical use cases and safe adoption.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To make AI a natural part of daily work, save time on routine tasks, and improve creative output.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Designed the agenda, exercises, and prompt‑writing framework.</li>
+											<li>Delivered hands‑on demos for content generation, summarization, and data insights.</li>
+											<li>Covered best practices on context, structure, tone, and safe usage.</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Copilot</li>
+											<li>Prompt Design</li>
+											<li>Workshop Facilitation</li>
+											<li>Presentation</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Customer Segmentation by Consumption Patterns</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Segmentation</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/pic02.jpg" alt="Segmentation logic" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Built segmentation logic (A–D, Plus classes) using parameters like average usage, variance, peak load, and night/day ratio.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To classify customers by consumption behavior and support targeted communication and pricing analysis.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Designed classification rules based on behavioral features.</li>
+											<li>Validated segments with historical consumption data.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Python</li>
+											<li>PySpark</li>
+											<li>Fabric Notebooks</li>
+											<li>SQL</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">PySpark Pipelines for Product &amp; Contract Logic</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Data Engineering</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="PySpark pipelines" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Built PySpark pipelines for contract/product logic with joins and customer flagging by product groups (P50, P51, O63A, M63A, 10 kV).</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To enable reliable segmentation and reporting across product categories.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Implemented joins and business rules for product grouping.</li>
+											<li>Flagged customers for downstream analytics and reporting.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>PySpark</li>
+											<li>Python</li>
+											<li>Fabric Notebooks</li>
+											<li>SQL</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Robust Customer Classification with Missing Data</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Data Quality</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/pic02.jpg" alt="Missing data handling" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Methodology for robust customer classification when key fields are missing, using substitute variables and priority rules.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To keep segmentation and analytics reliable despite incomplete source data.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Defined fallback variables and priority logic for classification.</li>
+											<li>Documented decision rules for traceability.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Python</li>
+											<li>PySpark</li>
+											<li>Data Profiling</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">NKI Surveys – Structure &amp; Analysis</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Research</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="NKI survey design" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Designed recurring NKI measurements with segment, product, and audience‑specific questions.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To track customer satisfaction over time and identify improvement priorities.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Defined survey structure and segmentation logic.</li>
+											<li>Aligned questions to products and target groups.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Survey Design</li>
+											<li>Segmentation</li>
+											<li>Power BI</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Data Quality &amp; CRM Migration Rules</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Data Quality</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/pic02.jpg" alt="CRM migration rules" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Defined data quality checks and migration rules to ensure correct sources, keys, and relationships in the new CRM.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To reduce migration risk and improve data reliability for analytics and operations.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Mapped source systems and validated key relationships.</li>
+											<li>Defined rules for migration and quality assurance.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Data Governance</li>
+											<li>CRM Data Mapping</li>
+											<li>SQL</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Excel/VBA – Customer Lists &amp; Mailings</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Automation</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="Excel automation" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Excel/VBA solutions for deduplication, selection rules, and customer flagging for targeted mailings.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To speed up list creation and reduce manual errors in outbound communication.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Built deduplication logic and selection rules.</li>
+											<li>Automated customer flagging and list outputs.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Excel</li>
+											<li>VBA</li>
+											<li>Data Cleaning</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Power Automate – Process Automation</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Automation</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/pic02.jpg" alt="Power Automate flows" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Designed Power Automate flows connected to Microsoft Lists and Planner for tracking and follow‑up.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To reduce manual admin work and keep planning data in sync.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Defined flow logic and trigger conditions.</li>
+											<li>Mapped fields between Lists and Planner.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Power Automate</li>
+											<li>Microsoft Lists</li>
+											<li>Planner</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">B2B Contact Logic – Address &amp; Email Rules</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Data Quality</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="B2B contact rules" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Rules for selecting the correct B2B contact channel and avoiding incorrect mailings.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To reduce failed deliveries and improve communication accuracy.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Defined selection rules for contact channels.</li>
+											<li>Implemented logic to prevent mis‑targeting.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Data Rules</li>
+											<li>CRM Logic</li>
+											<li>Excel</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Power BI Reports for Tariff &amp; Customer Impact</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Power BI</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/pic02.jpg" alt="Power BI analysis" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Power BI reports to visualize cost changes, peak loads, and customer impact for tariff scenarios.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To support decision‑making and explain impact to stakeholders.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Built measures and visuals for peak and cost analysis.</li>
+											<li>Designed reports for segment and product views.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Power BI</li>
+											<li>DAX</li>
+											<li>SQL</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Advanced Visualizations for Totals &amp; Components</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Data Viz</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="Advanced visualizations" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Custom visuals to show totals and underlying components clearly (line, stacked, and combined views).</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To make complex KPIs and breakdowns easier to interpret for non‑technical stakeholders.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Designed charts that balance overview and detail.</li>
+											<li>Optimized layout for readability and comparison.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Power BI</li>
+											<li>Data Visualization</li>
+											<li>DAX</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Needs‑Driven Analytics &amp; Information Modeling</span>
+								<span class="accordion-meta">Göteborg Energi AB · 2025</span>
+							</span>
+							<span class="accordion-tag">Analytics</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="Needs-driven analytics" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Designed analytics solutions based on real business needs, translating unclear questions into structured models and decision‑ready insights.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To ensure analytics reflected actual behaviors and processes when existing data structures were not enough.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Led needs analysis with business and IT stakeholders.</li>
+											<li>Translated qualitative requirements into data and information models.</li>
+											<li>Defined new entities, relationships, and logic where needed.</li>
+											<li>Initiated and supported creation of new tables/views.</li>
+											<li>Ensured data quality, consistency, and long‑term usability.</li>
+											<li>Acted as a bridge between business, analytics, and technical teams.</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Microsoft Fabric</li>
+											<li>SQL</li>
+											<li>PySpark</li>
+											<li>Power BI</li>
+											<li>Excel</li>
+											<li>VBA</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
 								<span class="accordion-title">New Business System – Requirements &amp; User Perspective</span>
 								<span class="accordion-meta">Boplats Göteborg AB · 2023-09 – 2024-03</span>
 							</span>
@@ -403,10 +1072,10 @@
 						</div>
 						<button class="accordion-trigger" type="button" aria-expanded="false">
 							<span class="accordion-text">
-								<span class="accordion-title">ShotgunGame</span>
-								<span class="accordion-meta">Jensen Education · Sep – Oct 2025</span>
+								<span class="accordion-title">Behavioral Insights Mentorship</span>
+								<span class="accordion-meta">Boplats Göteborg AB · 2023</span>
 							</span>
-							<span class="accordion-tag">Program Build</span>
+							<span class="accordion-tag">Mentorship</span>
 							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
 								<path d="M4 2l6 6-6 6"></path>
 							</svg>
@@ -415,40 +1084,334 @@
 						<div class="accordion-panel">
 <!-- Section: div.accordion-content -->
 							<div class="accordion-content">
-								<span class="media left">
-									<video class="project-video" controls preload="metadata" playsinline>
-										<source src="assets/videos/shotgungame.mp4#t=20" type="video/mp4" >
-										Sorry, your browser doesn’t support embedded videos.
-									</video>
-								</span>
+								<span class="image left"><img src="images/pic02.jpg" alt="Mentorship and behavioral insights" width="276" height="276" ></span>
 <!-- Section: div.project-text -->
 								<div class="project-text">
 <!-- Section: div.project-section -->
 									<div class="project-section">
 										<p class="project-kicker">WHAT?</p>
-										<p>A minimal turn‑based game built as a school assignment with a clean UI and simple logic.</p>
+										<p>Mentored a behavioral science student on applying behavior insights to customer communication and service design.</p>
 									</div>
 <!-- Section: div.project-section -->
 									<div class="project-section">
 										<p class="project-kicker">WHY?</p>
-										<p>To demonstrate game logic fundamentals and component state handling.</p>
+										<p>To connect academic research with practical use cases and improve how we influence customer behavior.</p>
 									</div>
 <!-- Section: div.project-section -->
 									<div class="project-section">
 										<p class="project-kicker">MY CONTRIBUTION</p>
 <!-- Section: ul -->
 										<ul>
-											<li>Implemented conditional logic and control flow for game turns.</li>
-											<li>Managed state within components to track gameplay.</li>
-											<li>Separated UI and game logic into modular structure.</li>
-											<li>Built CSS layout and layering for background, sprites, and labels.</li>
-											<li>Handled static assets within the web app.</li>
+											<li>Defined scope, goals, and feedback loops for the student project.</li>
+											<li>Guided methods for interviews, hypotheses, and behavioral framing.</li>
+											<li>Translated findings into actionable communication ideas.</li>
 										</ul>
 									</div>
 <!-- Section: div.project-section -->
 									<div class="project-section">
 										<p class="project-kicker">TOOLS</p>
 <!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Behavioral Science</li>
+											<li>Mentorship</li>
+											<li>Research Design</li>
+											<li>Communication Strategy</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Strategic Process Leadership</span>
+								<span class="accordion-meta">Boplats Göteborg AB · 2020–2024</span>
+							</span>
+							<span class="accordion-tag">Strategy</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/pic02.jpg" alt="Strategic process leadership" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Led planning, governance, and follow‑up to connect goals, KPIs, and delivery across the organization.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To ensure strategy translated into measurable execution — not just documentation.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Aligned objectives, KPIs, and reporting cycles across teams.</li>
+											<li>Worked cross‑functionally with business, IT, and leadership.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Strategic Planning</li>
+											<li>OKR/KPI Frameworks</li>
+											<li>Stakeholder Management</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Organizational Change Support</span>
+								<span class="accordion-meta">Boplats Göteborg AB · 2020–2024</span>
+							</span>
+							<span class="accordion-tag">Change</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="Organizational change support" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Supported organizational change during leadership transitions and restructuring.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To create stability, clarity, and data‑driven decisions in high‑change periods.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Provided analysis and structure for decision‑making.</li>
+											<li>Collaborated with change management and behavioral insights.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Change Management</li>
+											<li>Behavioral Insights</li>
+											<li>Facilitation</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Market &amp; External Analysis</span>
+								<span class="accordion-meta">Boplats Göteborg AB · 2020–2024</span>
+							</span>
+							<span class="accordion-tag">Insights</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image right"><img src="images/pic02.jpg" alt="Market and external analysis" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Market monitoring, trend analysis, and impact assessments for strategic decision‑making.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To anticipate user impact from new systems, offers, and policy changes.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Delivered market insights and external trend summaries.</li>
+											<li>Analyzed user impact for changes in services and offerings.</li>
+											<li>[Add result/impact]</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Market Research</li>
+											<li>Trend Analysis</li>
+											<li>Stakeholder Insights</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Antura Implementation Support</span>
+								<span class="accordion-meta">Boplats Göteborg AB · 2022–2023</span>
+							</span>
+							<span class="accordion-tag">Implementation</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+<!-- Section: div.accordion-panel -->
+						<div class="accordion-panel">
+<!-- Section: div.accordion-content -->
+							<div class="accordion-content">
+								<span class="image left"><img src="images/pic02.jpg" alt="Antura implementation support" width="276" height="276" ></span>
+<!-- Section: div.project-text -->
+								<div class="project-text">
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Supported the implementation of Antura, a project, portfolio, and resource management system.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To ensure a structured rollout with realistic budgeting and clear processes for how the tool would be used.</p>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+<!-- Section: ul -->
+										<ul>
+											<li>Helped define implementation structure and timelines.</li>
+											<li>Contributed to budget planning and scope alignment.</li>
+											<li>Mapped how the system would be used in day‑to‑day processes.</li>
+										</ul>
+									</div>
+<!-- Section: div.project-section -->
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+<!-- Section: ul.project-tools -->
+										<ul class="project-tools">
+											<li>Antura</li>
+											<li>Process Design</li>
+											<li>Budget Planning</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section id="personal-projects" class="wrapper">
+				<div class="inner">
+					<h3 class="section-title">Personal Projects</h3>
+					<div class="project-accordion" data-accordion>
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">PatriciaStancaPortfolio</span>
+								<span class="accordion-meta">Personal Project · 2025–2026</span>
+							</span>
+							<span class="accordion-tag">Portfolio</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<span class="image left"><img src="images/skill.jpg" alt="Portfolio site" width="2292" height="1152" ></span>
+								<div class="project-text">
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Personal portfolio site showcasing projects, skills, and experience.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To present work clearly, highlight impact, and keep my professional profile up to date.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+										<ul>
+											<li>Designed the structure, content, and visual layout.</li>
+											<li>Built and refined the UI and interactions.</li>
+											<li>Deployed and maintained the site.</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+										<ul class="project-tools">
+											<li>HTML</li>
+											<li>CSS</li>
+											<li>JavaScript</li>
+											<li>Netlify</li>
+											<li>Custom Domain</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">Shotgun Game</span>
+								<span class="accordion-meta">Jensen Education · 2025</span>
+							</span>
+							<span class="accordion-tag">Game</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<video class="project-video" controls preload="metadata" poster="images/aw.jpg">
+									<source src="assets/videos/shotgungame.mp4#t=20" type="video/mp4" >
+								</video>
+								<div class="project-text">
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Interactive game project created as part of coursework at Jensen Education.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To practice game logic, UI behavior, and interaction design.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+										<ul>
+											<li>Built core game logic and UI flow.</li>
+											<li>Implemented interactions and state handling.</li>
+											<li>Packaged and presented the project.</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
 										<ul class="project-tools">
 											<li>HTML</li>
 											<li>CSS</li>
@@ -457,7 +1420,200 @@
 											<li>.NET</li>
 										</ul>
 									</div>
-									<p><a href="https://github.com/PatriciaStanca/ShotgunGame">GitHub repo</a></p>
+									<div class="project-section">
+										<p class="project-kicker">LINK</p>
+										<a href="https://github.com/PatriciaStanca/ShotgunGame" class="project-link">GitHub Repo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">AddressBookAvaloniaGroup</span>
+								<span class="accordion-meta">Jensen Education · 2025</span>
+							</span>
+							<span class="accordion-tag">Desktop App</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<span class="image left"><img src="images/aw.jpg" alt="Address book app" width="1080" height="1080" ></span>
+								<div class="project-text">
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Group-built address book application with CRUD, search, and file storage.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To practice file-based persistence and UI workflow in a desktop app.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+										<ul>
+											<li>Implemented contact management flow and validation.</li>
+											<li>Contributed to UI structure and file I/O logic.</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+										<ul class="project-tools">
+											<li>C#</li>
+											<li>.NET</li>
+											<li>Avalonia UI</li>
+											<li>File I/O</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">LINK</p>
+										<a href="https://github.com/PatriciaStanca/AddressBookAvaloniaGroup" class="project-link">GitHub Repo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">StancaBlogApi</span>
+								<span class="accordion-meta">Jensen Education · 2025</span>
+							</span>
+							<span class="accordion-tag">Web API</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<span class="image left"><img src="images/aw.jpg" alt="Blog API" width="1080" height="1080" ></span>
+								<div class="project-text">
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>ASP.NET Core Web API for a blog community with authentication and CRUD for posts and comments.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To demonstrate API design, authentication, and clean architecture in .NET.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+										<ul>
+											<li>Built endpoints, services, and repository layer.</li>
+											<li>Implemented JWT auth and Swagger documentation.</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+										<ul class="project-tools">
+											<li>C#</li>
+											<li>ASP.NET Core</li>
+											<li>EF Core</li>
+											<li>SQL Server</li>
+											<li>JWT</li>
+											<li>Swagger</li>
+											<li>Postman</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">LINK</p>
+										<a href="https://github.com/PatriciaStanca/StancaBlogApi" class="project-link">GitHub Repo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">StancaBankApi</span>
+								<span class="accordion-meta">Jensen Education · 2025</span>
+							</span>
+							<span class="accordion-tag">Web API</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<span class="image left"><img src="images/aw.jpg" alt="Bank API" width="1080" height="1080" ></span>
+								<div class="project-text">
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>ASP.NET Web API for a bank assignment with roles, accounts, and transactions.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To implement authentication, role‑based access, and domain logic in a clean API.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+										<ul>
+											<li>Built API endpoints and service layer.</li>
+											<li>Implemented JWT auth and validation rules.</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+										<ul class="project-tools">
+											<li>C#</li>
+											<li>ASP.NET Web API</li>
+											<li>EF Core</li>
+											<li>SQL Server</li>
+											<li>JWT</li>
+											<li>Swagger</li>
+											<li>Postman</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">LINK</p>
+										<a href="https://github.com/PatriciaStanca/StancaBankApi" class="project-link">GitHub Repo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="accordion-trigger" type="button" aria-expanded="false">
+							<span class="accordion-text">
+								<span class="accordion-title">blackjack.py</span>
+								<span class="accordion-meta">IT‑Högskolan · 2025</span>
+							</span>
+							<span class="accordion-tag">Web App</span>
+							<svg class="accordion-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+								<path d="M4 2l6 6-6 6"></path>
+							</svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<span class="image left"><img src="images/ith.jpg" alt="Blackjack game" width="1024" height="207" ></span>
+								<div class="project-text">
+									<div class="project-section">
+										<p class="project-kicker">WHAT?</p>
+										<p>Simple web‑based Blackjack game built with Python and Flask.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">WHY?</p>
+										<p>To practice backend logic, session handling, and templating for web apps.</p>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">MY CONTRIBUTION</p>
+										<ul>
+											<li>Implemented game logic and user flow.</li>
+											<li>Built Flask routes and Jinja2 templates.</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">TOOLS</p>
+										<ul class="project-tools">
+											<li>Python</li>
+											<li>Flask</li>
+											<li>Jinja2</li>
+											<li>HTML</li>
+										</ul>
+									</div>
+									<div class="project-section">
+										<p class="project-kicker">LINK</p>
+										<a href="https://github.com/PatriciaStanca/blackjack.py" class="project-link">GitHub Repo</a>
+									</div>
 								</div>
 							</div>
 						</div>

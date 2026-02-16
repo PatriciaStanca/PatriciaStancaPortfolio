@@ -1,9 +1,4 @@
 /* Projects accordion */
-/* Styles for .page-elements #projects > .inner */
-.page-elements #projects > .inner {
-  padding-top: calc(var(--section-space) + 24px) !important;
-}
-
 /* Styles for .page-elements #projects .project-accordion */
 .page-elements #projects .project-accordion {
   margin-top: 1.5rem;
@@ -113,12 +108,19 @@
 
 /* Styles for .accordion-content .image img, .accordion-content .media video */
 .accordion-content .image img,
-.accordion-content .media video {
+.accordion-content .media video,
+.accordion-content .project-video {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
+}
+
+/* Styles for .accordion-content .project-video */
+.accordion-content .project-video {
+  max-height: 420px;
+  object-fit: cover;
 }
 
 /* Styles for .accordion-content .image.right, .accordion-content .media.right */

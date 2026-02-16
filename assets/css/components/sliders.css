@@ -125,8 +125,10 @@
 .role-chips {
   margin-top: 0.8rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.4rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Styles for .role-chip */
