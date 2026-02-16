@@ -95,3 +95,4 @@ Private GitHub repository:
 - Build command: none
 - Publish directory: `.`
 - Custom domain configured via Netlify + Cloudflare DNS
+ - `netlify.toml` in repo defines build/publish settings
