@@ -111,16 +111,40 @@
 .accordion-content .media video,
 .accordion-content .project-video {
   width: 100%;
-  height: auto;
+  height: 320px;
   display: block;
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.accordion-content .image-credit {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--slate);
+  font-style: italic;
 }
 
 /* Styles for .accordion-content .project-video */
 .accordion-content .project-video {
-  max-height: 420px;
-  object-fit: cover;
+  max-height: none;
+}
+
+@media screen and (max-width: 980px) {
+  .accordion-content .image img,
+  .accordion-content .media video,
+  .accordion-content .project-video {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .accordion-content .image img,
+  .accordion-content .media video,
+  .accordion-content .project-video {
+    height: 200px;
+  }
 }
 
 /* Styles for .accordion-content .image.right, .accordion-content .media.right */

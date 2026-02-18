@@ -145,13 +145,6 @@ select.is-invalid {
   color: #dc2626;
 }
 
-/* Styles for .form-privacy */
-.form-privacy {
-  margin-top: 0.5rem;
-  color: var(--slate);
-  font-size: 0.85rem;
-}
-
 /* Styles for textarea */
 textarea {
   resize: vertical;

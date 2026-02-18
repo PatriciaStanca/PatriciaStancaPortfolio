@@ -123,15 +123,9 @@
   align-self: center;
 }
 
-/* Styles for .contact-card label, .contact-card .form-privacy */
-.contact-card label,
-.contact-card .form-privacy {
+/* Styles for .contact-card label */
+.contact-card label {
   color: #1f2937;
-}
-
-/* Styles for .contact-card .form-privacy */
-.contact-card .form-privacy {
-  margin-top: 0.75rem;
 }
 
 /* Styles for .contact-card .btn-primary */

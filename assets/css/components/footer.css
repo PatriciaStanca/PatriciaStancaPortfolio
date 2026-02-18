@@ -187,21 +187,3 @@
   align-items: center;
   gap: 0.6rem;
 }
-
-/* Styles for .contact-icon */
-.contact-icon {
-  width: 20px;
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Styles for .contact-icon svg */
-.contact-icon svg {
-  width: 20px;
-  height: 20px;
-  stroke: #ffffff;
-  fill: none;
-  stroke-width: 1.8;
-}

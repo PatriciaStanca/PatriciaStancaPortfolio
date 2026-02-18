@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" >
 				<link rel="stylesheet" href="assets/css/base.css" >
 		<link rel="stylesheet" href="assets/css/layout.css" >
+		<link rel="stylesheet" href="assets/css/components/search.css" >
 		<link rel="stylesheet" href="assets/css/components/footer.css" >
 		<link rel="stylesheet" href="assets/css/utilities.css" >
 </head>
@@ -30,7 +31,21 @@
 					<a href="elements.html#references">References</a>
 				</nav>
 			</nav>
-			<a class="menu-toggle" href="#menu" aria-label="Open menu" aria-expanded="false"><span aria-hidden="true"></span>Menu</a>
+			<div class="header-search">
+				<div class="search-bar" data-search-root="">
+					<label class="sr-only" for="project-search">Search projects</label>
+					<input id="project-search" type="search" inputmode="search" placeholder="Search..." autocomplete="off" data-search-input="header" >
+					<button class="search-icon" type="button" aria-label="Focus search" data-search-focus="">
+						<i data-lucide="search" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div>
+			<div class="header-actions">
+				<button class="search-toggle-mobile" type="button" aria-label="Open search" data-search-open="">
+					<i data-lucide="search" aria-hidden="true"></i>
+				</button>
+				<button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span aria-hidden="true"></span>Menu</button>
+			</div>
 <!-- Section: nav#menu -->
 			<nav id="menu" class="mobile-menu" aria-label="Mobile">
 <!-- Section: div.inner -->
@@ -60,6 +75,19 @@
 				</div>
 			</nav>
 		</header>
+		<div class="search-overlay" data-search-overlay="" hidden></div>
+		<aside class="search-drawer" data-search-drawer="" aria-label="Search panel" hidden>
+			<div class="search-drawer-header">
+				<h2 class="search-drawer-title">Search</h2>
+				<button class="search-drawer-close" type="button" aria-label="Close search" data-search-close="">✕</button>
+			</div>
+			<label class="sr-only" for="search-panel-input">Search the page</label>
+			<input id="search-panel-input" class="search-drawer-input" type="search" inputmode="search" placeholder="Search..." autocomplete="off" data-search-input="panel" >
+			<div class="search-drawer-body">
+				<div class="search-guidance" data-search-guidance=""></div>
+				<div class="search-results-panel" data-search-results=""></div>
+			</div>
+		</aside>
 
 <!-- Section: main#main -->
 		<main id="main">
@@ -67,12 +95,12 @@
 			<section class="wrapper">
 <!-- Section: div.inner -->
 				<div class="inner">
-					<h2 class="section-title">Privacy Policy – Contact Form</h2>
-					<p>When you use the contact form on this website, I collect the personal information you voluntarily provide, such as your name, email address, and message. This information is used solely for the purpose of responding to your inquiry.</p>
-					<p>The form submissions are processed via Formspree, a third-party service used to handle form data securely. The submitted information is transmitted to me as the site administrator and is not used for any other purpose.</p>
-					<p>Formspree processes personal data in accordance with applicable data protection regulations, including the GDPR. You can find more information about how Formspree handles personal data in their Privacy Policy:</p>
+					<h2 class="section-title">Privacy Policy - Contact Form</h2>
+					<p>When the contact form on this website is used, personal information voluntarily provided such as name, email address, and message is collected for the sole purpose of responding to inquiries.</p>
+					<p>Form submissions are processed via Formspree, a third-party service used to securely handle form data. The submitted information is transmitted to the site administrator and is not used for any other purpose.</p>
+					<p>Formspree processes personal data in accordance with applicable data protection regulations, including the GDPR. Further information about Formspree&rsquo;s data processing practices is available in their Privacy Policy:</p>
 					<p><a href="https://formspree.io/legal/privacy-policy/">https://formspree.io/legal/privacy-policy/</a></p>
-					<p>Your personal data is not shared with any other third parties and is not retained longer than necessary. You may request the deletion of your personal data at any time by contacting me.</p>
+					<p>Personal data is not shared with additional third parties and is retained only for as long as necessary to handle the inquiry. Requests for deletion of personal data can be made at any time.</p>
 				</div>
 			</section>
 		</main>
@@ -87,25 +115,25 @@
 <!-- Section: div.footer-col -->
 					<div class="footer-col">
 						<h3 class="footer-title">Location</h3>
-						<p class="footer-item"><i data-lucide="map-pin"></i><span>Gothenburg, Sweden</span></p>
+						<p class="footer-item"><i data-lucide="map-pin" aria-hidden="true"></i><span>Gothenburg, Sweden</span></p>
 					</div>
 <!-- Section: div.footer-col -->
 					<div class="footer-col">
 						<h3 class="footer-title">Contact</h3>
-						<p class="footer-item"><i data-lucide="phone"></i><span>0737 82 80 97</span></p>
-						<p class="footer-item"><i data-lucide="mail"></i><a href="mailto:patricia.stanca@hotmail.com">patricia.stanca@hotmail.com</a></p>
+						<p class="footer-item"><i data-lucide="phone" aria-hidden="true"></i><span>0737 82 80 97</span></p>
+						<p class="footer-item"><i data-lucide="mail" aria-hidden="true"></i><a href="mailto:patricia.stanca@hotmail.com">patricia.stanca@hotmail.com</a></p>
 					</div>
 <!-- Section: div.footer-col -->
 					<div class="footer-col">
 						<h3 class="footer-title">Links</h3>
-						<p class="footer-item"><i data-lucide="shield"></i><a href="privacy.html">Privacy Policy</a></p>
-						<p class="footer-item"><i data-lucide="file-text"></i><a href="cv.html">CV (PDF)</a></p>
-						<p class="footer-item"><i data-lucide="github"></i><a href="https://github.com/PatriciaStanca">GitHub</a></p>
+						<p class="footer-item"><i data-lucide="shield" aria-hidden="true"></i><a href="privacy.html">Privacy Policy</a></p>
+						<p class="footer-item"><i data-lucide="file-text" aria-hidden="true"></i><a href="cv.html">CV (PDF)</a></p>
+						<p class="footer-item"><i data-lucide="github" aria-hidden="true"></i><a href="https://github.com/PatriciaStanca">GitHub</a></p>
 					</div>
 <!-- Section: div.footer-col -->
 					<div class="footer-col">
 						<h3 class="footer-title">Socials</h3>
-						<p class="footer-item"><i data-lucide="linkedin"></i><a href="https://linkedin.com/in/renata-patricia-stanca">LinkedIn</a></p>
+						<p class="footer-item"><i data-lucide="linkedin" aria-hidden="true"></i><a href="https://linkedin.com/in/renata-patricia-stanca">LinkedIn</a></p>
 					</div>
 				</div>
 <!-- Section: div.footer-decor -->
@@ -115,11 +143,11 @@
 					</svg>
 <!-- Section: div.footer-icon-row -->
 					<div class="footer-icon-row">
-						<span class="footer-icon"><i data-lucide="database-zap"></i></span>
-						<span class="footer-icon"><i data-lucide="laptop"></i></span>
-						<span class="footer-icon"><i data-lucide="chart-no-axes-combined"></i></span>
-						<span class="footer-icon"><i data-lucide="file-code-corner"></i></span>
-						<span class="footer-icon"><i data-lucide="users"></i></span>
+						<span class="footer-icon"><i data-lucide="database-zap" aria-hidden="true"></i></span>
+						<span class="footer-icon"><i data-lucide="laptop" aria-hidden="true"></i></span>
+						<span class="footer-icon"><i data-lucide="chart-no-axes-combined" aria-hidden="true"></i></span>
+						<span class="footer-icon"><i data-lucide="file-code-corner" aria-hidden="true"></i></span>
+						<span class="footer-icon"><i data-lucide="users" aria-hidden="true"></i></span>
 					</div>
 				</div>
 <!-- Section: ul.copyright -->

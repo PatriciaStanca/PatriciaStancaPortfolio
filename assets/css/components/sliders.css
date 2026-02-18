@@ -86,7 +86,7 @@
   overflow: visible;
   padding: 3rem 0 0;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 /* Styles for .role-card */
@@ -97,12 +97,17 @@
   background: #ffffff;
   min-height: 280px;
   scroll-snap-align: start;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Styles for .role-header h4 */
 .role-header h4 {
   margin: 0 0 0.45rem 0;
   font-size: 1.2rem;
+  line-height: 1.3;
+  min-height: calc(1.3em * 2);
 }
 
 /* Styles for .role-meta */
@@ -125,10 +130,9 @@
 .role-chips {
   margin-top: 0.8rem;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 0.4rem;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: visible;
 }
 
 /* Styles for .role-chip */
@@ -138,6 +142,7 @@
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 /* Testimonials */

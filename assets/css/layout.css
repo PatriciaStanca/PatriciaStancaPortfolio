@@ -58,6 +58,16 @@
   align-self: baseline;
 }
 
+/* Header actions (mobile icons) */
+#header .header-actions {
+  grid-column: 3 / 4;
+  justify-self: end;
+  align-self: baseline;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /* Styles for #header nav.top-nav.is-dropdown-open */
 #header nav.top-nav.is-dropdown-open {
   gap: 0.75rem;
@@ -132,6 +142,11 @@
   position: relative;
   color: var(--ink);
   text-indent: -9999px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
 }
 
 /* Styles for #header .menu-toggle::before, #header .menu-toggle::after, #header .menu-toggle span */
@@ -434,43 +449,6 @@ body.is-menu-visible #menu {
   margin-top: 0;
   margin-left: 0.35rem;
   vertical-align: baseline;
-}
-
-/* Contact split */
-/* Styles for .page-contact .contact-split */
-.page-contact .contact-split {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 2rem;
-  align-items: start;
-}
-
-/* Styles for .page-contact .contact-split .contact-form */
-.page-contact .contact-split .contact-form {
-  max-width: none;
-}
-
-/* Styles for .page-contact .contact-media img */
-.page-contact .contact-media img {
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: var(--shadow-soft);
-}
-
-/* Responsive: @media (max-width: 900px) { */
-@media (max-width: 900px) {
-/* Styles for .page-contact .contact-split */
-  .page-contact .contact-split {
-    grid-template-columns: 1fr;
-  }
-
-/* Styles for .page-contact .contact-media img */
-  .page-contact .contact-media img {
-    min-height: 280px;
-  }
 }
 
 /* Section titles */

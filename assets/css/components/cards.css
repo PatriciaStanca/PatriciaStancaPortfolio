@@ -246,11 +246,3 @@
 .stats-wide > .inner {
   max-width: 100em;
 }
-
-/* Styles for .stats-wide .stat-card, .stats-wide .box, .stats-wide .card */
-.stats-wide .stat-card,
-.stats-wide .box,
-.stats-wide .card {
-  margin-top: 0;
-  margin-bottom: 0;
-}
