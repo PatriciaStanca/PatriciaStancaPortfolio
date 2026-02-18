@@ -3,6 +3,7 @@
 #footer {
   background: var(--teal);
   color: #ffffff;
+  padding-top: 0.75rem;
 }
 
 /* Footer grid */

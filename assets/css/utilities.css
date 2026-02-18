@@ -149,3 +149,140 @@ article,
     grid-template-columns: 1fr;
   }
 }
+
+/* Print styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  @page {
+    margin: 12mm;
+  }
+
+  #header,
+  #menu,
+  .menu-toggle,
+  .slider-btn,
+  .footer-decor,
+  .footer-icon-row {
+    display: none !important;
+  }
+
+  #main {
+    margin-top: 0 !important;
+  }
+
+  .wrapper,
+  .wrapper > .inner {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .wrapper {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .wrapper:first-of-type {
+    break-before: auto;
+    page-break-before: auto;
+  }
+
+  .section-title,
+  .page-title {
+    margin-top: 0 !important;
+  }
+
+  .accordion-panel,
+  .accordion-trigger,
+  .education-group,
+  .language-card,
+  .role-card,
+  .testimonial-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .accordion-panel {
+    display: block !important;
+  }
+
+  .accordion-trigger {
+    border-top: 1px solid #e5e7eb !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .accordion-arrow {
+    display: none !important;
+  }
+
+  .accordion-tag {
+    border: 1px solid #cbd5f5;
+    color: #000000;
+    background: transparent;
+  }
+
+  .project-tools li,
+  .role-chip {
+    background: transparent !important;
+    border: 1px solid #d1d5db !important;
+    color: #000000 !important;
+  }
+
+  .key-card,
+  .skill-node,
+  .contact-card,
+  .language-card,
+  .education-group,
+  .role-card,
+  .testimonial-card,
+  .project-accordion {
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .project-accordion {
+    overflow: visible !important;
+  }
+
+  .logo-track,
+  .testimonial-grid,
+  .role-track {
+    overflow: visible !important;
+  }
+
+  .logo-track {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  .testimonial-grid,
+  .role-track {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+
+  img,
+  video {
+    max-width: 100% !important;
+    height: auto !important;
+    box-shadow: none !important;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #6b7280;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
