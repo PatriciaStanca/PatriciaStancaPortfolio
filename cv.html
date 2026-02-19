@@ -30,10 +30,28 @@
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
+				"@type": "Person",
+				"@id": "https://patriciastanca.com/#person",
+				"name": "Patricia Stanca",
+				"url": "https://patriciastanca.com/",
+				"image": "https://patriciastanca.com/images/psp.jpg",
+				"jobTitle": "Data Analyst / Business Intelligence",
+				"sameAs": [
+					"https://github.com/PatriciaStanca",
+					"https://linkedin.com/in/renata-patricia-stanca"
+				]
+			}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
 				"@type": "ProfilePage",
 				"name": "CV | Patricia Stanca",
 				"url": "https://patriciastanca.com/cv.html",
 				"description": "View and download Patricia Stanca’s CV for data analysis and business intelligence roles.",
+				"mainEntity": {
+					"@id": "https://patriciastanca.com/#person"
+				},
 				"isPartOf": {
 					"@type": "WebSite",
 					"name": "Patricia Stanca",
