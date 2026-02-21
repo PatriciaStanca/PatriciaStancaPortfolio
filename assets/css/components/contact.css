@@ -98,6 +98,8 @@
   letter-spacing: 0.02em;
   line-height: 1.2;
   max-width: 24ch;
+  color: #ffffff;
+  font-family: var(--font-sans);
 }
 
 /* Styles for .contact-lead */

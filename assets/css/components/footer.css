@@ -4,6 +4,16 @@
   background: var(--teal);
   color: #ffffff;
   padding-top: 0.75rem;
+  font-family: var(--font-sans);
+}
+
+#footer .section-title,
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4 {
+  color: #ffffff;
+  font-family: var(--font-sans);
 }
 
 /* Footer grid */
