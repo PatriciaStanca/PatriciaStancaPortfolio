@@ -23,9 +23,10 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
 		<link rel="preload" href="https://patriciastanca.com/images/skill.jpg" as="image">
 		<link rel="stylesheet" href="assets/css/base.css">
-		<link rel="stylesheet" href="assets/css/layout.css">
-		<link rel="stylesheet" href="assets/css/components/cards.css">
-		<link rel="stylesheet" href="assets/css/components/sliders.css">
+			<link rel="stylesheet" href="assets/css/layout.css">
+			<link rel="stylesheet" href="assets/css/components/cards.css">
+			<link rel="stylesheet" href="assets/css/components/project-reel.css">
+			<link rel="stylesheet" href="assets/css/components/sliders.css">
 		<link rel="stylesheet" href="assets/css/components/search.css">
 		<link rel="stylesheet" href="assets/css/components/skills.css">
 		<link rel="stylesheet" href="assets/css/components/footer.css">
@@ -188,40 +189,63 @@
 				</div>
 			</section>
 
-<!-- Section: section.wrapper -->
-			<section class="wrapper stats-wide">
-<!-- Section: div.inner -->
+		<!-- Section: section.wrapper -->
+			<section class="wrapper" id="project-reel">
+		<!-- Section: div.inner -->
 				<div class="inner">
-<!-- Section: section#summary -->
-					<section id="summary" class="summary-band">
-<!-- Section: div.summary-grid -->
-						<div class="summary-grid">
-<!-- Section: div.summary-card -->
-							<div class="summary-card">
-								<span class="summary-value">20+</span>
-								<span class="summary-label">Projects</span>
-							</div>
-<!-- Section: div.summary-card -->
-							<div class="summary-card">
-								<span class="summary-value">2</span>
-								<span class="summary-label">Industries</span>
-							</div>
-<!-- Section: div.summary-card -->
-							<div class="summary-card">
-								<span class="summary-value">100+</span>
-								<span class="summary-label">Stakeholders</span>
-							</div>
-<!-- Section: div.summary-card -->
-							<div class="summary-card">
-								<span class="summary-value">6+</span>
-								<span class="summary-label">Years Experience</span>
-							</div>
+		<!-- Section: div.project-reel -->
+					<div class="project-reel" data-project-reel="" role="region" aria-label="Project reel">
+						<div class="project-reel-viewport">
+							<div class="project-reel-track" data-project-reel-track=""></div>
 						</div>
-					</section>
+					</div>
+					<script id="project-reel-data" type="application/json">
+						{
+							"projects": [
+								{
+									"title": "Bank API Platform",
+									"category": "Backend Engineering",
+									"images": [
+										{ "src": "images/BANKAPI.jpg", "alt": "Bank API project overview" },
+										{ "src": "images/intra.jpg", "alt": "Intranet integration and workflow screen" },
+										{ "src": "images/core.jpg", "alt": "Core module architecture diagram" }
+									]
+								},
+								{
+									"title": "Stanca Blog API",
+									"category": "API Architecture",
+									"images": [
+										{ "src": "images/StancaBlogApi.jpg", "alt": "Stanca Blog API interface and endpoint map" },
+										{ "src": "images/flow.jpg", "alt": "Request and data flow visualization" },
+										{ "src": "images/fabric.jpg", "alt": "Architecture and service composition view" }
+									]
+								},
+								{
+									"title": "Predictive Analytics",
+									"category": "Data Analytics",
+									"images": [
+										{ "src": "images/predict.jpg", "alt": "Predictive analytics dashboard" },
+										{ "src": "images/etl.jpg", "alt": "Data pipeline and ETL process view" },
+										{ "src": "images/py.jpg", "alt": "Python-based analytics workflow" }
+									]
+								}
+							],
+							"statements": [
+								"Vision into action",
+								"Insights with direction",
+								"From data to impact"
+							],
+							"caseTitles": [
+								"Analytics Platform Foundation",
+								"Requirements to Delivery",
+								"Decision Support at Scale"
+							]
+						}
+					</script>
 				</div>
 			</section>
 
-<!-- Section: section.wrapper -->
+	<!-- Section: section.wrapper -->
 			<section class="wrapper">
 <!-- Section: div.inner -->
 				<div class="inner">
@@ -304,10 +328,30 @@
 				</div>
 			</section>
 
-		</main>
+			</main>
 
-<!-- Section: footer#footer -->
-		<footer id="footer" class="no-form">
+			<div class="project-modal" data-project-modal="" hidden>
+				<div class="project-modal-backdrop" data-project-modal-close=""></div>
+				<div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabindex="-1">
+					<button type="button" class="project-modal-close" data-project-modal-close="" aria-label="Close project preview">×</button>
+					<div class="project-modal-media">
+						<button type="button" class="project-modal-nav prev" data-project-modal-prev="" aria-label="Previous image">‹</button>
+						<figure class="project-modal-frame">
+							<img src="images/skill.jpg" alt="Project preview image" data-project-modal-image="">
+						</figure>
+						<button type="button" class="project-modal-nav next" data-project-modal-next="" aria-label="Next image">›</button>
+					</div>
+					<div class="project-modal-content">
+						<p class="project-modal-meta">Selected Project</p>
+						<h3 id="project-modal-title">Project title</h3>
+						<p class="project-modal-description" data-project-modal-description=""></p>
+						<p class="project-modal-counter" data-project-modal-counter="" aria-live="polite"></p>
+					</div>
+				</div>
+			</div>
+
+	<!-- Section: footer#footer -->
+			<footer id="footer" class="no-form">
 <!-- Section: div.inner -->
 			<div class="inner">
 				<h2 class="section-title">Get in touch</h2>

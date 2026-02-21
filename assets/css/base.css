@@ -10,6 +10,8 @@
   --bg: #ffffff;
   --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
   --section-space: 83px;
+  --font-sans: "Avenir Next", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
 }
 
 /* Styles for * */
@@ -25,12 +27,16 @@ html, body {
 
 /* Styles for body */
 body {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.68;
+  letter-spacing: 0.01em;
   color: var(--ink);
   background: var(--bg);
   padding-top: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Styles for .skip-link */
@@ -54,6 +60,17 @@ body {
 /* Styles for p */
 p {
   margin: 0 0 1.25rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.65em 0;
+  font-family: var(--font-display);
+  letter-spacing: 0.012em;
+  line-height: 1.16;
+  color: var(--ink);
 }
 
 /* Styles for img */

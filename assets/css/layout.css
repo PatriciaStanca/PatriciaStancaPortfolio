@@ -20,12 +20,13 @@
 #header h1 {
   margin: 0;
   font-size: 0.85em;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   justify-self: start;
   grid-column: 1 / 2;
   line-height: 1;
+  font-family: var(--font-sans);
 }
 
 /* Styles for #header h1 a */
@@ -83,11 +84,13 @@
 
 /* Styles for #header nav.top-nav a */
 #header nav.top-nav a {
-  font-size: 0.85em;
-  font-weight: 600;
+  font-size: 0.86em;
+  font-weight: 650;
   color: var(--ink);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 1;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
 }
 
 /* Styles for #header nav.top-nav a:hover */
@@ -359,9 +362,12 @@ body.is-menu-visible #menu {
 /* Styles for .hero-name */
 .hero-name {
   font-size: clamp(2.2rem, 4vw, 3.5rem);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 0 0 0.25rem 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.04;
 }
 
 /* Styles for .hero-role */
@@ -369,8 +375,10 @@ body.is-menu-visible #menu {
   color: var(--slate);
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  font-size: 0.92rem;
+  font-weight: 650;
+  font-family: var(--font-sans);
 }
 
 /* Styles for .hero-image img */
@@ -403,16 +411,18 @@ body.is-menu-visible #menu {
 .page-lead {
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: #000000;
   font-size: 1.35rem;
+  font-family: var(--font-sans);
 }
 
 /* Styles for .intro-long */
 .intro-long {
   color: #000000;
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.86;
+  letter-spacing: 0.01em;
   max-width: 560px;
   text-align: left;
 }
@@ -457,7 +467,9 @@ body.is-menu-visible #menu {
   margin: 0 0 1.5rem 0;
   font-size: 1.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  font-weight: 750;
 }
 
 /* Styles for .page-title */
@@ -469,9 +481,11 @@ body.is-menu-visible #menu {
 .section-kicker {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  font-size: 0.88rem;
   color: var(--slate);
+  font-family: var(--font-sans);
+  font-weight: 650;
 }
 
 /* Styles for .section-divider, .highlights-divider */
