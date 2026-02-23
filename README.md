@@ -45,37 +45,49 @@ Current component files:
 - `assets/css/components/footer.css`
 - `assets/css/components/weather.css`
 
-## Requirements Checklist
+## Kurskrav enligt uppgift (Webbutv. Frontend)
 
-### Must Have (G)
-- [x] HTML/CSS/JS only
-- [x] Portrait image (`index.html` / `images/`)
-- [x] CV download/open button (`cv.html` + footer link)
-- [x] Navbar (all pages)
-- [x] Social links (footer)
-- [x] About Me section (`generic.html`)
-- [x] Skills section (`index.html`, `generic.html`)
-- [x] Portfolio section (`elements.html`)
-- [x] References/Testimonials section (`elements.html`)
-- [x] Contact form (Formspree)
+### Minimikrav på innehåll i portföljen
+- [x] Porträttbild
+- [x] Knapp/länk för CV (nedladdning/öppning)
+- [x] Navbar
+- [x] Länkar till sociala medier/GitHub
+- [x] About Me-sektion
+- [x] Kunskap/teknologier-sektion
+- [x] Portföljsektion med projekt
+- [x] Referenser/testimonials-sektion
+- [x] Kontaktformulär som skickar e-post
 - [x] Footer
-- [x] Flex/Grid used (`assets/css/layout.css`, `assets/css/components/*.css`)
 
-### Nice to Have (VG)
-- [x] Validation warnings + retry on invalid input (`assets/js/main.js`)
-- [x] UX/UI polish + responsive layout
-- [x] External weather API (Open‑Meteo)
-- [x] Responsive design
-- [x] Feature branches + many meaningful commits (workflow documented and used)
-- [x] Live demo links for every project (stable anchors on the live site)
+### Kravlista G (status i detta repo)
+1. (G) Appen ska testas ordentligt för att undvika oönskat beteende eller fel.  
+Status: Uppfylld med automatiska kontroller (`npm test`: lint + Playwright + Lighthouse) och manuell testning.
+2. (G) Det ska vara omöjligt för användaren att mata in felaktiga uppgifter.  
+Status: Delvis/bedömningsfråga. Starkt klientskydd finns (HTML5 constraints + JS-validering + felmeddelanden), men absolut garanti kräver servervalidering.
+4. (G) Koden ska fungera och applikationen ska gå att köra utan fel.  
+Status: Uppfylld i lokal körning och testpipeline.
+5. (G) Best practices, bra namn, DRY (särskilt relevant för t.ex. C# Razor Pages).  
+Status: Uppfylld för denna stack (HTML/CSS/JS), med modulär struktur och separerade komponentfiler.
+6. (G) README ska finnas och beskriva projektet samt metoder/principer.  
+Status: Uppfylld (`README.md`).
+7. (G) Använd `display: grid` eller `display: flex`.  
+Status: Uppfylld (används brett i `assets/css/layout.css` och `assets/css/components/*.css`).
 
-## VG Evidence
+### Kravlista VG (status i detta repo)
+9. (VG) Git commits och feature branches med relevanta meddelanden.  
+Status: Uppfylld. Exempelbranch: `chore/vg-proof-links-and-branch-workflow` med separata, meningsfulla commits.
+10. (VG) Vid felaktig inmatning visas relevanta varningar och användaren kan försöka igen.  
+Status: Uppfylld (`assets/js/modules/contact-form.js`).
+11. (VG) Samtliga miljöer ska vara användarvänliga och snygga (UX/UI).  
+Status: Uppfylld enligt egen implementation; slutbedömning görs av examinator.
+12. (VG) Professionell klass avseende genomförande, dokumentation och testning.  
+Status: Uppfylld enligt egen implementation; slutbedömning görs av examinator.
+13. (VG) Externt väder-API med temperatur i Celsius, plats och relevant info/ikon.  
+Status: Uppfylld (Open‑Meteo i kontaktsektionen).
+14. (VG) Portföljen ska vara responsiv för mobil och desktop.  
+Status: Uppfylld (media queries + flex/grid-layouts).
 
-### Feature Branch Workflow
-- Work is done in feature branch: `chore/vg-proof-links-and-branch-workflow`
-- Commits are split by purpose (HTML anchors, then documentation updates)
-
-### Live Demo URLs (All Projects)
+### VG-bevis: live-länkar till projekt
 - Needs‑Driven Analytics, Data Modeling & BI Architecture: `https://patriciastanca.com/elements.html#proj-needs-driven-analytics`
 - Analytics Platform Implementation: `https://patriciastanca.com/elements.html#proj-analytics-platform-implementation`
 - Energy Consumption Behavior Analytics: `https://patriciastanca.com/elements.html#proj-energy-consumption-behavior`
@@ -98,6 +110,11 @@ Current component files:
 - StancaBlogApi: `https://patriciastanca.com/elements.html#proj-stancablogapi`
 - StancaBankApi: `https://patriciastanca.com/elements.html#proj-stancabankapi`
 - blackjack.py: `https://patriciastanca.com/elements.html#proj-blackjack-py`
+
+### Redovisning och inlämning (från uppgiften)
+- Muntlig redovisning ca 5–10 minuter.
+- Länk till privat GitHub-repo lämnas in i skolportalen.
+- `RichardChalk` ska vara inbjuden som collaborator.
 
 ## Validation Notes
 - Input validation is client‑side only using HTML5 constraints + JS regex helpers.
