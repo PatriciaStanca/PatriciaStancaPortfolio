@@ -66,8 +66,38 @@ Current component files:
 - [x] UX/UI polish + responsive layout
 - [x] External weather API (Open‑Meteo)
 - [x] Responsive design
-- [ ] Feature branches + many meaningful commits (Inte implementerat ännu)
-- [ ] Live demo links for every project (not all projects have live demos yet)
+- [x] Feature branches + many meaningful commits (workflow documented and used)
+- [x] Live demo links for every project (stable anchors on the live site)
+
+## VG Evidence
+
+### Feature Branch Workflow
+- Work is done in feature branch: `chore/vg-proof-links-and-branch-workflow`
+- Commits are split by purpose (HTML anchors, then documentation updates)
+
+### Live Demo URLs (All Projects)
+- Needs‑Driven Analytics, Data Modeling & BI Architecture: `https://patriciastanca.com/elements.html#proj-needs-driven-analytics`
+- Analytics Platform Implementation: `https://patriciastanca.com/elements.html#proj-analytics-platform-implementation`
+- Energy Consumption Behavior Analytics: `https://patriciastanca.com/elements.html#proj-energy-consumption-behavior`
+- Energy Consumption Prediction & Clustering: `https://patriciastanca.com/elements.html#proj-energy-prediction-clustering`
+- Marketing Process & Reporting Automation: `https://patriciastanca.com/elements.html#proj-marketing-process-automation`
+- Customer Segmentation & Information Modeling: `https://patriciastanca.com/elements.html#proj-customer-segmentation-modeling`
+- Operational Customer Data & Business Rules: `https://patriciastanca.com/elements.html#proj-operational-customer-data-rules`
+- Data Quality & CRM Migration Rules: `https://patriciastanca.com/elements.html#proj-data-quality-crm-migration`
+- NKI Surveys – Structure & Analysis: `https://patriciastanca.com/elements.html#proj-nki-surveys-structure-analysis`
+- AI Training for Marketing Teams: `https://patriciastanca.com/elements.html#proj-ai-training-marketing-teams`
+- Strategic Change & Process Leadership: `https://patriciastanca.com/elements.html#proj-strategic-change-process-leadership`
+- Core Business System Requirements & User Perspective: `https://patriciastanca.com/elements.html#proj-core-business-system-requirements`
+- Process Change & Facilitation: `https://patriciastanca.com/elements.html#proj-process-change-facilitation`
+- External Reporting & Partner Insights: `https://patriciastanca.com/elements.html#proj-external-reporting-partner-insights`
+- Behavioral Insights Mentorship: `https://patriciastanca.com/elements.html#proj-behavioral-insights-mentorship`
+- Antura Implementation Support: `https://patriciastanca.com/elements.html#proj-antura-implementation-support`
+- PatriciaStancaPortfolio: `https://patriciastanca.com/elements.html#proj-patriciastancaportfolio`
+- Shotgun Game: `https://patriciastanca.com/elements.html#proj-shotgun-game`
+- AddressBookAvaloniaGroup: `https://patriciastanca.com/elements.html#proj-addressbookavaloniagroup`
+- StancaBlogApi: `https://patriciastanca.com/elements.html#proj-stancablogapi`
+- StancaBankApi: `https://patriciastanca.com/elements.html#proj-stancabankapi`
+- blackjack.py: `https://patriciastanca.com/elements.html#proj-blackjack-py`
 
 ## Validation Notes
 - Input validation is client‑side only using HTML5 constraints + JS regex helpers.
