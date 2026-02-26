@@ -1,12 +1,12 @@
-/* Education */
-/* Styles for .education-list */
+/* This section has styles for Education. */
+/* This styles .education-list so this part of the page looks right. */
 .education-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
-/* Styles for .education-group */
+/* This styles .education-group so this part of the page looks right. */
 .education-group {
   display: grid;
   grid-template-columns: 1fr;
@@ -19,7 +19,7 @@
   padding: 1rem 1.25rem;
 }
 
-/* Styles for .education-logo img */
+/* This styles .education-logo img so this part of the page looks right. */
 .education-logo img {
   width: 100%;
   height: 100%;
@@ -28,18 +28,18 @@
   display: block;
 }
 
-/* Styles for .education-items li */
+/* This styles .education-items li so this part of the page looks right. */
 .education-items li {
   margin-bottom: 0.4rem;
   color: var(--slate);
 }
 
-/* Styles for .education-items */
+/* This styles .education-items so this part of the page looks right. */
 .education-items {
   text-align: center;
 }
 
-/* Styles for .education-items a */
+/* This styles .education-items a so this part of the page looks right. */
 .education-items a {
   color: var(--teal);
   text-decoration: underline;
@@ -47,27 +47,27 @@
   text-underline-offset: 4px;
 }
 
-/* Styles for .education-items a::after */
+/* This styles .education-items a::after so this part of the page looks right. */
 .education-items a::after {
   content: "↗";
   margin-left: 0.35rem;
   font-size: 0.85em;
 }
 
-/* Styles for .education-items a:hover */
+/* This styles .education-items a:hover so this part of the page looks right. */
 .education-items a:hover {
   color: var(--teal-dark);
   text-decoration-color: var(--teal);
 }
 
-/* Styles for .education-items a:focus-visible */
+/* This styles .education-items a:focus-visible so this part of the page looks right. */
 .education-items a:focus-visible {
   outline: 2px solid rgba(15, 118, 110, 0.4);
   outline-offset: 2px;
   border-radius: 6px;
 }
 
-/* Styles for .education-logo */
+/* This styles .education-logo so this part of the page looks right. */
 .education-logo {
   width: 170px;
   height: 96px;
@@ -76,30 +76,30 @@
   padding: 6px;
 }
 
-/* Styles for .education-logo-tight */
+/* This styles .education-logo-tight so this part of the page looks right. */
 .education-logo-tight {
   width: 170px;
   height: 96px;
   padding: 6px;
 }
 
-/* Styles for .education-logo-tight img */
+/* This styles .education-logo-tight img so this part of the page looks right. */
 .education-logo-tight img {
   max-width: 120px;
   max-height: 68px;
 }
 
-/* Responsive: @media (max-width: 980px) { */
+/* This changes the layout on max-width: 980px screens. */
 @media (max-width: 980px) {
-/* Styles for .education-list */
+/* This styles .education-list so this part of the page looks right. */
   .education-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* Responsive: @media (max-width: 700px) { */
+/* This changes the layout on max-width: 700px screens. */
 @media (max-width: 700px) {
-/* Styles for .education-list */
+/* This styles .education-list so this part of the page looks right. */
   .education-list {
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -110,21 +110,21 @@
     scroll-snap-type: x mandatory;
   }
 
-/* Styles for .education-group */
+/* This styles .education-group so this part of the page looks right. */
   .education-group {
     scroll-snap-align: center;
   }
 }
 
-/* Language cards */
-/* Styles for .language-list */
+/* This section has styles for Language cards. */
+/* This styles .language-list so this part of the page looks right. */
 .language-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
-/* Styles for .language-card */
+/* This styles .language-card so this part of the page looks right. */
 .language-card {
   border: 1px solid #ffffff;
   border-radius: 16px;
@@ -134,25 +134,25 @@
   align-items: center;
 }
 
-/* Styles for .language-badge */
+/* This styles .language-badge so this part of the page looks right. */
 .language-badge {
   font-size: 1.6rem;
 }
 
-/* Styles for .language-info h3 */
+/* This styles .language-info h3 so this part of the page looks right. */
 .language-info h3 {
   margin: 0 0 0.25rem 0;
 }
 
-/* Styles for .language-info p */
+/* This styles .language-info p so this part of the page looks right. */
 .language-info p {
   margin: 0;
   color: var(--slate);
 }
 
-/* Responsive: @media (max-width: 700px) { */
+/* This changes the layout on max-width: 700px screens. */
 @media (max-width: 700px) {
-/* Styles for .language-list */
+/* This styles .language-list so this part of the page looks right. */
   .language-list {
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -163,7 +163,7 @@
     scroll-snap-type: x mandatory;
   }
 
-/* Styles for .language-card */
+/* This styles .language-card so this part of the page looks right. */
   .language-card {
     scroll-snap-align: center;
   }

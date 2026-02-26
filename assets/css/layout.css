@@ -1,6 +1,6 @@
-/* Layout: header, nav, wrappers, hero, structure */
-/* Header */
-/* Styles for .site-header */
+/* This section has styles for Layout: header, nav, wrappers, hero, structure. */
+/* This section has styles for Header. */
+/* This styles .site-header so this part of the page looks right. */
 .site-header {
   position: sticky;
   top: 0;
@@ -16,7 +16,7 @@
   background: #ffffff;
 }
 
-/* Styles for .site-header h1 */
+/* This styles .site-header h1 so this part of the page looks right. */
 .site-header h1 {
   margin: 0;
   font-size: 0.85em;
@@ -29,23 +29,23 @@
   font-family: var(--font-sans);
 }
 
-/* Styles for .site-header h1 a */
+/* This styles .site-header h1 a so this part of the page looks right. */
 .site-header h1 a {
   color: var(--ink);
 }
 
-/* Styles for .site-header.alt */
+/* This styles .site-header.alt so this part of the page looks right. */
 .site-header.alt {
   background-color: #ffffff;
 }
 
-/* Styles for .site-header.alt h1 */
+/* This styles .site-header.alt h1 so this part of the page looks right. */
 .site-header.alt h1 {
   opacity: 1;
   visibility: visible;
 }
 
-/* Styles for .site-header nav.top-nav */
+/* This styles .site-header nav.top-nav so this part of the page looks right. */
 .site-header nav.top-nav {
   position: static;
   transform: none;
@@ -59,7 +59,7 @@
   align-self: baseline;
 }
 
-/* Header actions (mobile icons) */
+/* This section has styles for Header actions (mobile icons). */
 .site-header .header-actions {
   grid-column: 3 / 4;
   justify-self: end;
@@ -69,12 +69,12 @@
   gap: 0.5rem;
 }
 
-/* Styles for .site-header nav.top-nav.is-dropdown-open */
+/* This styles .site-header nav.top-nav.is-dropdown-open so this part of the page looks right. */
 .site-header nav.top-nav.is-dropdown-open {
   gap: 0.75rem;
 }
 
-/* Styles for .site-header nav.top-nav ul, .site-header nav.top-nav .nav-row */
+/* This styles .site-header nav.top-nav ul, .site-header nav.top-nav .nav-row so this part of the page looks right. */
 .site-header nav.top-nav ul,
 .site-header nav.top-nav .nav-row {
   display: flex;
@@ -82,7 +82,7 @@
   align-items: baseline;
 }
 
-/* Styles for .site-header nav.top-nav a */
+/* This styles .site-header nav.top-nav a so this part of the page looks right. */
 .site-header nav.top-nav a {
   font-size: 0.86em;
   font-weight: 650;
@@ -93,17 +93,17 @@
   text-transform: uppercase;
 }
 
-/* Styles for .site-header nav.top-nav a:hover */
+/* This styles .site-header nav.top-nav a:hover so this part of the page looks right. */
 .site-header nav.top-nav a:hover {
   color: var(--teal);
 }
 
-/* Styles for .site-header nav.top-nav .has-dropdown */
+/* This styles .site-header nav.top-nav .has-dropdown so this part of the page looks right. */
 .site-header nav.top-nav .has-dropdown {
   position: relative;
 }
 
-/* Styles for .site-header nav.top-nav .nav-dropdown */
+/* This styles .site-header nav.top-nav .nav-dropdown so this part of the page looks right. */
 .site-header nav.top-nav .nav-dropdown {
   display: flex;
   flex-direction: column;
@@ -120,7 +120,7 @@
   transition: max-height 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Styles for .site-header nav.top-nav.is-dropdown-open .nav-dropdown */
+/* This styles .site-header nav.top-nav.is-dropdown-open .nav-dropdown so this part of the page looks right. */
 .site-header nav.top-nav.is-dropdown-open .nav-dropdown {
   max-height: 320px;
   opacity: 1;
@@ -129,13 +129,13 @@
   transform: translateY(0);
 }
 
-/* Styles for .site-header nav.top-nav .nav-dropdown a */
+/* This styles .site-header nav.top-nav .nav-dropdown a so this part of the page looks right. */
 .site-header nav.top-nav .nav-dropdown a {
   font-size: 0.85em;
   font-weight: 600;
 }
 
-/* Styles for .site-header .menu-toggle */
+/* This styles .site-header .menu-toggle so this part of the page looks right. */
 .site-header .menu-toggle {
   display: none;
   justify-self: end;
@@ -152,7 +152,7 @@
   font: inherit;
 }
 
-/* Styles for .site-header .menu-toggle::before, .site-header .menu-toggle::after, .site-header .menu-toggle span */
+/* This styles .site-header .menu-toggle::before, .site-header .menu-toggle::after, .site-header .menu-toggle span so this part of the page looks right. */
 .site-header .menu-toggle::before,
 .site-header .menu-toggle::after,
 .site-header .menu-toggle span {
@@ -165,49 +165,49 @@
   border-radius: 999px;
 }
 
-/* Styles for .site-header .menu-toggle::before */
+/* This styles .site-header .menu-toggle::before so this part of the page looks right. */
 .site-header .menu-toggle::before {
   top: 9px;
 }
 
-/* Styles for .site-header .menu-toggle span */
+/* This styles .site-header .menu-toggle span so this part of the page looks right. */
 .site-header .menu-toggle span {
   top: 16px;
 }
 
-/* Styles for .site-header .menu-toggle::after */
+/* This styles .site-header .menu-toggle::after so this part of the page looks right. */
 .site-header .menu-toggle::after {
   top: 23px;
 }
 
-/* Styles for body.is-menu-visible .site-header .menu-toggle::before, body.is-menu-visible .site-header .menu-toggle::after */
+/* This styles body.is-menu-visible .site-header .menu-toggle::before, body.is-menu-visible .site-header .menu-toggle::after so this part of the page looks right. */
 body.is-menu-visible .site-header .menu-toggle::before,
 body.is-menu-visible .site-header .menu-toggle::after {
   top: 16px;
 }
 
-/* Styles for body.is-menu-visible .site-header .menu-toggle::before */
+/* This styles body.is-menu-visible .site-header .menu-toggle::before so this part of the page looks right. */
 body.is-menu-visible .site-header .menu-toggle::before {
   transform: rotate(45deg);
 }
 
-/* Styles for body.is-menu-visible .site-header .menu-toggle::after */
+/* This styles body.is-menu-visible .site-header .menu-toggle::after so this part of the page looks right. */
 body.is-menu-visible .site-header .menu-toggle::after {
   transform: rotate(-45deg);
 }
 
-/* Styles for body.is-menu-visible .site-header .menu-toggle span */
+/* This styles body.is-menu-visible .site-header .menu-toggle span so this part of the page looks right. */
 body.is-menu-visible .site-header .menu-toggle span {
   opacity: 0;
 }
 
-/* Styles for .site-header .menu-toggle:hover */
+/* This styles .site-header .menu-toggle:hover so this part of the page looks right. */
 .site-header .menu-toggle:hover {
   color: var(--teal);
 }
 
-/* Mobile menu (hidden by default) */
-/* Styles for .mobile-menu */
+/* This section has styles for Mobile menu (hidden by default). */
+/* This styles .mobile-menu so this part of the page looks right. */
 .mobile-menu {
   position: relative;
   width: 100%;
@@ -223,7 +223,7 @@ body.is-menu-visible .site-header .menu-toggle span {
   grid-column: 1 / -1;
 }
 
-/* Styles for body.is-menu-visible .mobile-menu */
+/* This styles body.is-menu-visible .mobile-menu so this part of the page looks right. */
 body.is-menu-visible .mobile-menu {
   opacity: 1;
   transform: translateY(0);
@@ -231,24 +231,24 @@ body.is-menu-visible .mobile-menu {
   max-height: 320px;
 }
 
-/* Styles for .mobile-menu .inner */
+/* This styles .mobile-menu .inner so this part of the page looks right. */
 .mobile-menu .inner {
   width: 85%;
   margin: 0 auto;
   padding: 1.5rem 0 2rem;
 }
 
-/* Styles for .mobile-menu .links li + li */
+/* This styles .mobile-menu .links li + li so this part of the page looks right. */
 .mobile-menu .links li + li {
   margin-top: 0.75rem;
 }
 
-/* Styles for .mobile-menu .mobile-parent */
+/* This styles .mobile-menu .mobile-parent so this part of the page looks right. */
 .mobile-menu .mobile-parent {
   list-style: none;
 }
 
-/* Styles for .mobile-menu .mobile-parent-row */
+/* This styles .mobile-menu .mobile-parent-row so this part of the page looks right. */
 .mobile-menu .mobile-parent-row {
   display: flex;
   align-items: center;
@@ -256,18 +256,18 @@ body.is-menu-visible .mobile-menu {
   gap: 0.75rem;
 }
 
-/* Styles for .mobile-menu .mobile-parent-link */
+/* This styles .mobile-menu .mobile-parent-link so this part of the page looks right. */
 .mobile-menu .mobile-parent-link {
   color: var(--ink);
   font-weight: 600;
 }
 
-/* Styles for .mobile-menu .mobile-parent-link:hover */
+/* This styles .mobile-menu .mobile-parent-link:hover so this part of the page looks right. */
 .mobile-menu .mobile-parent-link:hover {
   color: var(--teal);
 }
 
-/* Styles for .mobile-menu .mobile-accordion */
+/* This styles .mobile-menu .mobile-accordion so this part of the page looks right. */
 .mobile-menu .mobile-accordion {
   background: none;
   border: 0;
@@ -282,7 +282,7 @@ body.is-menu-visible .mobile-menu {
   cursor: pointer;
 }
 
-/* Styles for .mobile-menu .mobile-accordion::after */
+/* This styles .mobile-menu .mobile-accordion::after so this part of the page looks right. */
 .mobile-menu .mobile-accordion::after {
   content: "›";
   transform: rotate(90deg);
@@ -291,12 +291,12 @@ body.is-menu-visible .mobile-menu {
   color: var(--teal);
 }
 
-/* Styles for .mobile-menu .mobile-accordion[aria-expanded="true"]::after */
+/* This styles .mobile-menu .mobile-accordion[aria-expanded="true"]::after so this part of the page looks right. */
 .mobile-menu .mobile-accordion[aria-expanded="true"]::after {
   transform: rotate(-90deg);
 }
 
-/* Styles for .mobile-menu .mobile-submenu */
+/* This styles .mobile-menu .mobile-submenu so this part of the page looks right. */
 .mobile-menu .mobile-submenu {
   list-style: none;
   margin: 0.5rem 0 0 0.75rem;
@@ -307,51 +307,51 @@ body.is-menu-visible .mobile-menu {
   transition: max-height 0.25s ease, opacity 0.2s ease;
 }
 
-/* Styles for .mobile-menu .mobile-submenu ul */
+/* This styles .mobile-menu .mobile-submenu ul so this part of the page looks right. */
 .mobile-menu .mobile-submenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Styles for .mobile-menu .mobile-submenu li + li */
+/* This styles .mobile-menu .mobile-submenu li + li so this part of the page looks right. */
 .mobile-menu .mobile-submenu li + li {
   margin-top: 0.5rem;
 }
 
-/* Styles for .mobile-menu .mobile-parent.is-open .mobile-submenu */
+/* This styles .mobile-menu .mobile-parent.is-open .mobile-submenu so this part of the page looks right. */
 .mobile-menu .mobile-parent.is-open .mobile-submenu {
   max-height: 200px;
   opacity: 1;
 }
 
 
-/* Wrappers */
-/* Styles for .wrapper */
+/* This section has styles for Wrappers. */
+/* This styles .wrapper so this part of the page looks right. */
 .wrapper {
   position: relative;
 }
 
-/* Styles for .wrapper > .inner */
+/* This styles .wrapper > .inner so this part of the page looks right. */
 .wrapper > .inner {
   width: 85%;
   margin: 0 auto;
   padding: var(--section-space) 0;
 }
 
-/* Styles for .inner */
+/* This styles .inner so this part of the page looks right. */
 .inner {
   width: 85%;
   margin: 0 auto;
 }
 
-/* Hero */
-/* Styles for .section-hero */
+/* This section has styles for Hero. */
+/* This styles .section-hero so this part of the page looks right. */
 .section-hero {
   padding-top: var(--section-space);
 }
 
-/* Styles for .hero-grid */
+/* This styles .hero-grid so this part of the page looks right. */
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -359,7 +359,7 @@ body.is-menu-visible .mobile-menu {
   align-items: center;
 }
 
-/* Styles for .hero-name */
+/* This styles .hero-name so this part of the page looks right. */
 .hero-name {
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   letter-spacing: 0.05em;
@@ -370,7 +370,7 @@ body.is-menu-visible .mobile-menu {
   line-height: 1.04;
 }
 
-/* Styles for .hero-role */
+/* This styles .hero-role so this part of the page looks right. */
 .hero-role {
   color: var(--slate);
   margin: 0;
@@ -381,33 +381,33 @@ body.is-menu-visible .mobile-menu {
   font-family: var(--font-sans);
 }
 
-/* Styles for .hero-image img */
+/* This styles .hero-image img so this part of the page looks right. */
 .hero-image img {
   border-radius: 14px;
   box-shadow: var(--shadow-soft);
 }
 
-/* Intro split */
-/* Styles for .intro-wrap */
+/* This section has styles for Intro split. */
+/* This styles .intro-wrap so this part of the page looks right. */
 .intro-wrap {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* Styles for .page-about .intro-wrap */
+/* This styles .page-about .intro-wrap so this part of the page looks right. */
 .page-about .intro-wrap {
   padding-top: 2.5rem;
   padding-bottom: 1rem;
 }
 
-/* Styles for .intro-split */
+/* This styles .intro-split so this part of the page looks right. */
 .intro-split {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 3.5rem;
 }
 
-/* Styles for .page-lead */
+/* This styles .page-lead so this part of the page looks right. */
 .page-lead {
   font-weight: 700;
   text-transform: uppercase;
@@ -417,7 +417,7 @@ body.is-menu-visible .mobile-menu {
   font-family: var(--font-sans);
 }
 
-/* Styles for .intro-long */
+/* This styles .intro-long so this part of the page looks right. */
 .intro-long {
   color: #000000;
   font-size: 1rem;
@@ -427,12 +427,12 @@ body.is-menu-visible .mobile-menu {
   text-align: left;
 }
 
-/* Styles for .page-about .intro-split > div:last-child */
+/* This styles .page-about .intro-split > div:last-child so this part of the page looks right. */
 .page-about .intro-split > div:last-child {
   justify-self: start;
 }
 
-/* Styles for .intro-cta */
+/* This styles .intro-cta so this part of the page looks right. */
 .intro-cta {
   display: inline-flex;
   align-items: center;
@@ -442,27 +442,27 @@ body.is-menu-visible .mobile-menu {
   color: var(--teal);
 }
 
-/* Styles for .intro-arrow */
+/* This styles .intro-arrow so this part of the page looks right. */
 .intro-arrow {
   display: inline-block;
   transition: transform 0.2s ease, color 0.2s ease;
   font-size: 1.3em;
 }
 
-/* Styles for .intro-cta:hover .intro-arrow */
+/* This styles .intro-cta:hover .intro-arrow so this part of the page looks right. */
 .intro-cta:hover .intro-arrow {
   transform: translateX(4px);
 }
 
-/* Styles for .intro-cta.inline-cta */
+/* This styles .intro-cta.inline-cta so this part of the page looks right. */
 .intro-cta.inline-cta {
   margin-top: 0;
   margin-left: 0.35rem;
   vertical-align: baseline;
 }
 
-/* Section titles */
-/* Styles for .section-title */
+/* This section has styles for Section titles. */
+/* This styles .section-title so this part of the page looks right. */
 .section-title {
   margin: 0 0 1.5rem 0;
   font-size: 1.6rem;
@@ -472,12 +472,12 @@ body.is-menu-visible .mobile-menu {
   font-weight: 750;
 }
 
-/* Styles for .page-title */
+/* This styles .page-title so this part of the page looks right. */
 .page-title {
   font-size: clamp(1.8rem, 2.3vw, 2.3rem);
 }
 
-/* Styles for .section-kicker */
+/* This styles .section-kicker so this part of the page looks right. */
 .section-kicker {
   margin: 0;
   text-transform: uppercase;
@@ -488,7 +488,7 @@ body.is-menu-visible .mobile-menu {
   font-weight: 650;
 }
 
-/* Styles for .section-divider, .highlights-divider */
+/* This styles .section-divider, .highlights-divider so this part of the page looks right. */
 .section-divider,
 .highlights-divider {
   border: 0;

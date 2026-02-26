@@ -1,5 +1,5 @@
-/* Contact hero */
-/* Styles for .contact-hero */
+/* This section has styles for Contact hero. */
+/* This styles .contact-hero so this part of the page looks right. */
 .contact-hero {
   background: linear-gradient(135deg, #0f766e 0%, #0b5f58 55%, #115e59 100%);
   padding: 2.75rem 0 3.1rem;
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-/* Styles for .contact-hero .inner */
+/* This styles .contact-hero .inner so this part of the page looks right. */
 body .site-main .contact-hero .inner {
   padding-top: 0;
   padding-bottom: 0;
@@ -15,7 +15,7 @@ body .site-main .contact-hero .inner {
   z-index: 1;
 }
 
-/* Styles for .contact-hero::after */
+/* This styles .contact-hero::after so this part of the page looks right. */
 .contact-hero::after {
   content: "";
   position: absolute;
@@ -28,7 +28,7 @@ body .site-main .contact-hero .inner {
   pointer-events: none;
 }
 
-/* Styles for .contact-hero-grid */
+/* This styles .contact-hero-grid so this part of the page looks right. */
 .contact-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
@@ -36,7 +36,7 @@ body .site-main .contact-hero .inner {
   align-items: start;
 }
 
-/* Styles for .contact-visual */
+/* This styles .contact-visual so this part of the page looks right. */
 .contact-visual {
   position: relative;
   display: grid;
@@ -47,7 +47,7 @@ body .site-main .contact-hero .inner {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Styles for .contact-visual::before, .contact-visual::after */
+/* This styles .contact-visual::before, .contact-visual::after so this part of the page looks right. */
 .contact-visual::before,
 .contact-visual::after {
   content: "";
@@ -57,7 +57,7 @@ body .site-main .contact-hero .inner {
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* Styles for .contact-visual::before */
+/* This styles .contact-visual::before so this part of the page looks right. */
 .contact-visual::before {
   width: 280px;
   height: 200px;
@@ -65,7 +65,7 @@ body .site-main .contact-hero .inner {
   left: -30px;
 }
 
-/* Styles for .contact-visual::after */
+/* This styles .contact-visual::after so this part of the page looks right. */
 .contact-visual::after {
   width: 220px;
   height: 220px;
@@ -74,7 +74,7 @@ body .site-main .contact-hero .inner {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Styles for .contact-visual img */
+/* This styles .contact-visual img so this part of the page looks right. */
 .contact-visual img {
   position: relative;
   z-index: 1;
@@ -84,14 +84,14 @@ body .site-main .contact-hero .inner {
   box-shadow: var(--shadow-soft);
 }
 
-/* Styles for .contact-content */
+/* This styles .contact-content so this part of the page looks right. */
 .contact-content {
   color: #ffffff;
   display: grid;
   gap: 0.6rem;
 }
 
-/* Styles for .contact-title */
+/* This styles .contact-title so this part of the page looks right. */
 .contact-title {
   font-size: clamp(1.7rem, 2.4vw, 2.2rem);
   margin: 0;
@@ -102,7 +102,7 @@ body .site-main .contact-hero .inner {
   font-family: var(--font-sans);
 }
 
-/* Styles for .contact-lead */
+/* This styles .contact-lead so this part of the page looks right. */
 .contact-lead {
   margin: 0;
   font-size: 0.95rem;
@@ -111,7 +111,7 @@ body .site-main .contact-hero .inner {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Styles for .contact-card */
+/* This styles .contact-card so this part of the page looks right. */
 .contact-card {
   background: #ffffff;
   border-radius: 18px;
@@ -120,22 +120,22 @@ body .site-main .contact-hero .inner {
   border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
-/* Styles for .contact-visual */
+/* This styles .contact-visual so this part of the page looks right. */
 .contact-visual {
   align-self: center;
 }
 
-/* Styles for .contact-card label */
+/* This styles .contact-card label so this part of the page looks right. */
 .contact-card label {
   color: #1f2937;
 }
 
-/* Styles for .contact-card .btn-primary */
+/* This styles .contact-card .btn-primary so this part of the page looks right. */
 .contact-card .btn-primary {
   margin-top: 0.5rem;
 }
 
-/* Styles for .form-consent */
+/* This styles .form-consent so this part of the page looks right. */
 .form-consent {
   display: flex;
   gap: 0.6rem;
@@ -143,7 +143,7 @@ body .site-main .contact-hero .inner {
   margin-top: 0.85rem;
 }
 
-/* Styles for .form-consent input[type="checkbox"] */
+/* This styles .form-consent input[type="checkbox"] so this part of the page looks right. */
 .form-consent input[type="checkbox"] {
   width: 16px;
   height: 16px;
@@ -151,14 +151,14 @@ body .site-main .contact-hero .inner {
   accent-color: var(--teal);
 }
 
-/* Styles for .form-consent label */
+/* This styles .form-consent label so this part of the page looks right. */
 .form-consent label {
   font-size: 0.85rem;
   line-height: 1.5;
   color: #1f2937;
 }
 
-/* Styles for .form-consent a */
+/* This styles .form-consent a so this part of the page looks right. */
 .form-consent a {
   color: var(--teal);
   text-decoration: underline;
@@ -166,12 +166,12 @@ body .site-main .contact-hero .inner {
   text-underline-offset: 2px;
 }
 
-/* Styles for .form-consent a:hover */
+/* This styles .form-consent a:hover so this part of the page looks right. */
 .form-consent a:hover {
   color: var(--teal-dark);
 }
 
-/* Styles for .contact-card input, .contact-card textarea, .contact-card select */
+/* This styles .contact-card input, .contact-card textarea, .contact-card select so this part of the page looks right. */
 .contact-card input,
 .contact-card textarea,
 .contact-card select {
@@ -180,82 +180,82 @@ body .site-main .contact-hero .inner {
   background: #f8fafc;
 }
 
-/* Styles for .contact-card label */
+/* This styles .contact-card label so this part of the page looks right. */
 .contact-card label {
   font-size: 0.82rem;
 }
 
-/* Styles for .form-row */
+/* This styles .form-row so this part of the page looks right. */
 .form-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
-/* Styles for .contact-form */
+/* This styles .contact-form so this part of the page looks right. */
 .contact-form {
   gap: 0.6rem;
 }
 
-/* Styles for .form-consent */
+/* This styles .form-consent so this part of the page looks right. */
 .form-consent {
   margin-top: 0.6rem;
 }
 
-/* Responsive: @media (max-width: 980px) { */
+/* This changes the layout on max-width: 980px screens. */
 @media (max-width: 980px) {
-/* Styles for .contact-hero-grid */
+/* This styles .contact-hero-grid so this part of the page looks right. */
   .contact-hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-/* Styles for .contact-content */
+/* This styles .contact-content so this part of the page looks right. */
   .contact-content {
     order: 1;
   }
 
-/* Styles for .contact-visual */
+/* This styles .contact-visual so this part of the page looks right. */
   .contact-visual {
     order: 2;
   }
 
-/* Styles for .contact-visual::before */
+/* This styles .contact-visual::before so this part of the page looks right. */
   .contact-visual::before {
     left: 5%;
   }
 
-/* Styles for .contact-visual::after */
+/* This styles .contact-visual::after so this part of the page looks right. */
   .contact-visual::after {
     left: 20%;
   }
 }
 
-/* Responsive: @media (max-width: 700px) { */
+/* This changes the layout on max-width: 700px screens. */
 @media (max-width: 700px) {
-/* Styles for .contact-hero */
+/* This styles .contact-hero so this part of the page looks right. */
   .contact-hero {
     padding: 3.5rem 0 4rem;
   }
 
-/* Styles for .contact-visual::before */
+/* This styles .contact-visual::before so this part of the page looks right. */
   .contact-visual::before {
     width: 240px;
     height: 170px;
   }
 
-/* Styles for .contact-visual::after */
+/* This styles .contact-visual::after so this part of the page looks right. */
   .contact-visual::after {
     width: 190px;
     height: 190px;
   }
 
-/* Styles for .contact-card */
+/* This styles .contact-card so this part of the page looks right. */
   .contact-card {
     padding: 1.3rem;
   }
 
-/* Styles for .form-row */
+/* This styles .form-row so this part of the page looks right. */
   .form-row {
     grid-template-columns: 1fr;
   }

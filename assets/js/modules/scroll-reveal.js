@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Scroll reveal (all pages)
+// This reveals sections as you scroll down the page.
 (function () {
   const selectors = [
     '.section-title',
@@ -58,7 +58,7 @@
     });
   });
 
-  // Stagger inside each skill card: icon -> title -> description -> chips
+  // Reveal order: icon, title, text, chips.
   const skillNodes = document.querySelectorAll('.skill-node');
   skillNodes.forEach((node) => {
     const sequence = [];

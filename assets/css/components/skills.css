@@ -1,5 +1,5 @@
-/* Skill flow */
-/* Styles for .skill-flow */
+/* This section has styles for Skill flow. */
+/* This styles .skill-flow so this part of the page looks right. */
 .skill-flow {
   display: flex;
   gap: 2rem;
@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-/* Styles for .skill-node */
+/* This styles .skill-node so this part of the page looks right. */
 .skill-node {
   background: #ffffff;
   border: 0;
@@ -20,7 +20,7 @@
   scroll-snap-align: start;
 }
 
-/* Styles for .skill-node-icon */
+/* This styles .skill-node-icon so this part of the page looks right. */
 .skill-node-icon {
   width: 44px;
   height: 44px;
@@ -30,14 +30,14 @@
   color: var(--teal);
 }
 
-/* Styles for .skill-node-icon svg */
+/* This styles .skill-node-icon svg so this part of the page looks right. */
 .skill-node-icon svg {
   width: 24px;
   height: 24px;
   stroke: currentColor;
 }
 
-/* Styles for .skill-node h3 */
+/* This styles .skill-node h3 so this part of the page looks right. */
 .skill-node h3 {
   margin: 0 0 0.75rem 0;
   font-size: 1rem;
@@ -46,7 +46,7 @@
   white-space: nowrap;
 }
 
-/* Styles for .skill-desc */
+/* This styles .skill-desc so this part of the page looks right. */
 .skill-desc {
   margin: -0.35rem 0 0.75rem 0;
   color: var(--slate);
@@ -54,14 +54,14 @@
   line-height: 1.4;
 }
 
-/* Styles for .skill-node-chips */
+/* This styles .skill-node-chips so this part of the page looks right. */
 .skill-node-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-/* Styles for .skill-node-chips span */
+/* This styles .skill-node-chips span so this part of the page looks right. */
 .skill-node-chips span {
   display: inline-flex;
   align-items: center;
@@ -73,38 +73,38 @@
   letter-spacing: 0.3px;
 }
 
-/* Skills: clean card look */
-/* Styles for .section-technical-skills .skill-node, .section-business-skills .skill-node */
+/* This section has styles for Skills: clean card look. */
+/* This styles .section-technical-skills .skill-node, .section-business-skills .skill-node so this part of the page looks right. */
 .section-technical-skills .skill-node,
 .section-business-skills .skill-node {
   background: transparent;
   padding: 0.75rem 0;
 }
 
-/* Styles for .section-technical-skills .skill-flow */
+/* This styles .section-technical-skills .skill-flow so this part of the page looks right. */
 .section-technical-skills .skill-flow {
   flex-direction: column;
   overflow: visible;
   scroll-snap-type: none;
 }
 
-/* Styles for .section-technical-skills .skill-node */
+/* This styles .section-technical-skills .skill-node so this part of the page looks right. */
 .section-technical-skills .skill-node {
   min-width: 0;
 }
 
-/* Styles for .section-business-skills .skill-flow */
+/* This styles .section-business-skills .skill-flow so this part of the page looks right. */
 .section-business-skills .skill-flow {
   flex-direction: column;
   overflow: visible;
   scroll-snap-type: none;
 }
 
-/* Styles for .section-business-skills .skill-node */
+/* This styles .section-business-skills .skill-node so this part of the page looks right. */
 .section-business-skills .skill-node {
   min-width: 0;
 }
-/* Styles for .section-technical-skills .skill-node-chips */
+/* This styles .section-technical-skills .skill-node-chips so this part of the page looks right. */
 .section-technical-skills .skill-node-chips {
   flex-direction: row;
   flex-wrap: wrap;

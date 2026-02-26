@@ -1,5 +1,5 @@
-/* CV page */
-/* Styles for .cv-embed */
+/* This section has styles for CV page. */
+/* This styles .cv-embed so this part of the page looks right. */
 .cv-embed {
   background: #ffffff;
   border-radius: 18px;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-/* Styles for .cv-actions */
+/* This styles .cv-actions so this part of the page looks right. */
 .cv-actions {
   display: flex;
   flex-wrap: wrap;
@@ -16,20 +16,20 @@
   margin-bottom: 1rem;
 }
 
-/* Styles for .cv-actions .cv-switch[aria-pressed="true"] */
+/* This styles .cv-actions .cv-switch[aria-pressed="true"] so this part of the page looks right. */
 .cv-actions .cv-switch[aria-pressed="true"] {
   background: var(--teal);
   color: #ffffff;
   border-color: var(--teal);
 }
 
-/* Styles for .cv-actions .cv-switch[aria-pressed="true"]:hover */
+/* This styles .cv-actions .cv-switch[aria-pressed="true"]:hover so this part of the page looks right. */
 .cv-actions .cv-switch[aria-pressed="true"]:hover {
   background: var(--teal-dark);
   border-color: var(--teal-dark);
 }
 
-/* Styles for .btn-secondary */
+/* This styles .btn-secondary so this part of the page looks right. */
 .btn-secondary {
   background: #ffffff;
   color: var(--teal);
@@ -41,12 +41,12 @@
   width: fit-content;
 }
 
-/* Styles for .btn-secondary:hover */
+/* This styles .btn-secondary:hover so this part of the page looks right. */
 .btn-secondary:hover {
   background: rgba(15, 118, 110, 0.08);
 }
 
-/* Styles for .cv-embed iframe */
+/* This styles .cv-embed iframe so this part of the page looks right. */
 .cv-embed iframe {
   display: block;
   width: 100%;
@@ -55,22 +55,22 @@
   border: 0;
 }
 
-/* Responsive: @media (max-width: 700px) { */
+/* This changes the layout on max-width: 700px screens. */
 @media (max-width: 700px) {
-/* Styles for .cv-embed iframe */
+/* This styles .cv-embed iframe so this part of the page looks right. */
   .cv-embed iframe {
     height: 60vh;
     min-height: 320px;
   }
 }
 
-/* Styles for .site-footer .inner */
+/* This styles .site-footer .inner so this part of the page looks right. */
 .site-footer .inner {
   position: relative;
   padding-top: 0.6rem;
 }
 
-/* Styles for .site-footer .section-title */
+/* This styles .site-footer .section-title so this part of the page looks right. */
 .site-footer .section-title {
   color: #ffffff;
   margin-top: 0.25rem;

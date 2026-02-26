@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Role cards slider (elements)
+// Moves role cards left or right.
 (function () {
   const track = document.getElementById('role-cards');
   if (!track) return;

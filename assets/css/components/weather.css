@@ -1,5 +1,5 @@
-/* Weather */
-/* Styles for .weather-card */
+/* This section has styles for Weather. */
+/* This styles .weather-card so this part of the page looks right. */
 .weather-card {
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@
   max-width: 420px;
 }
 
-/* Styles for .weather-icon */
+/* This styles .weather-icon so this part of the page looks right. */
 .weather-icon {
   width: 48px;
   height: 48px;
@@ -22,33 +22,33 @@
   color: var(--teal);
 }
 
-/* Styles for .weather-icon svg */
+/* This styles .weather-icon svg so this part of the page looks right. */
 .weather-icon svg {
   width: 26px;
   height: 26px;
 }
 
-/* Styles for .weather-temp */
+/* This styles .weather-temp so this part of the page looks right. */
 .weather-temp {
   margin: 0;
   font-size: 1.4rem;
   font-weight: 700;
 }
 
-/* Styles for .weather-meta */
+/* This styles .weather-meta so this part of the page looks right. */
 .weather-meta {
   margin: 0.15rem 0 0 0;
   color: var(--slate);
 }
 
-/* Styles for .weather-note */
+/* This styles .weather-note so this part of the page looks right. */
 .weather-note {
   margin-top: 0.6rem;
   color: var(--slate-light);
   font-size: 0.85rem;
 }
 
-/* Footer compact weather (contact page) */
+/* This section has styles for Footer compact weather (contact page). */
 .page-contact .weather-card-compact {
   padding: 0.6rem 0.75rem;
   gap: 0.6rem;

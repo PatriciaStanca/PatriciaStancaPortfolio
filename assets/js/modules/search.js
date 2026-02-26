@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Project search (site-wide)
+// This lets people search across the site.
 (function () {
   const searchRoot = document.querySelector('[data-search-root]');
   const overlay = document.querySelector('[data-search-overlay]');
@@ -210,7 +210,7 @@
           assignSearchIds(doc);
           items.push(...buildItemsFromRoot(doc, page.label, page.url));
         } catch (err) {
-          // ignore load errors; keep local results
+          // If a page fails, keep local search results.
         }
       })
     );

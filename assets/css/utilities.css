@@ -1,6 +1,6 @@
-/* Utilities: spacing tweaks, overrides, responsive */
-/* Overrides previously in overrides.css */
-/* Styles for section:not(.stats-wide):not(.summary-band), article, .wrapper:not(.stats-wide), .wrapper > .inner */
+/* This section has styles for Utilities: spacing tweaks, overrides, responsive. */
+/* This section has styles for Overrides previously in overrides.css. */
+/* This styles section:not(.stats-wide):not(.summary-band), article, .wrapper:not(.stats-wide), .wrapper > .inner so this part of the page looks right. */
 body .site-main section:not(.stats-wide):not(.summary-band),
 body .site-main .wrapper article,
 body .site-main .wrapper:not(.stats-wide),
@@ -11,13 +11,13 @@ body .site-main .wrapper > .inner {
   padding-bottom: 0;
 }
 
-/* Styles for .wrapper > .inner */
+/* This styles .wrapper > .inner so this part of the page looks right. */
 body .site-main .wrapper > .inner {
   padding-top: var(--section-space);
   padding-bottom: var(--section-space);
 }
 
-/* Scroll reveal (global) */
+/* This section has styles for Scroll reveal (global). */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -39,84 +39,84 @@ body .site-main .wrapper > .inner {
 }
 
 
-/* Styles for .site-footer .inner .copyright li */
+/* This styles .site-footer .inner .copyright li so this part of the page looks right. */
 .site-footer .inner .copyright li {
   border-left: 0;
 }
 
-/* Responsive */
-/* Responsive: @media screen and (max-width: 980px) { */
+/* This section has styles for Responsive. */
+/* This changes the layout on max-width: 980px screens. */
 @media screen and (max-width: 980px) {
-/* Styles for .hero-grid */
+/* This styles .hero-grid so this part of the page looks right. */
   .hero-grid {
     grid-template-columns: 1fr;
   }
 
-/* Styles for .key-achievements */
+/* This styles .key-achievements so this part of the page looks right. */
   .key-achievements {
     grid-auto-flow: column;
     grid-auto-columns: minmax(260px, 1fr);
     grid-template-columns: none;
   }
 
-/* Styles for .role-track */
+/* This styles .role-track so this part of the page looks right. */
   .role-track {
     grid-auto-columns: minmax(260px, 1fr);
   }
 
-/* Styles for .skill-flow */
+/* This styles .skill-flow so this part of the page looks right. */
   .skill-flow {
     justify-content: flex-start;
   }
 
-/* Styles for .highlights-grid */
+/* This styles .highlights-grid so this part of the page looks right. */
   .highlights-grid {
     grid-template-columns: 1fr;
   }
 
-/* Styles for .summary-grid */
+/* This styles .summary-grid so this part of the page looks right. */
   .summary-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
 
-/* Styles for .language-list */
+/* This styles .language-list so this part of the page looks right. */
   .language-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* Responsive: @media screen and (max-width: 736px) { */
+/* This changes the layout on max-width: 736px screens. */
 @media screen and (max-width: 736px) {
-/* Styles for body.is-menu-visible */
+/* This styles body.is-menu-visible so this part of the page looks right. */
   body.is-menu-visible {
     overflow: hidden;
   }
 
-/* Styles for body.is-menu-visible .site-main, body.is-menu-visible .site-footer */
+/* This styles body.is-menu-visible .site-main, body.is-menu-visible .site-footer so this part of the page looks right. */
   body.is-menu-visible .site-main,
   body.is-menu-visible .site-footer {
     visibility: hidden;
   }
 
-/* Styles for .site-header nav.top-nav */
+/* This styles .site-header nav.top-nav so this part of the page looks right. */
   .site-header nav.top-nav {
     display: none;
   }
 
-/* Styles for .site-header .menu-toggle */
+/* This styles .site-header .menu-toggle so this part of the page looks right. */
   .site-header .menu-toggle {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
   }
 
-/* Styles for .mobile-menu */
+/* This styles .mobile-menu so this part of the page looks right. */
   .mobile-menu {
     display: block;
   }
 
-/* Styles for .mobile-menu */
+/* This styles .mobile-menu so this part of the page looks right. */
   .mobile-menu {
     position: fixed;
     top: var(--header-height, 84px);
@@ -129,28 +129,28 @@ body .site-main .wrapper > .inner {
     transform: translateY(-8px);
   }
 
-/* Styles for body.is-menu-visible .mobile-menu */
+/* This styles body.is-menu-visible .mobile-menu so this part of the page looks right. */
   body.is-menu-visible .mobile-menu {
     max-height: none;
   }
 
-/* Styles for .intro-split */
+/* This styles .intro-split so this part of the page looks right. */
   .intro-split {
     grid-template-columns: 1fr;
   }
 
-/* Styles for .education-group */
+/* This styles .education-group so this part of the page looks right. */
   .education-group {
     grid-template-columns: 1fr;
   }
 
-/* Styles for .language-list */
+/* This styles .language-list so this part of the page looks right. */
   .language-list {
     grid-template-columns: 1fr;
   }
 }
 
-/* Print styles */
+/* This section has styles for Print styles. */
 @media print {
   body {
     background: #ffffff;

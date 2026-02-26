@@ -1,4 +1,4 @@
-// Vanilla JS: bootstrap and feature module initialization
+// This starts the site scripts when the page is ready.
 
 (function () {
   const onReady = (fn) => {
@@ -32,7 +32,7 @@
     const script = document.createElement('script');
     script.src = 'assets/js/vendor/lucide.min.js';
     script.defer = true;
-    script.onload = renderIcons;
+    script.addEventListener('load', renderIcons, { once: true });
     document.head.appendChild(script);
   };
 
@@ -44,7 +44,7 @@
       try {
         if (typeof initFn === 'function') initFn();
       } catch (err) {
-        // Keep other modules running even if one initializer fails.
+        // If one module fails, keep the others running.
       }
     });
 

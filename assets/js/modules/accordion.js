@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Accordion (elements)
+// Opens and closes accordion items.
 (function () {
   const triggers = Array.from(document.querySelectorAll('[data-accordion] .accordion-trigger'));
   if (!triggers.length) return;

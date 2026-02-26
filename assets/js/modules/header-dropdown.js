@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Header dropdown (open only on Experience hover/focus)
+// Opens and closes the Experience dropdown.
 (function () {
   const nav = document.querySelector('#header .top-nav');
   if (!nav) return;

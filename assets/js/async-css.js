@@ -1,4 +1,4 @@
-// Promote print-media async stylesheets to all-media without inline handlers.
+// This turns async CSS on after each file is loaded.
 (function () {
   const asyncLinks = document.querySelectorAll('link[data-async-css]');
   if (!asyncLinks.length) return;
@@ -16,7 +16,7 @@
 
     link.addEventListener('load', () => activate(link), { once: true });
 
-    // Fallback when load event is missed on cached resources.
+    // Backup: turn styles on after a short wait.
     window.setTimeout(() => activate(link), 2500);
   });
 })();

@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Testimonials slider (elements)
+// Moves testimonials left or right.
 (function () {
   const track = document.getElementById('testimonial-track');
   if (!track) return;

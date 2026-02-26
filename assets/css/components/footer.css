@@ -1,5 +1,5 @@
-/* Footer */
-/* Styles for .site-footer */
+/* This section has styles for Footer. */
+/* This styles .site-footer so this part of the page looks right. */
 .site-footer {
   background: var(--teal);
   color: #ffffff;
@@ -16,8 +16,8 @@
   font-family: var(--font-sans);
 }
 
-/* Footer grid */
-/* Styles for .footer-grid */
+/* This section has styles for Footer grid. */
+/* This styles .footer-grid so this part of the page looks right. */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, max-content);
@@ -32,17 +32,17 @@
   justify-content: start;
 }
 
-/* Contact page footer: reserve space for compact weather card */
+/* This section has styles for Contact page footer: reserve space for compact weather card. */
 .page-contact .site-footer .footer-grid {
   grid-template-columns: repeat(4, max-content) 1fr;
 }
 
-/* Contact page footer: weather alignment */
+/* This section has styles for Contact page footer: weather alignment. */
 .page-contact .site-footer .footer-weather {
   justify-self: end;
 }
 
-/* Styles for .footer-col */
+/* This styles .footer-col so this part of the page looks right. */
 .footer-col {
   display: grid;
   gap: 0.5rem;
@@ -50,18 +50,18 @@
   align-items: start;
 }
 
-/* Styles for .footer-item */
+/* This styles .footer-item so this part of the page looks right. */
 .footer-item {
   display: block;
   margin: 0;
 }
 
-/* Styles for .footer-item svg */
+/* This styles .footer-item svg so this part of the page looks right. */
 .footer-item svg {
   display: none;
 }
 
-/* Styles for .footer-title */
+/* This styles .footer-title so this part of the page looks right. */
 .footer-title {
   margin: 0 0 0.25rem 0;
   font-size: 0.7rem;
@@ -70,25 +70,25 @@
   color: #ffffff;
 }
 
-/* Styles for .site-footer p, .site-footer a */
+/* This styles .site-footer p, .site-footer a so this part of the page looks right. */
 .site-footer p,
 .site-footer a {
   font-size: 0.85rem;
   line-height: 1.7;
 }
 
-/* Styles for .site-footer a */
+/* This styles .site-footer a so this part of the page looks right. */
 .site-footer a {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* Styles for .site-footer a:hover */
+/* This styles .site-footer a:hover so this part of the page looks right. */
 .site-footer a:hover {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Styles for .footer-decor */
+/* This styles .footer-decor so this part of the page looks right. */
 .footer-decor {
   margin-top: 2.5rem;
   width: 100%;
@@ -96,20 +96,20 @@
   margin-right: 0;
 }
 
-/* Styles for .footer-wave */
+/* This styles .footer-wave so this part of the page looks right. */
 .footer-wave {
   width: 100%;
   height: 40px;
 }
 
-/* Styles for .footer-wave path */
+/* This styles .footer-wave path so this part of the page looks right. */
 .footer-wave path {
   fill: none;
   stroke: rgba(255, 255, 255, 0.18);
   stroke-width: 1.25;
 }
 
-/* Styles for .footer-icon-row */
+/* This styles .footer-icon-row so this part of the page looks right. */
 .footer-icon-row {
   display: flex;
   justify-content: space-between;
@@ -117,7 +117,7 @@
   padding: 0 1rem;
 }
 
-/* Styles for .footer-icon */
+/* This styles .footer-icon so this part of the page looks right. */
 .footer-icon {
   width: 20px;
   height: 20px;
@@ -127,13 +127,13 @@
   place-items: center;
 }
 
-/* Styles for .footer-icon svg */
+/* This styles .footer-icon svg so this part of the page looks right. */
 .footer-icon svg {
   stroke: rgba(255, 255, 255, 0.18);
   stroke-width: 1.25;
 }
 
-/* Styles for .site-footer .copyright */
+/* This styles .site-footer .copyright so this part of the page looks right. */
 .site-footer .copyright {
   display: flex;
   justify-content: space-between;
@@ -145,9 +145,9 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive: @media (max-width: 900px) { */
+/* This changes the layout on max-width: 900px screens. */
 @media (max-width: 900px) {
-/* Styles for .footer-grid */
+/* This styles .footer-grid so this part of the page looks right. */
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
@@ -158,9 +158,9 @@
   }
 }
 
-/* Responsive: @media (max-width: 600px) { */
+/* This changes the layout on max-width: 600px screens. */
 @media (max-width: 600px) {
-/* Styles for .footer-grid */
+/* This styles .footer-grid so this part of the page looks right. */
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -171,18 +171,18 @@
     grid-template-columns: 1fr;
   }
 
-/* Styles for .footer-col */
+/* This styles .footer-col so this part of the page looks right. */
   .footer-col {
     text-align: left;
     gap: 0.75rem;
   }
 
-/* Styles for .footer-decor */
+/* This styles .footer-decor so this part of the page looks right. */
   .footer-decor {
     display: none;
   }
 
-/* Styles for .site-footer .copyright */
+/* This styles .site-footer .copyright so this part of the page looks right. */
   .site-footer .copyright {
     flex-direction: column;
     gap: 0.75rem;
@@ -190,8 +190,8 @@
   }
 }
 
-/* Contact list icons (inline SVG) */
-/* Styles for .contact li */
+/* This section has styles for Contact list icons (inline SVG). */
+/* This styles .contact li so this part of the page looks right. */
 .contact li {
   display: flex;
   align-items: center;

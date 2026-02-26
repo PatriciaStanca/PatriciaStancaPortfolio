@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Weather widget (Open-Meteo, no API key)
+// Shows live weather.
 (function () {
   const weatherCard = document.querySelector('[data-weather], #weather .weather-card');
   if (!weatherCard) return;
@@ -11,7 +11,7 @@
 
   const setIcon = (code) => {
     if (!iconEl) return;
-    // Simple mapping for Open-Meteo weather codes
+    // Matches weather codes to icons.
     let name = 'cloud-sun';
     if ([0].includes(code)) name = 'sun';
     if ([1, 2].includes(code)) name = 'cloud-sun';
@@ -46,7 +46,7 @@
     }
   };
 
-  // Default: Gothenburg
+  // Starts with Gothenburg weather.
   fetchWeather(57.7089, 11.9746, 'Gothenburg, Sweden');
 })();
   });

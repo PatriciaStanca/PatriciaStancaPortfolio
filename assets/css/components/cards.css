@@ -1,5 +1,5 @@
-/* Key achievements */
-/* Styles for .key-achievements */
+/* This section has styles for Key achievements. */
+/* This styles .key-achievements so this part of the page looks right. */
 .key-achievements {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -8,12 +8,12 @@
   scroll-snap-type: x mandatory;
 }
 
-/* Styles for .key-achievements .key-card */
+/* This styles .key-achievements .key-card so this part of the page looks right. */
 .key-achievements .key-card {
   scroll-snap-align: start;
 }
 
-/* Styles for .key-card */
+/* This styles .key-card so this part of the page looks right. */
 .key-card {
   border: 0;
   border-radius: 16px;
@@ -23,7 +23,7 @@
   min-width: 260px;
 }
 
-/* Styles for .key-icon */
+/* This styles .key-icon so this part of the page looks right. */
 .key-icon {
   width: 52px;
   height: 52px;
@@ -35,20 +35,20 @@
   color: var(--teal);
 }
 
-/* Styles for .key-icon svg */
+/* This styles .key-icon svg so this part of the page looks right. */
 .key-icon svg {
   width: 26px;
   height: 26px;
   stroke: currentColor;
 }
 
-/* Styles for .key-title */
+/* This styles .key-title so this part of the page looks right. */
 .key-title {
   margin: 0 0 0.35rem 0;
   font-size: 1.1rem;
 }
 
-/* Styles for .key-kicker */
+/* This styles .key-kicker so this part of the page looks right. */
 .key-kicker {
   margin: 0 0 0.6rem 0;
   color: var(--teal);
@@ -56,27 +56,27 @@
   font-weight: 600;
 }
 
-/* Styles for .key-body */
+/* This styles .key-body so this part of the page looks right. */
 .key-body {
   margin: 0;
   color: #000000;
   font-size: 1rem;
 }
 
-/* Highlights */
-/* Styles for .highlights-wrap */
+/* This section has styles for Highlights. */
+/* This styles .highlights-wrap so this part of the page looks right. */
 .highlights-wrap {
   padding-top: 0;
 }
 
-/* Styles for .highlights-grid */
+/* This styles .highlights-grid so this part of the page looks right. */
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
 }
 
-/* Styles for .highlight-item */
+/* This styles .highlight-item so this part of the page looks right. */
 .highlight-item {
   border: 0;
   border-radius: 16px;
@@ -84,32 +84,32 @@
   background: #ffffff;
 }
 
-/* Styles for .highlight-link */
+/* This styles .highlight-link so this part of the page looks right. */
 .highlight-link {
   color: var(--ink);
   font-weight: 600;
 }
 
-/* Styles for .heading-arrow */
+/* This styles .heading-arrow so this part of the page looks right. */
 .heading-arrow {
   color: var(--teal);
   display: inline-block;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-/* Styles for .highlight-link:hover .heading-arrow */
+/* This styles .highlight-link:hover .heading-arrow so this part of the page looks right. */
 .highlight-link:hover .heading-arrow {
   transform: translateX(4px);
 }
 
-/* Stats summary (elements page) */
-/* Styles for .stats-wide */
+/* This section has styles for Stats summary (elements page). */
+/* This styles .stats-wide so this part of the page looks right. */
 .stats-wide {
   padding: 0;
 }
 
-/* Scroll reveal */
-/* Styles for .reveal */
+/* This section has styles for Scroll reveal. */
+/* This styles .reveal so this part of the page looks right. */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -117,15 +117,15 @@
   will-change: opacity, transform;
 }
 
-/* Styles for .reveal.is-visible */
+/* This styles .reveal.is-visible so this part of the page looks right. */
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Responsive: @media (prefers-reduced-motion: reduce) { */
+/* This changes the layout on prefers-reduced-motion: reduce screens. */
 @media (prefers-reduced-motion: reduce) {
-/* Styles for .reveal */
+/* This styles .reveal so this part of the page looks right. */
   .reveal {
     opacity: 1;
     transform: none;
@@ -133,7 +133,7 @@
   }
 }
 
-/* Styles for .summary-band */
+/* This styles .summary-band so this part of the page looks right. */
 .summary-band {
   background: var(--teal);
   padding: 4.5rem 0;
@@ -145,20 +145,20 @@
   color: #ffffff;
 }
 
-/* Styles for .summary-grid */
+/* This styles .summary-grid so this part of the page looks right. */
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(0.5rem, 1.5vw, 1.5rem);
 }
 
-/* Styles for .summary-band .summary-grid */
+/* This styles .summary-band .summary-grid so this part of the page looks right. */
 .summary-band .summary-grid {
   width: 85%;
   margin: 0 auto;
 }
 
-/* Styles for .summary-card */
+/* This styles .summary-card so this part of the page looks right. */
 .summary-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -168,81 +168,81 @@
   min-width: 0;
 }
 
-/* Styles for .summary-value */
+/* This styles .summary-value so this part of the page looks right. */
 .summary-value {
   font-size: clamp(1.05rem, 2.2vw, 1.5rem);
   font-weight: 700;
   display: block;
 }
 
-/* Styles for .summary-label */
+/* This styles .summary-label so this part of the page looks right. */
 .summary-label {
   color: rgba(255, 255, 255, 0.8);
   font-size: clamp(0.7rem, 1.6vw, 0.95rem);
 }
 
-/* Responsive: @media (max-width: 700px) { */
+/* This changes the layout on max-width: 700px screens. */
 @media (max-width: 700px) {
-/* Styles for .summary-band .summary-grid */
+/* This styles .summary-band .summary-grid so this part of the page looks right. */
   .summary-band .summary-grid {
     width: 100%;
   }
 }
 
-/* Responsive: @media (max-width: 600px) { */
+/* This changes the layout on max-width: 600px screens. */
 @media (max-width: 600px) {
-/* Styles for .summary-grid */
+/* This styles .summary-grid so this part of the page looks right. */
   .summary-band .summary-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.5rem;
   }
 
-/* Styles for .summary-card */
+/* This styles .summary-card so this part of the page looks right. */
   .summary-card {
     padding: 0.55rem 0.6rem;
     border-radius: 12px;
   }
 
-/* Styles for .summary-value */
+/* This styles .summary-value so this part of the page looks right. */
   .summary-value {
     font-size: 1rem;
   }
 
-/* Styles for .summary-label */
+/* This styles .summary-label so this part of the page looks right. */
   .summary-label {
     font-size: 0.68rem;
   }
 }
 
-/* Responsive: @media (max-width: 736px) { */
+/* This changes the layout on max-width: 736px screens. */
 @media (max-width: 736px) {
-/* Styles for .summary-band */
+/* This styles .summary-band so this part of the page looks right. */
   .summary-band {
     padding: 3rem 0;
   }
 
-/* Styles for .summary-band .summary-grid */
+/* This styles .summary-band .summary-grid so this part of the page looks right. */
   .summary-band .summary-grid {
     width: 92%;
   }
 
-/* Styles for .summary-card */
+/* This styles .summary-card so this part of the page looks right. */
   .summary-card {
     padding: 1rem;
   }
 
-/* Styles for .summary-value */
+/* This styles .summary-value so this part of the page looks right. */
   .summary-value {
     font-size: 1.4rem;
   }
 
-/* Styles for .summary-label */
+/* This styles .summary-label so this part of the page looks right. */
   .summary-label {
     font-size: 0.85rem;
   }
 }
 
-/* Styles for .stats-wide > .inner */
+/* This styles .stats-wide > .inner so this part of the page looks right. */
 .stats-wide > .inner {
   max-width: 100em;
 }

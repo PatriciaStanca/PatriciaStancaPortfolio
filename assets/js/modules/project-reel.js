@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Project reel (index): phone video + core value slides only
+// This plays the project reel scenes one by one.
 (function () {
   const reel = document.querySelector('[data-project-reel]');
   const track = document.querySelector('[data-project-reel-track]');
@@ -367,7 +367,7 @@
           video.load();
         }
 
-        video.onended = advanceFromPhone;
+        video.addEventListener('ended', advanceFromPhone, { once: true });
         const tryPlay = () => {
           const playPromise = video.play();
           if (playPromise && typeof playPromise.catch === 'function') {

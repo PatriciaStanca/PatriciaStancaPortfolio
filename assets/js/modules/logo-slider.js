@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Logo slider (index)
+// Moves logos left or right.
 (function () {
   const track = document.querySelector('.logo-track');
   const left = document.querySelector('.slider-btn.left');

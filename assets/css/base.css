@@ -1,5 +1,5 @@
-/* Base: variables, resets, typography, form basics */
-/* Styles for :root */
+/* This section has styles for Base: variables, resets, typography, form basics. */
+/* This styles :root so this part of the page looks right. */
 :root {
   --teal: #0F766E;
   --teal-dark: #0B5F58;
@@ -14,18 +14,18 @@
   --font-display: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
-/* Styles for * */
+/* This styles * so this part of the page looks right. */
 * {
   box-sizing: border-box;
 }
 
-/* Styles for html, body */
+/* This styles html, body so this part of the page looks right. */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* Styles for body */
+/* This styles body so this part of the page looks right. */
 body {
   font-family: var(--font-sans);
   font-size: 16px;
@@ -39,7 +39,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Styles for .skip-link */
+/* This styles .skip-link so this part of the page looks right. */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -52,12 +52,12 @@ body {
   z-index: 10001;
 }
 
-/* Styles for .skip-link:focus */
+/* This styles .skip-link:focus so this part of the page looks right. */
 .skip-link:focus {
   left: 0.75rem;
 }
 
-/* Styles for p */
+/* This styles p so this part of the page looks right. */
 p {
   margin: 0 0 1.25rem 0;
 }
@@ -73,25 +73,25 @@ h4 {
   color: var(--ink);
 }
 
-/* Styles for img */
+/* This styles img so this part of the page looks right. */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Styles for a */
+/* This styles a so this part of the page looks right. */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Styles for a:hover */
+/* This styles a:hover so this part of the page looks right. */
 a:hover {
   color: var(--teal);
 }
 
-/* Styles for a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible */
+/* This styles a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible so this part of the page looks right. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -101,14 +101,14 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* Styles for label */
+/* This styles label so this part of the page looks right. */
 label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
-/* Styles for input, textarea, select */
+/* This styles input, textarea, select so this part of the page looks right. */
 input,
 textarea,
 select {
@@ -120,7 +120,7 @@ select {
   font-size: 1rem;
 }
 
-/* Styles for input:focus, textarea:focus, select:focus */
+/* This styles input:focus, textarea:focus, select:focus so this part of the page looks right. */
 input:focus,
 textarea:focus,
 select:focus {
@@ -129,7 +129,7 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
 }
 
-/* Styles for input.is-invalid, textarea.is-invalid, select.is-invalid */
+/* This styles input.is-invalid, textarea.is-invalid, select.is-invalid so this part of the page looks right. */
 input.is-invalid,
 textarea.is-invalid,
 select.is-invalid {
@@ -137,42 +137,42 @@ select.is-invalid {
   box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
 }
 
-/* Styles for .form-error */
+/* This styles .form-error text so this part of the page looks right. */
 .form-error {
   color: #dc2626;
   font-size: 0.85rem;
   margin-top: 0.25rem;
 }
 
-/* Styles for .form-feedback */
+/* This styles .form-feedback message so this part of the page looks right. */
 .form-feedback {
   margin: 0.25rem 0 0 0;
   font-size: 0.9rem;
 }
 
-/* Styles for .form-feedback.is-success */
+/* This styles success feedback state so this part of the page looks right. */
 .form-feedback.is-success {
   color: #15803d;
 }
 
-/* Styles for .form-feedback.is-error */
+/* This styles error feedback state so this part of the page looks right. */
 .form-feedback.is-error {
   color: #dc2626;
 }
 
-/* Styles for textarea */
+/* This styles textarea so this part of the page looks right. */
 textarea {
   resize: vertical;
 }
 
-/* Styles for .contact-form */
+/* This styles .contact-form so this part of the page looks right. */
 .contact-form {
   display: grid;
   gap: 1rem;
   max-width: 620px;
 }
 
-/* Styles for .btn-primary */
+/* This styles .btn-primary so this part of the page looks right. */
 .btn-primary {
   background: var(--teal);
   color: #ffffff;
@@ -184,12 +184,12 @@ textarea {
   width: fit-content;
 }
 
-/* Styles for .btn-primary:hover */
+/* This styles .btn-primary:hover so this part of the page looks right. */
 .btn-primary:hover {
   background: var(--teal-dark);
 }
 
-/* Styles for ul */
+/* This styles ul so this part of the page looks right. */
 ul {
   margin: 0;
   padding: 0;

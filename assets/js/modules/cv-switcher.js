@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// CV embed switcher (cv.html)
+// Switches the CV file view.
 (function () {
   const embed = document.getElementById('cv-embed');
   const fallback = document.getElementById('cv-fallback');

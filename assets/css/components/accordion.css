@@ -1,10 +1,10 @@
-/* Projects accordion */
-/* Styles for .page-elements .section-projects .project-accordion */
+/* This section has styles for Projects accordion. */
+/* This styles .page-elements .section-projects .project-accordion so this part of the page looks right. */
 .page-elements .section-projects .project-accordion {
   margin-top: 1.5rem;
 }
 
-/* Styles for .project-accordion */
+/* This styles .project-accordion so this part of the page looks right. */
 .project-accordion {
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-/* Styles for .accordion-trigger */
+/* This styles .accordion-trigger so this part of the page looks right. */
 .accordion-trigger {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -27,25 +27,25 @@
   cursor: pointer;
 }
 
-/* Styles for .accordion-text */
+/* This styles .accordion-text so this part of the page looks right. */
 .accordion-text {
   display: grid;
   gap: 0.35rem;
   text-align: left;
 }
 
-/* Styles for .accordion-title */
+/* This styles .accordion-title so this part of the page looks right. */
 .accordion-title {
   font-weight: 600;
 }
 
-/* Styles for .accordion-meta */
+/* This styles .accordion-meta so this part of the page looks right. */
 .accordion-meta {
   color: var(--slate);
   font-size: 0.85rem;
 }
 
-/* Styles for .accordion-tag */
+/* This styles .accordion-tag so this part of the page looks right. */
 .accordion-tag {
   font-size: 0.75rem;
   background: rgba(15, 118, 110, 0.12);
@@ -55,7 +55,7 @@
   justify-self: end;
 }
 
-/* Styles for .accordion-arrow */
+/* This styles .accordion-arrow so this part of the page looks right. */
 .accordion-arrow {
   width: 14px;
   height: 14px;
@@ -66,24 +66,24 @@
   transition: transform 0.2s ease, stroke 0.2s ease;
 }
 
-/* Styles for .accordion-trigger[aria-expanded="true"] .accordion-arrow */
+/* This styles .accordion-trigger[aria-expanded="true"] .accordion-arrow so this part of the page looks right. */
 .accordion-trigger[aria-expanded="true"] .accordion-arrow {
   transform: rotate(90deg);
 }
 
-/* Styles for .accordion-trigger:hover .accordion-arrow */
+/* This styles .accordion-trigger:hover .accordion-arrow so this part of the page looks right. */
 .accordion-trigger:hover .accordion-arrow {
   transform: rotate(0deg) translateX(3px);
   stroke: var(--teal);
 }
 
-/* Styles for .accordion-panel */
+/* This styles .accordion-panel so this part of the page looks right. */
 .accordion-panel {
   padding: 1.2rem 1.4rem 1.6rem;
   border-top: 1px solid var(--border);
 }
 
-/* Styles for .accordion-content */
+/* This styles .accordion-content so this part of the page looks right. */
 .accordion-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -91,14 +91,14 @@
   align-items: center;
 }
 
-/* Styles for .accordion-content .image, .accordion-content .media */
+/* This styles .accordion-content .image, .accordion-content .media so this part of the page looks right. */
 .accordion-content .image,
 .accordion-content .media {
   display: block;
   margin: 0;
 }
 
-/* Styles for .accordion-content .image.left, .accordion-content .image.right, .accordion-content .media.left, .accordion-content .media.right */
+/* This styles .accordion-content .image.left, .accordion-content .image.right, .accordion-content .media.left, .accordion-content .media.right so this part of the page looks right. */
 .accordion-content .image.left,
 .accordion-content .image.right,
 .accordion-content .media.left,
@@ -106,7 +106,7 @@
   float: none;
 }
 
-/* Styles for .accordion-content .image img, .accordion-content .media video */
+/* This styles .accordion-content .image img, .accordion-content .media video so this part of the page looks right. */
 .accordion-content .image img,
 .accordion-content .media video,
 .accordion-content .project-video {
@@ -126,7 +126,7 @@
   font-style: italic;
 }
 
-/* Styles for .accordion-content .project-video */
+/* This styles .accordion-content .project-video so this part of the page looks right. */
 .accordion-content .project-video {
   max-height: none;
 }
@@ -147,20 +147,20 @@
   }
 }
 
-/* Styles for .accordion-content .image.right, .accordion-content .media.right */
+/* This styles .accordion-content .image.right, .accordion-content .media.right so this part of the page looks right. */
 .accordion-content .image.right,
 .accordion-content .media.right {
   order: 2;
 }
 
-/* Styles for .accordion-content .image.right + ul, .accordion-content .media.right + ul, .accordion-content .media.right + .project-text */
+/* This styles .accordion-content .image.right + ul, .accordion-content .media.right + ul, .accordion-content .media.right + .project-text so this part of the page looks right. */
 .accordion-content .image.right + ul,
 .accordion-content .media.right + ul,
 .accordion-content .media.right + .project-text {
   order: 1;
 }
 
-/* Styles for .accordion-content ul */
+/* This styles .accordion-content ul so this part of the page looks right. */
 .accordion-content ul {
   list-style: disc;
   padding-left: 1.2rem;
@@ -168,23 +168,23 @@
   margin: 0;
 }
 
-/* Styles for .accordion-content .project-text h4 */
+/* This styles .accordion-content .project-text h4 so this part of the page looks right. */
 .accordion-content .project-text h4 {
   margin: 0 0 0.6rem 0;
   font-size: 1.05rem;
 }
 
-/* Styles for .accordion-content .project-section */
+/* This styles .accordion-content .project-section so this part of the page looks right. */
 .accordion-content .project-section {
   margin-bottom: 0.85rem;
 }
 
-/* Styles for .accordion-content .project-section:last-child */
+/* This styles .accordion-content .project-section:last-child so this part of the page looks right. */
 .accordion-content .project-section:last-child {
   margin-bottom: 0;
 }
 
-/* Styles for .accordion-content .project-text .project-kicker */
+/* This styles .accordion-content .project-text .project-kicker so this part of the page looks right. */
 .accordion-content .project-text .project-kicker {
   margin: 0 0 0.35rem 0;
   font-size: 0.72rem;
@@ -194,24 +194,24 @@
   color: #0F766E;
 }
 
-/* Styles for .accordion-content .project-text p */
+/* This styles .accordion-content .project-text p so this part of the page looks right. */
 .accordion-content .project-text p {
   margin: 0 0 0.75rem 0;
   color: #000000;
 }
 
-/* Styles for .accordion-content .project-text p:last-child */
+/* This styles .accordion-content .project-text p:last-child so this part of the page looks right. */
 .accordion-content .project-text p:last-child {
   margin-bottom: 0;
 }
 
-/* Styles for .accordion-content .project-text a */
+/* This styles .accordion-content .project-text a so this part of the page looks right. */
 .accordion-content .project-text a {
   color: var(--teal);
   font-weight: 600;
 }
 
-/* Styles for .accordion-content .project-tools */
+/* This styles .accordion-content .project-tools so this part of the page looks right. */
 .accordion-content .project-tools {
   list-style: none;
   padding-left: 0;
@@ -222,7 +222,7 @@
   color: var(--slate);
 }
 
-/* Styles for .accordion-content .project-tools li */
+/* This styles .accordion-content .project-tools li so this part of the page looks right. */
 .accordion-content .project-tools li {
   padding: 0.25rem 0.55rem;
   background: rgba(15, 118, 110, 0.08);
@@ -232,14 +232,14 @@
   font-weight: 600;
 }
 
-/* Responsive: @media (max-width: 900px) { */
+/* This changes the layout on max-width: 900px screens. */
 @media (max-width: 900px) {
-/* Styles for .accordion-content */
+/* This styles .accordion-content so this part of the page looks right. */
   .accordion-content {
     grid-template-columns: 1fr;
   }
 
-/* Styles for .accordion-content .image, .accordion-content .media, .accordion-content ul, .accordion-content .project-text */
+/* This styles .accordion-content .image, .accordion-content .media, .accordion-content ul, .accordion-content .project-text so this part of the page looks right. */
   .accordion-content .image,
   .accordion-content .media,
   .accordion-content ul,
@@ -247,7 +247,7 @@
     order: initial;
   }
 
-/* Styles for .accordion-content .image.right + ul, .accordion-content .media.right + ul, .accordion-content .media.right + .project-text */
+/* This styles .accordion-content .image.right + ul, .accordion-content .media.right + ul, .accordion-content .media.right + .project-text so this part of the page looks right. */
   .accordion-content .image.right + ul,
   .accordion-content .media.right + ul,
   .accordion-content .media.right + .project-text {

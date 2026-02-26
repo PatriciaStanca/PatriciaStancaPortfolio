@@ -1,21 +1,21 @@
-/* Timeline */
-/* Styles for .timeline-section */
+/* This section has styles for Timeline. */
+/* This styles .timeline-section so this part of the page looks right. */
 .timeline-section {
   background: #0F766E;
   color: #ffffff;
 }
 
-/* Styles for .timeline-section .section-title */
+/* This styles .timeline-section .section-title so this part of the page looks right. */
 .timeline-section .section-title {
   color: #ffffff;
 }
 
-/* Styles for .timeline-stem */
+/* This styles .timeline-stem so this part of the page looks right. */
 .timeline-stem {
   position: relative;
 }
 
-/* Styles for .ts-row */
+/* This styles .ts-row so this part of the page looks right. */
 .ts-row {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -26,7 +26,7 @@
   --ts-stem: 50px;
 }
 
-/* Styles for .ts-line */
+/* This styles .ts-line so this part of the page looks right. */
 .ts-line {
   position: absolute;
   left: 0;
@@ -37,7 +37,7 @@
   z-index: 0;
 }
 
-/* Styles for .ts-item */
+/* This styles .ts-item so this part of the page looks right. */
 .ts-item {
   position: relative;
   display: grid;
@@ -48,21 +48,21 @@
   z-index: 1;
 }
 
-/* Styles for .ts-top */
+/* This styles .ts-top so this part of the page looks right. */
 .ts-top {
   align-self: end;
   padding-bottom: 0;
   position: relative;
 }
 
-/* Styles for .ts-bottom */
+/* This styles .ts-bottom so this part of the page looks right. */
 .ts-bottom {
   align-self: start;
   padding-top: 0;
   position: relative;
 }
 
-/* Styles for .ts-circle */
+/* This styles .ts-circle so this part of the page looks right. */
 .ts-circle {
   width: 70px;
   height: 70px;
@@ -77,7 +77,7 @@
   z-index: 2;
 }
 
-/* Styles for .ts-circle span */
+/* This styles .ts-circle span so this part of the page looks right. */
 .ts-circle span {
   position: relative;
   z-index: 1;
@@ -86,17 +86,17 @@
   background: transparent;
 }
 
-/* Styles for .ts-top:has(.ts-title) */
+/* This styles .ts-top:has(.ts-title) so this part of the page looks right. */
 .ts-top:has(.ts-title) {
   padding-bottom: var(--ts-stem);
 }
 
-/* Styles for .ts-bottom:has(.ts-title) */
+/* This styles .ts-bottom:has(.ts-title) so this part of the page looks right. */
 .ts-bottom:has(.ts-title) {
   padding-top: var(--ts-stem);
 }
 
-/* Styles for .ts-top:has(.ts-title)::after, .ts-bottom:has(.ts-title)::before */
+/* This styles .ts-top:has(.ts-title)::after, .ts-bottom:has(.ts-title)::before so this part of the page looks right. */
 .ts-top:has(.ts-title)::after,
 .ts-bottom:has(.ts-title)::before {
   content: "";
@@ -107,75 +107,75 @@
   transform: translateX(-50%);
 }
 
-/* Styles for .ts-top:has(.ts-title)::after */
+/* This styles .ts-top:has(.ts-title)::after so this part of the page looks right. */
 .ts-top:has(.ts-title)::after {
   bottom: 0;
   height: var(--ts-stem);
 }
 
-/* Styles for .ts-bottom:has(.ts-title)::before */
+/* This styles .ts-bottom:has(.ts-title)::before so this part of the page looks right. */
 .ts-bottom:has(.ts-title)::before {
   top: 0;
   height: var(--ts-stem);
 }
 
-/* Styles for .ts-title */
+/* This styles .ts-title so this part of the page looks right. */
 .ts-title {
   font-weight: 600;
 }
 
-/* Styles for .ts-meta */
+/* This styles .ts-meta so this part of the page looks right. */
 .ts-meta {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* Responsive: @media (max-width: 900px) { */
+/* This changes the layout on max-width: 900px screens. */
 @media (max-width: 900px) {
-/* Styles for .ts-row */
+/* This styles .ts-row so this part of the page looks right. */
   .ts-row {
     gap: 1rem;
     --ts-stem: 26px;
   }
 
-/* Styles for .ts-item */
+/* This styles .ts-item so this part of the page looks right. */
   .ts-item {
     min-height: 180px;
     grid-template-rows: 1fr 56px 1fr;
   }
 
-/* Styles for .ts-circle */
+/* This styles .ts-circle so this part of the page looks right. */
   .ts-circle {
     width: 56px;
     height: 56px;
     box-shadow: 0 0 0 9px rgba(255, 255, 255, 0.08);
   }
 
-/* Styles for .ts-title */
+/* This styles .ts-title so this part of the page looks right. */
   .ts-title {
     font-size: 0.95rem;
   }
 
-/* Styles for .ts-meta */
+/* This styles .ts-meta so this part of the page looks right. */
   .ts-meta {
     font-size: 0.8rem;
   }
 }
 
-/* Responsive: @media (max-width: 600px) { */
+/* This changes the layout on max-width: 600px screens. */
 @media (max-width: 600px) {
-/* Styles for .timeline-stem */
+/* This styles .timeline-stem so this part of the page looks right. */
   .timeline-stem {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-/* Styles for .timeline-section .inner */
+/* This styles .timeline-section .inner so this part of the page looks right. */
   .timeline-section .inner {
     width: 92%;
   }
 
-/* Styles for .ts-row */
+/* This styles .ts-row so this part of the page looks right. */
   .ts-row {
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -187,12 +187,12 @@
     min-width: 100%;
   }
 
-/* Styles for .ts-line */
+/* This styles .ts-line so this part of the page looks right. */
   .ts-line {
     display: none;
   }
 
-/* Styles for .ts-row::after */
+/* This styles .ts-row::after so this part of the page looks right. */
   .ts-row::after {
     content: "";
     position: absolute;
@@ -204,31 +204,31 @@
     z-index: 0;
   }
 
-/* Styles for .ts-item */
+/* This styles .ts-item so this part of the page looks right. */
   .ts-item {
     min-height: 155px;
     grid-template-rows: 1fr 48px 1fr;
     scroll-snap-align: center;
   }
 
-/* Styles for .timeline-stem */
+/* This styles .timeline-stem so this part of the page looks right. */
   .timeline-stem {
     scroll-snap-type: x mandatory;
   }
 
-/* Styles for .ts-circle */
+/* This styles .ts-circle so this part of the page looks right. */
   .ts-circle {
     width: 48px;
     height: 48px;
     box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.08);
   }
 
-/* Styles for .ts-title */
+/* This styles .ts-title so this part of the page looks right. */
   .ts-title {
     font-size: 0.9rem;
   }
 
-/* Styles for .ts-meta */
+/* This styles .ts-meta so this part of the page looks right. */
   .ts-meta {
     font-size: 0.75rem;
   }

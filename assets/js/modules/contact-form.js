@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Contact form validation (vanilla JS)
+// This checks contact form fields before sending.
 (function () {
   const form = document.querySelector('.contact-form');
   if (!form) return;
@@ -19,7 +19,7 @@
     return 'Please enter a valid value.';
   };
 
-  // Extra regex validation using Validators (if available)
+  // Extra checks with Validators.
   const validateWithRegex = (field) => {
     if (!window.Validators) return true;
     const value = field.value.trim();
@@ -80,7 +80,7 @@
       return;
     }
 
-    // If using Formspree, submit via fetch to avoid leaving the page.
+    // Sends with fetch when Formspree is on.
     if (!form.hasAttribute('data-formspree')) return;
     event.preventDefault();
     const formData = new FormData(form);

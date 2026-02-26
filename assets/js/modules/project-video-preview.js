@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Project video preview: show a preview frame, but play from the start.
+// Restarts preview videos from the beginning.
 (function () {
   const videos = document.querySelectorAll('.project-video');
   if (!videos.length) return;
