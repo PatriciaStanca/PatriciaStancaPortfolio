@@ -74,38 +74,38 @@
 }
 
 /* Skills: clean card look */
-/* Styles for #technical-skills .skill-node, #business-skills .skill-node */
-#technical-skills .skill-node,
-#business-skills .skill-node {
+/* Styles for .section-technical-skills .skill-node, .section-business-skills .skill-node */
+.section-technical-skills .skill-node,
+.section-business-skills .skill-node {
   background: transparent;
   padding: 0.75rem 0;
 }
 
-/* Styles for #technical-skills .skill-flow */
-#technical-skills .skill-flow {
+/* Styles for .section-technical-skills .skill-flow */
+.section-technical-skills .skill-flow {
   flex-direction: column;
   overflow: visible;
   scroll-snap-type: none;
 }
 
-/* Styles for #technical-skills .skill-node */
-#technical-skills .skill-node {
+/* Styles for .section-technical-skills .skill-node */
+.section-technical-skills .skill-node {
   min-width: 0;
 }
 
-/* Styles for #business-skills .skill-flow */
-#business-skills .skill-flow {
+/* Styles for .section-business-skills .skill-flow */
+.section-business-skills .skill-flow {
   flex-direction: column;
   overflow: visible;
   scroll-snap-type: none;
 }
 
-/* Styles for #business-skills .skill-node */
-#business-skills .skill-node {
+/* Styles for .section-business-skills .skill-node */
+.section-business-skills .skill-node {
   min-width: 0;
 }
-/* Styles for #technical-skills .skill-node-chips */
-#technical-skills .skill-node-chips {
+/* Styles for .section-technical-skills .skill-node-chips */
+.section-technical-skills .skill-node-chips {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;

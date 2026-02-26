@@ -105,7 +105,7 @@
 /* Stats summary (elements page) */
 /* Styles for .stats-wide */
 .stats-wide {
-  padding: 0 !important;
+  padding: 0;
 }
 
 /* Scroll reveal */
@@ -192,8 +192,8 @@
 /* Responsive: @media (max-width: 600px) { */
 @media (max-width: 600px) {
 /* Styles for .summary-grid */
-  .summary-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  .summary-band .summary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.5rem;
   }
 

@@ -1,5 +1,5 @@
 /* Project reel: cinematic sequence built from one anchor image */
-#project-reel {
+.section-project-reel {
   --brand-green: #0f766e;
   --green-dark: #0a3f39;
   --green-deep: #072b26;
@@ -20,7 +20,7 @@
     linear-gradient(155deg, var(--green-dark) 0%, #0c5f55 48%, var(--green-deep) 100%);
 }
 
-#project-reel .inner {
+.section-project-reel .inner {
   width: min(1180px, calc(100vw - clamp(1.5rem, 4vw, 4.5rem)));
   margin: 0 auto;
   padding: clamp(0.75rem, 1.2vw, 1.3rem) 0 clamp(1.2rem, 2.2vw, 2.2rem);
@@ -961,7 +961,7 @@
   font-weight: 700;
 }
 
-#project-modal-title {
+.project-modal-title {
   margin: 0 0 0.45rem 0;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
 }

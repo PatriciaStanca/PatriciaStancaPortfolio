@@ -63,14 +63,14 @@
   }
 }
 
-/* Styles for #footer .inner */
-#footer .inner {
+/* Styles for .site-footer .inner */
+.site-footer .inner {
   position: relative;
   padding-top: 0.6rem;
 }
 
-/* Styles for #footer .section-title */
-#footer .section-title {
+/* Styles for .site-footer .section-title */
+.site-footer .section-title {
   color: #ffffff;
   margin-top: 0.25rem;
   font-size: 1.35rem;
