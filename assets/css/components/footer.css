@@ -1,17 +1,17 @@
 /* Footer */
-/* Styles for #footer */
-#footer {
+/* Styles for .site-footer */
+.site-footer {
   background: var(--teal);
   color: #ffffff;
   padding-top: 0.75rem;
   font-family: var(--font-sans);
 }
 
-#footer .section-title,
-#footer h1,
-#footer h2,
-#footer h3,
-#footer h4 {
+.site-footer .section-title,
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4 {
   color: #ffffff;
   font-family: var(--font-sans);
 }
@@ -33,12 +33,12 @@
 }
 
 /* Contact page footer: reserve space for compact weather card */
-.page-contact #footer .footer-grid {
+.page-contact .site-footer .footer-grid {
   grid-template-columns: repeat(4, max-content) 1fr;
 }
 
 /* Contact page footer: weather alignment */
-.page-contact #footer .footer-weather {
+.page-contact .site-footer .footer-weather {
   justify-self: end;
 }
 
@@ -70,21 +70,21 @@
   color: #ffffff;
 }
 
-/* Styles for #footer p, #footer a */
-#footer p,
-#footer a {
+/* Styles for .site-footer p, .site-footer a */
+.site-footer p,
+.site-footer a {
   font-size: 0.85rem;
   line-height: 1.7;
 }
 
-/* Styles for #footer a */
-#footer a {
+/* Styles for .site-footer a */
+.site-footer a {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* Styles for #footer a:hover */
-#footer a:hover {
+/* Styles for .site-footer a:hover */
+.site-footer a:hover {
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -133,8 +133,8 @@
   stroke-width: 1.25;
 }
 
-/* Styles for #footer .copyright */
-#footer .copyright {
+/* Styles for .site-footer .copyright */
+.site-footer .copyright {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -142,7 +142,7 @@
   margin-top: 2rem;
   border-top: 0;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Responsive: @media (max-width: 900px) { */
@@ -153,7 +153,7 @@
     gap: 2rem;
   }
 
-  .page-contact #footer .footer-grid {
+  .page-contact .site-footer .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -167,7 +167,7 @@
     text-align: left;
   }
 
-  .page-contact #footer .footer-grid {
+  .page-contact .site-footer .footer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -182,8 +182,8 @@
     display: none;
   }
 
-/* Styles for #footer .copyright */
-  #footer .copyright {
+/* Styles for .site-footer .copyright */
+  .site-footer .copyright {
     flex-direction: column;
     gap: 0.75rem;
     text-align: left;

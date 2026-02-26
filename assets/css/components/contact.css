@@ -8,9 +8,9 @@
 }
 
 /* Styles for .contact-hero .inner */
-.contact-hero .inner {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+body .site-main .contact-hero .inner {
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
   z-index: 1;
 }

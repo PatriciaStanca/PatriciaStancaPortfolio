@@ -9,7 +9,7 @@
 
   const valueWords = ['Vision', 'Strategy', 'Implementation', 'Insight', 'Impact'];
   const scenePattern = ['phone', 'value', 'vision-detail', 'value', 'image-duo', 'value', 'implementation-detail', 'value', 'insight-detail', 'value', 'impact-detail'];
-  const phoneVideoSources = ['assets/videos/scroll.mp4', 'assets/videos/skroll.mp4'];
+  const phoneVideoSources = ['assets/videos/skroll.mp4'];
   const visionDetailImage = 'images/shahid-mehmood-0KgJaDiOS7c-unsplash.jpg';
   const imageDuoLeft = 'images/fabric.jpg';
   const implementationTopImage = 'images/BANKAPI.jpg';
@@ -153,15 +153,7 @@
       };
 
       video.addEventListener('loadeddata', tryPlay, { once: true });
-      video.addEventListener('error', () => {
-        if (video.dataset.fallbackApplied === 'true') return;
-        video.dataset.fallbackApplied = 'true';
-        if (phoneVideoSources[1]) {
-          video.src = phoneVideoSources[1];
-          video.load();
-          tryPlay();
-        }
-      });
+      video.addEventListener('error', () => {});
 
       const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       icon.setAttribute('viewBox', '0 0 24 24');
