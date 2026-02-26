@@ -136,23 +136,13 @@
       video.className = 'project-reel-phone-video';
       video.controls = false;
       video.muted = true;
-      video.autoplay = true;
       video.loop = false;
       video.playsInline = true;
-      video.preload = 'metadata';
+      video.preload = 'none';
       video.setAttribute('aria-label', 'Screen recording showing live product scroll');
       video.setAttribute('disablepictureinpicture', '');
       video.setAttribute('controlslist', 'nodownload noplaybackrate noremoteplayback');
-      video.src = phoneVideoSources[0];
-
-      const tryPlay = () => {
-        const playPromise = video.play();
-        if (playPromise && typeof playPromise.catch === 'function') {
-          playPromise.catch(() => {});
-        }
-      };
-
-      video.addEventListener('loadeddata', tryPlay, { once: true });
+      video.dataset.src = phoneVideoSources[0];
       video.addEventListener('error', () => {});
 
       const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -372,10 +362,23 @@
       };
 
       if (video) {
+        if (video.dataset.src && !video.getAttribute('src')) {
+          video.src = video.dataset.src;
+          video.load();
+        }
+
         video.onended = advanceFromPhone;
-        const playPromise = video.play();
-        if (playPromise && typeof playPromise.catch === 'function') {
-          playPromise.catch(() => {});
+        const tryPlay = () => {
+          const playPromise = video.play();
+          if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch(() => {});
+          }
+        };
+
+        if (video.readyState >= 2) {
+          tryPlay();
+        } else {
+          video.addEventListener('loadeddata', tryPlay, { once: true });
         }
       }
 

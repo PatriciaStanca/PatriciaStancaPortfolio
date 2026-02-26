@@ -21,7 +21,12 @@
     button.addEventListener('click', () => {
       const pdf = button.getAttribute('data-cv');
       if (!pdf) return;
-      embed.setAttribute('data', pdf);
+      const tagName = embed.tagName.toLowerCase();
+      if (tagName === 'iframe') {
+        embed.setAttribute('src', pdf);
+      } else {
+        embed.setAttribute('data', pdf);
+      }
       if (fallback) fallback.setAttribute('href', pdf);
       setActive(button);
     });

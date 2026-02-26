@@ -18,19 +18,38 @@
 		<meta name="twitter:description" content="Portfolio of Patricia Stanca, a data analyst focused on business intelligence, analytics, and automation. Explore projects, experience, and ways to connect.">
 		<meta name="twitter:image" content="https://patriciastanca.com/images/psp.jpg">
 		<meta name="theme-color" content="#0F766E">
+		<link rel="icon" href="/favicon.ico" sizes="any">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
-		<link rel="preload" href="https://patriciastanca.com/images/skill.jpg" as="image">
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
+		<link rel="preload" as="image" href="images/skill-1000.jpg" imagesrcset="images/skill-600.jpg 600w, images/skill-1000.jpg 1000w" imagesizes="(max-width: 980px) 92vw, 700px" fetchpriority="high">
 		<link rel="stylesheet" href="assets/css/base.css">
-			<link rel="stylesheet" href="assets/css/layout.css">
+		<link rel="stylesheet" href="assets/css/layout.css">
+		<link rel="preload" href="assets/css/components/cards.css" as="style">
+		<link rel="stylesheet" href="assets/css/components/cards.css" media="print" onload="this.media='all'">
+		<link rel="preload" href="assets/css/components/project-reel.css" as="style">
+		<link rel="stylesheet" href="assets/css/components/project-reel.css" media="print" onload="this.media='all'">
+		<link rel="preload" href="assets/css/components/sliders.css" as="style">
+		<link rel="stylesheet" href="assets/css/components/sliders.css" media="print" onload="this.media='all'">
+		<link rel="preload" href="assets/css/components/search.css" as="style">
+		<link rel="stylesheet" href="assets/css/components/search.css" media="print" onload="this.media='all'">
+		<link rel="preload" href="assets/css/components/skills.css" as="style">
+		<link rel="stylesheet" href="assets/css/components/skills.css" media="print" onload="this.media='all'">
+		<link rel="preload" href="assets/css/components/footer.css" as="style">
+		<link rel="stylesheet" href="assets/css/components/footer.css" media="print" onload="this.media='all'">
+		<link rel="preload" href="assets/css/utilities.css" as="style">
+		<link rel="stylesheet" href="assets/css/utilities.css" media="print" onload="this.media='all'">
+		<noscript>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
 			<link rel="stylesheet" href="assets/css/components/cards.css">
 			<link rel="stylesheet" href="assets/css/components/project-reel.css">
 			<link rel="stylesheet" href="assets/css/components/sliders.css">
-		<link rel="stylesheet" href="assets/css/components/search.css">
-		<link rel="stylesheet" href="assets/css/components/skills.css">
-		<link rel="stylesheet" href="assets/css/components/footer.css">
-		<link rel="stylesheet" href="assets/css/utilities.css">
+			<link rel="stylesheet" href="assets/css/components/search.css">
+			<link rel="stylesheet" href="assets/css/components/skills.css">
+			<link rel="stylesheet" href="assets/css/components/footer.css">
+			<link rel="stylesheet" href="assets/css/utilities.css">
+		</noscript>
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -166,7 +185,7 @@
 					</div>
 <!-- Section: div.hero-image -->
 					<div class="hero-image">
-						<img src="images/skill.jpg" alt="Patricia Stanca" width="2292" height="1152" decoding="async" loading="eager" fetchpriority="high">
+						<img src="images/skill-1000.jpg" srcset="images/skill-600.jpg 600w, images/skill-1000.jpg 1000w" sizes="(max-width: 980px) 92vw, 700px" alt="Patricia Stanca" width="1000" height="502" decoding="async" loading="eager" fetchpriority="high">
 					</div>
 				</div>
 			</section>
@@ -317,11 +336,11 @@
 						<button class="slider-btn left" type="button" aria-label="Scroll left">‹</button>
 <!-- Section: div.logo-track -->
 						<div class="logo-track" role="region" aria-label="Client logos">
-							<img src="images/GE_Logo_RGB.jpg" alt="Göteborg Energi" width="2500" height="397"  decoding="async" loading="lazy">
-							<img src="images/Boplats.jpg" alt="Boplats Väst" width="556" height="202"  decoding="async" loading="lazy">
-							<img src="images/askanalytics_logo.jpg" alt="ASK Analytics" width="402" height="177"  decoding="async" loading="lazy">
-							<img src="images/poolia.jpg" alt="Poolia" width="820" height="173"  decoding="async" loading="lazy">
-							<img src="images/aw.jpg" alt="AW" width="1080" height="1080"  decoding="async" loading="lazy">
+							<img src="images/GE_Logo_RGB-520.jpg" alt="Göteborg Energi" width="520" height="82"  decoding="async" loading="lazy">
+							<img src="images/Boplats-520.jpg" alt="Boplats Väst" width="520" height="189"  decoding="async" loading="lazy">
+							<img src="images/askanalytics_logo-402.jpg" alt="ASK Analytics" width="402" height="177"  decoding="async" loading="lazy">
+							<img src="images/poolia-520.jpg" alt="Poolia" width="520" height="109"  decoding="async" loading="lazy">
+							<img src="images/aw-520.jpg" alt="AW" width="520" height="520"  decoding="async" loading="lazy">
 						</div>
 						<button class="slider-btn right" type="button" aria-label="Scroll right">›</button>
 					</div>
@@ -337,7 +356,7 @@
 					<div class="project-modal-media">
 						<button type="button" class="project-modal-nav prev" data-project-modal-prev="" aria-label="Previous image">‹</button>
 						<figure class="project-modal-frame">
-							<img src="images/skill.jpg" alt="Project preview image" data-project-modal-image="">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="Project preview image" data-project-modal-image="">
 						</figure>
 						<button type="button" class="project-modal-nav next" data-project-modal-next="" aria-label="Next image">›</button>
 					</div>
@@ -406,20 +425,12 @@
 		<!-- Scripts -->
 
 
-				<script src="assets/js/modules/weather.js"></script>
-				<script src="assets/js/modules/contact-form.js"></script>
-				<script src="assets/js/modules/mobile-menu.js"></script>
-				<script src="assets/js/modules/logo-slider.js"></script>
-				<script src="assets/js/modules/accordion.js"></script>
-				<script src="assets/js/modules/search.js"></script>
-				<script src="assets/js/modules/header-dropdown.js"></script>
-				<script src="assets/js/modules/role-slider.js"></script>
-				<script src="assets/js/modules/testimonial-slider.js"></script>
-				<script src="assets/js/modules/project-video-preview.js"></script>
-				<script src="assets/js/modules/project-reel.js"></script>
-				<script src="assets/js/modules/scroll-reveal.js"></script>
-				<script src="assets/js/modules/cv-switcher.js"></script>
-				<script src="assets/js/main.js"></script>
-				<script src="assets/js/vendor/lucide.min.js"></script>
+				<script src="assets/js/modules/mobile-menu.js" defer></script>
+				<script src="assets/js/modules/logo-slider.js" defer></script>
+				<script src="assets/js/modules/search.js" defer></script>
+				<script src="assets/js/modules/header-dropdown.js" defer></script>
+				<script src="assets/js/modules/project-reel.js" defer></script>
+				<script src="assets/js/modules/scroll-reveal.js" defer></script>
+				<script src="assets/js/main.js" defer></script>
 	</body>
 </html>
