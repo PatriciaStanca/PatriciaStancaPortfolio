@@ -1,7 +1,7 @@
 .DS_Store
-review_pdfs/
 node_modules/
-test-results/
+dev/review_pdfs/
+dev/test-results/
 /.lighthouseci/
 playwright-report/
 npm-debug.log*

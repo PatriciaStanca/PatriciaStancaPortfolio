@@ -27,9 +27,10 @@ A multi‑page, responsive developer portfolio built with vanilla HTML, CSS, and
 ## Where Things Live
 - **CSS:** `assets/css/`
 - **JS:** `assets/js/`
-- **Images:** `images/`
-- **Video:** `assets/videos/`
+- **Images:** `assets/media/images/`
+- **Video:** `assets/media/videos/`
 - **CV PDFs:** `assets/docs/`
+- **Dev artifacts:** `dev/review_pdfs/`, `dev/test-results/`
 
 ### CSS Structure Note
 `assets/css/components.css` was split into smaller files under `assets/css/components/` for easier maintenance.

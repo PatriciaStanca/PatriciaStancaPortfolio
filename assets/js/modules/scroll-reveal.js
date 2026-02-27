@@ -88,6 +88,12 @@
     el.style.transitionDelay = `${delay}ms`;
   });
 
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  const initiallyVisible = (el) => {
+    const rect = el.getBoundingClientRect();
+    return rect.bottom > 0 && rect.top < viewportHeight * 0.9;
+  };
+
   const observer = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
@@ -99,7 +105,14 @@
     { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
   );
 
-  elements.forEach((el) => observer.observe(el));
+  elements.forEach((el) => {
+    if (initiallyVisible(el)) {
+      el.style.transitionDelay = '0ms';
+      el.classList.add('is-visible');
+      return;
+    }
+    observer.observe(el);
+  });
 })();
   });
 })();

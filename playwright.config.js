@@ -6,6 +6,7 @@ const useWebServer = !baseURL.startsWith('file://');
 
 module.exports = defineConfig({
   testDir: './tests',
+  outputDir: 'dev/test-results',
   timeout: 30000,
   retries: 0,
   use: {

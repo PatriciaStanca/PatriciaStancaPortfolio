@@ -10,8 +10,8 @@
   --bg: #ffffff;
   --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
   --section-space: 83px;
-  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-display: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 /* This styles * so this part of the page looks right. */

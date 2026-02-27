@@ -9,15 +9,15 @@
 
   const valueWords = ['Vision', 'Strategy', 'Implementation', 'Insight', 'Impact'];
   const scenePattern = ['phone', 'value', 'vision-detail', 'value', 'image-duo', 'value', 'implementation-detail', 'value', 'insight-detail', 'value', 'impact-detail'];
-  const phoneVideoSources = ['assets/videos/skroll.mp4'];
-  const visionDetailImage = 'images/shahid-mehmood-0KgJaDiOS7c-unsplash.jpg';
-  const imageDuoLeft = 'images/fabric.jpg';
-  const implementationTopImage = 'images/BANKAPI.jpg';
-  const implementationBottomImage = 'images/StancaBlogApi.jpg';
-  const implementationRightImage = 'images/core.jpg';
-  const insightLeftImage = 'images/etl.jpg';
-  const insightRightImage = 'images/predict.jpg';
-  const impactImage = 'images/py.jpg';
+  const phoneVideoSources = ['assets/media/videos/skroll.mp4'];
+  const visionDetailImage = 'assets/media/images/shahid-mehmood-0KgJaDiOS7c-unsplash.jpg';
+  const imageDuoLeft = 'assets/media/images/fabric.jpg';
+  const implementationTopImage = 'assets/media/images/BANKAPI.jpg';
+  const implementationBottomImage = 'assets/media/images/StancaBlogApi.jpg';
+  const implementationRightImage = 'assets/media/images/core.jpg';
+  const insightLeftImage = 'assets/media/images/etl.jpg';
+  const insightRightImage = 'assets/media/images/predict.jpg';
+  const impactImage = 'assets/media/images/py.jpg';
   const prefersReducedMotion = window.matchMedia
     && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
