@@ -22,16 +22,20 @@
     const suggestions = ['Fabric', 'Power BI', 'Boplats', 'Gothenburg Energi', 'ML', 'Automation'];
     const defaultGuidance = 'Start typing to search the page.';
     const pageConfigs = [
-      { url: 'index.html', label: 'Home' },
-      { url: 'generic.html', label: 'About' },
-      { url: 'elements.html', label: 'Experience' },
-      { url: 'cv.html', label: 'CV' },
-      { url: 'contact.html', label: 'Contact' },
-      { url: 'privacy.html', label: 'Privacy' },
+      { url: '/', label: 'Home' },
+      { url: '/about', label: 'About' },
+      { url: '/experience', label: 'Experience' },
+      { url: '/cv', label: 'CV' },
+      { url: '/contact', label: 'Contact' },
+      { url: '/privacy', label: 'Privacy' },
     ];
 
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const isCurrentPage = (url) => url === currentPath;
+    const normalizePath = (value) => {
+      if (!value || value === '/') return '/';
+      return value.endsWith('/') ? value.slice(0, -1) : value;
+    };
+    const currentPath = normalizePath(window.location.pathname);
+    const isCurrentPage = (url) => normalizePath(url) === currentPath;
 
     const normalize = (value) => (value || '').toLowerCase().replace(/\s+/g, ' ').trim();
     const splitTerms = (value) => normalize(value).split(' ').filter(Boolean);

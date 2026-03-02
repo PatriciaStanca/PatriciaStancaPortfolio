@@ -2,7 +2,7 @@
 .header-search {
   grid-column: 3 / 4;
   justify-self: end;
-  align-self: baseline;
+  align-self: center;
 }
 
 .header-actions {

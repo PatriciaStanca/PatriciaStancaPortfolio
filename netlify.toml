@@ -1,3 +1,70 @@
 [build]
   command = ""
   publish = "."
+
+[[redirects]]
+  from = "/about"
+  to = "/generic.html"
+  status = 200
+
+[[redirects]]
+  from = "/experience"
+  to = "/elements.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/cv"
+  to = "/cv.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/generic"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/generic.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/elements"
+  to = "/experience"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/elements.html"
+  to = "/experience"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cv.html"
+  to = "/cv"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true

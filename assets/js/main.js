@@ -36,6 +36,22 @@
     document.head.appendChild(script);
   };
 
+  const playHeaderLogoVideo = () => {
+    const logoVideo = document.querySelector('[data-logo-video]');
+    if (!logoVideo) return;
+
+    logoVideo.addEventListener('ended', () => {
+      logoVideo.pause();
+    }, { once: true });
+
+    const playPromise = logoVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {
+        // Some browsers block programmatic play; keep static first frame.
+      });
+    }
+  };
+
   onReady(() => {
     const app = window.SiteApp;
     const initializers = app && Array.isArray(app.initializers) ? app.initializers : [];
@@ -53,5 +69,7 @@
     } else {
       window.setTimeout(loadLucideIcons, 200);
     }
+
+    playHeaderLogoVideo();
   });
 })();

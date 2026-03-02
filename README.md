@@ -8,12 +8,12 @@ A multi‑page, responsive developer portfolio built with vanilla HTML, CSS, and
 - JavaScript (`assets/js/main.js`, `assets/js/validators.js`)
 
 ## Pages
-- `index.html` (Home)
-- `generic.html` (About)
-- `elements.html` (Experience / Projects / References)
-- `contact.html` (Contact + Weather)
-- `cv.html` (Embedded CV)
-- `privacy.html` (Privacy policy)
+- `/` (Home)
+- `/about` (About)
+- `/experience` (Experience / Projects / References)
+- `/contact` (Contact + Weather)
+- `/cv` (Embedded CV)
+- `/privacy` (Privacy policy)
 
 ## Key Features
 - Responsive layout (flex/grid)
@@ -89,28 +89,28 @@ Status: Uppfylld (Open‑Meteo i kontaktsektionen).
 Status: Uppfylld (media queries + flex/grid-layouts).
 
 ### VG-bevis: live-länkar till projekt
-- Needs‑Driven Analytics, Data Modeling & BI Architecture: `https://patriciastanca.com/elements.html#proj-needs-driven-analytics`
-- Analytics Platform Implementation: `https://patriciastanca.com/elements.html#proj-analytics-platform-implementation`
-- Energy Consumption Behavior Analytics: `https://patriciastanca.com/elements.html#proj-energy-consumption-behavior`
-- Energy Consumption Prediction & Clustering: `https://patriciastanca.com/elements.html#proj-energy-prediction-clustering`
-- Marketing Process & Reporting Automation: `https://patriciastanca.com/elements.html#proj-marketing-process-automation`
-- Customer Segmentation & Information Modeling: `https://patriciastanca.com/elements.html#proj-customer-segmentation-modeling`
-- Operational Customer Data & Business Rules: `https://patriciastanca.com/elements.html#proj-operational-customer-data-rules`
-- Data Quality & CRM Migration Rules: `https://patriciastanca.com/elements.html#proj-data-quality-crm-migration`
-- NKI Surveys – Structure & Analysis: `https://patriciastanca.com/elements.html#proj-nki-surveys-structure-analysis`
-- AI Training for Marketing Teams: `https://patriciastanca.com/elements.html#proj-ai-training-marketing-teams`
-- Strategic Change & Process Leadership: `https://patriciastanca.com/elements.html#proj-strategic-change-process-leadership`
-- Core Business System Requirements & User Perspective: `https://patriciastanca.com/elements.html#proj-core-business-system-requirements`
-- Process Change & Facilitation: `https://patriciastanca.com/elements.html#proj-process-change-facilitation`
-- External Reporting & Partner Insights: `https://patriciastanca.com/elements.html#proj-external-reporting-partner-insights`
-- Behavioral Insights Mentorship: `https://patriciastanca.com/elements.html#proj-behavioral-insights-mentorship`
-- Antura Implementation Support: `https://patriciastanca.com/elements.html#proj-antura-implementation-support`
-- PatriciaStancaPortfolio: `https://patriciastanca.com/elements.html#proj-patriciastancaportfolio`
-- Shotgun Game: `https://patriciastanca.com/elements.html#proj-shotgun-game`
-- AddressBookAvaloniaGroup: `https://patriciastanca.com/elements.html#proj-addressbookavaloniagroup`
-- StancaBlogApi: `https://patriciastanca.com/elements.html#proj-stancablogapi`
-- StancaBankApi: `https://patriciastanca.com/elements.html#proj-stancabankapi`
-- blackjack.py: `https://patriciastanca.com/elements.html#proj-blackjack-py`
+- Needs‑Driven Analytics, Data Modeling & BI Architecture: `https://patriciastanca.com/experience#proj-needs-driven-analytics`
+- Analytics Platform Implementation: `https://patriciastanca.com/experience#proj-analytics-platform-implementation`
+- Energy Consumption Behavior Analytics: `https://patriciastanca.com/experience#proj-energy-consumption-behavior`
+- Energy Consumption Prediction & Clustering: `https://patriciastanca.com/experience#proj-energy-prediction-clustering`
+- Marketing Process & Reporting Automation: `https://patriciastanca.com/experience#proj-marketing-process-automation`
+- Customer Segmentation & Information Modeling: `https://patriciastanca.com/experience#proj-customer-segmentation-modeling`
+- Operational Customer Data & Business Rules: `https://patriciastanca.com/experience#proj-operational-customer-data-rules`
+- Data Quality & CRM Migration Rules: `https://patriciastanca.com/experience#proj-data-quality-crm-migration`
+- NKI Surveys – Structure & Analysis: `https://patriciastanca.com/experience#proj-nki-surveys-structure-analysis`
+- AI Training for Marketing Teams: `https://patriciastanca.com/experience#proj-ai-training-marketing-teams`
+- Strategic Change & Process Leadership: `https://patriciastanca.com/experience#proj-strategic-change-process-leadership`
+- Core Business System Requirements & User Perspective: `https://patriciastanca.com/experience#proj-core-business-system-requirements`
+- Process Change & Facilitation: `https://patriciastanca.com/experience#proj-process-change-facilitation`
+- External Reporting & Partner Insights: `https://patriciastanca.com/experience#proj-external-reporting-partner-insights`
+- Behavioral Insights Mentorship: `https://patriciastanca.com/experience#proj-behavioral-insights-mentorship`
+- Antura Implementation Support: `https://patriciastanca.com/experience#proj-antura-implementation-support`
+- PatriciaStancaPortfolio: `https://patriciastanca.com/experience#proj-patriciastancaportfolio`
+- Shotgun Game: `https://patriciastanca.com/experience#proj-shotgun-game`
+- AddressBookAvaloniaGroup: `https://patriciastanca.com/experience#proj-addressbookavaloniagroup`
+- StancaBlogApi: `https://patriciastanca.com/experience#proj-stancablogapi`
+- StancaBankApi: `https://patriciastanca.com/experience#proj-stancabankapi`
+- blackjack.py: `https://patriciastanca.com/experience#proj-blackjack-py`
 
 ### Redovisning och inlämning (från uppgiften)
 - Muntlig redovisning ca 5–10 minuter.
