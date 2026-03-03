@@ -52,6 +52,14 @@
     }
   };
 
+  const scheduleLogoVideoPlayback = () => {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(playHeaderLogoVideo, { timeout: 2000 });
+      return;
+    }
+    window.setTimeout(playHeaderLogoVideo, 1200);
+  };
+
   onReady(() => {
     const app = window.SiteApp;
     const initializers = app && Array.isArray(app.initializers) ? app.initializers : [];
@@ -70,6 +78,6 @@
       window.setTimeout(loadLucideIcons, 200);
     }
 
-    playHeaderLogoVideo();
+    scheduleLogoVideoPlayback();
   });
 })();

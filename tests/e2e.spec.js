@@ -40,10 +40,10 @@ test('weather widget renders current data', async ({ page }) => {
     const originalFetch = window.fetch;
     window.fetch = (input, init) => {
       const url = typeof input === 'string' ? input : input.url;
-      if (url && url.startsWith('https://api.open-meteo.com/')) {
+      if (url && url.startsWith('https://api.openweathermap.org/')) {
         return Promise.resolve(
           new Response(
-            JSON.stringify({ current: { temperature_2m: 5.4, weather_code: 1 } }),
+            JSON.stringify({ main: { temp: 5.4 }, weather: [{ icon: '01d', description: 'clear sky' }] }),
             { status: 200, headers: { 'Content-Type': 'application/json' } }
           )
         );

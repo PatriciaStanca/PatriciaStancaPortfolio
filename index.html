@@ -22,13 +22,14 @@
 		<link rel="preload" as="image" href="assets/media/images/skill-1000.jpg" imagesrcset="assets/media/images/skill-600.jpg 600w, assets/media/images/skill-1000.jpg 1000w" imagesizes="(max-width: 980px) 92vw, 700px" fetchpriority="high">
 		<link rel="stylesheet" href="assets/css/base.css">
 		<link rel="stylesheet" href="assets/css/layout.css">
-		<link rel="stylesheet" href="assets/css/components/cards.css">
-		<link rel="stylesheet" href="assets/css/components/project-reel.css">
-		<link rel="stylesheet" href="assets/css/components/sliders.css">
+		<link rel="stylesheet" href="assets/css/components/cards.css" media="print" data-async-css>
+		<link rel="stylesheet" href="assets/css/components/project-reel.css" media="print" data-async-css>
+		<link rel="stylesheet" href="assets/css/components/sliders.css" media="print" data-async-css>
 		<link rel="stylesheet" href="assets/css/components/search.css">
-		<link rel="stylesheet" href="assets/css/components/skills.css">
-		<link rel="stylesheet" href="assets/css/components/footer.css">
+		<link rel="stylesheet" href="assets/css/components/skills.css" media="print" data-async-css>
+		<link rel="stylesheet" href="assets/css/components/footer.css" media="print" data-async-css>
 		<link rel="stylesheet" href="assets/css/utilities.css">
+		<script src="assets/js/async-css.js" defer></script>
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -74,7 +75,7 @@
 		<a class="skip-link" href="#main">Skip to content</a>
 <!-- This section is for the header#header area of the page. -->
 		<header id="header" class="site-header alt">
-			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span><video class="site-logo-video" data-logo-video muted playsinline preload="auto" aria-hidden="true"><source src="assets/media/videos/green.mp4" type="video/mp4"></video></a></h1>
+			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span><video class="site-logo-video" data-logo-video muted playsinline preload="metadata" aria-hidden="true"><source src="assets/media/videos/green.mp4" type="video/mp4"></video></a></h1>
 <!-- This section is for the nav.top-nav area of the page. -->
 			<nav class="top-nav" aria-label="Primary">
 <!-- This section is for the ul.nav-row area of the page. -->
