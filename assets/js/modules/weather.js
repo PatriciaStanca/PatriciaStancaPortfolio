@@ -7,31 +7,24 @@
   if (!weatherCard) return;
   const tempEl = weatherCard.querySelector('.weather-temp');
   const metaEl = weatherCard.querySelector('.weather-meta');
-  const iconHostEl = weatherCard.querySelector('.weather-icon');
   const iconEl = weatherCard.querySelector('.weather-icon i');
   const apiKey = (weatherCard.getAttribute('data-weather-api-key') || '').trim();
 
-  const setOpenWeatherIcon = (iconCode, description) => {
-    if (!iconHostEl || !iconCode) return;
-    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-    const existingImg = iconHostEl.querySelector('img');
-    const img = existingImg || document.createElement('img');
-
-    img.src = iconUrl;
-    img.alt = description || 'Current weather icon';
-    img.width = 52;
-    img.height = 52;
-    img.loading = 'lazy';
-
-    if (!existingImg) {
-      iconHostEl.innerHTML = '';
-      iconHostEl.appendChild(img);
-    }
+  const mapConditionToLucide = (conditionId) => {
+    if (typeof conditionId !== 'number') return 'cloud';
+    if (conditionId >= 200 && conditionId <= 232) return 'cloud-lightning';
+    if (conditionId >= 300 && conditionId <= 321) return 'cloud-drizzle';
+    if (conditionId >= 500 && conditionId <= 531) return 'cloud-rain';
+    if (conditionId >= 600 && conditionId <= 622) return 'cloud-snow';
+    if (conditionId >= 700 && conditionId <= 781) return 'cloud-fog';
+    if (conditionId === 800) return 'sun';
+    if (conditionId >= 801 && conditionId <= 804) return 'cloud';
+    return 'cloud';
   };
 
-  const setFallbackLucideIcon = () => {
+  const setLucideIcon = (name) => {
     if (!iconEl) return;
-    iconEl.setAttribute('data-lucide', 'cloud-off');
+    iconEl.setAttribute('data-lucide', name);
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       window.lucide.createIcons();
     }
@@ -57,36 +50,26 @@
     }
 
     const temp = data.main?.temp;
-    const iconCode = data.weather?.[0]?.icon;
-    const description = data.weather?.[0]?.description;
+    const conditionId = data.weather?.[0]?.id;
     setTempAndMeta(temp, label);
-    setOpenWeatherIcon(iconCode, description);
-  };
-
-  const fetchFromOpenMeteo = async (lat, lon, label) => {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m&timezone=auto`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Open-Meteo HTTP ${res.status}`);
-    const data = await res.json();
-    const temp = data.current?.temperature_2m;
-    setTempAndMeta(temp, label);
+    setLucideIcon(mapConditionToLucide(conditionId));
   };
 
   const fetchWeather = async (lat, lon, label) => {
     try {
       await fetchFromOpenWeather(lat, lon, label);
-      return;
     } catch (err) {
-      // Keep this for debugging API key/account issues in production.
       console.warn('OpenWeather failed:', err?.message || err);
-    }
-
-    try {
-      await fetchFromOpenMeteo(lat, lon, label);
-    } catch (err) {
       tempEl.textContent = 'Unavailable';
-      metaEl.textContent = 'Weather service error';
-      setFallbackLucideIcon();
+      const message = String(err?.message || '');
+      if (message.toLowerCase().includes('invalid api key') || message.includes('401')) {
+        metaEl.textContent = 'Invalid/inactive OpenWeather API key';
+      } else if (message.includes('429')) {
+        metaEl.textContent = 'OpenWeather rate limit reached';
+      } else {
+        metaEl.textContent = 'Weather service error';
+      }
+      setLucideIcon('cloud-off');
     }
   };
 
