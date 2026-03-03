@@ -29,37 +29,64 @@
     }
   };
 
-  const fetchWeather = async (lat, lon, label) => {
-    if (!apiKey) {
+  const setFallbackLucideIcon = () => {
+    if (!iconEl) return;
+    iconEl.setAttribute('data-lucide', 'cloud-off');
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
+  };
+
+  const setTempAndMeta = (temp, label) => {
+    if (typeof temp === 'number') {
+      tempEl.textContent = `${Math.round(temp)}°C`;
+    } else {
       tempEl.textContent = 'Unavailable';
-      metaEl.textContent = 'Missing OpenWeather API key';
+    }
+    metaEl.textContent = label;
+  };
+
+  const fetchFromOpenWeather = async (lat, lon, label) => {
+    if (!apiKey) throw new Error('Missing OpenWeather API key');
+
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${encodeURIComponent(apiKey)}`;
+    const res = await fetch(url);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      throw new Error(data.message || `OpenWeather HTTP ${res.status}`);
+    }
+
+    const temp = data.main?.temp;
+    const iconCode = data.weather?.[0]?.icon;
+    const description = data.weather?.[0]?.description;
+    setTempAndMeta(temp, label);
+    setOpenWeatherIcon(iconCode, description);
+  };
+
+  const fetchFromOpenMeteo = async (lat, lon, label) => {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m&timezone=auto`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Open-Meteo HTTP ${res.status}`);
+    const data = await res.json();
+    const temp = data.current?.temperature_2m;
+    setTempAndMeta(temp, label);
+  };
+
+  const fetchWeather = async (lat, lon, label) => {
+    try {
+      await fetchFromOpenWeather(lat, lon, label);
       return;
+    } catch (err) {
+      // Keep this for debugging API key/account issues in production.
+      console.warn('OpenWeather failed:', err?.message || err);
     }
 
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${encodeURIComponent(apiKey)}`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('Weather error');
-      const data = await res.json();
-      const temp = data.main?.temp;
-      const iconCode = data.weather?.[0]?.icon;
-      const description = data.weather?.[0]?.description;
-      if (typeof temp === 'number') {
-        tempEl.textContent = `${Math.round(temp)}°C`;
-      } else {
-        tempEl.textContent = 'Unavailable';
-      }
-      metaEl.textContent = label;
-      setOpenWeatherIcon(iconCode, description);
+      await fetchFromOpenMeteo(lat, lon, label);
     } catch (err) {
       tempEl.textContent = 'Unavailable';
       metaEl.textContent = 'Weather service error';
-      if (iconEl) {
-        iconEl.setAttribute('data-lucide', 'cloud-off');
-        if (window.lucide && typeof window.lucide.createIcons === 'function') {
-          window.lucide.createIcons();
-        }
-      }
+      setFallbackLucideIcon();
     }
   };
 
