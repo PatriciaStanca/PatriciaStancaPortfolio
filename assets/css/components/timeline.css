@@ -219,7 +219,7 @@
 
 /* Applies styling to .timeline-section .inner. */
   .timeline-section .inner {
-    width: auto;
+    width: 85%;
   }
 }
 
