@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// Shows live weather.
+// Renders live weather from OpenWeather.
 (function () {
   const weatherCard = document.querySelector('[data-weather], #weather .weather-card');
   if (!weatherCard) return;

@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// This plays the project reel scenes one by one.
+// plays the project reel scenes one by one.
 (function () {
   const reel = document.querySelector('[data-project-reel]');
   const track = document.querySelector('[data-project-reel-track]');

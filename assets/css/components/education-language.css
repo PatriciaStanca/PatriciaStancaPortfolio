@@ -1,12 +1,17 @@
-/* This section has styles for Education. */
-/* This styles .education-list so this part of the page looks right. */
+/* Defines the styles for Education. */
+/* Applies styling to .education-list. */
 .education-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
 }
 
-/* This styles .education-group so this part of the page looks right. */
+/* Applies styling to .education-group. */
 .education-group {
   display: grid;
   grid-template-columns: 1fr;
@@ -17,9 +22,10 @@
   border: 1px solid #ffffff;
   border-radius: 16px;
   padding: 1rem 1.25rem;
+  scroll-snap-align: center;
 }
 
-/* This styles .education-logo img so this part of the page looks right. */
+/* Applies styling to .education-logo img. */
 .education-logo img {
   width: 100%;
   height: 100%;
@@ -28,18 +34,18 @@
   display: block;
 }
 
-/* This styles .education-items li so this part of the page looks right. */
+/* Applies styling to .education-items li. */
 .education-items li {
   margin-bottom: 0.4rem;
   color: var(--slate);
 }
 
-/* This styles .education-items so this part of the page looks right. */
+/* Applies styling to .education-items. */
 .education-items {
   text-align: center;
 }
 
-/* This styles .education-items a so this part of the page looks right. */
+/* Applies styling to .education-items a. */
 .education-items a {
   color: var(--teal);
   text-decoration: underline;
@@ -47,27 +53,27 @@
   text-underline-offset: 4px;
 }
 
-/* This styles .education-items a::after so this part of the page looks right. */
+/* Applies styling to .education-items a::after. */
 .education-items a::after {
   content: "↗";
   margin-left: 0.35rem;
   font-size: 0.85em;
 }
 
-/* This styles .education-items a:hover so this part of the page looks right. */
+/* Applies styling to .education-items a:hover. */
 .education-items a:hover {
   color: var(--teal-dark);
   text-decoration-color: var(--teal);
 }
 
-/* This styles .education-items a:focus-visible so this part of the page looks right. */
+/* Applies styling to .education-items a:focus-visible. */
 .education-items a:focus-visible {
   outline: 2px solid rgba(15, 118, 110, 0.4);
   outline-offset: 2px;
   border-radius: 6px;
 }
 
-/* This styles .education-logo so this part of the page looks right. */
+/* Applies styling to .education-logo. */
 .education-logo {
   width: 170px;
   height: 96px;
@@ -76,55 +82,55 @@
   padding: 6px;
 }
 
-/* This styles .education-logo-tight so this part of the page looks right. */
+/* Applies styling to .education-logo-tight. */
 .education-logo-tight {
   width: 170px;
   height: 96px;
   padding: 6px;
 }
 
-/* This styles .education-logo-tight img so this part of the page looks right. */
+/* Applies styling to .education-logo-tight img. */
 .education-logo-tight img {
   max-width: 120px;
   max-height: 68px;
 }
 
-/* This changes the layout on max-width: 980px screens. */
-@media (max-width: 980px) {
-/* This styles .education-list so this part of the page looks right. */
+/* This changes the layout on min-width: 701px screens. */
+@media (min-width: 701px) {
+/* Applies styling to .education-list. */
   .education-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    overflow-x: visible;
+    padding-bottom: 0;
+    gap: 1.5rem;
+    scroll-snap-type: none;
   }
 }
 
-/* This changes the layout on max-width: 700px screens. */
-@media (max-width: 700px) {
-/* This styles .education-list so this part of the page looks right. */
+/* This changes the layout on min-width: 981px screens. */
+@media (min-width: 981px) {
+/* Applies styling to .education-list. */
   .education-list {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(220px, 1fr);
-    overflow-x: auto;
-    padding-bottom: 0.75rem;
-    gap: 1rem;
-    scroll-snap-type: x mandatory;
-  }
-
-/* This styles .education-group so this part of the page looks right. */
-  .education-group {
-    scroll-snap-align: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-/* This section has styles for Language cards. */
-/* This styles .language-list so this part of the page looks right. */
+/* Defines the styles for Language cards. */
+/* Applies styling to .language-list. */
 .language-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(180px, 1fr);
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
   gap: 1rem;
+  scroll-snap-type: x mandatory;
 }
 
-/* This styles .language-card so this part of the page looks right. */
+/* Applies styling to .language-card. */
 .language-card {
   border: 1px solid #ffffff;
   border-radius: 16px;
@@ -132,39 +138,35 @@
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  scroll-snap-align: center;
 }
 
-/* This styles .language-badge so this part of the page looks right. */
+/* Applies styling to .language-badge. */
 .language-badge {
   font-size: 1.6rem;
 }
 
-/* This styles .language-info h3 so this part of the page looks right. */
+/* Applies styling to .language-info h3. */
 .language-info h3 {
   margin: 0 0 0.25rem 0;
 }
 
-/* This styles .language-info p so this part of the page looks right. */
+/* Applies styling to .language-info p. */
 .language-info p {
   margin: 0;
   color: var(--slate);
 }
 
-/* This changes the layout on max-width: 700px screens. */
-@media (max-width: 700px) {
-/* This styles .language-list so this part of the page looks right. */
+/* This changes the layout on min-width: 701px screens. */
+@media (min-width: 701px) {
+/* Applies styling to .language-list. */
   .language-list {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(180px, 1fr);
-    overflow-x: auto;
-    padding-bottom: 0.75rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    overflow-x: visible;
+    padding-bottom: 0;
     gap: 1rem;
-    scroll-snap-type: x mandatory;
-  }
-
-/* This styles .language-card so this part of the page looks right. */
-  .language-card {
-    scroll-snap-align: center;
+    scroll-snap-type: none;
   }
 }

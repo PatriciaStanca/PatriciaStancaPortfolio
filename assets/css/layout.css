@@ -1,6 +1,6 @@
-/* This section has styles for Layout: header, nav, wrappers, hero, structure. */
-/* This section has styles for Header. */
-/* This styles .site-header so this part of the page looks right. */
+/* Defines the styles for Layout: header, nav, wrappers, hero, structure. */
+/* Defines the styles for Header. */
+/* Applies styling to .site-header. */
 .site-header {
   position: sticky;
   top: 0;
@@ -16,7 +16,7 @@
   background: #ffffff;
 }
 
-/* This styles .site-header h1 so this part of the page looks right. */
+/* Applies styling to .site-header h1. */
 .site-header h1 {
   position: relative;
   z-index: 10030;
@@ -32,12 +32,12 @@
   transform: translateY(0.08rem);
 }
 
-/* This styles .site-header h1 a so this part of the page looks right. */
+/* Applies styling to .site-header h1 a. */
 .site-header h1 a {
   color: var(--ink);
 }
 
-/* This styles .site-logo-link so this part of the page looks right. */
+/* Applies styling to .site-logo-link. */
 .site-logo-link {
   position: relative;
   z-index: 10031;
@@ -50,7 +50,7 @@
   overflow: hidden;
 }
 
-/* This styles .site-logo-video so this part of the page looks right. */
+/* Applies styling to .site-logo-video. */
 .site-logo-video {
   display: block;
   width: 100%;
@@ -60,7 +60,7 @@
   transform: translateY(-0.08rem) scale(1.16);
 }
 
-/* This styles .site-logo-text so this part of the page looks right. */
+/* Applies styling to .site-logo-text. */
 .site-logo-text {
   position: absolute;
   width: 1px;
@@ -73,18 +73,18 @@
   border: 0;
 }
 
-/* This styles .site-header.alt so this part of the page looks right. */
+/* Applies styling to .site-header.alt. */
 .site-header.alt {
   background-color: #ffffff;
 }
 
-/* This styles .site-header.alt h1 so this part of the page looks right. */
+/* Applies styling to .site-header.alt h1. */
 .site-header.alt h1 {
   opacity: 1;
   visibility: visible;
 }
 
-/* This styles .site-header nav.top-nav so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav. */
 .site-header nav.top-nav {
   position: relative;
   transform: none;
@@ -99,7 +99,7 @@
   z-index: 2;
 }
 
-/* This styles .site-header nav.top-nav::before so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav::before. */
 .site-header nav.top-nav::before {
   content: "";
   position: absolute;
@@ -115,7 +115,7 @@
   z-index: -1;
 }
 
-/* This section has styles for Header actions (mobile icons). */
+/* Defines the styles for Header actions (mobile icons). */
 .site-header .header-actions {
   grid-column: 3 / 4;
   justify-self: end;
@@ -125,17 +125,17 @@
   gap: 0.5rem;
 }
 
-/* This styles .site-header nav.top-nav.is-dropdown-open so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav.is-dropdown-open. */
 .site-header nav.top-nav.is-dropdown-open {
   gap: 0;
 }
 
-/* This styles .site-header nav.top-nav.is-dropdown-open::before so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav.is-dropdown-open::before. */
 .site-header nav.top-nav.is-dropdown-open::before {
   opacity: 1;
 }
 
-/* This styles .site-header nav.top-nav ul, .site-header nav.top-nav .nav-row so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav ul, .site-header nav.top-nav .nav-row. */
 .site-header nav.top-nav ul,
 .site-header nav.top-nav .nav-row {
   display: flex;
@@ -143,7 +143,7 @@
   align-items: baseline;
 }
 
-/* This styles .site-header nav.top-nav a so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav a. */
 .site-header nav.top-nav a {
   font-size: 0.86em;
   font-weight: 650;
@@ -154,17 +154,17 @@
   text-transform: uppercase;
 }
 
-/* This styles .site-header nav.top-nav a:hover so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav a:hover. */
 .site-header nav.top-nav a:hover {
   color: var(--teal);
 }
 
-/* This styles .site-header nav.top-nav .has-dropdown so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav .has-dropdown. */
 .site-header nav.top-nav .has-dropdown {
   position: relative;
 }
 
-/* This styles .site-header nav.top-nav .nav-dropdown so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav .nav-dropdown. */
 .site-header nav.top-nav .nav-dropdown {
   position: absolute;
   top: 100%;
@@ -185,7 +185,7 @@
   z-index: 10020;
 }
 
-/* This styles .site-header nav.top-nav.is-dropdown-open .nav-dropdown so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav.is-dropdown-open .nav-dropdown. */
 .site-header nav.top-nav.is-dropdown-open .nav-dropdown {
   opacity: 1;
   visibility: visible;
@@ -193,13 +193,13 @@
   transform: translateY(0);
 }
 
-/* This styles .site-header nav.top-nav .nav-dropdown a so this part of the page looks right. */
+/* Applies styling to .site-header nav.top-nav .nav-dropdown a. */
 .site-header nav.top-nav .nav-dropdown a {
   font-size: 0.85em;
   font-weight: 600;
 }
 
-/* This styles .site-header .menu-toggle so this part of the page looks right. */
+/* Applies styling to .site-header .menu-toggle. */
 .site-header .menu-toggle {
   display: none;
   justify-self: end;
@@ -216,7 +216,7 @@
   font: inherit;
 }
 
-/* This styles .site-header .menu-toggle::before, .site-header .menu-toggle::after, .site-header .menu-toggle span so this part of the page looks right. */
+/* Applies styling to .site-header .menu-toggle::before, .site-header .menu-toggle::after, .site-header .menu-toggle span. */
 .site-header .menu-toggle::before,
 .site-header .menu-toggle::after,
 .site-header .menu-toggle span {
@@ -229,49 +229,49 @@
   border-radius: 999px;
 }
 
-/* This styles .site-header .menu-toggle::before so this part of the page looks right. */
+/* Applies styling to .site-header .menu-toggle::before. */
 .site-header .menu-toggle::before {
   top: 9px;
 }
 
-/* This styles .site-header .menu-toggle span so this part of the page looks right. */
+/* Applies styling to .site-header .menu-toggle span. */
 .site-header .menu-toggle span {
   top: 16px;
 }
 
-/* This styles .site-header .menu-toggle::after so this part of the page looks right. */
+/* Applies styling to .site-header .menu-toggle::after. */
 .site-header .menu-toggle::after {
   top: 23px;
 }
 
-/* This styles body.is-menu-visible .site-header .menu-toggle::before, body.is-menu-visible .site-header .menu-toggle::after so this part of the page looks right. */
+/* Applies styling to body.is-menu-visible .site-header .menu-toggle::before, body.is-menu-visible .site-header .menu-toggle::after. */
 body.is-menu-visible .site-header .menu-toggle::before,
 body.is-menu-visible .site-header .menu-toggle::after {
   top: 16px;
 }
 
-/* This styles body.is-menu-visible .site-header .menu-toggle::before so this part of the page looks right. */
+/* Applies styling to body.is-menu-visible .site-header .menu-toggle::before. */
 body.is-menu-visible .site-header .menu-toggle::before {
   transform: rotate(45deg);
 }
 
-/* This styles body.is-menu-visible .site-header .menu-toggle::after so this part of the page looks right. */
+/* Applies styling to body.is-menu-visible .site-header .menu-toggle::after. */
 body.is-menu-visible .site-header .menu-toggle::after {
   transform: rotate(-45deg);
 }
 
-/* This styles body.is-menu-visible .site-header .menu-toggle span so this part of the page looks right. */
+/* Applies styling to body.is-menu-visible .site-header .menu-toggle span. */
 body.is-menu-visible .site-header .menu-toggle span {
   opacity: 0;
 }
 
-/* This styles .site-header .menu-toggle:hover so this part of the page looks right. */
+/* Applies styling to .site-header .menu-toggle:hover. */
 .site-header .menu-toggle:hover {
   color: var(--teal);
 }
 
-/* This section has styles for Mobile menu (hidden by default). */
-/* This styles .mobile-menu so this part of the page looks right. */
+/* Defines the styles for Mobile menu (hidden by default). */
+/* Applies styling to .mobile-menu. */
 .mobile-menu {
   position: relative;
   width: 100%;
@@ -287,7 +287,7 @@ body.is-menu-visible .site-header .menu-toggle span {
   grid-column: 1 / -1;
 }
 
-/* This styles body.is-menu-visible .mobile-menu so this part of the page looks right. */
+/* Applies styling to body.is-menu-visible .mobile-menu. */
 body.is-menu-visible .mobile-menu {
   opacity: 1;
   transform: translateY(0);
@@ -295,24 +295,24 @@ body.is-menu-visible .mobile-menu {
   max-height: 320px;
 }
 
-/* This styles .mobile-menu .inner so this part of the page looks right. */
+/* Applies styling to .mobile-menu .inner. */
 .mobile-menu .inner {
   width: 85%;
   margin: 0 auto;
   padding: 1.5rem 0 2rem;
 }
 
-/* This styles .mobile-menu .links li + li so this part of the page looks right. */
+/* Applies styling to .mobile-menu .links li + li. */
 .mobile-menu .links li + li {
   margin-top: 0.75rem;
 }
 
-/* This styles .mobile-menu .mobile-parent so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-parent. */
 .mobile-menu .mobile-parent {
   list-style: none;
 }
 
-/* This styles .mobile-menu .mobile-parent-row so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-parent-row. */
 .mobile-menu .mobile-parent-row {
   display: flex;
   align-items: center;
@@ -320,18 +320,18 @@ body.is-menu-visible .mobile-menu {
   gap: 0.75rem;
 }
 
-/* This styles .mobile-menu .mobile-parent-link so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-parent-link. */
 .mobile-menu .mobile-parent-link {
   color: var(--ink);
   font-weight: 600;
 }
 
-/* This styles .mobile-menu .mobile-parent-link:hover so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-parent-link:hover. */
 .mobile-menu .mobile-parent-link:hover {
   color: var(--teal);
 }
 
-/* This styles .mobile-menu .mobile-accordion so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-accordion. */
 .mobile-menu .mobile-accordion {
   background: none;
   border: 0;
@@ -346,7 +346,7 @@ body.is-menu-visible .mobile-menu {
   cursor: pointer;
 }
 
-/* This styles .mobile-menu .mobile-accordion::after so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-accordion::after. */
 .mobile-menu .mobile-accordion::after {
   content: "›";
   transform: rotate(90deg);
@@ -355,12 +355,12 @@ body.is-menu-visible .mobile-menu {
   color: var(--teal);
 }
 
-/* This styles .mobile-menu .mobile-accordion[aria-expanded="true"]::after so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-accordion[aria-expanded="true"]::after. */
 .mobile-menu .mobile-accordion[aria-expanded="true"]::after {
   transform: rotate(-90deg);
 }
 
-/* This styles .mobile-menu .mobile-submenu so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-submenu. */
 .mobile-menu .mobile-submenu {
   list-style: none;
   margin: 0.5rem 0 0 0.75rem;
@@ -371,51 +371,51 @@ body.is-menu-visible .mobile-menu {
   transition: max-height 0.25s ease, opacity 0.2s ease;
 }
 
-/* This styles .mobile-menu .mobile-submenu ul so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-submenu ul. */
 .mobile-menu .mobile-submenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* This styles .mobile-menu .mobile-submenu li + li so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-submenu li + li. */
 .mobile-menu .mobile-submenu li + li {
   margin-top: 0.5rem;
 }
 
-/* This styles .mobile-menu .mobile-parent.is-open .mobile-submenu so this part of the page looks right. */
+/* Applies styling to .mobile-menu .mobile-parent.is-open .mobile-submenu. */
 .mobile-menu .mobile-parent.is-open .mobile-submenu {
   max-height: 200px;
   opacity: 1;
 }
 
 
-/* This section has styles for Wrappers. */
-/* This styles .wrapper so this part of the page looks right. */
+/* Defines the styles for Wrappers. */
+/* Applies styling to .wrapper. */
 .wrapper {
   position: relative;
 }
 
-/* This styles .wrapper > .inner so this part of the page looks right. */
+/* Applies styling to .wrapper > .inner. */
 .wrapper > .inner {
   width: 85%;
   margin: 0 auto;
   padding: var(--section-space) 0;
 }
 
-/* This styles .inner so this part of the page looks right. */
+/* Applies styling to .inner. */
 .inner {
   width: 85%;
   margin: 0 auto;
 }
 
-/* This section has styles for Hero. */
-/* This styles .section-hero so this part of the page looks right. */
+/* Defines the styles for Hero. */
+/* Applies styling to .section-hero. */
 .section-hero {
   padding-top: var(--section-space);
 }
 
-/* This styles .hero-grid so this part of the page looks right. */
+/* Applies styling to .hero-grid. */
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -423,7 +423,7 @@ body.is-menu-visible .mobile-menu {
   align-items: center;
 }
 
-/* This styles .hero-name so this part of the page looks right. */
+/* Applies styling to .hero-name. */
 .hero-name {
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   letter-spacing: 0.05em;
@@ -434,7 +434,7 @@ body.is-menu-visible .mobile-menu {
   line-height: 1.04;
 }
 
-/* This styles .hero-role so this part of the page looks right. */
+/* Applies styling to .hero-role. */
 .hero-role {
   color: var(--slate);
   margin: 0;
@@ -445,33 +445,33 @@ body.is-menu-visible .mobile-menu {
   font-family: var(--font-sans);
 }
 
-/* This styles .hero-image img so this part of the page looks right. */
+/* Applies styling to .hero-image img. */
 .hero-image img {
   border-radius: 14px;
   box-shadow: var(--shadow-soft);
 }
 
-/* This section has styles for Intro split. */
-/* This styles .intro-wrap so this part of the page looks right. */
+/* Defines the styles for Intro split. */
+/* Applies styling to .intro-wrap. */
 .intro-wrap {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* This styles .page-about .intro-wrap so this part of the page looks right. */
+/* Applies styling to .page-about .intro-wrap. */
 .page-about .intro-wrap {
   padding-top: 2.5rem;
   padding-bottom: 1rem;
 }
 
-/* This styles .intro-split so this part of the page looks right. */
+/* Applies styling to .intro-split. */
 .intro-split {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 3.5rem;
 }
 
-/* This styles .page-lead so this part of the page looks right. */
+/* Applies styling to .page-lead. */
 .page-lead {
   font-weight: 700;
   text-transform: uppercase;
@@ -481,7 +481,7 @@ body.is-menu-visible .mobile-menu {
   font-family: var(--font-sans);
 }
 
-/* This styles .intro-long so this part of the page looks right. */
+/* Applies styling to .intro-long. */
 .intro-long {
   color: #000000;
   font-size: 1rem;
@@ -491,12 +491,12 @@ body.is-menu-visible .mobile-menu {
   text-align: left;
 }
 
-/* This styles .page-about .intro-split > div:last-child so this part of the page looks right. */
+/* Applies styling to .page-about .intro-split > div:last-child. */
 .page-about .intro-split > div:last-child {
   justify-self: start;
 }
 
-/* This styles .intro-cta so this part of the page looks right. */
+/* Applies styling to .intro-cta. */
 .intro-cta {
   display: inline-flex;
   align-items: center;
@@ -506,27 +506,27 @@ body.is-menu-visible .mobile-menu {
   color: var(--teal);
 }
 
-/* This styles .intro-arrow so this part of the page looks right. */
+/* Applies styling to .intro-arrow. */
 .intro-arrow {
   display: inline-block;
   transition: transform 0.2s ease, color 0.2s ease;
   font-size: 1.3em;
 }
 
-/* This styles .intro-cta:hover .intro-arrow so this part of the page looks right. */
+/* Applies styling to .intro-cta:hover .intro-arrow. */
 .intro-cta:hover .intro-arrow {
   transform: translateX(4px);
 }
 
-/* This styles .intro-cta.inline-cta so this part of the page looks right. */
+/* Applies styling to .intro-cta.inline-cta. */
 .intro-cta.inline-cta {
   margin-top: 0;
   margin-left: 0.35rem;
   vertical-align: baseline;
 }
 
-/* This section has styles for Section titles. */
-/* This styles .section-title so this part of the page looks right. */
+/* Defines the styles for Section titles. */
+/* Applies styling to .section-title. */
 .section-title {
   margin: 0 0 1.5rem 0;
   font-size: 1.6rem;
@@ -536,12 +536,12 @@ body.is-menu-visible .mobile-menu {
   font-weight: 750;
 }
 
-/* This styles .page-title so this part of the page looks right. */
+/* Applies styling to .page-title. */
 .page-title {
   font-size: clamp(1.8rem, 2.3vw, 2.3rem);
 }
 
-/* This styles .section-kicker so this part of the page looks right. */
+/* Applies styling to .section-kicker. */
 .section-kicker {
   margin: 0;
   text-transform: uppercase;
@@ -552,7 +552,7 @@ body.is-menu-visible .mobile-menu {
   font-weight: 650;
 }
 
-/* This styles .section-divider, .highlights-divider so this part of the page looks right. */
+/* Applies styling to .section-divider, .highlights-divider. */
 .section-divider,
 .highlights-divider {
   border: 0;

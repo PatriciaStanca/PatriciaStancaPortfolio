@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// This opens, closes, and controls the mobile menu.
+// opens, closes, and controls the mobile menu.
 const menu = document.getElementById('menu');
 const menuToggle = document.querySelector('.menu-toggle');
 const header = document.getElementById('header');

@@ -1,4 +1,4 @@
-// This starts the site scripts when the page is ready.
+// Bootstraps site scripts when the page is ready.
 
 (function () {
   const onReady = (fn) => {

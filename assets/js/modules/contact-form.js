@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// This checks contact form fields before sending.
+// checks contact form fields before sending.
 (function () {
   const form = document.querySelector('.contact-form');
   if (!form) return;

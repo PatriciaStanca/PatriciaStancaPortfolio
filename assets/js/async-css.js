@@ -1,4 +1,4 @@
-// This turns async CSS on after each file is loaded.
+// turns async CSS on after each file is loaded.
 (function () {
   const asyncLinks = document.querySelectorAll('link[data-async-css]');
   if (!asyncLinks.length) return;

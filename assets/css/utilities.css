@@ -1,6 +1,6 @@
-/* This section has styles for Utilities: spacing tweaks, overrides, responsive. */
-/* This section has styles for Overrides previously in overrides.css. */
-/* This styles section:not(.stats-wide):not(.summary-band), article, .wrapper:not(.stats-wide), .wrapper > .inner so this part of the page looks right. */
+/* Defines the styles for Utilities: spacing tweaks, overrides, responsive. */
+/* Defines the styles for Overrides previously in overrides.css. */
+/* Applies styling to section:not(.stats-wide):not(.summary-band), article, .wrapper:not(.stats-wide), .wrapper > .inner. */
 body .site-main section:not(.stats-wide):not(.summary-band),
 body .site-main .wrapper article,
 body .site-main .wrapper:not(.stats-wide),
@@ -11,13 +11,13 @@ body .site-main .wrapper > .inner {
   padding-bottom: 0;
 }
 
-/* This styles .wrapper > .inner so this part of the page looks right. */
+/* Applies styling to .wrapper > .inner. */
 body .site-main .wrapper > .inner {
   padding-top: var(--section-space);
   padding-bottom: var(--section-space);
 }
 
-/* This section has styles for Scroll reveal (global). */
+/* Defines the styles for Scroll reveal (global). */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -39,118 +39,202 @@ body .site-main .wrapper > .inner {
 }
 
 
-/* This styles .site-footer .inner .copyright li so this part of the page looks right. */
+/* Applies styling to .site-footer .inner .copyright li. */
 .site-footer .inner .copyright li {
   border-left: 0;
 }
 
-/* This section has styles for Responsive. */
-/* This changes the layout on max-width: 980px screens. */
-@media screen and (max-width: 980px) {
-/* This styles .hero-grid so this part of the page looks right. */
-  .hero-grid {
-    grid-template-columns: 1fr;
+/* Defines the styles for Responsive. */
+/* Applies styling to .hero-grid. */
+.hero-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .key-achievements. */
+.key-achievements {
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
+  grid-template-columns: none;
+}
+
+/* Applies styling to .role-track. */
+.role-track {
+  grid-auto-columns: minmax(260px, 1fr);
+}
+
+/* Applies styling to .skill-flow. */
+.skill-flow {
+  justify-content: flex-start;
+}
+
+/* Applies styling to .highlights-grid. */
+.highlights-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .summary-grid. */
+.summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Applies styling to .language-list. */
+.language-list {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to body.is-menu-visible. */
+body.is-menu-visible {
+  overflow: hidden;
+}
+
+/* Applies styling to body.is-menu-visible .site-main, body.is-menu-visible .site-footer. */
+body.is-menu-visible .site-main,
+body.is-menu-visible .site-footer {
+  visibility: hidden;
+}
+
+/* Applies styling to .site-header nav.top-nav. */
+.site-header nav.top-nav {
+  display: none;
+}
+
+/* Applies styling to .site-header .menu-toggle. */
+.site-header .menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Applies styling to .mobile-menu. */
+.mobile-menu {
+  display: block;
+}
+
+/* Applies styling to .mobile-menu. */
+.mobile-menu {
+  position: fixed;
+  top: var(--header-height, 84px);
+  left: 0;
+  right: 0;
+  height: calc(100vh - var(--header-height, 84px));
+  max-height: none;
+  border-top: none;
+  box-shadow: none;
+  transform: translateY(-8px);
+}
+
+/* Applies styling to body.is-menu-visible .mobile-menu. */
+body.is-menu-visible .mobile-menu {
+  max-height: none;
+}
+
+/* Applies styling to .intro-split. */
+.intro-split {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .education-group. */
+.education-group {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .language-list. */
+/* This changes the layout on min-width: 737px screens. */
+@media screen and (min-width: 737px) {
+/* Applies styling to .site-header nav.top-nav. */
+  .site-header nav.top-nav {
+    display: flex;
   }
 
-/* This styles .key-achievements so this part of the page looks right. */
-  .key-achievements {
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(260px, 1fr);
-    grid-template-columns: none;
+/* Applies styling to .site-header .menu-toggle. */
+  .site-header .menu-toggle {
+    display: none;
   }
 
-/* This styles .role-track so this part of the page looks right. */
-  .role-track {
-    grid-auto-columns: minmax(260px, 1fr);
+/* Applies styling to .mobile-menu. */
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% - 0.2rem);
+    left: 50%;
+    right: auto;
+    height: auto;
+    max-height: 0;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    transform: translateX(-50%);
   }
 
-/* This styles .skill-flow so this part of the page looks right. */
-  .skill-flow {
-    justify-content: flex-start;
+/* Applies styling to body.is-menu-visible. */
+  body.is-menu-visible {
+    overflow: visible;
   }
 
-/* This styles .highlights-grid so this part of the page looks right. */
-  .highlights-grid {
-    grid-template-columns: 1fr;
+/* Applies styling to body.is-menu-visible .site-main, body.is-menu-visible .site-footer. */
+  body.is-menu-visible .site-main,
+  body.is-menu-visible .site-footer {
+    visibility: visible;
   }
 
-/* This styles .summary-grid so this part of the page looks right. */
-  .summary-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-/* This styles .language-list so this part of the page looks right. */
+/* Applies styling to .language-list. */
   .language-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* This changes the layout on max-width: 736px screens. */
-@media screen and (max-width: 736px) {
-/* This styles body.is-menu-visible so this part of the page looks right. */
-  body.is-menu-visible {
-    overflow: hidden;
+/* This changes the layout on min-width: 981px screens. */
+@media screen and (min-width: 981px) {
+/* Applies styling to .hero-grid. */
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
   }
 
-/* This styles body.is-menu-visible .site-main, body.is-menu-visible .site-footer so this part of the page looks right. */
-  body.is-menu-visible .site-main,
-  body.is-menu-visible .site-footer {
-    visibility: hidden;
+/* Applies styling to .key-achievements. */
+  .key-achievements {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-/* This styles .site-header nav.top-nav so this part of the page looks right. */
-  .site-header nav.top-nav {
-    display: none;
+/* Applies styling to .role-track. */
+  .role-track {
+    grid-auto-columns: auto;
   }
 
-/* This styles .site-header .menu-toggle so this part of the page looks right. */
-  .site-header .menu-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
+/* Applies styling to .skill-flow. */
+  .skill-flow {
+    justify-content: center;
   }
 
-/* This styles .mobile-menu so this part of the page looks right. */
-  .mobile-menu {
-    display: block;
+/* Applies styling to .highlights-grid. */
+  .highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-/* This styles .mobile-menu so this part of the page looks right. */
-  .mobile-menu {
-    position: fixed;
-    top: var(--header-height, 84px);
-    left: 0;
-    right: 0;
-    height: calc(100vh - var(--header-height, 84px));
-    max-height: none;
-    border-top: none;
-    box-shadow: none;
-    transform: translateY(-8px);
+/* Applies styling to .summary-grid. */
+  .summary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
   }
 
-/* This styles body.is-menu-visible .mobile-menu so this part of the page looks right. */
-  body.is-menu-visible .mobile-menu {
-    max-height: none;
-  }
-
-/* This styles .intro-split so this part of the page looks right. */
+/* Applies styling to .intro-split. */
   .intro-split {
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.95fr 1.05fr;
   }
 
-/* This styles .education-group so this part of the page looks right. */
+/* Applies styling to .education-group. */
   .education-group {
     grid-template-columns: 1fr;
   }
 
-/* This styles .language-list so this part of the page looks right. */
+/* Applies styling to .language-list. */
   .language-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* This section has styles for Print styles. */
+/* Defines the styles for Print styles. */
 @media print {
   body {
     background: #ffffff;

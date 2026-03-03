@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// This lets people search across the site.
+// lets people search across the site.
 (function () {
   const ns = window.SiteSearchModule;
   if (!ns || typeof ns.createContext !== 'function') return;

@@ -1,5 +1,5 @@
-/* This section has styles for Key achievements. */
-/* This styles .key-achievements so this part of the page looks right. */
+/* Defines the styles for Key achievements. */
+/* Applies styling to .key-achievements. */
 .key-achievements {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -8,12 +8,12 @@
   scroll-snap-type: x mandatory;
 }
 
-/* This styles .key-achievements .key-card so this part of the page looks right. */
+/* Applies styling to .key-achievements .key-card. */
 .key-achievements .key-card {
   scroll-snap-align: start;
 }
 
-/* This styles .key-card so this part of the page looks right. */
+/* Applies styling to .key-card. */
 .key-card {
   border: 0;
   border-radius: 16px;
@@ -23,7 +23,7 @@
   min-width: 260px;
 }
 
-/* This styles .key-icon so this part of the page looks right. */
+/* Applies styling to .key-icon. */
 .key-icon {
   width: 52px;
   height: 52px;
@@ -35,20 +35,20 @@
   color: var(--teal);
 }
 
-/* This styles .key-icon svg so this part of the page looks right. */
+/* Applies styling to .key-icon svg. */
 .key-icon svg {
   width: 26px;
   height: 26px;
   stroke: currentColor;
 }
 
-/* This styles .key-title so this part of the page looks right. */
+/* Applies styling to .key-title. */
 .key-title {
   margin: 0 0 0.35rem 0;
   font-size: 1.1rem;
 }
 
-/* This styles .key-kicker so this part of the page looks right. */
+/* Applies styling to .key-kicker. */
 .key-kicker {
   margin: 0 0 0.6rem 0;
   color: var(--teal);
@@ -56,27 +56,27 @@
   font-weight: 600;
 }
 
-/* This styles .key-body so this part of the page looks right. */
+/* Applies styling to .key-body. */
 .key-body {
   margin: 0;
   color: #000000;
   font-size: 1rem;
 }
 
-/* This section has styles for Highlights. */
-/* This styles .highlights-wrap so this part of the page looks right. */
+/* Defines the styles for Highlights. */
+/* Applies styling to .highlights-wrap. */
 .highlights-wrap {
   padding-top: 0;
 }
 
-/* This styles .highlights-grid so this part of the page looks right. */
+/* Applies styling to .highlights-grid. */
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
 }
 
-/* This styles .highlight-item so this part of the page looks right. */
+/* Applies styling to .highlight-item. */
 .highlight-item {
   border: 0;
   border-radius: 16px;
@@ -84,32 +84,32 @@
   background: #ffffff;
 }
 
-/* This styles .highlight-link so this part of the page looks right. */
+/* Applies styling to .highlight-link. */
 .highlight-link {
   color: var(--ink);
   font-weight: 600;
 }
 
-/* This styles .heading-arrow so this part of the page looks right. */
+/* Applies styling to .heading-arrow. */
 .heading-arrow {
   color: var(--teal);
   display: inline-block;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-/* This styles .highlight-link:hover .heading-arrow so this part of the page looks right. */
+/* Applies styling to .highlight-link:hover .heading-arrow. */
 .highlight-link:hover .heading-arrow {
   transform: translateX(4px);
 }
 
-/* This section has styles for Stats summary (elements page). */
-/* This styles .stats-wide so this part of the page looks right. */
+/* Defines the styles for Stats summary (elements page). */
+/* Applies styling to .stats-wide. */
 .stats-wide {
   padding: 0;
 }
 
-/* This section has styles for Scroll reveal. */
-/* This styles .reveal so this part of the page looks right. */
+/* Defines the styles for Scroll reveal. */
+/* Applies styling to .reveal. */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -117,7 +117,7 @@
   will-change: opacity, transform;
 }
 
-/* This styles .reveal.is-visible so this part of the page looks right. */
+/* Applies styling to .reveal.is-visible. */
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -125,7 +125,7 @@
 
 /* This changes the layout on prefers-reduced-motion: reduce screens. */
 @media (prefers-reduced-motion: reduce) {
-/* This styles .reveal so this part of the page looks right. */
+/* Applies styling to .reveal. */
   .reveal {
     opacity: 1;
     transform: none;
@@ -133,10 +133,10 @@
   }
 }
 
-/* This styles .summary-band so this part of the page looks right. */
+/* Applies styling to .summary-band. */
 .summary-band {
   background: var(--teal);
-  padding: 4.5rem 0;
+  padding: 3rem 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -145,104 +145,91 @@
   color: #ffffff;
 }
 
-/* This styles .summary-grid so this part of the page looks right. */
+/* Applies styling to .summary-grid. */
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(0.5rem, 1.5vw, 1.5rem);
 }
 
-/* This styles .summary-band .summary-grid so this part of the page looks right. */
+/* Applies styling to .summary-band .summary-grid. */
 .summary-band .summary-grid {
-  width: 85%;
+  width: 92%;
   margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
 }
 
-/* This styles .summary-card so this part of the page looks right. */
+/* Applies styling to .summary-card. */
 .summary-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: clamp(0.6rem, 1.2vw, 1.1rem) clamp(0.7rem, 1.4vw, 1.25rem);
+  border-radius: 12px;
+  padding: 1rem;
   color: #fff;
   min-width: 0;
 }
 
-/* This styles .summary-value so this part of the page looks right. */
+/* Applies styling to .summary-value. */
 .summary-value {
-  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  font-size: 1.4rem;
   font-weight: 700;
   display: block;
 }
 
-/* This styles .summary-label so this part of the page looks right. */
+/* Applies styling to .summary-label. */
 .summary-label {
   color: rgba(255, 255, 255, 0.8);
-  font-size: clamp(0.7rem, 1.6vw, 0.95rem);
+  font-size: 0.85rem;
 }
 
-/* This changes the layout on max-width: 700px screens. */
-@media (max-width: 700px) {
-/* This styles .summary-band .summary-grid so this part of the page looks right. */
+/* This changes the layout on min-width: 601px screens. */
+@media (min-width: 601px) {
+/* Applies styling to .summary-band .summary-grid. */
   .summary-band .summary-grid {
     width: 100%;
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
   }
 }
 
-/* This changes the layout on max-width: 600px screens. */
-@media (max-width: 600px) {
-/* This styles .summary-grid so this part of the page looks right. */
-  .summary-band .summary-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.5rem;
-  }
-
-/* This styles .summary-card so this part of the page looks right. */
-  .summary-card {
-    padding: 0.55rem 0.6rem;
-    border-radius: 12px;
-  }
-
-/* This styles .summary-value so this part of the page looks right. */
-  .summary-value {
-    font-size: 1rem;
-  }
-
-/* This styles .summary-label so this part of the page looks right. */
-  .summary-label {
-    font-size: 0.68rem;
-  }
-}
-
-/* This changes the layout on max-width: 736px screens. */
-@media (max-width: 736px) {
-/* This styles .summary-band so this part of the page looks right. */
-  .summary-band {
-    padding: 3rem 0;
-  }
-
-/* This styles .summary-band .summary-grid so this part of the page looks right. */
+/* This changes the layout on min-width: 701px screens. */
+@media (min-width: 701px) {
+/* Applies styling to .summary-band .summary-grid. */
   .summary-band .summary-grid {
     width: 92%;
   }
+}
 
-/* This styles .summary-card so this part of the page looks right. */
+/* This changes the layout on min-width: 737px screens. */
+@media (min-width: 737px) {
+/* Applies styling to .summary-band. */
+  .summary-band {
+    padding: 4.5rem 0;
+  }
+
+/* Applies styling to .summary-band .summary-grid. */
+  .summary-band .summary-grid {
+    width: 85%;
+  }
+
+/* Applies styling to .summary-card. */
   .summary-card {
-    padding: 1rem;
+    padding: clamp(0.6rem, 1.2vw, 1.1rem) clamp(0.7rem, 1.4vw, 1.25rem);
+    border-radius: 16px;
   }
 
-/* This styles .summary-value so this part of the page looks right. */
+/* Applies styling to .summary-value. */
   .summary-value {
-    font-size: 1.4rem;
+    font-size: clamp(1.05rem, 2.2vw, 1.5rem);
   }
 
-/* This styles .summary-label so this part of the page looks right. */
+/* Applies styling to .summary-label. */
   .summary-label {
-    font-size: 0.85rem;
+    font-size: clamp(0.7rem, 1.6vw, 0.95rem);
   }
 }
 
-/* This styles .stats-wide > .inner so this part of the page looks right. */
+/* Applies styling to .stats-wide > .inner. */
 .stats-wide > .inner {
   max-width: 100em;
 }

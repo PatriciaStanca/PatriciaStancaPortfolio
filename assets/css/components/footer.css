@@ -1,5 +1,5 @@
-/* This section has styles for Footer. */
-/* This styles .site-footer so this part of the page looks right. */
+/* Defines the styles for Footer. */
+/* Applies styling to .site-footer. */
 .site-footer {
   background: var(--teal);
   color: #ffffff;
@@ -16,13 +16,13 @@
   font-family: var(--font-sans);
 }
 
-/* This section has styles for Footer grid. */
-/* This styles .footer-grid so this part of the page looks right. */
+/* Defines the styles for Footer grid. */
+/* Applies styling to .footer-grid. */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  column-gap: 1.95rem;
-  row-gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: left;
   margin-top: 1.5rem;
   width: 100%;
   margin-left: 0;
@@ -32,36 +32,36 @@
   justify-content: start;
 }
 
-/* This section has styles for Contact page footer: reserve space for compact weather card. */
+/* Defines the styles for Contact page footer: reserve space for compact weather card. */
 .page-contact .site-footer .footer-grid {
-  grid-template-columns: repeat(4, max-content) 1fr;
+  grid-template-columns: 1fr;
 }
 
-/* This section has styles for Contact page footer: weather alignment. */
+/* Defines the styles for Contact page footer: weather alignment. */
 .page-contact .site-footer .footer-weather {
   justify-self: end;
 }
 
-/* This styles .footer-col so this part of the page looks right. */
+/* Applies styling to .footer-col. */
 .footer-col {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.75rem;
   text-align: left;
   align-items: start;
 }
 
-/* This styles .footer-item so this part of the page looks right. */
+/* Applies styling to .footer-item. */
 .footer-item {
   display: block;
   margin: 0;
 }
 
-/* This styles .footer-item svg so this part of the page looks right. */
+/* Applies styling to .footer-item svg. */
 .footer-item svg {
   display: none;
 }
 
-/* This styles .footer-title so this part of the page looks right. */
+/* Applies styling to .footer-title. */
 .footer-title {
   margin: 0 0 0.25rem 0;
   font-size: 0.7rem;
@@ -70,46 +70,47 @@
   color: #ffffff;
 }
 
-/* This styles .site-footer p, .site-footer a so this part of the page looks right. */
+/* Applies styling to .site-footer p, .site-footer a. */
 .site-footer p,
 .site-footer a {
   font-size: 0.85rem;
   line-height: 1.7;
 }
 
-/* This styles .site-footer a so this part of the page looks right. */
+/* Applies styling to .site-footer a. */
 .site-footer a {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* This styles .site-footer a:hover so this part of the page looks right. */
+/* Applies styling to .site-footer a:hover. */
 .site-footer a:hover {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* This styles .footer-decor so this part of the page looks right. */
+/* Applies styling to .footer-decor. */
 .footer-decor {
+  display: none;
   margin-top: 2.5rem;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
 
-/* This styles .footer-wave so this part of the page looks right. */
+/* Applies styling to .footer-wave. */
 .footer-wave {
   width: 100%;
   height: 40px;
 }
 
-/* This styles .footer-wave path so this part of the page looks right. */
+/* Applies styling to .footer-wave path. */
 .footer-wave path {
   fill: none;
   stroke: rgba(255, 255, 255, 0.18);
   stroke-width: 1.25;
 }
 
-/* This styles .footer-icon-row so this part of the page looks right. */
+/* Applies styling to .footer-icon-row. */
 .footer-icon-row {
   display: flex;
   justify-content: space-between;
@@ -117,7 +118,7 @@
   padding: 0 1rem;
 }
 
-/* This styles .footer-icon so this part of the page looks right. */
+/* Applies styling to .footer-icon. */
 .footer-icon {
   width: 20px;
   height: 20px;
@@ -127,17 +128,19 @@
   place-items: center;
 }
 
-/* This styles .footer-icon svg so this part of the page looks right. */
+/* Applies styling to .footer-icon svg. */
 .footer-icon svg {
   stroke: rgba(255, 255, 255, 0.18);
   stroke-width: 1.25;
 }
 
-/* This styles .site-footer .copyright so this part of the page looks right. */
+/* Applies styling to .site-footer .copyright. */
 .site-footer .copyright {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.75rem;
+  flex-direction: column;
+  text-align: left;
   padding-top: 1.5rem;
   margin-top: 2rem;
   border-top: 0;
@@ -145,9 +148,9 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* This changes the layout on max-width: 900px screens. */
-@media (max-width: 900px) {
-/* This styles .footer-grid so this part of the page looks right. */
+/* This changes the layout on min-width: 601px screens. */
+@media (min-width: 601px) {
+/* Applies styling to .footer-grid. */
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
@@ -156,42 +159,41 @@
   .page-contact .site-footer .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
 
-/* This changes the layout on max-width: 600px screens. */
-@media (max-width: 600px) {
-/* This styles .footer-grid so this part of the page looks right. */
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: left;
-  }
-
-  .page-contact .site-footer .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-/* This styles .footer-col so this part of the page looks right. */
+/* Applies styling to .footer-col. */
   .footer-col {
     text-align: left;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
-/* This styles .footer-decor so this part of the page looks right. */
+/* Applies styling to .footer-decor. */
   .footer-decor {
-    display: none;
+    display: block;
   }
 
-/* This styles .site-footer .copyright so this part of the page looks right. */
+/* Applies styling to .site-footer .copyright. */
   .site-footer .copyright {
-    flex-direction: column;
-    gap: 0.75rem;
-    text-align: left;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: initial;
   }
 }
 
-/* This section has styles for Contact list icons (inline SVG). */
-/* This styles .contact li so this part of the page looks right. */
+/* This changes the layout on min-width: 901px screens. */
+@media (min-width: 901px) {
+/* Applies styling to .footer-grid. */
+  .footer-grid {
+    grid-template-columns: repeat(4, max-content);
+    gap: 1rem 1.95rem;
+  }
+
+  .page-contact .site-footer .footer-grid {
+    grid-template-columns: repeat(4, max-content) 1fr;
+  }
+}
+
+/* Defines the styles for Contact list icons (inline SVG). */
+/* Applies styling to .contact li. */
 .contact li {
   display: flex;
   align-items: center;

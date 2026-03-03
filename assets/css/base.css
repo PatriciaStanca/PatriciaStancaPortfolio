@@ -1,5 +1,5 @@
-/* This section has styles for Base: variables, resets, typography, form basics. */
-/* This styles :root so this part of the page looks right. */
+/* Base layer: shared variables, resets, typography, and core form defaults used across the site. */
+/* :root stores global CSS variables (colors, spacing, shadows, and font tokens). */
 :root {
   --teal: #0F766E;
   --teal-dark: #0B5F58;
@@ -14,18 +14,18 @@
   --font-display: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
-/* This styles * so this part of the page looks right. */
+/* * targets every element and applies border-box sizing for predictable layouts. */
 * {
   box-sizing: border-box;
 }
 
-/* This styles html, body so this part of the page looks right. */
+/* html and body: remove default browser margin/padding to start from a clean canvas. */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* This styles body so this part of the page looks right. */
+/* body: sets global text style, colors, smoothing, and overall page rendering defaults. */
 body {
   font-family: var(--font-sans);
   font-size: 16px;
@@ -39,7 +39,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* This styles .skip-link so this part of the page looks right. */
+/* .skip-link is an accessibility shortcut that lets keyboard users jump straight to main content. */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -52,12 +52,12 @@ body {
   z-index: 10001;
 }
 
-/* This styles .skip-link:focus so this part of the page looks right. */
+/* .skip-link:focus makes the hidden skip link visible when tabbed to. */
 .skip-link:focus {
   left: 0.75rem;
 }
 
-/* This styles p so this part of the page looks right. */
+/* p means paragraph text; this sets consistent bottom spacing between text blocks. */
 p {
   margin: 0 0 1.25rem 0;
 }
@@ -73,25 +73,25 @@ h4 {
   color: var(--ink);
 }
 
-/* This styles img so this part of the page looks right. */
+/* img ensures images stay responsive and do not overflow their container width. */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* This styles a so this part of the page looks right. */
+/* a targets links and removes default underline/color so links inherit surrounding text style. */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* This styles a:hover so this part of the page looks right. */
+/* a:hover applies the brand color when users hover over links. */
 a:hover {
   color: var(--teal);
 }
 
-/* This styles a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible so this part of the page looks right. */
+/* :focus-visible adds a clear keyboard-focus ring on interactive controls for accessibility. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -101,14 +101,14 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* This styles label so this part of the page looks right. */
+/* label styles form field labels with stronger weight and spacing. */
 label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
-/* This styles input, textarea, select so this part of the page looks right. */
+/* input, textarea, and select share a unified form-control appearance. */
 input,
 textarea,
 select {
@@ -120,7 +120,7 @@ select {
   font-size: 1rem;
 }
 
-/* This styles input:focus, textarea:focus, select:focus so this part of the page looks right. */
+/* Form control focus state: highlights active fields with border and soft ring. */
 input:focus,
 textarea:focus,
 select:focus {
@@ -129,7 +129,7 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
 }
 
-/* This styles input.is-invalid, textarea.is-invalid, select.is-invalid so this part of the page looks right. */
+/* .is-invalid marks form controls with error border/ring styles. */
 input.is-invalid,
 textarea.is-invalid,
 select.is-invalid {
@@ -137,42 +137,42 @@ select.is-invalid {
   box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
 }
 
-/* This styles .form-error text so this part of the page looks right. */
+/* .form-error styles inline validation error messages under fields. */
 .form-error {
   color: #dc2626;
   font-size: 0.85rem;
   margin-top: 0.25rem;
 }
 
-/* This styles .form-feedback message so this part of the page looks right. */
+/* .form-feedback styles the general submit/result message area in forms. */
 .form-feedback {
   margin: 0.25rem 0 0 0;
   font-size: 0.9rem;
 }
 
-/* This styles success feedback state so this part of the page looks right. */
+/* .form-feedback.is-success colors feedback text for successful actions. */
 .form-feedback.is-success {
   color: #15803d;
 }
 
-/* This styles error feedback state so this part of the page looks right. */
+/* .form-feedback.is-error colors feedback text for failed actions. */
 .form-feedback.is-error {
   color: #dc2626;
 }
 
-/* This styles textarea so this part of the page looks right. */
+/* textarea allows only vertical resize to keep form layout stable. */
 textarea {
   resize: vertical;
 }
 
-/* This styles .contact-form so this part of the page looks right. */
+/* .contact-form defines grid layout and max width for the contact form block. */
 .contact-form {
   display: grid;
   gap: 1rem;
   max-width: 620px;
 }
 
-/* This styles .btn-primary so this part of the page looks right. */
+/* .btn-primary styles the main call-to-action button. */
 .btn-primary {
   background: var(--teal);
   color: #ffffff;
@@ -184,12 +184,12 @@ textarea {
   width: fit-content;
 }
 
-/* This styles .btn-primary:hover so this part of the page looks right. */
+/* .btn-primary:hover uses a darker brand tone for hover feedback. */
 .btn-primary:hover {
   background: var(--teal-dark);
 }
 
-/* This styles ul so this part of the page looks right. */
+/* ul resets default list spacing and bullets for custom list layouts. */
 ul {
   margin: 0;
   padding: 0;

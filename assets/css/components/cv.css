@@ -1,5 +1,5 @@
-/* This section has styles for CV page. */
-/* This styles .cv-embed so this part of the page looks right. */
+/* Defines the styles for CV page. */
+/* Applies styling to .cv-embed. */
 .cv-embed {
   background: #ffffff;
   border-radius: 18px;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-/* This styles .cv-actions so this part of the page looks right. */
+/* Applies styling to .cv-actions. */
 .cv-actions {
   display: flex;
   flex-wrap: wrap;
@@ -16,20 +16,20 @@
   margin-bottom: 1rem;
 }
 
-/* This styles .cv-actions .cv-switch[aria-pressed="true"] so this part of the page looks right. */
+/* Applies styling to .cv-actions .cv-switch[aria-pressed="true"]. */
 .cv-actions .cv-switch[aria-pressed="true"] {
   background: var(--teal);
   color: #ffffff;
   border-color: var(--teal);
 }
 
-/* This styles .cv-actions .cv-switch[aria-pressed="true"]:hover so this part of the page looks right. */
+/* Applies styling to .cv-actions .cv-switch[aria-pressed="true"]:hover. */
 .cv-actions .cv-switch[aria-pressed="true"]:hover {
   background: var(--teal-dark);
   border-color: var(--teal-dark);
 }
 
-/* This styles .btn-secondary so this part of the page looks right. */
+/* Applies styling to .btn-secondary. */
 .btn-secondary {
   background: #ffffff;
   color: var(--teal);
@@ -41,36 +41,36 @@
   width: fit-content;
 }
 
-/* This styles .btn-secondary:hover so this part of the page looks right. */
+/* Applies styling to .btn-secondary:hover. */
 .btn-secondary:hover {
   background: rgba(15, 118, 110, 0.08);
 }
 
-/* This styles .cv-embed iframe so this part of the page looks right. */
+/* Applies styling to .cv-embed iframe. */
 .cv-embed iframe {
   display: block;
   width: 100%;
-  height: 80vh;
-  min-height: 520px;
+  height: 60vh;
+  min-height: 320px;
   border: 0;
 }
 
-/* This changes the layout on max-width: 700px screens. */
-@media (max-width: 700px) {
-/* This styles .cv-embed iframe so this part of the page looks right. */
+/* This changes the layout on min-width: 701px screens. */
+@media (min-width: 701px) {
+/* Applies styling to .cv-embed iframe. */
   .cv-embed iframe {
-    height: 60vh;
-    min-height: 320px;
+    height: 80vh;
+    min-height: 520px;
   }
 }
 
-/* This styles .site-footer .inner so this part of the page looks right. */
+/* Applies styling to .site-footer .inner. */
 .site-footer .inner {
   position: relative;
   padding-top: 0.6rem;
 }
 
-/* This styles .site-footer .section-title so this part of the page looks right. */
+/* Applies styling to .site-footer .section-title. */
 .site-footer .section-title {
   color: #ffffff;
   margin-top: 0.25rem;

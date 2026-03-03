@@ -1,33 +1,43 @@
-/* This section has styles for Timeline. */
-/* This styles .timeline-section so this part of the page looks right. */
+/* Defines the styles for Timeline. */
+/* Applies styling to .timeline-section. */
 .timeline-section {
   background: #0F766E;
   color: #ffffff;
 }
 
-/* This styles .timeline-section .section-title so this part of the page looks right. */
+/* Applies styling to .timeline-section .section-title. */
 .timeline-section .section-title {
   color: #ffffff;
 }
 
-/* This styles .timeline-stem so this part of the page looks right. */
+/* Applies styling to .timeline-stem. */
 .timeline-stem {
   position: relative;
 }
 
-/* This styles .ts-row so this part of the page looks right. */
+/* Applies styling to .ts-row. */
 .ts-row {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(140px, 1fr);
+  gap: 0.75rem;
   position: relative;
-  margin-top: 1.5rem;
-  padding: 0.5rem 0 0.25rem;
-  --ts-stem: 50px;
+  margin-top: 1rem;
+  padding: 0.5rem 0 0.75rem;
+  width: max-content;
+  min-width: 100%;
+  --ts-stem: 26px;
 }
 
-/* This styles .ts-line so this part of the page looks right. */
+/* Applies styling to .ts-line. */
 .ts-line {
+  display: none;
+}
+
+/* Applies styling to .ts-row::after. */
+.ts-row::after {
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -37,35 +47,36 @@
   z-index: 0;
 }
 
-/* This styles .ts-item so this part of the page looks right. */
+/* Applies styling to .ts-item. */
 .ts-item {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 70px 1fr;
-  min-height: 210px;
+  grid-template-rows: 1fr 48px 1fr;
+  min-height: 155px;
   gap: 0;
   text-align: center;
   z-index: 1;
+  scroll-snap-align: center;
 }
 
-/* This styles .ts-top so this part of the page looks right. */
+/* Applies styling to .ts-top. */
 .ts-top {
   align-self: end;
   padding-bottom: 0;
   position: relative;
 }
 
-/* This styles .ts-bottom so this part of the page looks right. */
+/* Applies styling to .ts-bottom. */
 .ts-bottom {
   align-self: start;
   padding-top: 0;
   position: relative;
 }
 
-/* This styles .ts-circle so this part of the page looks right. */
+/* Applies styling to .ts-circle. */
 .ts-circle {
-  width: 70px;
-  height: 70px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: #0F766E;
   display: grid;
@@ -73,11 +84,11 @@
   margin: 0 auto;
   font-weight: 700;
   border: 0.75px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.08);
   z-index: 2;
 }
 
-/* This styles .ts-circle span so this part of the page looks right. */
+/* Applies styling to .ts-circle span. */
 .ts-circle span {
   position: relative;
   z-index: 1;
@@ -86,17 +97,17 @@
   background: transparent;
 }
 
-/* This styles .ts-top:has(.ts-title) so this part of the page looks right. */
+/* Applies styling to .ts-top:has(.ts-title). */
 .ts-top:has(.ts-title) {
   padding-bottom: var(--ts-stem);
 }
 
-/* This styles .ts-bottom:has(.ts-title) so this part of the page looks right. */
+/* Applies styling to .ts-bottom:has(.ts-title). */
 .ts-bottom:has(.ts-title) {
   padding-top: var(--ts-stem);
 }
 
-/* This styles .ts-top:has(.ts-title)::after, .ts-bottom:has(.ts-title)::before so this part of the page looks right. */
+/* Applies styling to .ts-top:has(.ts-title)::after, .ts-bottom:has(.ts-title)::before. */
 .ts-top:has(.ts-title)::after,
 .ts-bottom:has(.ts-title)::before {
   content: "";
@@ -107,94 +118,60 @@
   transform: translateX(-50%);
 }
 
-/* This styles .ts-top:has(.ts-title)::after so this part of the page looks right. */
+/* Applies styling to .ts-top:has(.ts-title)::after. */
 .ts-top:has(.ts-title)::after {
   bottom: 0;
   height: var(--ts-stem);
 }
 
-/* This styles .ts-bottom:has(.ts-title)::before so this part of the page looks right. */
+/* Applies styling to .ts-bottom:has(.ts-title)::before. */
 .ts-bottom:has(.ts-title)::before {
   top: 0;
   height: var(--ts-stem);
 }
 
-/* This styles .ts-title so this part of the page looks right. */
+/* Applies styling to .ts-title. */
 .ts-title {
   font-weight: 600;
+  font-size: 0.9rem;
 }
 
-/* This styles .ts-meta so this part of the page looks right. */
+/* Applies styling to .ts-meta. */
 .ts-meta {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* This changes the layout on max-width: 900px screens. */
-@media (max-width: 900px) {
-/* This styles .ts-row so this part of the page looks right. */
+/* Applies styling to .timeline-stem. */
+.timeline-stem {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+/* Applies styling to .timeline-section .inner. */
+.timeline-section .inner {
+  width: 92%;
+}
+
+/* This changes the layout on min-width: 601px screens. */
+@media (min-width: 601px) {
+/* Applies styling to .ts-row. */
   .ts-row {
     gap: 1rem;
+    margin-top: 1.5rem;
+    padding-bottom: 0.25rem;
+    width: auto;
+    min-width: 0;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
     --ts-stem: 26px;
   }
 
-/* This styles .ts-item so this part of the page looks right. */
-  .ts-item {
-    min-height: 180px;
-    grid-template-rows: 1fr 56px 1fr;
-  }
-
-/* This styles .ts-circle so this part of the page looks right. */
-  .ts-circle {
-    width: 56px;
-    height: 56px;
-    box-shadow: 0 0 0 9px rgba(255, 255, 255, 0.08);
-  }
-
-/* This styles .ts-title so this part of the page looks right. */
-  .ts-title {
-    font-size: 0.95rem;
-  }
-
-/* This styles .ts-meta so this part of the page looks right. */
-  .ts-meta {
-    font-size: 0.8rem;
-  }
-}
-
-/* This changes the layout on max-width: 600px screens. */
-@media (max-width: 600px) {
-/* This styles .timeline-stem so this part of the page looks right. */
-  .timeline-stem {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-/* This styles .timeline-section .inner so this part of the page looks right. */
-  .timeline-section .inner {
-    width: 92%;
-  }
-
-/* This styles .ts-row so this part of the page looks right. */
-  .ts-row {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(140px, 1fr);
-    gap: 0.75rem;
-    margin-top: 1rem;
-    padding-bottom: 0.75rem;
-    width: max-content;
-    min-width: 100%;
-  }
-
-/* This styles .ts-line so this part of the page looks right. */
+/* Applies styling to .ts-line. */
   .ts-line {
-    display: none;
-  }
-
-/* This styles .ts-row::after so this part of the page looks right. */
-  .ts-row::after {
-    content: "";
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -204,32 +181,76 @@
     z-index: 0;
   }
 
-/* This styles .ts-item so this part of the page looks right. */
+/* Applies styling to .ts-row::after. */
+  .ts-row::after {
+    display: none;
+  }
+
+/* Applies styling to .ts-item. */
   .ts-item {
-    min-height: 155px;
-    grid-template-rows: 1fr 48px 1fr;
-    scroll-snap-align: center;
+    min-height: 180px;
+    grid-template-rows: 1fr 56px 1fr;
+    scroll-snap-align: none;
   }
 
-/* This styles .timeline-stem so this part of the page looks right. */
-  .timeline-stem {
-    scroll-snap-type: x mandatory;
-  }
-
-/* This styles .ts-circle so this part of the page looks right. */
+/* Applies styling to .ts-circle. */
   .ts-circle {
-    width: 48px;
-    height: 48px;
-    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.08);
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 0 0 9px rgba(255, 255, 255, 0.08);
   }
 
-/* This styles .ts-title so this part of the page looks right. */
+/* Applies styling to .ts-title. */
   .ts-title {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
-/* This styles .ts-meta so this part of the page looks right. */
+/* Applies styling to .ts-meta. */
   .ts-meta {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+/* Applies styling to .timeline-stem. */
+  .timeline-stem {
+    overflow-x: visible;
+    -webkit-overflow-scrolling: auto;
+    scroll-snap-type: none;
+  }
+
+/* Applies styling to .timeline-section .inner. */
+  .timeline-section .inner {
+    width: auto;
+  }
+}
+
+/* This changes the layout on min-width: 901px screens. */
+@media (min-width: 901px) {
+/* Applies styling to .ts-row. */
+  .ts-row {
+    gap: 1.5rem;
+    --ts-stem: 50px;
+  }
+
+/* Applies styling to .ts-item. */
+  .ts-item {
+    min-height: 210px;
+    grid-template-rows: 1fr 70px 1fr;
+  }
+
+/* Applies styling to .ts-circle. */
+  .ts-circle {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.08);
+  }
+
+/* Applies styling to .ts-title. */
+  .ts-title {
+    font-size: 1rem;
+  }
+
+/* Applies styling to .ts-meta. */
+  .ts-meta {
+    font-size: 0.85rem;
   }
 }

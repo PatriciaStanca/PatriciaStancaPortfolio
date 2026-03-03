@@ -1,7 +1,7 @@
 (function () {
   const app = (window.SiteApp = window.SiteApp || { initializers: [] });
   app.initializers.push(() => {
-// This reveals sections as you scroll down the page.
+// reveals sections as you scroll down the page.
 (function () {
   const selectors = [
     '.section-title',
