@@ -349,7 +349,7 @@ body.is-menu-visible .mobile-menu {
 /* Applies styling to .mobile-menu .mobile-accordion::after. */
 .mobile-menu .mobile-accordion::after {
   content: "›";
-  transform: rotate(90deg);
+  transform: none;
   transition: transform 0.2s ease;
   font-size: 1.1em;
   color: var(--teal);
@@ -357,7 +357,7 @@ body.is-menu-visible .mobile-menu {
 
 /* Applies styling to .mobile-menu .mobile-accordion[aria-expanded="true"]::after. */
 .mobile-menu .mobile-accordion[aria-expanded="true"]::after {
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 /* Applies styling to .mobile-menu .mobile-submenu. */
@@ -447,8 +447,15 @@ body.is-menu-visible .mobile-menu {
 
 /* Applies styling to .hero-image img. */
 .hero-image img {
-  border-radius: 14px;
-  box-shadow: var(--shadow-soft);
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  transform-origin: center;
+  mix-blend-mode: multiply;
 }
 
 /* Defines the styles for Intro split. */
@@ -469,6 +476,7 @@ body.is-menu-visible .mobile-menu {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 3.5rem;
+  align-items: start;
 }
 
 /* Applies styling to .page-lead. */
@@ -487,8 +495,17 @@ body.is-menu-visible .mobile-menu {
   font-size: 1rem;
   line-height: 1.86;
   letter-spacing: 0.01em;
-  max-width: 560px;
+  max-width: none;
+  width: 100%;
   text-align: left;
+}
+
+.intro-split > div {
+  min-width: 0;
+}
+
+.intro-split > div:last-child {
+  justify-self: stretch;
 }
 
 /* Applies styling to .page-about .intro-split > div:last-child. */

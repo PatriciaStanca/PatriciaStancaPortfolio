@@ -123,7 +123,7 @@
   max-height: none;
 }
 
-@media screen and (min-width: 737px) {
+@media (min-width: 737px) {
   .accordion-content .image img,
   .accordion-content .media video,
   .accordion-content .project-video {
@@ -245,7 +245,7 @@
   }
 }
 
-@media screen and (min-width: 981px) {
+@media (min-width: 981px) {
   .accordion-content .image img,
   .accordion-content .media video,
   .accordion-content .project-video {

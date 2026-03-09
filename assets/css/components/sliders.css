@@ -30,7 +30,7 @@
 /* Applies styling to .slider-btn. */
 .slider-btn {
   border: 0;
-  background: #ffffff;
+  background: transparent;
   border-radius: 999px;
   width: 72px;
   height: 72px;
@@ -48,7 +48,7 @@
   width: 72px;
   height: 72px;
   font-size: 1.6rem;
-  background: #ffffff;
+  background: transparent;
 }
 
 /* Applies styling to .testimonial-nav.slider-btn. */
@@ -56,7 +56,7 @@
   width: 72px;
   height: 72px;
   font-size: 1.6rem;
-  background: #ffffff;
+  background: transparent;
 }
 
 /* Applies styling to .slider-btn:hover. */
@@ -67,6 +67,46 @@
 /* Applies styling to .slider-btn.left:hover. */
 .slider-btn.left:hover {
   transform: translateX(-4px);
+}
+
+/* Defines the styles for Previous Work + References premium treatment (elements page). */
+/* Applies styling to .page-elements .section-previous-work, .page-elements .section-references. */
+.page-elements .section-previous-work,
+.page-elements .section-references {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Applies styling to .page-elements .section-previous-work::before, .page-elements .section-references::before. */
+.page-elements .section-previous-work::before,
+.page-elements .section-references::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Applies styling to .page-elements .section-previous-work::before. */
+.page-elements .section-previous-work::before {
+  background:
+    radial-gradient(54% 70% at 8% 22%, rgba(15, 118, 110, 0.1), transparent 74%),
+    radial-gradient(38% 48% at 93% 82%, rgba(164, 225, 215, 0.16), transparent 82%);
+}
+
+/* Applies styling to .page-elements .section-references::before. */
+.page-elements .section-references::before {
+  background:
+    radial-gradient(42% 56% at 90% 14%, rgba(15, 118, 110, 0.09), transparent 74%),
+    radial-gradient(58% 72% at 6% 92%, rgba(164, 225, 215, 0.14), transparent 82%);
+}
+
+/* Applies styling to .page-elements .section-previous-work .inner, .page-elements .section-references .inner. */
+.page-elements .section-previous-work .inner,
+.page-elements .section-references .inner {
+  position: relative;
+  z-index: 1;
 }
 
 /* Defines the styles for Previous work slider. */
@@ -98,9 +138,9 @@
 /* Applies styling to .role-card. */
 .role-card {
   border: 0;
-  border-radius: 16px;
-  padding: 1.25rem;
-  background: #ffffff;
+  border-radius: 0;
+  padding: 1.35rem;
+  background: transparent;
   min-height: 280px;
   width: 100%;
   box-sizing: border-box;
@@ -109,6 +149,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: none;
+  transition: none;
 }
 
 /* Applies styling to .role-header h4. */
@@ -122,7 +164,7 @@
 /* Applies styling to .role-meta. */
 .role-meta {
   margin: 0 0 1rem 0;
-  color: var(--slate);
+  color: #456064;
   font-size: 0.85rem;
 }
 
@@ -137,7 +179,8 @@
 
 /* Applies styling to .role-chips. */
 .role-chips {
-  margin-top: 0.8rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -146,12 +189,18 @@
 
 /* Applies styling to .role-chip. */
 .role-chip {
-  background: rgba(15, 118, 110, 0.12);
-  color: var(--teal);
-  padding: 0.25rem 0.6rem;
+  background: rgba(15, 118, 110, 0.1);
+  color: #0b5f58;
+  padding: 0.3rem 0.65rem;
   border-radius: 999px;
   font-size: 0.7rem;
   white-space: nowrap;
+}
+
+/* Applies styling to .role-card:hover. */
+.role-card:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 /* Defines the styles for Testimonials. */
@@ -176,14 +225,43 @@
 
 /* Applies styling to .testimonial-card. */
 .testimonial-card {
+  position: relative;
   background: transparent;
   border-radius: 0;
-  padding: 0;
+  padding: 1.25rem 1.15rem 1.1rem;
   box-shadow: none;
+  border: 0;
   min-width: 280px;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  transition: none;
+}
+
+/* Applies styling to .page-elements .role-card, .page-elements .testimonial-card. */
+.page-elements .role-card,
+.page-elements .testimonial-card {
+  border: none;
+}
+
+/* Applies styling to .page-elements .section-references .testimonial-nav.slider-btn. */
+.page-elements .section-references .testimonial-nav.slider-btn {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+}
+
+/* Applies styling to .testimonial-card::after. */
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  right: -20%;
+  top: -42%;
+  width: 74%;
+  height: 92%;
+  border-radius: 58% 42% 64% 36% / 46% 56% 44% 54%;
+  background: radial-gradient(circle, rgba(164, 225, 215, 0.1) 0%, rgba(164, 225, 215, 0) 72%);
+  pointer-events: none;
 }
 
 /* Applies styling to .testimonial-quote. */
@@ -198,22 +276,121 @@
 .testimonial-body {
   display: grid;
   gap: 0.75rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* Applies styling to .testimonial-text. */
 .testimonial-text {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-style: italic;
   margin: 0;
+  color: #0f172a;
+  line-height: 1.72;
 }
 
 /* Applies styling to .testimonial-author. */
 .testimonial-author {
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--slate);
+  color: #3f5d61;
   margin: 0;
+}
+
+/* Applies styling to .testimonial-card:hover. */
+.testimonial-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* This changes the layout on max-width: 980px screens. */
+@media (max-width: 980px) {
+/* Applies styling to .role-slider, .testimonial-slider. */
+  .role-slider,
+  .testimonial-slider {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+/* Applies styling to .role-nav.slider-btn, .testimonial-nav.slider-btn. */
+  .role-nav.slider-btn,
+  .testimonial-nav.slider-btn {
+    display: none;
+  }
+
+/* Applies styling to .role-track. */
+  .role-track {
+    grid-auto-columns: 100%;
+    gap: 0.95rem;
+    padding-top: 1rem;
+    scroll-padding-inline: 0.1rem;
+  }
+
+/* Applies styling to .role-card. */
+  .role-card {
+    min-height: 0;
+    padding: 1rem;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07);
+  }
+
+/* Applies styling to .role-header h4. */
+  .role-header h4 {
+    min-height: 0;
+  }
+
+/* Applies styling to .testimonial-grid. */
+  .testimonial-grid {
+    grid-auto-columns: 100%;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.1rem;
+  }
+
+/* Applies styling to .testimonial-card. */
+  .testimonial-card {
+    min-width: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding: 1rem 0.95rem 0.92rem;
+  }
+
+/* Applies styling to .testimonial-card::after. */
+  .testimonial-card::after {
+    right: -26%;
+    top: -55%;
+    width: 92%;
+    height: 118%;
+  }
+
+/* Applies styling to .testimonial-body. */
+  .testimonial-body {
+    min-width: 0;
+  }
+
+/* Applies styling to .testimonial-quote. */
+  .testimonial-quote {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+    margin-top: 0;
+  }
+
+/* Applies styling to .role-meta, .role-points, .testimonial-text, .testimonial-author. */
+  .role-meta,
+  .role-points,
+  .testimonial-text,
+  .testimonial-author {
+    overflow-wrap: anywhere;
+  }
+
+/* Applies styling to .role-card:hover, .testimonial-card:hover. */
+  .role-card:hover,
+  .testimonial-card:hover {
+    transform: none;
+  }
 }
 
 /* This changes the layout on min-width: 701px screens. */

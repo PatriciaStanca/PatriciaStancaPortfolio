@@ -310,7 +310,7 @@ body.is-search-open .search-drawer {
   border: 0;
 }
 
-@media screen and (min-width: 737px) {
+@media (min-width: 737px) {
   .header-search {
     display: block;
     grid-column: 3 / 4;

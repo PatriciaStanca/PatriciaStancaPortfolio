@@ -1,4 +1,5 @@
 /* Defines the styles for Utilities: spacing tweaks, overrides, responsive. */
+/* Global breakpoint scale (mobile-first): 601, 701, 737, 901, 981, 1201. */
 /* Defines the styles for Overrides previously in overrides.css. */
 /* Applies styling to section:not(.stats-wide):not(.summary-band), article, .wrapper:not(.stats-wide), .wrapper > .inner. */
 body .site-main section:not(.stats-wide):not(.summary-band),
@@ -141,7 +142,7 @@ body.is-menu-visible .mobile-menu {
 
 /* Applies styling to .language-list. */
 /* This changes the layout on min-width: 737px screens. */
-@media screen and (min-width: 737px) {
+@media (min-width: 737px) {
 /* Applies styling to .site-header nav.top-nav. */
   .site-header nav.top-nav {
     display: flex;
@@ -184,10 +185,15 @@ body.is-menu-visible .mobile-menu {
 }
 
 /* This changes the layout on min-width: 981px screens. */
-@media screen and (min-width: 981px) {
+@media (min-width: 981px) {
 /* Applies styling to .hero-grid. */
   .hero-grid {
     grid-template-columns: 1.1fr 0.9fr;
+  }
+
+/* Pulls hero portrait closer to center split on desktop. */
+  .hero-image {
+    margin-left: clamp(-9rem, -8vw, -4.5rem);
   }
 
 /* Applies styling to .key-achievements. */
@@ -234,8 +240,377 @@ body.is-menu-visible .mobile-menu {
   }
 }
 
+/* This keeps ultra-wide screens on the same visual rhythm while reserving a global xl breakpoint. */
+@media (min-width: 1201px) {
+/* Applies styling to .wrapper > .inner, .inner. */
+  .wrapper > .inner,
+  .inner {
+    width: 85%;
+  }
+}
+
+/* Defines the styles for Index visual depth (hero rhythm, subtle structure, layered accents). */
+body.page-index .site-main {
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #fcfffe 38%, #ffffff 100%);
+}
+
+body.page-index .section-hero {
+  --hero-diagonal-height: clamp(42px, 7vw, 88px);
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body.page-index .section-hero > .inner {
+  padding-bottom: calc(var(--section-space) + var(--hero-diagonal-height));
+}
+
+body.page-index .section-hero::before,
+body.page-index .section-hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+body.page-index .section-hero::before {
+  top: clamp(1.2rem, 3vw, 3.5rem);
+  left: max(-18vw, -180px);
+  width: clamp(320px, 56vw, 760px);
+  height: clamp(260px, 44vw, 560px);
+  border-radius: 48% 52% 41% 59% / 58% 42% 60% 40%;
+  background: radial-gradient(circle at 28% 32%, rgba(15, 118, 110, 0.14), rgba(15, 118, 110, 0.04) 56%, transparent 78%);
+  filter: blur(2px);
+  z-index: 0;
+  animation: ambient-shift 24s ease-in-out infinite alternate;
+}
+
+body.page-index .section-hero::after {
+  right: max(-11vw, -130px);
+  bottom: clamp(5rem, 10vw, 9rem);
+  width: clamp(240px, 35vw, 500px);
+  height: clamp(180px, 28vw, 360px);
+  border-radius: 61% 39% 55% 45% / 44% 58% 42% 56%;
+  background: radial-gradient(circle at 60% 44%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 60%, transparent 82%);
+  filter: blur(1px);
+  z-index: 0;
+  animation: ambient-shift 18s ease-in-out infinite alternate-reverse;
+}
+
+body.page-index .section-hero .hero-grid {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-index .section-hero .hero-text,
+body.page-index .section-hero .hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+body.page-index .section-hero .hero-text::before {
+  content: "";
+  position: absolute;
+  top: clamp(-2.8rem, -3.8vw, -1rem);
+  left: clamp(-1.6rem, -4vw, -3.6rem);
+  width: clamp(190px, 26vw, 340px);
+  height: clamp(150px, 18vw, 240px);
+  border-radius: 58% 42% 48% 52% / 50% 56% 44% 50%;
+  background: radial-gradient(circle at 36% 44%, rgba(15, 118, 110, 0.15), rgba(15, 118, 110, 0.04) 58%, transparent 84%);
+  filter: blur(4px);
+  z-index: -1;
+  animation: ambient-shift 20s ease-in-out infinite alternate;
+}
+
+body.page-index .section-hero .hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 9% 7% -12% 10%;
+  border-radius: 40% 60% 52% 48% / 46% 47% 53% 54%;
+  background: radial-gradient(circle at 40% 40%, rgba(15, 118, 110, 0.14), rgba(15, 118, 110, 0.05) 62%, transparent 84%);
+  z-index: -1;
+  filter: blur(3px);
+}
+
+body.page-index .section-hero .hero-image img {
+  border-radius: 20px;
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+  mix-blend-mode: normal;
+}
+
+body.page-index .section-hero .hero-grid::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(-1 * var(--hero-diagonal-height));
+  width: 100vw;
+  height: var(--hero-diagonal-height);
+  transform: translateX(-50%);
+  background: linear-gradient(136deg, rgba(225, 245, 240, 0.95) 0%, rgba(236, 250, 246, 0.95) 100%);
+  clip-path: polygon(0 64%, 100% 0, 100% 100%, 0 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.page-index #intro {
+  position: relative;
+  z-index: 3;
+  background: #ffffff;
+}
+
+body.page-index #intro .inner {
+  padding-top: clamp(1.2rem, 3vw, 2.4rem);
+}
+
+body.page-index #skills {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body.page-index #skills::before {
+  content: "";
+  position: absolute;
+  top: 12%;
+  right: max(-14vw, -180px);
+  width: clamp(260px, 42vw, 620px);
+  height: clamp(220px, 34vw, 460px);
+  border-radius: 52% 48% 63% 37% / 39% 58% 42% 61%;
+  background: radial-gradient(circle at 32% 38%, rgba(15, 118, 110, 0.1), rgba(15, 118, 110, 0.02) 64%, transparent 82%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.page-index #skills::after {
+  content: "";
+  position: absolute;
+  left: max(-12vw, -160px);
+  bottom: 6%;
+  width: clamp(210px, 30vw, 420px);
+  height: clamp(150px, 24vw, 320px);
+  border-radius: 44% 56% 36% 64% / 56% 36% 64% 44%;
+  background: radial-gradient(circle at 42% 50%, rgba(15, 118, 110, 0.08), rgba(15, 118, 110, 0.015) 64%, transparent 82%);
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-index #skills .inner {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-index #project-reel {
+  position: relative;
+  isolation: isolate;
+}
+
+body.page-index #project-reel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(58% 70% at 16% 22%, rgba(164, 225, 215, 0.08), transparent 70%);
+  z-index: 0;
+}
+
+body.page-index #project-reel::after {
+  content: "";
+  position: absolute;
+  right: max(-10vw, -130px);
+  bottom: 8%;
+  width: clamp(230px, 34vw, 520px);
+  height: clamp(170px, 26vw, 360px);
+  border-radius: 65% 35% 52% 48% / 44% 58% 42% 56%;
+  background: radial-gradient(circle at 54% 50%, rgba(164, 225, 215, 0.14), rgba(164, 225, 215, 0.02) 66%, transparent 86%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-index #project-reel .inner {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-index #project-reel + .wrapper,
+body.page-index #clients {
+  background: #ffffff;
+}
+
+/* Defines the styles for Generic + Elements visual depth (organic forms without grid). */
+body.page-generic .site-main,
+body.page-elements .site-main {
+  position: relative;
+  isolation: isolate;
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #fcfffe 40%, #ffffff 100%);
+  overflow: hidden;
+}
+
+body.page-generic .site-main::before,
+body.page-elements .site-main::before,
+body.page-generic .site-main::after,
+body.page-elements .site-main::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-generic .site-main::before,
+body.page-elements .site-main::before {
+  top: clamp(4rem, 8vw, 8rem);
+  left: max(-16vw, -220px);
+  width: clamp(300px, 48vw, 760px);
+  height: clamp(240px, 40vw, 560px);
+  border-radius: 58% 42% 46% 54% / 52% 48% 52% 48%;
+  background: radial-gradient(circle at 40% 42%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 62%, transparent 84%);
+  filter: blur(2px);
+  animation: ambient-shift 26s ease-in-out infinite alternate;
+}
+
+body.page-generic .site-main::after,
+body.page-elements .site-main::after {
+  right: max(-14vw, -190px);
+  top: clamp(16rem, 28vw, 28rem);
+  width: clamp(280px, 38vw, 620px);
+  height: clamp(190px, 31vw, 420px);
+  border-radius: 41% 59% 62% 38% / 55% 38% 62% 45%;
+  background: radial-gradient(circle at 50% 42%, rgba(164, 225, 215, 0.18), rgba(15, 118, 110, 0.03) 66%, transparent 84%);
+  animation: ambient-shift 21s ease-in-out infinite alternate-reverse;
+}
+
+body.page-generic .site-main > .wrapper,
+body.page-elements .site-main > .wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-generic .site-main > .wrapper:first-of-type,
+body.page-elements .site-main > .wrapper:first-of-type {
+  position: relative;
+  overflow: hidden;
+}
+
+body.page-generic .site-main > .wrapper:first-of-type::before,
+body.page-elements .site-main > .wrapper:first-of-type::before {
+  content: "";
+  position: absolute;
+  right: max(-9vw, -120px);
+  top: clamp(2rem, 4vw, 4.5rem);
+  width: clamp(180px, 22vw, 320px);
+  height: clamp(130px, 18vw, 240px);
+  border-radius: 60% 40% 52% 48% / 44% 56% 44% 56%;
+  background: radial-gradient(circle at 44% 48%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 64%, transparent 82%);
+  filter: blur(1px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-generic .intro-split,
+body.page-elements .site-main > .wrapper:first-of-type .inner {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-generic .intro-split::after {
+  content: "";
+  position: absolute;
+  left: max(-10vw, -150px);
+  bottom: clamp(-1rem, -3vw, -2.2rem);
+  width: clamp(180px, 24vw, 340px);
+  height: clamp(120px, 16vw, 220px);
+  border-radius: 45% 55% 38% 62% / 60% 44% 56% 40%;
+  background: radial-gradient(circle at 48% 48%, rgba(164, 225, 215, 0.18), rgba(164, 225, 215, 0.02) 66%, transparent 84%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ambient-shift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(0.7rem, -0.5rem, 0) scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-index .section-hero::before,
+  body.page-index .section-hero::after,
+  body.page-index .section-hero .hero-text::before,
+  body.page-generic .site-main::before,
+  body.page-elements .site-main::before,
+  body.page-generic .site-main::after,
+  body.page-elements .site-main::after {
+    animation: none;
+  }
+}
+
+@media (max-width: 980px) {
+  body.page-index .section-hero {
+    --hero-diagonal-height: clamp(32px, 9vw, 62px);
+  }
+
+  body.page-index .section-hero > .inner {
+    padding-bottom: calc(var(--section-space) + (var(--hero-diagonal-height) * 0.8));
+  }
+
+  body.page-index .section-hero .hero-grid::after {
+    clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  body.page-index #intro .inner {
+    padding-top: 1rem;
+  }
+
+  body.page-index .section-hero .hero-text::before {
+    left: -0.5rem;
+    top: -1.4rem;
+    width: clamp(160px, 34vw, 240px);
+    height: clamp(120px, 25vw, 170px);
+  }
+
+  body.page-generic .site-main::before,
+  body.page-elements .site-main::before {
+    top: 5rem;
+    left: -7rem;
+  }
+
+  body.page-generic .site-main::after,
+  body.page-elements .site-main::after {
+    right: -6.2rem;
+    top: 20rem;
+  }
+}
+
 /* Defines the styles for Print styles. */
 @media print {
+  body.page-index .site-main {
+    background-image: none;
+  }
+
+  body.page-index .section-hero::before,
+  body.page-index .section-hero::after,
+  body.page-index .section-hero .hero-text::before,
+  body.page-index .section-hero .hero-image::before,
+  body.page-index .section-hero .hero-grid::after,
+  body.page-index #skills::before,
+  body.page-index #skills::after,
+  body.page-index #project-reel::before,
+  body.page-index #project-reel::after,
+  body.page-generic .site-main::before,
+  body.page-elements .site-main::before,
+  body.page-generic .site-main::after,
+  body.page-elements .site-main::after,
+  body.page-generic .site-main > .wrapper:first-of-type::before,
+  body.page-elements .site-main > .wrapper:first-of-type::before,
+  body.page-generic .intro-split::after {
+    display: none;
+  }
+
   body {
     background: #ffffff;
     color: #000000;

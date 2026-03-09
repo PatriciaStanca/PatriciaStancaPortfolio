@@ -35,6 +35,7 @@
   const valueTypePauseMs = 260;
   const transitionMs = 340;
   const sceneGapMs = 80;
+  const phoneVideoStartAt = 6.5;
 
   let sceneIndex = 0;
   let valueIndex = 0;
@@ -126,46 +127,69 @@
       const stage = document.createElement('div');
       stage.className = 'project-reel-phone-stage';
 
-      const device = document.createElement('div');
-      device.className = 'project-reel-phone';
+      const stack = document.createElement('div');
+      stack.className = 'project-reel-device-stack';
 
-      const media = document.createElement('div');
-      media.className = 'project-reel-phone-media';
+      const bgLayer = document.createElement('div');
+      bgLayer.className = 'project-reel-bg-layer';
+      stack.appendChild(bgLayer);
 
-      const video = document.createElement('video');
-      video.className = 'project-reel-phone-video';
-      video.controls = false;
-      video.muted = true;
-      video.loop = false;
-      video.playsInline = true;
-      video.preload = 'none';
-      video.setAttribute('aria-label', 'Screen recording showing live product scroll');
-      video.setAttribute('disablepictureinpicture', '');
-      video.setAttribute('controlslist', 'nodownload noplaybackrate noremoteplayback');
-      video.dataset.src = phoneVideoSources[0];
-      video.addEventListener('error', () => {});
+      const createDeviceVideo = (role) => {
+        const video = document.createElement('video');
+        video.className = 'project-reel-phone-video';
+        video.controls = false;
+        video.muted = true;
+        video.loop = false;
+        video.autoplay = true;
+        video.playsInline = true;
+        video.preload = 'none';
+        video.setAttribute('aria-label', 'Screen recording showing live product scroll');
+        video.setAttribute('disablepictureinpicture', '');
+        video.setAttribute('controlslist', 'nodownload noplaybackrate noremoteplayback');
+        video.setAttribute('autoplay', '');
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+        video.dataset.src = phoneVideoSources[0];
+        video.dataset.role = role;
+        video.addEventListener('error', () => {});
+        return video;
+      };
 
-      const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      icon.setAttribute('viewBox', '0 0 24 24');
-      icon.setAttribute('fill', 'none');
-      icon.setAttribute('aria-hidden', 'true');
-      icon.classList.add('project-reel-phone-outline');
+      const desktop = document.createElement('div');
+      desktop.className = 'project-reel-desktop';
+      const desktopScreen = document.createElement('div');
+      desktopScreen.className = 'project-reel-desktop-screen';
+      desktopScreen.appendChild(createDeviceVideo('primary'));
+      const desktopFrame = document.createElement('div');
+      desktopFrame.className = 'project-reel-desktop-frame';
+      desktop.append(desktopScreen, desktopFrame);
+      stack.appendChild(desktop);
 
-      const bodyRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-      bodyRect.setAttribute('x', '5');
-      bodyRect.setAttribute('y', '2');
-      bodyRect.setAttribute('width', '14');
-      bodyRect.setAttribute('height', '20');
-      bodyRect.setAttribute('rx', '2');
-      bodyRect.setAttribute('ry', '2');
+      const tabletLeft = document.createElement('div');
+      tabletLeft.className = 'project-reel-tablet project-reel-tablet-left';
+      const tabletLeftScreen = document.createElement('div');
+      tabletLeftScreen.className = 'project-reel-tablet-screen';
+      tabletLeftScreen.appendChild(createDeviceVideo('secondary'));
+      tabletLeft.appendChild(tabletLeftScreen);
+      stack.appendChild(tabletLeft);
 
-      const button = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      button.setAttribute('d', 'M12 18h.01');
+      const tabletRight = document.createElement('div');
+      tabletRight.className = 'project-reel-tablet project-reel-tablet-right';
+      const tabletRightScreen = document.createElement('div');
+      tabletRightScreen.className = 'project-reel-tablet-screen';
+      tabletRightScreen.appendChild(createDeviceVideo('secondary'));
+      tabletRight.appendChild(tabletRightScreen);
+      stack.appendChild(tabletRight);
 
-      icon.append(bodyRect, button);
-      media.appendChild(video);
-      device.append(media, icon);
-      stage.appendChild(device);
+      const mobile = document.createElement('div');
+      mobile.className = 'project-reel-mobile';
+      const mobileScreen = document.createElement('div');
+      mobileScreen.className = 'project-reel-mobile-screen';
+      mobileScreen.appendChild(createDeviceVideo('secondary'));
+      mobile.appendChild(mobileScreen);
+      stack.appendChild(mobile);
+
+      stage.appendChild(stack);
       layout.appendChild(stage);
     }
 
@@ -353,7 +377,8 @@
 
     if (currentType === 'phone') {
       const activeScene = track.querySelector('.project-reel-scene.is-active[data-scene="phone"]');
-      const video = activeScene ? activeScene.querySelector('.project-reel-phone-video') : null;
+      const videos = activeScene ? Array.from(activeScene.querySelectorAll('.project-reel-phone-video')) : [];
+      const primaryVideo = videos.find((video) => video.dataset.role === 'primary') || videos[0] || null;
       let hasAdvanced = false;
       const advanceFromPhone = () => {
         if (hasAdvanced || !isRunning) return;
@@ -361,25 +386,43 @@
         queueAdvance(sceneGapMs);
       };
 
-      if (video) {
-        if (video.dataset.src && !video.getAttribute('src')) {
-          video.src = video.dataset.src;
-          video.load();
+      if (videos.length) {
+        const seekToStart = (video) => {
+          const safeStart = Number.isFinite(video.duration) && video.duration > phoneVideoStartAt
+            ? phoneVideoStartAt
+            : 0;
+          try {
+            video.currentTime = safeStart;
+          } catch (_) {}
+        };
+
+        videos.forEach((video) => {
+          if (video.dataset.src && !video.getAttribute('src')) {
+            video.src = video.dataset.src;
+            video.load();
+          }
+        });
+
+        if (primaryVideo) {
+          primaryVideo.addEventListener('ended', advanceFromPhone, { once: true });
         }
 
-        video.addEventListener('ended', advanceFromPhone, { once: true });
-        const tryPlay = () => {
+        const tryPlay = (video) => {
+          seekToStart(video);
           const playPromise = video.play();
           if (playPromise && typeof playPromise.catch === 'function') {
             playPromise.catch(() => {});
           }
         };
 
-        if (video.readyState >= 2) {
-          tryPlay();
-        } else {
-          video.addEventListener('loadeddata', tryPlay, { once: true });
-        }
+        videos.forEach((video) => {
+          if (video.readyState >= 2) {
+            tryPlay(video);
+          } else {
+            video.addEventListener('loadedmetadata', () => seekToStart(video), { once: true });
+            video.addEventListener('loadeddata', () => tryPlay(video), { once: true });
+          }
+        });
       }
 
       setReelTimeout(() => {

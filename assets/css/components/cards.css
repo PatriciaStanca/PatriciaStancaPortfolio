@@ -2,7 +2,9 @@
 /* Applies styling to .key-achievements. */
 .key-achievements {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
   gap: 1.5rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -72,7 +74,7 @@
 /* Applies styling to .highlights-grid. */
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -100,6 +102,15 @@
 /* Applies styling to .highlight-link:hover .heading-arrow. */
 .highlight-link:hover .heading-arrow {
   transform: translateX(4px);
+}
+
+/* Defines the styles for Index skills section (non-boxed style). */
+/* Applies styling to .page-index #skills .highlight-item. */
+.page-index #skills .highlight-item {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.7rem 0;
 }
 
 /* Defines the styles for Stats summary (elements page). */
@@ -148,8 +159,8 @@
 /* Applies styling to .summary-grid. */
 .summary-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(0.5rem, 1.5vw, 1.5rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 /* Applies styling to .summary-band .summary-grid. */
@@ -226,6 +237,27 @@
 /* Applies styling to .summary-label. */
   .summary-label {
     font-size: clamp(0.7rem, 1.6vw, 0.95rem);
+  }
+}
+
+/* This changes the layout on min-width: 981px screens. */
+@media (min-width: 981px) {
+/* Applies styling to .key-achievements. */
+  .key-achievements {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+/* Applies styling to .highlights-grid. */
+  .highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+/* Applies styling to .summary-grid. */
+  .summary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
   }
 }
 
