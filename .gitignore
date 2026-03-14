@@ -2,6 +2,7 @@
 node_modules/
 dev/review_pdfs/
 dev/test-results/
+dev/qa-screenshots/
 /.lighthouseci/
 playwright-report/
 npm-debug.log*
