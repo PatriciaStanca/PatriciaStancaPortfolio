@@ -67,9 +67,9 @@ Current component files:
 1. (G) Appen ska testas ordentligt för att undvika oönskat beteende eller fel.  
 Status: Uppfylld i repo:t. `npm run lint` och `npm run e2e` passerar, och sajten har även testats manuellt.
 2. (G) Det ska vara omöjligt för användaren att mata in felaktiga uppgifter.  
-Status: Delvis/bedömningsfråga. Starkt klientskydd finns (HTML5 constraints + JS-validering + felmeddelanden), men absolut garanti kräver servervalidering.
+Status: Klientskydd finns genom HTML5-validering, JavaScript-validering och tydliga felmeddelanden, till exempel krav på ifyllda fält, giltig e-post och minst 2 tecken i namn.
 4. (G) Koden ska fungera och applikationen ska gå att köra utan fel.  
-Status: Uppfylld i normal användning. Sajten fungerar lokalt och live, och kontaktformulärets Formspree-submit fungerar igen efter uppdaterad CSP.
+Status: Uppfylld i normal användning. Sajten fungerar lokalt och live, och kontaktformulärets Formspree-submit.
 5. (G) Best practices, bra namn, DRY (särskilt relevant för t.ex. C# Razor Pages).  
 Status: Uppfylld för denna stack (HTML/CSS/JS), med modulär struktur och separerade komponentfiler.
 6. (G) README ska finnas och beskriva projektet samt metoder/principer.  
@@ -81,15 +81,17 @@ Status: Uppfylld (används brett i `assets/css/layout/*.css` och `assets/css/com
 9. (VG) Git commits och feature branches med relevanta meddelanden.  
 Status: Uppfylld. Exempelbranch: `chore/vg-proof-links-and-branch-workflow` med separata, meningsfulla commits.
 10. (VG) Vid felaktig inmatning visas relevanta varningar och användaren kan försöka igen.  
-Status: Uppfylld i implementationen (`assets/js/modules/contact-form.js`).
+Status: Uppfylld i (`assets/js/modules/contact-form.js`).
 11. (VG) Samtliga miljöer ska vara användarvänliga och snygga (UX/UI).  
-Status: Stark kandidat enligt implementationen; slutbedömning görs av examinator.
+Status: Bedömning görs av examinator.
 12. (VG) Professionell klass avseende genomförande, dokumentation och testning.  
-Status: Stark kandidat enligt implementationen. Den vanliga kodtestkedjan (`lint` + `e2e`) är grön.
+Status: Kodtestkedjan (`lint` + `e2e`) är grön.
 13. (VG) Externt väder-API med temperatur i Celsius, plats och relevant info/ikon.  
 Status: Uppfylld (OpenWeather i kontaktsektionen).
 14. (VG) Portföljen ska vara responsiv för mobil och desktop.  
 Status: Uppfylld (media queries + flex/grid-layouts).
+15. (VG) Portföljen ska använda minst 3 breakpoints för responsiv anpassning.  
+Status: Uppfylld. Följande breakpoints används i CSS: `601px`, `701px`, `737px`, `767px`, `768px`, `820px`, `901px`, `980px`, `981px`, `1201px` och `1280px` i layout-, komponent- och utility-filer.
 
 ## Validation Notes
 - Input validation is client‑side only using HTML5 constraints + JS regex helpers.
@@ -111,6 +113,7 @@ Automated and manual testing.
 ## Methods / Principles
 - Semantic HTML structure
 - Separation of concerns: base/layout/components/utilities CSS
+- Mobile-first responsive strategy in overall layout, with additional max-width refinements where needed
 - Progressive enhancement
 - Accessibility basics (labels, aria, keyboard support)
 
