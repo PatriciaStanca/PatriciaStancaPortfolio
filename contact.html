@@ -21,14 +21,15 @@
 			<link rel="icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="shortcut icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="apple-touch-icon" href="/assets/media/images/P.jpg">
-		<link rel="stylesheet" href="assets/css/base.css">
-		<link rel="stylesheet" href="assets/css/layout.css">
-		<link rel="stylesheet" href="assets/css/components/contact.css">
-		<link rel="stylesheet" href="assets/css/components/search.css">
-		<link rel="stylesheet" href="assets/css/components/footer.css" media="print" data-async-css>
-		<link rel="stylesheet" href="assets/css/components/weather.css" media="print" data-async-css>
-		<link rel="stylesheet" href="assets/css/utilities.css">
-		<script src="assets/js/async-css.js" defer></script>
+			<link rel="stylesheet" href="assets/css/base.css">
+			<link rel="stylesheet" href="assets/css/layout.css">
+			<link rel="stylesheet" href="assets/css/components/contact.css">
+			<link rel="stylesheet" href="assets/css/components/search.css">
+			<link rel="stylesheet" href="assets/css/components/footer.css" media="print" data-async-css>
+			<link rel="stylesheet" href="assets/css/components/weather.css" media="print" data-async-css>
+			<link rel="stylesheet" href="assets/css/utilities.css">
+			<link rel="preload" as="image" href="assets/media/images/contact-1080.webp" imagesrcset="assets/media/images/contact-720.webp 720w, assets/media/images/contact-1080.webp 1080w" imagesizes="(max-width: 980px) 92vw, 360px" type="image/webp" fetchpriority="high">
+			<script src="assets/js/async-css.js" defer></script>
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -134,9 +135,15 @@
 <!-- Two-column contact hero layout for image and form content. -->
 					<div class="contact-hero-grid">
 <!-- Contact page visual panel with decorative image treatment. -->
-						<div class="contact-visual" data-reveal-delay="280">
-							<img src="assets/media/images/contact.jpg" alt="Contact illustration" loading="eager" fetchpriority="high" width="1400" height="1400"  decoding="async">
-						</div>
+							<div class="contact-visual" data-reveal-delay="280">
+								<picture>
+									<source
+										type="image/webp"
+										srcset="assets/media/images/contact-720.webp 720w, assets/media/images/contact-1080.webp 1080w"
+										sizes="(max-width: 980px) 92vw, 360px">
+									<img src="assets/media/images/contact-1080.jpg" srcset="assets/media/images/contact-720.jpg 720w, assets/media/images/contact-1080.jpg 1080w" sizes="(max-width: 980px) 92vw, 360px" alt="Contact illustration" loading="eager" fetchpriority="high" width="1080" height="1080" decoding="async">
+								</picture>
+							</div>
 <!-- Contact form content area with heading and lead text. -->
 						<div class="contact-content">
 							<h2 class="contact-title" data-reveal-delay="0">Curious about how I work and how I can contribute?</h2>

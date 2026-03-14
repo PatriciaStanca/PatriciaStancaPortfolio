@@ -37,11 +37,12 @@
   const sceneGapMs = 80;
   const phoneVideoStartAt = 6.5;
 
-  let sceneIndex = 0;
-  let valueIndex = 0;
-  let isInView = false;
-  let isRunning = false;
-  const timers = new Set();
+	  let sceneIndex = 0;
+	  let valueIndex = 0;
+	  let isInView = false;
+	  let isRunning = false;
+	  let isInitialized = false;
+	  const timers = new Set();
 
   const setReelTimeout = (fn, delay) => {
     const id = window.setTimeout(() => {
@@ -442,11 +443,15 @@
     queueAdvance(hold);
   };
 
-  const start = () => {
-    if (prefersReducedMotion || isRunning || !isInView) return;
-    isRunning = true;
-    scheduleNext();
-  };
+	  const start = () => {
+	    if (prefersReducedMotion || isRunning || !isInView) return;
+	    if (!isInitialized) {
+	      showInitialScene();
+	      isInitialized = true;
+	    }
+	    isRunning = true;
+	    scheduleNext();
+	  };
 
   const stop = () => {
     isRunning = false;
@@ -462,22 +467,21 @@
     activeValue.dataset.valueTyping = 'done';
   };
 
-  showInitialScene();
-  if (prefersReducedMotion) return;
+	  if (prefersReducedMotion) return;
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        isInView = Boolean(entry && entry.isIntersecting && entry.intersectionRatio > 0.2);
-        if (isInView) start();
-        if (!isInView) stop();
-      },
-      { threshold: [0.2] }
-    );
-    observer.observe(reel);
-  } else {
-    isInView = true;
+	  if ('IntersectionObserver' in window) {
+	    const observer = new IntersectionObserver(
+	      (entries) => {
+	        const entry = entries[0];
+	        isInView = Boolean(entry && entry.isIntersecting);
+	        if (isInView) start();
+	        if (!isInView) stop();
+	      },
+	      { threshold: [0, 0.2], rootMargin: '240px 0px' }
+	    );
+	    observer.observe(reel);
+	  } else {
+	    isInView = true;
     start();
   }
 
