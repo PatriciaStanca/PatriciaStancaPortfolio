@@ -1,0 +1,246 @@
+/* Defines the styles for Utilities: spacing tweaks, overrides, responsive. */
+/* Global breakpoint scale (mobile-first): 601, 701, 737, 901, 981, 1201. */
+/* Defines the styles for Overrides previously in overrides.css. */
+/* Applies styling to section:not(.stats-wide):not(.summary-band), article, .wrapper:not(.stats-wide), .wrapper > .inner. */
+body .site-main section:not(.stats-wide):not(.summary-band),
+body .site-main .wrapper article,
+body .site-main .wrapper:not(.stats-wide),
+body .site-main .wrapper > .inner {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Applies styling to .wrapper > .inner. */
+body .site-main .wrapper > .inner {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+/* Defines the styles for Scroll reveal (global). */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 420ms ease-out, transform 420ms ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* Applies styling to .site-footer .inner .copyright li. */
+.site-footer .inner .copyright li {
+  border-left: 0;
+}
+
+/* Defines the styles for Responsive. */
+/* Applies styling to .hero-grid. */
+.hero-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .key-achievements. */
+.key-achievements {
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
+  grid-template-columns: none;
+}
+
+/* Applies styling to .role-track. */
+.role-track {
+  grid-auto-columns: minmax(260px, 1fr);
+}
+
+/* Applies styling to .skill-flow. */
+.skill-flow {
+  justify-content: flex-start;
+}
+
+/* Applies styling to .highlights-grid. */
+.highlights-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .summary-grid. */
+.summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Applies styling to .language-list. */
+.language-list {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to body.is-menu-visible. */
+body.is-menu-visible {
+  overflow: hidden;
+}
+
+/* Applies styling to body.is-menu-visible .site-main, body.is-menu-visible .site-footer. */
+body.is-menu-visible .site-main,
+body.is-menu-visible .site-footer {
+  visibility: hidden;
+}
+
+/* Applies styling to .site-header nav.top-nav. */
+.site-header nav.top-nav {
+  display: none;
+}
+
+/* Applies styling to .site-header .menu-toggle. */
+.site-header .menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Applies styling to .mobile-menu. */
+.mobile-menu {
+  display: block;
+  position: fixed;
+  top: var(--header-height, 84px);
+  left: 0;
+  right: 0;
+  height: calc(100vh - var(--header-height, 84px));
+  max-height: none;
+  border-top: none;
+  box-shadow: none;
+  transform: translateY(-8px);
+}
+
+/* Applies styling to body.is-menu-visible .mobile-menu. */
+body.is-menu-visible .mobile-menu {
+  max-height: none;
+}
+
+/* Applies styling to .intro-split. */
+.intro-split {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .education-group. */
+.education-group {
+  grid-template-columns: 1fr;
+}
+
+/* Applies styling to .language-list. */
+/* This changes the layout on min-width: 737px screens. */
+@media (min-width: 737px) {
+/* Applies styling to .site-header nav.top-nav. */
+  .site-header nav.top-nav {
+    display: flex;
+  }
+
+/* Applies styling to .site-header .menu-toggle. */
+  .site-header .menu-toggle {
+    display: none;
+  }
+
+/* Applies styling to .mobile-menu. */
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% - 0.2rem);
+    left: 50%;
+    right: auto;
+    height: auto;
+    max-height: 0;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    transform: translateX(-50%);
+  }
+
+/* Applies styling to body.is-menu-visible. */
+  body.is-menu-visible {
+    overflow: visible;
+  }
+
+/* Applies styling to body.is-menu-visible .site-main, body.is-menu-visible .site-footer. */
+  body.is-menu-visible .site-main,
+  body.is-menu-visible .site-footer {
+    visibility: visible;
+  }
+
+/* Applies styling to .language-list. */
+  .language-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* This changes the layout on min-width: 981px screens. */
+@media (min-width: 981px) {
+/* Applies styling to .hero-grid. */
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+/* Pulls hero portrait closer to center split on desktop. */
+  .hero-image {
+    margin-left: clamp(-9rem, -8vw, -4.5rem);
+  }
+
+/* Applies styling to .key-achievements. */
+  .key-achievements {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+/* Applies styling to .role-track. */
+  .role-track {
+    grid-auto-columns: auto;
+  }
+
+/* Applies styling to .skill-flow. */
+  .skill-flow {
+    justify-content: center;
+  }
+
+/* Applies styling to .highlights-grid. */
+  .highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+/* Applies styling to .summary-grid. */
+  .summary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
+  }
+
+/* Applies styling to .intro-split. */
+  .intro-split {
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+
+/* Applies styling to .education-group. */
+  .education-group {
+    grid-template-columns: 1fr;
+  }
+
+/* Applies styling to .language-list. */
+  .language-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* This keeps ultra-wide screens on the same visual rhythm while reserving a global xl breakpoint. */
+@media (min-width: 1201px) {
+/* Applies styling to .wrapper > .inner, .inner. */
+  .wrapper > .inner,
+  .inner {
+    width: 85%;
+  }
+}

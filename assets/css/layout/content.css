@@ -1,0 +1,186 @@
+/* Defines the styles for Wrappers. */
+/* Applies styling to .wrapper. */
+.wrapper {
+  position: relative;
+}
+
+/* Applies styling to .wrapper > .inner. */
+.wrapper > .inner {
+  width: 85%;
+  margin: 0 auto;
+  padding: var(--section-space) 0;
+}
+
+/* Applies styling to .inner. */
+.inner {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* Defines the styles for Hero. */
+/* Applies styling to .section-hero. */
+.section-hero {
+  padding-top: var(--section-space);
+}
+
+/* Applies styling to .hero-grid. */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Applies styling to .hero-name. */
+.hero-name {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.04;
+}
+
+/* Applies styling to .hero-role. */
+.hero-role {
+  color: var(--slate);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.92rem;
+  font-weight: 650;
+  font-family: var(--font-sans);
+}
+
+/* Applies styling to .hero-image img. */
+.hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  transform-origin: center;
+  mix-blend-mode: multiply;
+}
+
+/* Defines the styles for Intro split. */
+/* Applies styling to .intro-wrap. */
+.intro-wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Applies styling to .page-about .intro-wrap. */
+.page-about .intro-wrap {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Applies styling to .intro-split. */
+.intro-split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Applies styling to .page-lead. */
+.page-lead {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #000000;
+  font-size: 1.35rem;
+  font-family: var(--font-sans);
+}
+
+/* Applies styling to .intro-long. */
+.intro-long {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.86;
+  letter-spacing: 0.01em;
+  max-width: none;
+  width: 100%;
+  text-align: left;
+}
+
+.intro-split > div {
+  min-width: 0;
+}
+
+.intro-split > div:last-child {
+  justify-self: stretch;
+}
+
+/* Applies styling to .page-about .intro-split > div:last-child. */
+.page-about .intro-split > div:last-child {
+  justify-self: start;
+}
+
+/* Applies styling to .intro-cta. */
+.intro-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+/* Applies styling to .intro-arrow. */
+.intro-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-size: 1.3em;
+}
+
+/* Applies styling to .intro-cta:hover .intro-arrow. */
+.intro-cta:hover .intro-arrow {
+  transform: translateX(4px);
+}
+
+/* Applies styling to .intro-cta.inline-cta. */
+.intro-cta.inline-cta {
+  margin-top: 0;
+  margin-left: 0.35rem;
+  vertical-align: baseline;
+}
+
+/* Defines the styles for Section titles. */
+/* Applies styling to .section-title. */
+.section-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  font-weight: 750;
+}
+
+/* Applies styling to .page-title. */
+.page-title {
+  font-size: clamp(1.8rem, 2.3vw, 2.3rem);
+}
+
+/* Applies styling to .section-kicker. */
+.section-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.88rem;
+  color: var(--slate);
+  font-family: var(--font-sans);
+  font-weight: 650;
+}
+
+/* Applies styling to .section-divider, .highlights-divider. */
+.section-divider,
+.highlights-divider {
+  border: 0;
+  border-bottom: 0;
+  margin: 1rem 0 2rem 0;
+}

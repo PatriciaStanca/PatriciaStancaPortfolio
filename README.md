@@ -7,6 +7,8 @@ A multi‑page, responsive developer portfolio built with vanilla HTML, CSS, and
 - CSS (`assets/css/base.css`, `assets/css/layout.css`, `assets/css/components/*.css`, `assets/css/utilities.css`)
 - JavaScript (`assets/js/main.js`, `assets/js/validators.js`)
 
+`package-lock.json` exists to lock exact dependency versions so installs stay consistent across machines and over time.
+
 ## Pages
 - `/` (Home)
 - `/about` (About)
@@ -18,11 +20,11 @@ A multi‑page, responsive developer portfolio built with vanilla HTML, CSS, and
 ## Key Features
 - Responsive layout (flex/grid)
 - Contact form with client‑side validation + Formspree submit
-- Weather widget (Open‑Meteo, current temperature + icon)
+- Weather widget (OpenWeather, current temperature + icon)
 - Projects accordion with alternating image/text layout
 - References slider
 - CV page with embedded PDF + language switch (EN/SE)
-- Scroll‑reveal animations (subtle fade + translate)
+- Scroll‑reveal animations for page content (project reel excluded)
 
 ## Where Things Live
 - **CSS:** `assets/css/`
@@ -31,6 +33,10 @@ A multi‑page, responsive developer portfolio built with vanilla HTML, CSS, and
 - **Video:** `assets/media/videos/`
 - **CV PDFs:** `assets/docs/`
 - **Dev artifacts:** `dev/review_pdfs/`, `dev/test-results/`
+
+Detailed folder documentation:
+- `assets/css/README.md`
+- `assets/js/README.md`
 
 ### CSS Structure Note
 `assets/css/components.css` was split into smaller files under `assets/css/components/` for easier maintenance.
@@ -62,11 +68,11 @@ Current component files:
 
 ### Kravlista G (status i detta repo)
 1. (G) Appen ska testas ordentligt för att undvika oönskat beteende eller fel.  
-Status: Uppfylld med automatiska kontroller (`npm test`: lint + Playwright + Lighthouse) och manuell testning.
+Status: Delvis uppfylld. Repo:t har automatiska kontroller (`npm test`: lint + Playwright + Lighthouse) och manuell testning, men minst ett Playwright-test behöver justeras innan allt är grönt igen.
 2. (G) Det ska vara omöjligt för användaren att mata in felaktiga uppgifter.  
 Status: Delvis/bedömningsfråga. Starkt klientskydd finns (HTML5 constraints + JS-validering + felmeddelanden), men absolut garanti kräver servervalidering.
 4. (G) Koden ska fungera och applikationen ska gå att köra utan fel.  
-Status: Uppfylld i lokal körning och testpipeline.
+Status: I huvudsak uppfylld i lokal körning. Sajten fungerar, men testpipeline är inte helt grön just nu.
 5. (G) Best practices, bra namn, DRY (särskilt relevant för t.ex. C# Razor Pages).  
 Status: Uppfylld för denna stack (HTML/CSS/JS), med modulär struktur och separerade komponentfiler.
 6. (G) README ska finnas och beskriva projektet samt metoder/principer.  
@@ -78,13 +84,13 @@ Status: Uppfylld (används brett i `assets/css/layout.css` och `assets/css/compo
 9. (VG) Git commits och feature branches med relevanta meddelanden.  
 Status: Uppfylld. Exempelbranch: `chore/vg-proof-links-and-branch-workflow` med separata, meningsfulla commits.
 10. (VG) Vid felaktig inmatning visas relevanta varningar och användaren kan försöka igen.  
-Status: Uppfylld (`assets/js/modules/contact-form.js`).
+Status: Uppfylld i implementationen (`assets/js/modules/contact-form.js`).
 11. (VG) Samtliga miljöer ska vara användarvänliga och snygga (UX/UI).  
-Status: Uppfylld enligt egen implementation; slutbedömning görs av examinator.
+Status: Stark kandidat enligt implementationen; slutbedömning görs av examinator.
 12. (VG) Professionell klass avseende genomförande, dokumentation och testning.  
-Status: Uppfylld enligt egen implementation; slutbedömning görs av examinator.
+Status: Stark kandidat enligt implementationen, men den automatiska testkedjan bör vara helt grön för ett starkare underlag.
 13. (VG) Externt väder-API med temperatur i Celsius, plats och relevant info/ikon.  
-Status: Uppfylld (Open‑Meteo i kontaktsektionen).
+Status: Uppfylld (OpenWeather i kontaktsektionen).
 14. (VG) Portföljen ska vara responsiv för mobil och desktop.  
 Status: Uppfylld (media queries + flex/grid-layouts).
 
@@ -122,7 +128,9 @@ Status: Uppfylld (media queries + flex/grid-layouts).
 - Server‑side validation is not applicable (static site).
 
 ## Testing
-Manual testing only.
+Automated and manual testing.
+- Automated: `npm test` runs HTML lint, CSS lint, Playwright, and Lighthouse.
+- Current status: lint passes, but at least one Playwright assertion currently needs adjustment.
 - Form validation (required fields, invalid email, min length, consent)
 - Weather widget fallback
 - Mobile menu

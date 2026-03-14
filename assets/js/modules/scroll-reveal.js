@@ -10,7 +10,6 @@
     '.reveal-force',
     '.summary-card',
     '.key-card',
-    '.project-reel',
     '.highlight-item',
     '.skill-node',
     '.skill-node-icon',

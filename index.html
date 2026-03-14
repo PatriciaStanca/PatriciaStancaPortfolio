@@ -18,8 +18,10 @@
 		<meta name="twitter:description" content="Portfolio of Patricia Stanca, a data analyst focused on business intelligence, analytics, and automation. Explore projects, experience, and ways to connect.">
 		<meta name="twitter:image" content="https://patriciastanca.com/assets/media/images/psp.jpg">
 		<meta name="theme-color" content="#0F766E">
-		<link rel="icon" href="/favicon.ico" sizes="any">
-		<link rel="preload" as="image" href="assets/media/images/jag2.jpg" imagesrcset="assets/media/images/jag2.jpg 1625w" imagesizes="(max-width: 980px) 92vw, 700px" fetchpriority="high">
+			<link rel="icon" href="/assets/media/images/P.jpg" type="image/jpeg">
+			<link rel="shortcut icon" href="/assets/media/images/P.jpg" type="image/jpeg">
+			<link rel="apple-touch-icon" href="/assets/media/images/P.jpg">
+			<link rel="preload" as="image" href="assets/media/images/jag2-1200.webp" imagesrcset="assets/media/images/jag2-700.webp 700w, assets/media/images/jag2-1200.webp 1200w" imagesizes="(max-width: 980px) 92vw, 700px" type="image/webp" fetchpriority="high">
 		<link rel="stylesheet" href="assets/css/base.css">
 		<link rel="stylesheet" href="assets/css/layout.css">
 		<link rel="stylesheet" href="assets/css/components/cards.css" media="print" data-async-css>
@@ -161,12 +163,18 @@
 <!-- Hero text block with name and role. -->
 					<div class="hero-text">
 						<h1 class="hero-name">PATRICIA STANCA</h1>
-						<p class="hero-role">Senior Analytics Consultant</p>
+						<p class="hero-role">Senior Consultant</p>
 					</div>
 <!-- Hero image container with responsive portrait asset. -->
-					<div class="hero-image">
-						<img src="assets/media/images/jag2.jpg" srcset="assets/media/images/jag2.jpg 1625w" sizes="(max-width: 980px) 92vw, 700px" alt="Patricia Stanca" width="1625" height="1288" decoding="async" loading="eager" fetchpriority="high">
-					</div>
+						<div class="hero-image">
+							<picture>
+								<source
+									type="image/webp"
+									srcset="assets/media/images/jag2-700.webp 700w, assets/media/images/jag2-1200.webp 1200w"
+									sizes="(max-width: 980px) 92vw, 700px">
+								<img src="assets/media/images/jag2-1200.jpg" srcset="assets/media/images/jag2-700.jpg 700w, assets/media/images/jag2-1200.jpg 1200w" sizes="(max-width: 980px) 92vw, 700px" alt="Patricia Stanca" width="1200" height="951" decoding="async" loading="eager" fetchpriority="high">
+							</picture>
+						</div>
 				</div>
 			</section>
 
@@ -178,7 +186,7 @@
 					<div class="intro-split">
 <!-- Generic layout container used to group related content blocks. -->
 						<div>
-							<p class="page-lead">I help organizations bridge data, technology and business to turn insights into action.</p>
+							<p class="page-lead">I help organizations design data platforms and analytics solutions that turn data into business value.</p>
 						</div>
 <!-- Generic layout container used to group related content blocks. -->
 						<div>

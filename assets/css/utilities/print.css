@@ -1,0 +1,159 @@
+/* Defines the styles for Print styles. */
+@media print {
+  body.page-index .site-main {
+    background-image: none;
+  }
+
+  body.page-index .section-hero::before,
+  body.page-index .section-hero::after,
+  body.page-index .section-hero .hero-text::before,
+  body.page-index .section-hero .hero-image::before,
+  body.page-index .section-hero .hero-grid::after,
+  body.page-index #skills::before,
+  body.page-index #skills::after,
+  body.page-index #project-reel::before,
+  body.page-index #project-reel::after,
+  body.page-generic .site-main::before,
+  body.page-elements .site-main::before,
+  body.page-generic .site-main::after,
+  body.page-elements .site-main::after,
+  body.page-generic .site-main > .wrapper:first-of-type::before,
+  body.page-elements .site-main > .wrapper:first-of-type::before,
+  body.page-generic .intro-split::after {
+    display: none;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  @page {
+    margin: 12mm;
+  }
+
+  .site-header,
+  .mobile-menu,
+  .menu-toggle,
+  .slider-btn,
+  .footer-decor,
+  .footer-icon-row {
+    display: none;
+  }
+
+  .site-main {
+    margin-top: 0;
+  }
+
+  .wrapper,
+  .wrapper > .inner {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .wrapper {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .wrapper:first-of-type {
+    break-before: auto;
+    page-break-before: auto;
+  }
+
+  .section-title,
+  .page-title {
+    margin-top: 0;
+  }
+
+  .accordion-panel,
+  .accordion-trigger,
+  .education-group,
+  .language-card,
+  .role-card,
+  .testimonial-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .accordion-panel {
+    display: block;
+  }
+
+  .accordion-trigger {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .accordion-arrow {
+    display: none;
+  }
+
+  .accordion-tag {
+    border: 1px solid #cbd5f5;
+    color: #000000;
+    background: transparent;
+  }
+
+  .project-tools li,
+  .role-chip {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    color: #000000;
+  }
+
+  .key-card,
+  .skill-node,
+  .contact-card,
+  .language-card,
+  .education-group,
+  .role-card,
+  .testimonial-card,
+  .project-accordion {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+  }
+
+  .project-accordion {
+    overflow: visible;
+  }
+
+  .logo-track,
+  .testimonial-grid,
+  .role-track {
+    overflow: visible;
+  }
+
+  .logo-track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .testimonial-grid,
+  .role-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #6b7280;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

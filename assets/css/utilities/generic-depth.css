@@ -1,0 +1,148 @@
+/* Defines the styles for Generic + Elements visual depth (organic forms without grid). */
+body.page-generic .site-main,
+body.page-elements .site-main {
+  position: relative;
+  isolation: isolate;
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #fcfffe 40%, #ffffff 100%);
+  overflow: hidden;
+}
+
+body.page-generic .site-main::before,
+body.page-elements .site-main::before,
+body.page-generic .site-main::after,
+body.page-elements .site-main::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-generic .site-main::before,
+body.page-elements .site-main::before {
+  top: clamp(4rem, 8vw, 8rem);
+  left: max(-16vw, -220px);
+  width: clamp(300px, 48vw, 760px);
+  height: clamp(240px, 40vw, 560px);
+  border-radius: 58% 42% 46% 54% / 52% 48% 52% 48%;
+  background: radial-gradient(circle at 40% 42%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 62%, transparent 84%);
+  filter: blur(2px);
+  animation: ambient-shift 26s ease-in-out infinite alternate;
+}
+
+body.page-generic .site-main::after,
+body.page-elements .site-main::after {
+  right: max(-14vw, -190px);
+  top: clamp(16rem, 28vw, 28rem);
+  width: clamp(280px, 38vw, 620px);
+  height: clamp(190px, 31vw, 420px);
+  border-radius: 41% 59% 62% 38% / 55% 38% 62% 45%;
+  background: radial-gradient(circle at 50% 42%, rgba(164, 225, 215, 0.18), rgba(15, 118, 110, 0.03) 66%, transparent 84%);
+  animation: ambient-shift 21s ease-in-out infinite alternate-reverse;
+}
+
+body.page-generic .site-main > .wrapper,
+body.page-elements .site-main > .wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-generic .site-main > .wrapper:first-of-type,
+body.page-elements .site-main > .wrapper:first-of-type {
+  position: relative;
+  overflow: hidden;
+}
+
+body.page-generic .site-main > .wrapper:first-of-type::before,
+body.page-elements .site-main > .wrapper:first-of-type::before {
+  content: "";
+  position: absolute;
+  right: max(-9vw, -120px);
+  top: clamp(2rem, 4vw, 4.5rem);
+  width: clamp(180px, 22vw, 320px);
+  height: clamp(130px, 18vw, 240px);
+  border-radius: 60% 40% 52% 48% / 44% 56% 44% 56%;
+  background: radial-gradient(circle at 44% 48%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 64%, transparent 82%);
+  filter: blur(1px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-generic .intro-split,
+body.page-elements .site-main > .wrapper:first-of-type .inner {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-generic .intro-split::after {
+  content: "";
+  position: absolute;
+  left: max(-10vw, -150px);
+  bottom: clamp(-1rem, -3vw, -2.2rem);
+  width: clamp(180px, 24vw, 340px);
+  height: clamp(120px, 16vw, 220px);
+  border-radius: 45% 55% 38% 62% / 60% 44% 56% 40%;
+  background: radial-gradient(circle at 48% 48%, rgba(164, 225, 215, 0.18), rgba(164, 225, 215, 0.02) 66%, transparent 84%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ambient-shift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(0.7rem, -0.5rem, 0) scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-index .section-hero::before,
+  body.page-index .section-hero::after,
+  body.page-index .section-hero .hero-text::before,
+  body.page-generic .site-main::before,
+  body.page-elements .site-main::before,
+  body.page-generic .site-main::after,
+  body.page-elements .site-main::after {
+    animation: none;
+  }
+}
+
+@media (max-width: 980px) {
+  body.page-index .section-hero {
+    --hero-diagonal-height: clamp(32px, 9vw, 62px);
+  }
+
+  body.page-index .section-hero > .inner {
+    padding-bottom: calc(var(--section-space) + (var(--hero-diagonal-height) * 0.8));
+  }
+
+  body.page-index .section-hero .hero-grid::after {
+    clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  body.page-index #intro .inner {
+    padding-top: 1rem;
+  }
+
+  body.page-index .section-hero .hero-text::before {
+    left: -0.5rem;
+    top: -1.4rem;
+    width: clamp(160px, 34vw, 240px);
+    height: clamp(120px, 25vw, 170px);
+  }
+
+  body.page-generic .site-main::before,
+  body.page-elements .site-main::before {
+    top: 5rem;
+    left: -7rem;
+  }
+
+  body.page-generic .site-main::after,
+  body.page-elements .site-main::after {
+    right: -6.2rem;
+    top: 20rem;
+  }
+}
+

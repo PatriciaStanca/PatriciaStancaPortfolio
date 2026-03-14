@@ -1,0 +1,120 @@
+/* Defines the styles for Mobile menu (hidden by default). */
+/* Applies styling to .mobile-menu. */
+.mobile-menu {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  z-index: 10001;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.2s ease, transform 0.3s ease;
+  grid-column: 1 / -1;
+}
+
+/* Applies styling to body.is-menu-visible .mobile-menu. */
+body.is-menu-visible .mobile-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  max-height: 320px;
+}
+
+/* Applies styling to .mobile-menu .inner. */
+.mobile-menu .inner {
+  width: 85%;
+  margin: 0 auto;
+  padding: 1.5rem 0 2rem;
+}
+
+/* Applies styling to .mobile-menu .links li + li. */
+.mobile-menu .links li + li {
+  margin-top: 0.75rem;
+}
+
+/* Applies styling to .mobile-menu .mobile-parent. */
+.mobile-menu .mobile-parent {
+  list-style: none;
+}
+
+/* Applies styling to .mobile-menu .mobile-parent-row. */
+.mobile-menu .mobile-parent-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* Applies styling to .mobile-menu .mobile-parent-link. */
+.mobile-menu .mobile-parent-link {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Applies styling to .mobile-menu .mobile-parent-link:hover. */
+.mobile-menu .mobile-parent-link:hover {
+  color: var(--teal);
+}
+
+/* Applies styling to .mobile-menu .mobile-accordion. */
+.mobile-menu .mobile-accordion {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Applies styling to .mobile-menu .mobile-accordion::after. */
+.mobile-menu .mobile-accordion::after {
+  content: "›";
+  transform: none;
+  transition: transform 0.2s ease;
+  font-size: 1.1em;
+  color: var(--teal);
+}
+
+/* Applies styling to .mobile-menu .mobile-accordion[aria-expanded="true"]::after. */
+.mobile-menu .mobile-accordion[aria-expanded="true"]::after {
+  transform: rotate(90deg);
+}
+
+/* Applies styling to .mobile-menu .mobile-submenu. */
+.mobile-menu .mobile-submenu {
+  list-style: none;
+  margin: 0.5rem 0 0 0.75rem;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+/* Applies styling to .mobile-menu .mobile-submenu ul. */
+.mobile-menu .mobile-submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Applies styling to .mobile-menu .mobile-submenu li + li. */
+.mobile-menu .mobile-submenu li + li {
+  margin-top: 0.5rem;
+}
+
+/* Applies styling to .mobile-menu .mobile-parent.is-open .mobile-submenu. */
+.mobile-menu .mobile-parent.is-open .mobile-submenu {
+  max-height: 200px;
+  opacity: 1;
+}
+
+
