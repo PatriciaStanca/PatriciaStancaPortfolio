@@ -33,11 +33,6 @@ A multi‑page, responsive developer portfolio built with vanilla HTML, CSS, and
 - **Video:** `assets/media/videos/`
 - **CV PDFs:** `assets/docs/`
 - **Tests:** `tests/`
-- **Local dev artifacts:** `dev/test-results/`, `dev/qa-screenshots/`, `.lighthouseci/`, `playwright-report/`
-
-Detailed folder documentation:
-- `assets/css/README.md`
-- `assets/js/README.md`
 
 ### CSS Structure Note
 CSS is split into `base`, `layout`, `components`, and `utilities` folders for easier maintenance.
@@ -112,23 +107,6 @@ Automated and manual testing.
 - Mobile menu
 - Sliders
 - Responsive layouts
-
-## Git Ignore / Local Artifacts
-The following should stay local and do not need to be committed:
-- `dev/test-results/`
-- `dev/qa-screenshots/`
-- `.lighthouseci/`
-- `playwright-report/`
-- `node_modules/`
-
-These are local test outputs, screenshots, or installed dependencies rather than source code.
-
-Files that should remain versioned in Git:
-- `tests/`
-- `netlify.toml`
-- `robots.txt`
-- `lighthouserc.json`
-- `_headers`
 
 ## Methods / Principles
 - Semantic HTML structure

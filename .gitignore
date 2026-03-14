@@ -5,6 +5,7 @@ dev/test-results/
 dev/qa-screenshots/
 /.lighthouseci/
 playwright-report/
+workspace.dsl
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

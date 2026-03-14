@@ -35,9 +35,7 @@
   .site-header,
   .mobile-menu,
   .menu-toggle,
-  .slider-btn,
-  .footer-decor,
-  .footer-icon-row {
+  .slider-btn {
     display: none;
   }
 

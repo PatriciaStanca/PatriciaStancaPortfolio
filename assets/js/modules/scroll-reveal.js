@@ -31,9 +31,6 @@
     '.cv-embed',
     '#footer .section-title',
     '.footer-col',
-    '.footer-decor',
-    '.footer-wave',
-    '.footer-icon-row',
   ];
 
   const elements = selectors
