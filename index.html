@@ -21,7 +21,7 @@
 			<link rel="icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="shortcut icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="apple-touch-icon" href="/assets/media/images/P.jpg">
-			<link rel="preload" as="image" href="assets/media/images/jag2-1200.png" imagesrcset="assets/media/images/jag2-700.png 700w, assets/media/images/jag2-1200.png 1200w" imagesizes="(max-width: 980px) 92vw, 700px" type="image/png" fetchpriority="high">
+			<link rel="preload" as="image" href="assets/media/images/jag2-alpha-1200.webp" imagesrcset="assets/media/images/jag2-alpha-700.webp 700w, assets/media/images/jag2-alpha-1200.webp 1200w" imagesizes="(max-width: 980px) 92vw, 700px" type="image/webp" fetchpriority="high">
 			<link rel="stylesheet" href="assets/css/base.css">
 			<link rel="stylesheet" href="assets/css/layout/header.css">
 			<link rel="stylesheet" href="assets/css/layout/mobile-menu.css">
@@ -29,7 +29,7 @@
 			<link rel="stylesheet" href="assets/css/components/cards.css" media="print" data-async-css>
 			<link rel="stylesheet" href="assets/css/components/project-reel.css" media="print" data-async-css>
 			<link rel="stylesheet" href="assets/css/components/sliders.css" media="print" data-async-css>
-			<link rel="stylesheet" href="assets/css/components/search.css">
+			<link rel="stylesheet" href="assets/css/components/search.css" media="print" data-async-css>
 			<link rel="stylesheet" href="assets/css/components/skills.css" media="print" data-async-css>
 			<link rel="stylesheet" href="assets/css/components/footer.css" media="print" data-async-css>
 			<link rel="stylesheet" href="assets/css/utilities/core.css">
@@ -172,6 +172,10 @@
 <!-- Hero image container with responsive portrait asset. -->
 						<div class="hero-image">
 							<picture>
+								<source
+									type="image/webp"
+									srcset="assets/media/images/jag2-alpha-700.webp 700w, assets/media/images/jag2-alpha-1200.webp 1200w"
+									sizes="(max-width: 980px) 92vw, 700px">
 								<source
 									type="image/png"
 									srcset="assets/media/images/jag2-700.png 700w, assets/media/images/jag2-1200.png 1200w"
