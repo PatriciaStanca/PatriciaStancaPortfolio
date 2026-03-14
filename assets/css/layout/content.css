@@ -63,7 +63,7 @@
   box-shadow: none;
   transform: none;
   transform-origin: center;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 
 /* Defines the styles for Intro split. */

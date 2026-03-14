@@ -187,3 +187,29 @@ body.page-index #clients {
   background: #ffffff;
 }
 
+@media (max-width: 767px) {
+  body.page-index .section-hero::before,
+  body.page-index .section-hero::after,
+  body.page-index .section-hero .hero-text::before,
+  body.page-index .section-hero .hero-image::before,
+  body.page-index .section-hero .hero-grid::after {
+    content: none;
+  }
+
+  body.page-index .section-hero > .inner {
+    padding-bottom: var(--section-space);
+  }
+
+  body.page-index .section-hero .hero-image img {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-index .section-hero::before,
+  body.page-index .section-hero::after,
+  body.page-index .section-hero .hero-text::before {
+    animation: none;
+  }
+}
