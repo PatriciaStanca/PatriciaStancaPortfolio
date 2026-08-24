@@ -2590,3 +2590,34 @@ body.page-elements .summary-label {
     width: 1.4rem;
   }
 }
+
+/* Fluid sizing for employer headings and brand marks. */
+body.page-elements #previous-work .role-header h4 {
+  font-size: clamp(1.25rem, 1.65vw, 1.9rem);
+}
+
+body.page-elements #previous-work .role-card-visual img {
+  max-width: min(clamp(120px, 12vw, 175px), 58%);
+  max-height: clamp(44px, 4vw, 58px);
+}
+
+body.page-index .trusted-strip img {
+  max-width: min(100%, clamp(76px, 8vw, 118px)) !important;
+  max-height: clamp(22px, 2vw, 30px) !important;
+}
+
+@media (max-width: 700px) {
+  body.page-elements #previous-work .role-header h4 {
+    font-size: clamp(1.1rem, 4.8vw, 1.35rem);
+  }
+
+  body.page-elements #previous-work .role-card-visual img {
+    max-width: min(clamp(110px, 34vw, 145px), 52%);
+    max-height: 46px;
+  }
+
+  body.page-index .trusted-strip img {
+    max-width: min(100%, 80px) !important;
+    max-height: 22px !important;
+  }
+}

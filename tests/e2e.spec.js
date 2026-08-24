@@ -117,6 +117,31 @@ test('Previous Work stays stable without scroll reveal motion', async ({ page })
   expect(titleToLogoGap).toBeLessThanOrEqual(48);
 });
 
+test('Previous Work headings and logos scale down on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('elements.html');
+
+  const roleHeadingSize = await page.locator('#previous-work .role-header h4').first().evaluate((heading) =>
+    Number.parseFloat(getComputedStyle(heading).fontSize)
+  );
+  const employerLogo = page.locator('#previous-work .role-card-visual img').first();
+  const logoBox = await employerLogo.evaluate((logo) => logo.getBoundingClientRect().toJSON());
+  expect(roleHeadingSize).toBeLessThanOrEqual(21.6);
+  expect(logoBox.width).toBeLessThanOrEqual(145);
+  expect(logoBox.height).toBeLessThanOrEqual(46);
+});
+
+test('Trusted by logos stay compact on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('index.html');
+
+  const logos = await page.locator('.trusted-strip img').evaluateAll((images) =>
+    images.map((logo) => logo.getBoundingClientRect().toJSON())
+  );
+  expect(Math.max(...logos.map((logo) => logo.width))).toBeLessThanOrEqual(80);
+  expect(Math.max(...logos.map((logo) => logo.height))).toBeLessThanOrEqual(22);
+});
+
 test('expanded project archive does not use scroll reveal animation', async ({ page }) => {
   await page.goto('elements.html');
 
