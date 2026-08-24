@@ -32,6 +32,18 @@ test('homepage progress heading stays on one line on desktop', async ({ page }) 
   expect(lineCount).toBeLessThanOrEqual(1.1);
 });
 
+test('cinematic project cards do not animate against scroll updates', async ({ page }) => {
+  await page.goto('/index.html');
+  const stage = page.locator('[data-cinematic-stage]');
+  await stage.scrollIntoViewIfNeeded();
+  await expect(stage).toHaveClass(/is-stage-active/);
+
+  const card = page.locator('[data-cinematic-card]').first();
+  const transitionProperty = await card.evaluate((element) => getComputedStyle(element).transitionProperty);
+  expect(transitionProperty).not.toContain('transform');
+  await expect(card.locator('img')).toHaveAttribute('loading', 'eager');
+});
+
 test('mobile menu opens at the top when the page is scrolled to the bottom', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('elements.html');

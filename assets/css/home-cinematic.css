@@ -118,7 +118,10 @@ body.page-index #selected-work .floating-work-card {
   opacity: 1;
   filter: saturate(0.96) contrast(1.04);
   pointer-events: auto;
-  will-change: transform;
+  contain: layout paint;
+  backface-visibility: hidden;
+  will-change: auto;
+  transition: box-shadow 220ms ease, filter 220ms ease !important;
   box-shadow: 0 26px 80px rgba(10, 24, 22, 0.2) !important;
   transform:
     translate3d(
@@ -128,6 +131,15 @@ body.page-index #selected-work .floating-work-card {
     )
     rotate(var(--motion-rotate))
     scale(var(--card-scale, 0.98)) !important;
+}
+
+body.page-index #selected-work .some-work-stage.is-stage-active .floating-work-card {
+  will-change: transform;
+}
+
+body.page-index #selected-work .floating-work-card img {
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 body.page-index #selected-work .floating-work-card.is-cinematic-visible {
