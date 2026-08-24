@@ -7,6 +7,11 @@ const menuToggle = document.querySelector('.menu-toggle');
 const header = document.getElementById('header');
 const body = document.body;
 let menuLocked = false;
+let menuPageScroll = 0;
+
+// Keep the fixed panel outside the sticky, backdrop-filtered header. Safari
+// otherwise treats the header as the panel's containing block at deep scroll positions.
+if (menu && menu.parentElement !== body) body.appendChild(menu);
 
 const lockMenu = () => {
   if (menuLocked) return false;
@@ -34,6 +39,7 @@ window.addEventListener('resize', syncHeaderHeight);
 const showMenu = () => {
   if (lockMenu()) {
     const pageScroll = window.scrollY;
+    menuPageScroll = pageScroll;
     syncHeaderHeight();
     body.classList.add('is-menu-visible');
     resetOpenMenuPosition(pageScroll);
@@ -45,6 +51,7 @@ const hideMenu = () => {
   if (lockMenu()) {
     body.classList.remove('is-menu-visible');
     if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    requestAnimationFrame(() => window.scrollTo({ top: menuPageScroll, behavior: 'auto' }));
   }
 };
 
@@ -52,7 +59,12 @@ const toggleMenu = () => {
   if (!lockMenu()) return;
   const pageScroll = window.scrollY;
   const isOpen = body.classList.toggle('is-menu-visible');
-  if (isOpen) resetOpenMenuPosition(pageScroll);
+  if (isOpen) {
+    menuPageScroll = pageScroll;
+    resetOpenMenuPosition(pageScroll);
+  } else {
+    requestAnimationFrame(() => window.scrollTo({ top: menuPageScroll, behavior: 'auto' }));
+  }
   if (menuToggle) menuToggle.setAttribute('aria-expanded', String(isOpen));
 };
 

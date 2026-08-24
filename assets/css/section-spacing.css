@@ -1263,6 +1263,15 @@ body[class] .section-standard :is(
   }
 }
 
+@media (max-width: 980px) {
+  body.is-menu-visible .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0;
+    left: 0;
+  }
+}
+
 /* Clean two-project proof of concept. This is deliberately independent from
    every previous explorer/story selector so the reference layout can be
    verified before the complete project collection is connected. */
