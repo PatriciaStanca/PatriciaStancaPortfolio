@@ -43,7 +43,7 @@
       && !el.classList.contains('project-prototype')
       && !el.classList.contains('project-archive-toggle')
       && !el.classList.contains('cinematic-reveal')
-      && !el.closest('.selected-transformations, [data-cinematic-stage], .project-archive-content')
+      && !el.closest('.selected-transformations, [data-cinematic-stage], .project-archive-content, #previous-work')
       && all.indexOf(el) === index
     ));
 

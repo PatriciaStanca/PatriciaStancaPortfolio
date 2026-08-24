@@ -74,15 +74,14 @@ test('Personal Projects navigation selects the personal project view', async ({ 
   await expect(page.getByRole('button', { name: 'Work' })).toHaveAttribute('aria-pressed', 'false');
 });
 
-test('Previous Work uses the shared scroll reveal motion', async ({ page }) => {
+test('Previous Work stays stable without scroll reveal motion', async ({ page }) => {
   await page.goto('elements.html');
 
   const previousWork = page.locator('#previous-work');
   await previousWork.scrollIntoViewIfNeeded();
   const card = previousWork.locator('.role-card').first();
-  await expect(card).toHaveClass(/reveal/);
-  await expect(card).toHaveClass(/is-visible/);
-  await expect(card).toHaveCSS('translate', '0px');
+  await expect(previousWork.locator('.section-title')).not.toHaveClass(/reveal/);
+  await expect(card).not.toHaveClass(/reveal/);
 });
 
 test('expanded project archive does not use scroll reveal animation', async ({ page }) => {
