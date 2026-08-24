@@ -8611,7 +8611,7 @@ body.page-contact .contact-intro .contact-visual {
   width: 100%;
   min-height: 0;
   height: clamp(230px, 24vw, 330px);
-  margin-bottom: clamp(1.25rem, 2vw, 1.8rem);
+  margin-top: clamp(1.25rem, 2vw, 1.8rem);
   border: 0;
   background: #f3f5f4;
 }
@@ -8637,9 +8637,9 @@ body.page-contact .contact-intro .section-kicker {
 }
 
 body.page-contact .contact-intro .contact-title {
-  max-width: 14ch;
+  max-width: none;
   margin: 0;
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-size: clamp(1.85rem, 2.2vw, 2.65rem);
   line-height: 1.06;
 }
 

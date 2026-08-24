@@ -52,15 +52,22 @@ test('contact form shows validation errors and allows resubmission', async ({ pa
   await expect(page.locator('.form-feedback')).toHaveText('Thanks! Your message has been sent.');
 });
 
-test('contact intro places Contact Me before the image', async ({ page }) => {
+test('contact intro places the heading before the image', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('contact.html');
 
   const order = await page.locator('.contact-intro').evaluate((intro) =>
     Array.from(intro.children).map((element) => element.className)
   );
   expect(order[0]).toContain('section-kicker');
-  expect(order[1]).toContain('contact-visual');
+  expect(order[1]).toContain('contact-title');
+  expect(order[2]).toContain('contact-visual');
   await expect(page.locator('.contact-intro .section-kicker')).toHaveText('Contact Me');
+  const headingLines = await page.locator('.contact-title').evaluate((heading) => {
+    const styles = getComputedStyle(heading);
+    return heading.getBoundingClientRect().height / Number.parseFloat(styles.lineHeight);
+  });
+  expect(headingLines).toBeLessThanOrEqual(2.1);
 });
 
 test('project archive stays compact until requested', async ({ page }) => {
