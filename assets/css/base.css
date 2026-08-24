@@ -1,8 +1,8 @@
 /* Base layer: shared variables, resets, typography, and core form defaults used across the site. */
 /* :root stores global CSS variables (colors, spacing, shadows, and font tokens). */
 :root {
-  --teal: #0F766E;
-  --teal-dark: #0B5F58;
+  --teal: #365a52;
+  --teal-dark: #2c4a44;
   --ink: #0f172a;
   --slate: #475569;
   --slate-light: #94a3b8;
@@ -97,7 +97,7 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 3px solid rgba(15, 118, 110, 0.4);
+  outline: 3px solid rgba(54, 90, 82, 0.4);
   outline-offset: 3px;
 }
 
@@ -126,7 +126,7 @@ textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+  box-shadow: 0 0 0 3px rgba(54, 90, 82, 0.15);
 }
 
 /* .is-invalid marks form controls with error border/ring styles. */

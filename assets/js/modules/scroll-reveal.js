@@ -4,6 +4,8 @@
 // reveals sections as you scroll down the page.
 (function () {
   const selectors = [
+    '.site-main > section:not(.selected-transformations) > .inner > *',
+    '.business-skills-intro > *',
     '.section-title',
     '.page-lead',
     '.intro-long',
@@ -35,13 +37,20 @@
 
   const elements = selectors
     .flatMap((sel) => Array.from(document.querySelectorAll(sel)))
-    .filter((el) => !el.classList.contains('page-title'));
+    .filter((el, index, all) => (
+      !el.classList.contains('page-title')
+      && !el.classList.contains('business-skills-layout')
+      && !el.classList.contains('project-prototype')
+      && !el.classList.contains('cinematic-reveal')
+      && !el.closest('.selected-transformations, [data-cinematic-stage]')
+      && all.indexOf(el) === index
+    ));
 
   if (!elements.length) return;
 
   const groups = new Map();
   elements.forEach((el) => {
-    const group = el.closest('.summary-grid, .testimonial-grid, .role-track, .footer-grid, .skill-flow, .education-list, .language-list, .logo-track, .key-achievements, .highlights-grid');
+    const group = el.closest('.summary-grid, .testimonial-grid, .role-track, .footer-grid, .skill-flow, .education-list, .language-list, .logo-track, .key-achievements, .highlights-grid, .business-skills-intro, .site-main > section > .inner');
     if (!group) return;
     if (!groups.has(group)) groups.set(group, []);
     groups.get(group).push(el);

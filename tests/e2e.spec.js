@@ -35,23 +35,17 @@ test('contact form shows validation errors and allows resubmission', async ({ pa
   await expect(page.locator('.form-feedback')).toHaveText('Thanks! Your message has been sent.');
 });
 
-test('weather widget renders current data', async ({ page }) => {
-  await page.addInitScript(() => {
-    const originalFetch = window.fetch;
-    window.fetch = (input, init) => {
-      const url = typeof input === 'string' ? input : input.url;
-      if (url && url.startsWith('https://api.openweathermap.org/')) {
-        return Promise.resolve(
-          new Response(
-            JSON.stringify({ main: { temp: 5.4 }, weather: [{ icon: '01d', description: 'clear sky' }] }),
-            { status: 200, headers: { 'Content-Type': 'application/json' } }
-          )
-        );
-      }
-      return originalFetch(input, init);
-    };
-  });
+test('project archive stays compact until requested', async ({ page }) => {
+  await page.goto('elements.html');
 
-  await page.goto('contact.html');
-  await expect(page.locator('.weather-temp')).toHaveText('5°C');
+  const archiveToggle = page.getByRole('button', { name: /List of all projects/i });
+  const workArchive = page.locator('#work-project-archive');
+  await expect(archiveToggle).toHaveAttribute('aria-expanded', 'false');
+  await expect(workArchive).toBeHidden();
+
+  await archiveToggle.click();
+  await expect(archiveToggle).toHaveAttribute('aria-expanded', 'true');
+  await expect(workArchive).toBeVisible();
+  await expect(workArchive.getByText('ASK Core', { exact: false }).first()).toBeVisible();
+  await expect(workArchive.getByText('SAP ByDesign', { exact: false }).first()).toBeVisible();
 });

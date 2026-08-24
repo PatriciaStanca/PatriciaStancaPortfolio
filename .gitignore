@@ -9,3 +9,24 @@ workspace.dsl
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local review and editor artifacts
+.playwright-mcp/
+.vscode/
+Inspo/
+test-results/
+/*-check*.png
+/project-*.png
+/reference-*.png
+/selected-work-*.png
+/assets/media/images/bildjagfärg.jpg
+/assets/media/images/contact-collaboration-vitaly-gariev.jpg
+/assets/media/images/patricia-about-cutout-v3.png
+/assets/media/logo/SQL Server Icon .html
+
+# Keep private CV working material out of the public portfolio repository.
+CV/*
+!CV/cv/
+CV/cv/*
+!CV/cv/Patricia Stanca - EN.pdf
+!CV/cv/Patricia Stanca - Se.pdf

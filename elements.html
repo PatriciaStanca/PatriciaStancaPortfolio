@@ -17,7 +17,7 @@
 		<meta name="twitter:title" content="Experience | Patricia Stanca">
 		<meta name="twitter:description" content="Explore Patricia Stanca’s business intelligence and data analytics projects, previous roles, and references.">
 		<meta name="twitter:image" content="https://patriciastanca.com/assets/media/images/psp.jpg">
-		<meta name="theme-color" content="#0F766E">
+		<meta name="theme-color" content="#111111">
 			<link rel="icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="shortcut icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="apple-touch-icon" href="/assets/media/images/P.jpg">
@@ -32,6 +32,9 @@
 			<link rel="stylesheet" href="assets/css/components/footer.css">
 			<link rel="stylesheet" href="assets/css/utilities/core.css">
 			<link rel="stylesheet" href="assets/css/utilities/generic-depth.css">
+			<link rel="stylesheet" href="assets/css/modern.css">
+			<link rel="stylesheet" href="assets/css/footer-unified.css">
+			<link rel="stylesheet" href="assets/css/section-spacing.css">
 			<link rel="stylesheet" href="assets/css/utilities/print.css" media="print" data-async-css>
 		<script src="assets/js/async-css.js" defer></script>
 		<script type="application/ld+json">
@@ -53,7 +56,7 @@
 		<a class="skip-link" href="#main">Skip to content</a>
 		<!-- Site header with branding, navigation, search, and mobile menu controls. -->
 		<header id="header" class="site-header">
-			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span><video class="site-logo-video" data-logo-video muted playsinline preload="metadata" aria-hidden="true"><source src="assets/media/videos/green.mp4" type="video/mp4"></video></a></h1>
+			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span></a></h1>
 			<!-- Primary desktop navigation links and dropdown trigger. -->
 			<nav aria-label="Primary" class="top-nav">
 				<!-- Main navigation list for top-level pages. -->
@@ -61,11 +64,11 @@
 					<li>
 						<a href="/">Home</a>
 					</li>
-					<li>
-						<a href="/about">About</a>
-					</li>
 					<li class="has-dropdown">
 						<a href="/experience">Experience</a>
+					</li>
+					<li>
+						<a href="/about">About</a>
 					</li>
 					<li>
 						<a href="contact.html">Contact</a>
@@ -76,7 +79,6 @@
 					<a href="/experience#projects">Work Projects</a>
 					<a href="/experience#personal-projects">Personal Projects</a>
 					<a href="/experience#previous-work">Previous Work</a>
-					<a href="/experience#references">References</a>
 				</nav>
 			</nav>
 			<div class="header-search">
@@ -89,6 +91,7 @@
 				</div>
 			</div>
 			<div class="header-actions">
+				<a class="header-cta" href="contact.html">Contact me <span aria-hidden="true">→</span></a>
 				<button class="search-toggle-mobile" type="button" aria-label="Open search" data-search-open="">
 					<i data-lucide="search" aria-hidden="true"></i>
 				</button>
@@ -128,9 +131,6 @@
 									<li>
 										<a href="/experience#previous-work">Previous Work</a>
 									</li>
-									<li>
-										<a href="/experience#references">References</a>
-									</li>
 								</ul>
 							</nav>
 						</li>
@@ -157,15 +157,16 @@
 		<!-- Main page content wrapper. -->
 		<main id="main" class="site-main">
 			<!-- Reusable section wrapper that applies spacing and layout structure. -->
-				<section class="wrapper">
+				<section class="wrapper section-standard">
 					<!-- Inner layout container that controls content width and alignment. -->
 					<div class="inner">
-						<h2 class="section-title page-title">Vision. Strategy. Implementation. Insight. Impact.</h2>
-						<p class="section-kicker">Selected projects and previous roles</p>
+						<p class="section-kicker">Experience</p>
+						<h2 class="section-title page-title">Work that turns complex needs into useful, lasting solutions.</h2>
+						<p>My projects span analytics, business development, automation and software development. What connects them is a practical approach: understand the real need, create structure and build something that helps people move forward.</p>
 					</div>
 				</section>
 				<!-- Reusable section wrapper that applies spacing and layout structure. -->
-				<section class="wrapper stats-wide">
+				<section class="wrapper stats-wide section-standard">
 					<!-- Inner layout container that controls content width and alignment. -->
 					<div class="inner">
 						<!-- Summary section showing high-level metrics and quick facts. -->
@@ -179,7 +180,7 @@
 								</div>
 								<!-- Single summary metric card with value and label. -->
 								<div class="summary-card">
-									<span class="summary-value">2</span>
+									<span class="summary-value">4</span>
 									<span class="summary-label">Industries</span>
 								</div>
 								<!-- Single summary metric card with value and label. -->
@@ -196,12 +197,32 @@
 						</section>
 					</div>
 				</section>
+
 				<!-- Projects section with accordion-based case study details. -->
-				<section class="section-projects wrapper" id="projects">
+				<section class="section-projects wrapper section-standard" id="projects">
 				<div class="inner">
-					<h3 class="section-title">Work Projects</h3>
+					<div class="project-prototype" data-project-prototype>
+						<header class="project-prototype__heading">
+							<span>Explore my</span>
+							<span class="project-prototype__switch" role="group" aria-label="Project category">
+								<button type="button" data-project-mode="work" aria-pressed="true">Work</button>
+								<span aria-hidden="true">↔</span>
+								<button type="button" data-project-mode="personal" aria-pressed="false">Personal</button>
+							</span>
+							<span>Projects</span>
+						</header>
+						<section class="project-prototype__story">
+							<div class="project-prototype__sticky" aria-live="polite"></div>
+							<div class="project-prototype__steps" aria-hidden="true"></div>
+						</section>
+					</div>
+					<button class="project-archive-toggle" type="button" aria-expanded="false" aria-controls="work-project-archive personal-projects">
+						<span>List of all projects</span><span aria-hidden="true">+</span>
+					</button>
+					<div id="work-project-archive" class="project-archive-content" hidden>
+					<h3 class="section-title project-data-title">Work Projects</h3>
 					<div class="project-accordion" data-accordion="">
-						<button id="proj-needs-driven-analytics" aria-expanded="true" class="accordion-trigger" type="button">
+						<button id="proj-needs-driven-analytics" aria-expanded="false" class="accordion-trigger" type="button">
 							<span class="accordion-text">
 								<span class="accordion-title">Needs‑Driven Analytics, Data Modeling &amp; BI Architecture</span>
 								<span class="accordion-meta">G&ouml;teborg Energi AB &middot; 2024&ndash;2026</span>
@@ -211,7 +232,7 @@
 								<path d="M4 2l6 6-6 6"></path>
 							</svg>
 						</button>
-						<div class="accordion-panel is-open">
+						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image left">
 									<img alt="Analytics architecture" height="402" src="assets/media/images/etl.jpg" width="1200" decoding="async" loading="lazy">
@@ -260,7 +281,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image left">
-									<img alt="Analysplattform" height="442" src="assets/media/images/fabric.jpg" width="2204" decoding="async" loading="lazy">
+									<img alt="Analysplattform" height="442" src="assets/media/images/fabric-1200.webp" width="2204" decoding="async" loading="eager" fetchpriority="high">
 								</div>
 								<div class="project-text">
 									<div class="project-section">
@@ -439,7 +460,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image right">
-									<img alt="Information modeling" height="276" src="assets/media/images/karacis-studio-pquE90oyRjU-unsplash.jpg" width="276" decoding="async" loading="lazy">
+									<img alt="Information modeling" height="1067" src="assets/media/images/business-analyse.jpg" width="1600" decoding="async" loading="lazy">
 									<p class="image-credit">Photo: Unsplash</p>
 								</div>
 								<div class="project-text">
@@ -483,7 +504,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image left">
-									<img alt="Operational data" height="402" src="assets/media/images/shahid-mehmood-0KgJaDiOS7c-unsplash.jpg" width="1200" decoding="async" loading="lazy">
+									<img alt="Operational data" height="317" src="assets/media/images/flow.jpg" width="2000" decoding="async" loading="lazy">
 									<p class="image-credit">Photo: Unsplash</p>
 								</div>
 								<div class="project-text">
@@ -574,7 +595,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image left">
-									<img alt="NKI survey design" height="276" src="assets/media/images/muhammad-afandi-oLTqZPW94DQ-unsplash.jpg" width="276" decoding="async" loading="lazy">
+									<img alt="NKI survey design" height="900" src="assets/media/images/business-align.jpg" width="1600" decoding="async" loading="lazy">
 									<p class="image-credit">Photo: Unsplash</p>
 								</div>
 								<div class="project-text">
@@ -666,7 +687,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image right">
-									<img alt="Strategic change leadership" height="402" src="assets/media/images/luky-triohandoko-ugGd6GTRYcQ-unsplash.jpg" width="1200" decoding="async" loading="lazy">
+									<img alt="Strategic change leadership" height="988" src="assets/media/images/probp.jpg" width="1748" decoding="async" loading="lazy">
 									<p class="image-credit">Photo: Unsplash</p>
 								</div>
 								<div class="project-text">
@@ -799,7 +820,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image left">
-									<img alt="External reporting" height="402" src="assets/media/images/luky-triohandoko-eecTcKqXpz8-unsplash.jpg" width="1200" decoding="async" loading="lazy">
+									<img alt="External reporting" height="1067" src="assets/media/images/business-analyse.jpg" width="1600" decoding="async" loading="lazy">
 									<p class="image-credit">Photo: Unsplash</p>
 								</div>
 								<div class="project-text">
@@ -844,7 +865,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image left">
-									<img alt="Behavioral insights mentorship" height="276" src="assets/media/images/round-icons-r9M-Qe6Thgc-unsplash.jpg" width="276" decoding="async" loading="lazy">
+									<img alt="Behavioral insights mentorship" height="1067" src="assets/media/images/business-enable.jpg" width="1600" decoding="async" loading="lazy">
 									<p class="image-credit">Photo: Unsplash</p>
 								</div>
 								<div class="project-text">
@@ -920,10 +941,43 @@
 								</div>
 							</div>
 						</div>
+						<button id="proj-ask-core" aria-expanded="false" class="accordion-trigger" type="button">
+							<span class="accordion-text"><span class="accordion-title">ASK Core</span><span class="accordion-meta">ASK Analytics &middot; 2026</span></span>
+							<span class="accordion-tag">Data Engineering</span>
+							<svg aria-hidden="true" class="accordion-arrow" focusable="false" viewbox="0 0 16 16"><path d="M4 2l6 6-6 6"></path></svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<div class="image right"><img alt="Reusable integration and data pipeline architecture" height="1080" src="assets/media/images/etl.jpg" width="1080" decoding="async" loading="lazy"></div>
+								<div class="project-text">
+									<div class="project-section"><p class="project-kicker">WHAT?</p><p>A shared Python package that brings reusable integration and ETL logic together for customer data flows, including Fortnox and student system data.</p></div>
+									<div class="project-section"><p class="project-kicker">WHY?</p><p>To reduce duplicated logic, make new integrations easier to build and create a more consistent foundation for extraction, validation and loading into Snowflake.</p></div>
+									<div class="project-section"><p class="project-kicker">MY CONTRIBUTION</p><ul><li>Developed reusable gateway and pipeline components for customer integrations.</li><li>Worked with authentication, rate limiting, staged files and Snowflake loading.</li><li>Contributed tests, configuration patterns and packaging for Azure Artifacts.</li></ul></div>
+									<div class="project-section"><p class="project-kicker">TOOLS</p><ul class="project-tools"><li>Python</li><li>Fortnox API</li><li>Snowflake</li><li>Azure Blob Storage</li><li>Azure Key Vault</li><li>Pytest</li><li>Azure Artifacts</li></ul></div>
+								</div>
+							</div>
+						</div>
+						<button id="proj-sap-bydesign-staging" aria-expanded="false" class="accordion-trigger" type="button">
+							<span class="accordion-text"><span class="accordion-title">SAP ByDesign Data Platform</span><span class="accordion-meta">ASK Analytics &middot; 2026</span></span>
+							<span class="accordion-tag">Data Platform</span>
+							<svg aria-hidden="true" class="accordion-arrow" focusable="false" viewbox="0 0 16 16"><path d="M4 2l6 6-6 6"></path></svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<div class="image left"><img alt="SAP ByDesign data platform flow" height="1080" src="assets/media/images/fabric.jpg" width="1080" decoding="async" loading="lazy"></div>
+								<div class="project-text">
+									<div class="project-section"><p class="project-kicker">WHAT?</p><p>A production focused data flow that extracts business data from SAP ByDesign through OData, transforms it in Python and loads structured staging tables in SQL Server.</p></div>
+									<div class="project-section"><p class="project-kicker">WHY?</p><p>To create a reliable foundation for reporting across customers, invoices, materials, budgets and other business areas, with clear traceability from source to reporting layer.</p></div>
+									<div class="project-section"><p class="project-kicker">MY CONTRIBUTION</p><ul><li>Developed extraction and staging flows across seven business domains.</li><li>Implemented validation, audit logging, safe reruns and transactional loading.</li><li>Created test and production pipelines, operational documentation and a runbook for incident handling.</li></ul></div>
+									<div class="project-section"><p class="project-kicker">TOOLS</p><ul class="project-tools"><li>SAP Business ByDesign</li><li>OData</li><li>Python</li><li>SQL Server</li><li>Azure DevOps</li><li>Pytest</li><li>Power BI</li></ul></div>
+								</div>
+							</div>
+						</div>
+					</div>
 					</div>
 				</div>
 			</section>
-			<section class="section-personal-projects wrapper" id="personal-projects">
+			<section class="section-personal-projects wrapper section-standard" id="personal-projects" hidden>
 				<div class="inner">
 					<h3 class="section-title">Personal Projects</h3>
 					<div class="project-accordion" data-accordion="">
@@ -983,12 +1037,10 @@
 							</svg>
 						</button>
 						<div class="accordion-panel">
-							<div class="accordion-content">
-								<span class="media right">
-									<video class="project-video" controls="" poster="assets/media/images/aw.jpg" preload="none">
-										<source src="assets/media/videos/shotgungame.mp4#t=20" type="video/mp4">
-									</video>
-								</span>
+								<div class="accordion-content">
+									<span class="media right">
+										<img src="assets/media/images/aw.jpg" alt="Shotgun Game project preview" width="520" height="520" decoding="async" loading="lazy">
+									</span>
 								<div class="project-text">
 									<div class="project-section">
 										<p class="project-kicker">WHAT?</p>
@@ -1036,7 +1088,7 @@
 						<div class="accordion-panel">
 							<div class="accordion-content">
 								<div class="image left">
-									<img alt="Address book app" height="1080" src="assets/media/images/shahid-mehmood-jBgGBq1Q5a0-unsplash.jpg" width="1080" decoding="async" loading="lazy">
+									<img alt="Address book app" height="1067" src="assets/media/images/business-clarify.jpg" width="1600" decoding="async" loading="lazy">
 									<p class="image-credit">Photo: Unsplash</p>
 								</div>
 								<div class="project-text">
@@ -1171,6 +1223,57 @@
 								</div>
 							</div>
 						</div>
+						<button id="proj-insidegrid" aria-expanded="false" class="accordion-trigger" type="button">
+							<span class="accordion-text">
+								<span class="accordion-title">InsideGrid</span>
+								<span class="accordion-meta">Personal Project &middot; 2026</span>
+							</span>
+							<span class="accordion-tag">Full Stack</span>
+							<svg aria-hidden="true" class="accordion-arrow" focusable="false" viewbox="0 0 16 16"><path d="M4 2l6 6-6 6"></path></svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<div class="image right"><img alt="InsideGrid CV and skills platform" height="1080" src="assets/media/images/ai1.jpg" width="1080" decoding="async" loading="lazy"></div>
+								<div class="project-text">
+									<div class="project-section"><p class="project-kicker">WHAT?</p><p>A full stack CV and skills platform for consulting companies, designed to connect candidate profiles, availability, assignment requirements and tailored CVs in one workflow.</p></div>
+									<div class="project-section"><p class="project-kicker">WHY?</p><p>To make it easier to understand who fits an assignment, find relevant competence quickly and prepare stronger client presentations without searching across disconnected files.</p></div>
+									<div class="project-section"><p class="project-kicker">MY CONTRIBUTION</p><ul><li>Designed and built the .NET API and React client.</li><li>Implemented candidate management, role based access, PDF export and local matching.</li><li>Added optional OpenAI support for candidate matching and tailored CV generation.</li></ul></div>
+									<div class="project-section"><p class="project-kicker">TOOLS</p><ul class="project-tools"><li>.NET 9</li><li>React</li><li>PostgreSQL</li><li>EF Core</li><li>JWT</li><li>OpenAI API</li><li>Docker</li></ul></div>
+								</div>
+							</div>
+						</div>
+						<button id="proj-fastighetsskotsel-api" aria-expanded="false" class="accordion-trigger" type="button">
+							<span class="accordion-text"><span class="accordion-title">Secure Maintenance Report API</span><span class="accordion-meta">Jensen Education &middot; 2026</span></span>
+							<span class="accordion-tag">Cloud Security</span>
+							<svg aria-hidden="true" class="accordion-arrow" focusable="false" viewbox="0 0 16 16"><path d="M4 2l6 6-6 6"></path></svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<div class="image left"><img alt="Secure cloud API project" height="1080" src="assets/media/images/core.jpg" width="1080" decoding="async" loading="lazy"></div>
+								<div class="project-text">
+									<div class="project-section"><p class="project-kicker">WHAT?</p><p>A secure API for maintenance reports with separate permissions for residents and property managers, supported by Azure services for identity, data storage and secret management.</p></div>
+									<div class="project-section"><p class="project-kicker">WHY?</p><p>To explore how security principles become concrete technical decisions in a cloud solution, from authentication and ownership rules to managed identities and protected secrets.</p></div>
+									<div class="project-section"><p class="project-kicker">MY CONTRIBUTION</p><ul><li>Built the API, data model and role based authorization.</li><li>Configured Azure App Service, Azure SQL, Microsoft Entra ID and Key Vault.</li><li>Created repeatable security tests for access rules, validation and error handling.</li></ul></div>
+									<div class="project-section"><p class="project-kicker">TOOLS</p><ul class="project-tools"><li>ASP.NET Core</li><li>EF Core</li><li>Azure SQL</li><li>Microsoft Entra ID</li><li>Azure Key Vault</li><li>Managed Identity</li><li>Swagger</li></ul></div>
+								</div>
+							</div>
+						</div>
+						<button id="proj-freaky-fashion-api" aria-expanded="false" class="accordion-trigger" type="button">
+							<span class="accordion-text"><span class="accordion-title">Freaky Fashion API</span><span class="accordion-meta">Jensen Education &middot; 2026</span></span>
+							<span class="accordion-tag">Web API</span>
+							<svg aria-hidden="true" class="accordion-arrow" focusable="false" viewbox="0 0 16 16"><path d="M4 2l6 6-6 6"></path></svg>
+						</button>
+						<div class="accordion-panel">
+							<div class="accordion-content">
+								<div class="image right"><img alt="Ecommerce API project" height="1080" src="assets/media/images/etl.jpg" width="1080" decoding="async" loading="lazy"></div>
+								<div class="project-text">
+									<div class="project-section"><p class="project-kicker">WHAT?</p><p>An ecommerce API for products, categories and shopping carts, with authenticated write operations and a deployment pipeline for Azure.</p></div>
+									<div class="project-section"><p class="project-kicker">WHY?</p><p>To build a complete API around a realistic business domain and strengthen the connection between application structure, security, testing and continuous delivery.</p></div>
+									<div class="project-section"><p class="project-kicker">MY CONTRIBUTION</p><ul><li>Built the API layers, endpoints and data model.</li><li>Implemented JWT authentication, validation, pagination and JSON Patch updates.</li><li>Created CI and CD configuration, technical documentation and API tests.</li></ul></div>
+									<div class="project-section"><p class="project-kicker">TOOLS</p><ul class="project-tools"><li>ASP.NET Core 8</li><li>EF Core</li><li>SQLite</li><li>JWT</li><li>Swagger</li><li>Azure DevOps</li><li>Application Insights</li></ul></div>
+								</div>
+							</div>
+						</div>
 						<button id="proj-blackjack-py" aria-expanded="false" class="accordion-trigger" type="button">
 							<span class="accordion-text">
 								<span class="accordion-title">blackjack.py</span>
@@ -1222,17 +1325,14 @@
 				</div>
 			</section>
 			<!-- Previous work section with role cards and company logos. -->
-			<section class="section-previous-work wrapper" id="previous-work">
+			<section class="section-previous-work wrapper section-standard" id="previous-work">
 				<!-- Inner layout container that controls content width and alignment. -->
 				<div class="inner">
 					<h3 class="section-title">Previous Work</h3>
-					<!-- Horizontal logo slider viewport with navigation controls. -->
-					<div class="logo-slider role-slider">
-						<button aria-label="Scroll left" class="slider-btn left role-nav" type="button">&lsaquo;</button>
-						<!-- Role card track used by the previous-work slider module. -->
-						<div class="logo-track role-track" id="role-cards">
+					<div class="previous-work-grid" id="role-cards">
 							<!-- Single previous-role card with highlights and technology chips. -->
 							<article class="role-card">
+								<figure class="role-card-visual"><img src="assets/media/images/GE_Logo_RGB-520.jpg" alt="Göteborg Energi" width="520" height="293" loading="lazy" decoding="async"></figure>
 								<!-- Role card header containing title and meta information. -->
 								<div class="role-header">
 										<h4>Customer &amp; Market Analyst</h4>
@@ -1254,6 +1354,7 @@
 							</article>
 							<!-- Single previous-role card with highlights and technology chips. -->
 							<article class="role-card">
+								<figure class="role-card-visual"><img src="assets/media/images/Boplats-520.jpg" alt="Boplats Göteborg" width="520" height="293" loading="lazy" decoding="async"></figure>
 								<!-- Role card header containing title and meta information. -->
 								<div class="role-header">
 										<h4>Market Analyst &amp; Process Leader</h4>
@@ -1272,64 +1373,19 @@
 										<span class="role-chip">Strategy &amp; governance</span>
 								</div>
 							</article>
-						</div>
-						<button aria-label="Scroll right" class="slider-btn right role-nav" type="button">&rsaquo;</button>
-					</div>
-				</div>
-			</section>
-			<!-- References section with testimonial slider content. -->
-			<section class="section-references wrapper" id="references">
-				<!-- Inner layout container that controls content width and alignment. -->
-				<div class="inner">
-					<h3 class="section-title">References</h3>
-					<!-- Testimonial slider wrapper with controls and track. -->
-					<div class="testimonial-slider">
-						<button aria-label="Scroll left" class="slider-btn left testimonial-nav" type="button">&lsaquo;</button>
-						<!-- Sliding testimonial track controlled by JavaScript. -->
-						<div class="testimonial-grid" id="testimonial-track">
-							<!-- Single testimonial card with quote and attribution. -->
-							<article class="testimonial-card">
-								<!-- Opening quote icon block for testimonial cards. -->
-								<div aria-hidden="true" class="testimonial-quote">&ldquo;</div>
-								<!-- Testimonial text and author details container. -->
-								<div class="testimonial-body">
-									<p class="testimonial-text">I understood that you’ll be leaving GE, which is so sad to hear!! You truly contribute so much to the company!!But of course, it’s always right to follow your heart and to work with and develop what you’re most passionate about 👍🥰 Absolutely the right choice, Patricia!! You should follow what inspires and challenges you!!I also know how hard you’ve been working and fighting for this.It has been such a pleasure and truly inspiring to work with you!!.</p>
-									<p class="testimonial-author">Marie, Segment Lead, G&Ouml;TEBORG ENERGI</p>
-								</div>
-							</article>
-							<!-- Single testimonial card with quote and attribution. -->
-							<article class="testimonial-card">
-								<!-- Opening quote icon block for testimonial cards. -->
-								<div aria-hidden="true" class="testimonial-quote">&ldquo;</div>
-								<!-- Testimonial text and author details container. -->
-								<div class="testimonial-body">
-									<p class="testimonial-text">You were fantastic from the very beginning when you came to Boplats. Attitude, mindset, and commitment. I have had the chance to see you grow and experienced you as a wonderful and smart person with a great deal of warmth and wisdom. An unbeatable mix! 😉</p>
-									<p class="testimonial-author">CAMILLA, MARKNADSANSVARIG, BOPLATS G&Ouml;TEBORG</p>
-								</div>
-							</article>
-							<!-- Single testimonial card with quote and attribution. -->
-							<article class="testimonial-card">
-								<!-- Opening quote icon block for testimonial cards. -->
-								<div aria-hidden="true" class="testimonial-quote">&ldquo;</div>
-								<!-- Testimonial text and author details container. -->
-								<div class="testimonial-body">
-									<p class="testimonial-text">I heard that you were going to leave. I think that&rsquo;s a shame, since I quickly noticed that you really have a good grasp of the situation!</p>
-									<p class="testimonial-author">ANDERS, GRUNDARE, DEVISOR</p>
-								</div>
-							</article>
-						</div>
-						<button aria-label="Scroll right" class="slider-btn right testimonial-nav" type="button">&rsaquo;</button>
 					</div>
 				</div>
 			</section>
 		</main>
 		<!-- Site footer containing contact details, links, and social references. -->
-		<footer class="site-footer no-form" id="footer">
+		<footer class="site-footer no-form portfolio-footer" id="footer">
 			<!-- Inner layout container that controls content width and alignment. -->
 			<div class="inner">
-				<h2 class="section-title">Get in touch</h2>
+				<div class="portfolio-footer-layout">
+					<div class="portfolio-footer-content">
+						<h2 class="section-title">Let’s build something meaningful together.</h2>
 				<!-- Footer grid layout that organizes columns of information. -->
-				<div class="footer-grid">
+						<div class="footer-grid">
 					<!-- Single footer column for grouped contact or navigation content. -->
 					<div class="footer-col">
 						<h3 class="footer-title">Location</h3>
@@ -1374,12 +1430,17 @@
 							<a href="https://linkedin.com/in/renata-patricia-stanca">LinkedIn</a>
 						</p>
 					</div>
+						</div>
+						<!-- Footer copyright and closing brand statement list. -->
+						<ul class="copyright">
+							<li>Vision. Strategy. Implementation. Insight. Impact.</li>
+							<li>&copy; 2026 Patricia Stanca. All rights reserved.</li>
+						</ul>
+					</div>
+					<figure class="portfolio-footer-portrait">
+						<img src="assets/media/images/bildjag-svartvit.jpg" alt="Patricia Stanca" width="1290" height="1602" loading="lazy" decoding="async">
+					</figure>
 				</div>
-				<!-- Footer copyright and closing brand statement list. -->
-				<ul class="copyright">
-					<li>Vision. Strategy. Implementation. Insight. Impact.</li>
-					<li>&copy; Untitled Inc. All rights reserved.</li>
-				</ul>
 			</div>
 		</footer>
 
@@ -1392,6 +1453,7 @@
 		<script src="assets/js/modules/search.js" defer></script>
 		<script src="assets/js/modules/header-dropdown.js" defer></script>
 		<script src="assets/js/modules/project-video-preview.js" defer></script>
+		<script src="assets/js/modules/experience-showcase.js" defer></script>
 		<script src="assets/js/modules/scroll-reveal.js" defer></script>
 		<script src="assets/js/main.js" defer></script>
 	</body>

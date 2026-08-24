@@ -1,0 +1,145 @@
+:root {
+  --page-max-width: 1300px;
+  --page-gutter: clamp(16px, 4vw, 56px);
+}
+
+body .site-footer.portfolio-footer {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: clamp(2rem, 4vw, 4rem) 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #050606 !important;
+  color: #ffffff !important;
+  overflow: hidden !important;
+}
+
+body .site-footer.portfolio-footer > .inner {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.portfolio-footer .portfolio-footer-layout {
+  position: static;
+  width: min(calc(100% - (2 * var(--page-gutter))), var(--page-max-width));
+  height: auto;
+  min-height: 0;
+  display: block !important;
+  margin-inline: auto;
+  padding-block: clamp(30px, 4vw, 48px) 18px;
+}
+
+.portfolio-footer .portfolio-footer-content {
+  width: 100%;
+  min-width: 0;
+  display: block !important;
+  padding: 0;
+}
+
+body .portfolio-footer .section-title {
+  max-width: none !important;
+  margin: 0 0 clamp(24px, 3vw, 36px) !important;
+  color: #ffffff !important;
+  font-size: clamp(21px, 3.3vw, 46px) !important;
+  font-weight: 430 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+  white-space: nowrap;
+}
+
+body .portfolio-footer .footer-grid {
+  width: fit-content !important;
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: clamp(28px, 4vw, 56px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+body .portfolio-footer .footer-col,
+body .portfolio-footer .footer-col + .footer-col {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 0;
+  display: block !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body .portfolio-footer .footer-title {
+  color: #8ea69f !important;
+}
+
+body .portfolio-footer .footer-item,
+body .portfolio-footer .footer-item span,
+body .portfolio-footer .footer-item a {
+  color: rgba(255, 255, 255, 0.72) !important;
+  white-space: nowrap;
+}
+
+body .portfolio-footer .footer-item a:hover {
+  color: #ffffff !important;
+}
+
+.portfolio-footer .portfolio-footer-portrait {
+  display: none !important;
+}
+
+body .portfolio-footer .copyright {
+  position: static !important;
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin: clamp(38px, 5vw, 64px) 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+body .portfolio-footer .copyright li {
+  position: static !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  text-shadow: none !important;
+  transform: none !important;
+}
+
+body .portfolio-footer .copyright li:last-child {
+  margin-left: auto !important;
+  text-align: right !important;
+}
+
+@media (max-width: 700px) {
+  body .portfolio-footer .section-title {
+    font-size: clamp(18px, 5vw, 24px) !important;
+  }
+
+  body .portfolio-footer .footer-grid {
+    gap: clamp(8px, 2.5vw, 18px) !important;
+  }
+
+  body .portfolio-footer .footer-item,
+  body .portfolio-footer .footer-item span,
+  body .portfolio-footer .footer-item a {
+    font-size: clamp(7px, 1.8vw, 10px) !important;
+  }
+
+  body .portfolio-footer .copyright {
+    flex-direction: row;
+    margin-top: 34px !important;
+    font-size: clamp(7px, 1.8vw, 10px) !important;
+  }
+}

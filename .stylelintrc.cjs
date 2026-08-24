@@ -30,6 +30,8 @@ module.exports = {
     'no-duplicate-selectors': null,
     // This rule is turned off because the project does not need one enforced style for :not() selectors.
     'selector-not-notation': null,
+    // The site uses BEM component names alongside kebab-case utility classes.
+    'selector-class-pattern': '^[a-z][a-z0-9]*(?:(?:-|__|--)[a-z0-9]+)*$',
     // This rule is turned off because explicit shorthand values can be easier to read during maintenance.
     'shorthand-property-no-redundant-values': null,
     // This rule is turned off because keyword casing is not important enough here to block linting.

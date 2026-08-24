@@ -17,7 +17,7 @@
 		<meta name="twitter:title" content="Contact | Patricia Stanca">
 		<meta name="twitter:description" content="Contact Patricia Stanca for data analysis and business intelligence projects, collaboration, or other questions.">
 		<meta name="twitter:image" content="https://patriciastanca.com/assets/media/images/psp.jpg">
-		<meta name="theme-color" content="#0F766E">
+		<meta name="theme-color" content="#111111">
 			<link rel="icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="shortcut icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="apple-touch-icon" href="/assets/media/images/P.jpg">
@@ -30,8 +30,11 @@
 			<link rel="stylesheet" href="assets/css/components/footer.css" media="print" data-async-css>
 			<link rel="stylesheet" href="assets/css/components/weather.css" media="print" data-async-css>
 			<link rel="stylesheet" href="assets/css/utilities/core.css">
+			<link rel="stylesheet" href="assets/css/modern.css">
+			<link rel="stylesheet" href="assets/css/footer-unified.css">
+			<link rel="stylesheet" href="assets/css/section-spacing.css">
 			<link rel="stylesheet" href="assets/css/utilities/print.css" media="print" data-async-css>
-			<link rel="preload" as="image" href="assets/media/images/contact-1080.webp" imagesrcset="assets/media/images/contact-720.webp 720w, assets/media/images/contact-1080.webp 1080w" imagesizes="(max-width: 980px) 92vw, 360px" type="image/webp" fetchpriority="high">
+			<link rel="preload" as="image" href="assets/media/images/contact-collaboration-480.webp" imagesrcset="assets/media/images/contact-collaboration-480.webp 480w, assets/media/images/contact-collaboration-960.webp 960w, assets/media/images/contact-collaboration-1440.webp 1440w" imagesizes="(max-width: 900px) calc(100vw - 2rem), 42vw" fetchpriority="high">
 			<script src="assets/js/async-css.js" defer></script>
 		<script type="application/ld+json">
 			{
@@ -52,14 +55,14 @@
 		<a class="skip-link" href="#main">Skip to content</a>
 <!-- Site header with branding, navigation, search, and mobile menu controls. -->
 		<header id="header" class="site-header">
-			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span><video class="site-logo-video" data-logo-video muted playsinline preload="metadata" aria-hidden="true"><source src="assets/media/videos/green.mp4" type="video/mp4"></video></a></h1>
+			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span></a></h1>
 <!-- Primary desktop navigation links and dropdown trigger. -->
 			<nav class="top-nav" aria-label="Primary">
 <!-- Main navigation list for top-level pages. -->
 				<ul class="nav-row">
 					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
 					<li class="has-dropdown"><a href="/experience">Experience</a></li>
+					<li><a href="/about">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 <!-- Desktop dropdown menu for experience-related links. -->
@@ -67,7 +70,6 @@
 					<a href="/experience#projects">Work Projects</a>
 					<a href="/experience#personal-projects">Personal Projects</a>
 					<a href="/experience#previous-work">Previous Work</a>
-					<a href="/experience#references">References</a>
 				</nav>
 			</nav>
 			<div class="header-search">
@@ -80,6 +82,7 @@
 				</div>
 			</div>
 			<div class="header-actions">
+				<a class="header-cta" href="contact.html">Contact me <span aria-hidden="true">→</span></a>
 				<button class="search-toggle-mobile" type="button" aria-label="Open search" data-search-open="">
 					<i data-lucide="search" aria-hidden="true"></i>
 				</button>
@@ -106,7 +109,6 @@
 								<li><a href="/experience#projects">Work Projects</a></li>
 								<li><a href="/experience#personal-projects">Personal Projects</a></li>
 								<li><a href="/experience#previous-work">Previous Work</a></li>
-								<li><a href="/experience#references">References</a></li>
 							</ul>
 							</nav>
 						</li>
@@ -132,25 +134,22 @@
 <!-- Main page content wrapper. -->
 		<main id="main" class="site-main">
 <!-- Reusable section wrapper that applies spacing and layout structure. -->
-			<section class="wrapper contact-hero">
+			<section class="wrapper contact-hero section-standard">
 <!-- Inner layout container that controls content width and alignment. -->
 				<div class="inner">
 <!-- Two-column contact hero layout for image and form content. -->
 					<div class="contact-hero-grid">
+						<div class="contact-intro">
 <!-- Contact page visual panel with decorative image treatment. -->
 							<div class="contact-visual" data-reveal-delay="280">
-								<picture>
-									<source
-										type="image/webp"
-										srcset="assets/media/images/contact-720.webp 720w, assets/media/images/contact-1080.webp 1080w"
-										sizes="(max-width: 980px) 92vw, 360px">
-									<img src="assets/media/images/contact-1080.jpg" srcset="assets/media/images/contact-720.jpg 720w, assets/media/images/contact-1080.jpg 1080w" sizes="(max-width: 980px) 92vw, 360px" alt="Contact illustration" loading="eager" fetchpriority="high" width="1080" height="1080" decoding="async">
-								</picture>
+								<img src="assets/media/images/contact-collaboration-960.webp" srcset="assets/media/images/contact-collaboration-480.webp 480w, assets/media/images/contact-collaboration-960.webp 960w, assets/media/images/contact-collaboration-1440.webp 1440w" sizes="(max-width: 900px) calc(100vw - 2rem), 42vw" alt="Two women sharing ideas while working together at a laptop" loading="eager" fetchpriority="high" width="1800" height="1013" decoding="async">
+								<p class="contact-photo-credit">Photo: <a href="https://unsplash.com/photos/two-women-collaborate-over-a-laptop-in-an-office-irfWcn-sF48">Vitaly Gariev on Unsplash</a></p>
 							</div>
-<!-- Contact form content area with heading and lead text. -->
+							<p class="section-kicker">Start here</p>
+							<h2 class="contact-title" data-reveal-delay="0">Have a challenge, an idea or a project in mind? Let’s talk.</h2>
+						</div>
+<!-- Contact form content area. -->
 						<div class="contact-content">
-							<h2 class="contact-title" data-reveal-delay="0">Curious about how I work and how I can contribute?</h2>
-
 <!-- Contact form element for collecting and sending user messages. -->
 							<form class="contact-form contact-card" action="https://formspree.io/f/xqedpzez" method="POST" data-formspree novalidate data-reveal-delay="420">
 <!-- Form row grouping related input fields side by side. -->
@@ -206,12 +205,14 @@
 		</main>
 
 <!-- Site footer containing contact details, links, and social references. -->
-		<footer id="footer" class="site-footer no-form">
+		<footer id="footer" class="site-footer no-form portfolio-footer">
 <!-- Inner layout container that controls content width and alignment. -->
 			<div class="inner">
-				<h2 class="section-title">Get in touch</h2>
+				<div class="portfolio-footer-layout">
+					<div class="portfolio-footer-content">
+						<h2 class="section-title">Let’s build something meaningful together.</h2>
 <!-- Footer grid layout that organizes columns of information. -->
-				<div class="footer-grid">
+						<div class="footer-grid">
 <!-- Single footer column for grouped contact or navigation content. -->
 					<div class="footer-col">
 						<h3 class="footer-title">Location</h3>
@@ -235,25 +236,18 @@
 						<h3 class="footer-title">Socials</h3>
 						<p class="footer-item"><i data-lucide="linkedin" aria-hidden="true"></i><a href="https://linkedin.com/in/renata-patricia-stanca">LinkedIn</a></p>
 					</div>
-
-<!-- Footer weather widget container: JavaScript uses this block (with OpenWeather API key) to render live temperature, location, and a Lucide weather icon. -->
-					<div class="footer-col footer-weather">
-						<div class="weather-card weather-card-compact" aria-live="polite" data-weather data-weather-api-key="4bd264cd33290192a1c8e5e5ac1489d1">
-							<div class="weather-icon"><i data-lucide="cloud-sun" aria-hidden="true"></i></div>
-							<div>
-								<p class="weather-temp">Loading…</p>
-								<p class="weather-meta">Gothenburg, Sweden</p>
-								<p class="weather-note">Uses OpenWeather.</p>
-							</div>
 						</div>
-					</div>
-				</div>
 
 <!-- Footer copyright and closing brand statement list. -->
-				<ul class="copyright">
-					<li>Vision. Strategy. Implementation. Insight. Impact.</li>
-					<li>&copy; Untitled Inc. All rights reserved.</li>
-				</ul>
+						<ul class="copyright">
+							<li>Vision. Strategy. Implementation. Insight. Impact.</li>
+							<li>&copy; 2026 Patricia Stanca. All rights reserved.</li>
+						</ul>
+					</div>
+					<figure class="portfolio-footer-portrait">
+						<img src="assets/media/images/bildjag-svartvit.jpg" alt="Patricia Stanca" width="1290" height="1602" loading="lazy" decoding="async">
+					</figure>
+				</div>
 			</div>
 		</footer>
 

@@ -1,7 +1,7 @@
 /* Defines the styles for Timeline. */
 /* Applies styling to .timeline-section. */
 .timeline-section {
-  background: #0F766E;
+  background: #365a52;
   color: #ffffff;
 }
 
@@ -78,7 +78,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #0F766E;
+  background: #365a52;
   display: grid;
   place-items: center;
   margin: 0 auto;

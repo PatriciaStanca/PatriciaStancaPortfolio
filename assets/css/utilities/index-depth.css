@@ -1,7 +1,7 @@
 /* Defines the styles for Index visual depth (hero rhythm, subtle structure, layered accents). */
 body.page-index .site-main {
   background-color: #ffffff;
-  background-image: linear-gradient(180deg, #ffffff 0%, #fcfffe 38%, #ffffff 100%);
+  background-image: linear-gradient(180deg, #ffffff 0%, #f7f7f5 38%, #ffffff 100%);
 }
 
 body.page-index .section-hero {
@@ -29,7 +29,7 @@ body.page-index .section-hero::before {
   width: clamp(320px, 56vw, 760px);
   height: clamp(260px, 44vw, 560px);
   border-radius: 48% 52% 41% 59% / 58% 42% 60% 40%;
-  background: radial-gradient(circle at 28% 32%, rgba(15, 118, 110, 0.14), rgba(15, 118, 110, 0.04) 56%, transparent 78%);
+  background: radial-gradient(circle at 28% 32%, rgba(54, 90, 82, 0.14), rgba(54, 90, 82, 0.04) 56%, transparent 78%);
   filter: blur(2px);
   z-index: 0;
   animation: ambient-shift 24s ease-in-out infinite alternate;
@@ -41,7 +41,7 @@ body.page-index .section-hero::after {
   width: clamp(240px, 35vw, 500px);
   height: clamp(180px, 28vw, 360px);
   border-radius: 61% 39% 55% 45% / 44% 58% 42% 56%;
-  background: radial-gradient(circle at 60% 44%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 60%, transparent 82%);
+  background: radial-gradient(circle at 60% 44%, rgba(54, 90, 82, 0.12), rgba(54, 90, 82, 0.03) 60%, transparent 82%);
   filter: blur(1px);
   z-index: 0;
   animation: ambient-shift 18s ease-in-out infinite alternate-reverse;
@@ -66,7 +66,7 @@ body.page-index .section-hero .hero-text::before {
   width: clamp(190px, 26vw, 340px);
   height: clamp(150px, 18vw, 240px);
   border-radius: 58% 42% 48% 52% / 50% 56% 44% 50%;
-  background: radial-gradient(circle at 36% 44%, rgba(15, 118, 110, 0.15), rgba(15, 118, 110, 0.04) 58%, transparent 84%);
+  background: radial-gradient(circle at 36% 44%, rgba(54, 90, 82, 0.15), rgba(54, 90, 82, 0.04) 58%, transparent 84%);
   filter: blur(4px);
   z-index: -1;
   animation: ambient-shift 20s ease-in-out infinite alternate;
@@ -77,7 +77,7 @@ body.page-index .section-hero .hero-image::before {
   position: absolute;
   inset: 9% 7% -12% 10%;
   border-radius: 40% 60% 52% 48% / 46% 47% 53% 54%;
-  background: radial-gradient(circle at 40% 40%, rgba(15, 118, 110, 0.14), rgba(15, 118, 110, 0.05) 62%, transparent 84%);
+  background: radial-gradient(circle at 40% 40%, rgba(54, 90, 82, 0.14), rgba(54, 90, 82, 0.05) 62%, transparent 84%);
   z-index: -1;
   filter: blur(3px);
 }
@@ -126,7 +126,7 @@ body.page-index #skills::before {
   width: clamp(260px, 42vw, 620px);
   height: clamp(220px, 34vw, 460px);
   border-radius: 52% 48% 63% 37% / 39% 58% 42% 61%;
-  background: radial-gradient(circle at 32% 38%, rgba(15, 118, 110, 0.1), rgba(15, 118, 110, 0.02) 64%, transparent 82%);
+  background: radial-gradient(circle at 32% 38%, rgba(54, 90, 82, 0.1), rgba(54, 90, 82, 0.02) 64%, transparent 82%);
   z-index: 0;
   pointer-events: none;
 }
@@ -139,7 +139,7 @@ body.page-index #skills::after {
   width: clamp(210px, 30vw, 420px);
   height: clamp(150px, 24vw, 320px);
   border-radius: 44% 56% 36% 64% / 56% 36% 64% 44%;
-  background: radial-gradient(circle at 42% 50%, rgba(15, 118, 110, 0.08), rgba(15, 118, 110, 0.015) 64%, transparent 82%);
+  background: radial-gradient(circle at 42% 50%, rgba(54, 90, 82, 0.08), rgba(54, 90, 82, 0.015) 64%, transparent 82%);
   filter: blur(2px);
   pointer-events: none;
   z-index: 0;
@@ -160,7 +160,7 @@ body.page-index #project-reel::before {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(58% 70% at 16% 22%, rgba(164, 225, 215, 0.08), transparent 70%);
+  background: radial-gradient(58% 70% at 16% 22%, rgba(218, 212, 201, 0.08), transparent 70%);
   z-index: 0;
 }
 
@@ -172,7 +172,7 @@ body.page-index #project-reel::after {
   width: clamp(230px, 34vw, 520px);
   height: clamp(170px, 26vw, 360px);
   border-radius: 65% 35% 52% 48% / 44% 58% 42% 56%;
-  background: radial-gradient(circle at 54% 50%, rgba(164, 225, 215, 0.14), rgba(164, 225, 215, 0.02) 66%, transparent 86%);
+  background: radial-gradient(circle at 54% 50%, rgba(218, 212, 201, 0.14), rgba(218, 212, 201, 0.02) 66%, transparent 86%);
   pointer-events: none;
   z-index: 0;
 }

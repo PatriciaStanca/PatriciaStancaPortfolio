@@ -17,7 +17,7 @@
 		<meta name="twitter:title" content="About | Patricia Stanca">
 		<meta name="twitter:description" content="Learn about Patricia Stanca’s background, skills, and education in data analysis, business intelligence, and automation.">
 		<meta name="twitter:image" content="https://patriciastanca.com/assets/media/images/psp.jpg">
-		<meta name="theme-color" content="#0F766E">
+		<meta name="theme-color" content="#111111">
 			<link rel="icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="shortcut icon" href="/assets/media/images/P.jpg" type="image/jpeg">
 			<link rel="apple-touch-icon" href="/assets/media/images/P.jpg">
@@ -29,6 +29,11 @@
 			<link rel="stylesheet" href="assets/css/components/education-language.css">
 			<link rel="stylesheet" href="assets/css/components/footer.css">
 		<link rel="stylesheet" href="assets/css/utilities.css">
+		<link rel="stylesheet" href="assets/css/modern.css">
+		<link rel="stylesheet" href="assets/css/footer-unified.css">
+		<link rel="stylesheet" href="assets/css/about-refresh.css">
+		<link rel="stylesheet" href="assets/css/section-spacing.css">
+		<link rel="preload" as="image" href="assets/media/images/patricia-about-cutout-v3-360.webp" imagesrcset="assets/media/images/patricia-about-cutout-v3-360.webp 360w, assets/media/images/patricia-about-cutout-v3-720.webp 720w, assets/media/images/patricia-about-cutout-v3-1124.webp 1124w" imagesizes="(max-width: 700px) 43vw, 420px" fetchpriority="high">
 		<script src="assets/js/async-css.js" defer></script>
 		<script type="application/ld+json">
 			{
@@ -49,14 +54,14 @@
 		<a class="skip-link" href="#main">Skip to content</a>
 <!-- Site header with branding, navigation, search, and mobile menu controls. -->
 		<header id="header" class="site-header">
-			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span><video class="site-logo-video" data-logo-video muted playsinline preload="metadata" aria-hidden="true"><source src="assets/media/videos/green.mp4" type="video/mp4"></video></a></h1>
+			<h1><a class="site-logo-link" href="/" aria-label="Patricia Stanca, Home"><span class="site-logo-text">Patricia Stanca</span></a></h1>
 <!-- Primary desktop navigation links and dropdown trigger. -->
 			<nav class="top-nav" aria-label="Primary">
 <!-- Main navigation list for top-level pages. -->
 				<ul class="nav-row">
 					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
 					<li class="has-dropdown"><a href="/experience">Experience</a></li>
+					<li><a href="/about">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 <!-- Desktop dropdown menu for experience-related links. -->
@@ -64,7 +69,6 @@
 					<a href="/experience#projects">Work Projects</a>
 					<a href="/experience#personal-projects">Personal Projects</a>
 					<a href="/experience#previous-work">Previous Work</a>
-					<a href="/experience#references">References</a>
 				</nav>
 			</nav>
 			<div class="header-search">
@@ -77,6 +81,7 @@
 				</div>
 			</div>
 			<div class="header-actions">
+				<a class="header-cta" href="contact.html">Contact me <span aria-hidden="true">→</span></a>
 				<button class="search-toggle-mobile" type="button" aria-label="Open search" data-search-open="">
 					<i data-lucide="search" aria-hidden="true"></i>
 				</button>
@@ -103,7 +108,6 @@
 								<li><a href="/experience#projects">Work Projects</a></li>
 								<li><a href="/experience#personal-projects">Personal Projects</a></li>
 								<li><a href="/experience#previous-work">Previous Work</a></li>
-								<li><a href="/experience#references">References</a></li>
 							</ul>
 							</nav>
 						</li>
@@ -129,274 +133,118 @@
 <!-- Main page content wrapper. -->
 		<main id="main" class="site-main">
 <!-- Reusable section wrapper that applies spacing and layout structure. -->
-			<section class="wrapper">
-<!-- Intro header block for page title and lead context. -->
-				<header class="intro-wrap">
-<!-- Inner layout container that controls content width and alignment. -->
-					<div class="inner intro-wrap">
-<!-- Two-column intro layout for lead and supporting copy. -->
-						<div class="intro-split">
-<!-- Generic layout container used to group related content blocks. -->
-							<div>
-								<p class="page-lead">HOW I CREATE VALUE</p>
-							</div>
-<!-- Generic layout container used to group related content blocks. -->
-							<div>
-								<p class="intro-long">The work is driven by curiosity, structure, and close collaboration.
-									Translating business needs into clear direction, shaping data and technology into usable solutions, and supporting teams through implementation and change.
-									With experience across multiple industries and trusted by both business and technical stakeholders, the focus is on building solutions that are grounded in reality, scalable over time, and genuinely useful for the people who rely on them.</p>
-							</div>
-						</div>
+			<section class="about-section section-spacing-custom">
+				<div class="about-section__inner">
+					<div class="about-section__content">
+						<p class="section-kicker">About</p>
+						<h1><span>Strategy, data and</span><br><span>technology turned into</span><br><span>decisions teams can use.</span></h1>
+						<p>I am at my best when there is something complex to understand, structure and move forward. I bring business needs, data and technology together, then turn them into practical solutions that people can trust and use in their everyday work.</p>
+						<nav class="about-section__actions" aria-label="About page actions">
+							<a class="btn-primary" href="/experience#projects">Explore selected work <span aria-hidden="true">→</span></a>
+						</nav>
 					</div>
-				</header>
-			</section>
-
-<!-- Reusable section wrapper that applies spacing and layout structure. -->
-			<section class="wrapper timeline-section">
-<!-- Inner layout container that controls content width and alignment. -->
-				<div class="inner">
-<!-- Timeline section presenting experience in chronological order. -->
-					<section class="timeline-stem" aria-label="Career timeline">
-<!-- Timeline heading and section context container. -->
-						<header class="timeline-header">
-							<h2 class="section-title">Career Timeline</h2>
-						</header>
-<!-- Timeline row that aligns events along the central stem. -->
-						<div class="ts-row">
-<!-- Single timeline event container. -->
-							<div class="ts-item">
-<!-- Upper portion of a timeline item for event content positioning. -->
-								<div class="ts-top"></div>
-<!-- Timeline marker circle that anchors each event on the stem. -->
-								<div class="ts-circle"><span>2020</span></div>
-<!-- Lower portion of a timeline item for event content positioning. -->
-								<div class="ts-bottom">
-<!-- Timeline event title block. -->
-									<div class="ts-title">Boplats Göteborg</div>
-<!-- Timeline event metadata such as date or location. -->
-									<div class="ts-meta">Market Analyst &amp; Process Lead</div>
-								</div>
-							</div>
-<!-- Single timeline event container. -->
-							<div class="ts-item">
-<!-- Upper portion of a timeline item for event content positioning. -->
-								<div class="ts-top">
-<!-- Timeline event title block. -->
-									<div class="ts-title">Bachelor’s Degree</div>
-<!-- Timeline event metadata such as date or location. -->
-									<div class="ts-meta">Economics</div>
-								</div>
-<!-- Timeline marker circle that anchors each event on the stem. -->
-								<div class="ts-circle"><span>2022</span></div>
-<!-- Lower portion of a timeline item for event content positioning. -->
-								<div class="ts-bottom"></div>
-							</div>
-<!-- Single timeline event container. -->
-							<div class="ts-item">
-<!-- Upper portion of a timeline item for event content positioning. -->
-								<div class="ts-top">
-<!-- Timeline event title block. -->
-									<div class="ts-title">Master’s Degree</div>
-<!-- Timeline event metadata such as date or location. -->
-									<div class="ts-meta">Finance</div>
-								</div>
-<!-- Timeline marker circle that anchors each event on the stem. -->
-								<div class="ts-circle"><span>2023</span></div>
-<!-- Lower portion of a timeline item for event content positioning. -->
-								<div class="ts-bottom"></div>
-							</div>
-<!-- Single timeline event container. -->
-							<div class="ts-item">
-<!-- Upper portion of a timeline item for event content positioning. -->
-								<div class="ts-top"></div>
-<!-- Timeline marker circle that anchors each event on the stem. -->
-								<div class="ts-circle"><span>2024</span></div>
-<!-- Lower portion of a timeline item for event content positioning. -->
-								<div class="ts-bottom">
-<!-- Timeline event title block. -->
-									<div class="ts-title">Göteborg Energi</div>
-<!-- Timeline event metadata such as date or location. -->
-									<div class="ts-meta">Customer &amp; Market Analyst</div>
-								</div>
-							</div>
-<!-- Single timeline event container. -->
-							<div class="ts-item">
-<!-- Upper portion of a timeline item for event content positioning. -->
-								<div class="ts-top"></div>
-<!-- Timeline marker circle that anchors each event on the stem. -->
-								<div class="ts-circle"><span>2026</span></div>
-<!-- Lower portion of a timeline item for event content positioning. -->
-								<div class="ts-bottom">
-<!-- Timeline event title block. -->
-									<div class="ts-title">ASK Analytics</div>
-<!-- Timeline event metadata such as date or location. -->
-									<div class="ts-meta">Senior Analytics Consultant</div>
-								</div>
-							</div>
-							<span class="ts-line" aria-hidden="true"></span>
-						</div>
-					</section>
+					<figure class="about-section__portrait">
+						<img src="assets/media/images/patricia-about-cutout-v3-720.webp" srcset="assets/media/images/patricia-about-cutout-v3-360.webp 360w, assets/media/images/patricia-about-cutout-v3-720.webp 720w, assets/media/images/patricia-about-cutout-v3-1124.webp 1124w" sizes="(max-width: 700px) 43vw, 420px" alt="Patricia Stanca" width="1124" height="1399" loading="eager" fetchpriority="high" decoding="async">
+					</figure>
 				</div>
 			</section>
 
 <!-- Technical skills section with grouped competency cards. -->
-				<section id="technical-skills" class="section-technical-skills wrapper">
-<!-- Inner layout container that controls content width and alignment. -->
+				<section id="technical-skills" class="section-technical-skills wrapper section-standard">
 					<div class="inner">
-						<h2 class="section-title">Technical Skills</h2>
-<!-- Skill card flow layout with responsive spacing. -->
-						<div class="skill-flow">
-<!-- Single skill node card with icon, summary, and chips. -->
-							<article class="skill-node">
-<!-- Icon container for a skill node. -->
-								<div class="skill-node-icon"><i data-lucide="database" aria-hidden="true"></i></div>
-								<h3>Everyday Use</h3>
-								<p class="skill-desc">Tools I use continuously in day-to-day delivery.</p>
-<!-- Skill keyword chip list for quick scanning. -->
-								<div class="skill-node-chips">
-									<span>SQL</span>
-									<span>Power BI</span>
-									<span>Azure Fabric</span>
-									<span>Data Modeling</span>
-									<span>Data Warehouse</span>
-									<span>Python (analytics &amp; automation)</span>
-									<span>ETL Processes &amp; Pipelines</span>
-									<span>PySpark</span>
-									<span>Fabric Notebooks</span>
-									<span>Data Visualization &amp; Storytelling</span>
-									<span>Data Ingestion Tools</span>
-									<span>AI Chat</span>
-									<span>Microsoft 365</span>
-									<span>Data Mapping</span>
-									<span>Data Cleaning</span>
-								</div>
+						<header class="technical-intro">
+							<p class="section-kicker">Technical Skills &amp; Tools</p>
+							<h2>A broad toolkit, used with purpose.</h2>
+							<p>I choose tools based on the problem, the people who will use the solution and what needs to work over time. Some are part of my daily analytics work, while others support specific needs or areas I am continuing to develop.</p>
+						</header>
+						<div class="technical-shelves technical-carousel-track" role="region" tabindex="0" aria-label="Technical skill levels">
+							<article class="technical-level technical-slide technical-slide--everyday">
+								<header class="technical-level-header"><h3>Everyday delivery</h3><p>The technologies and methods I rely on to structure data, develop analysis and create reporting that supports real decisions.</p></header>
+								<section class="technical-platforms"><h4 class="technical-group-label">Platforms &amp; tools</h4><div class="technical-tools">
+									<div class="technical-tool"><img src="assets/media/logo/sql-server-icon.webp" alt=""><strong>SQL</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/power-bi-microsoft-logo-png_seeklogo-400711.png" alt=""><strong>Power BI</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/fabric-icon.png" alt=""><strong>Microsoft Fabric</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/Python-logo-notext.svg.webp" alt=""><strong>Python</strong></div>
+									<div class="technical-tool"><img class="tool-logo-wide" src="assets/media/logo/pyspark-lang.png" alt=""><strong>PySpark</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/Microsoft_365_Copilot.png" alt=""><strong>Microsoft 365</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/images (1).png" alt=""><strong>Docker</strong></div>
+									<div class="technical-tool"><img class="tool-logo-wide" src="assets/media/logo/azure-devops-cover.png" alt=""><strong>Azure DevOps</strong></div>
+									<div class="technical-tool"><img class="tool-logo-wide" src="assets/media/logo/AirflowLogo.svg.webp" alt=""><strong>Apache Airflow</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/azure-icon.png" alt=""><strong>Microsoft Azure</strong></div>
+								</div></section><section class="technical-methods"><h4 class="technical-group-label">Methods &amp; practices</h4><div class="technical-method-grid"><span>Data Modelling</span><span>Data Warehousing</span><span>ETL &amp; Pipelines</span><span>Fabric Notebooks</span><span>Data Visualisation</span><span>Data Mapping</span><span>Data Cleaning</span></div></section>
 							</article>
-<!-- Single skill node card with icon, summary, and chips. -->
-							<article class="skill-node">
-<!-- Icon container for a skill node. -->
-								<div class="skill-node-icon"><i data-lucide="filter" aria-hidden="true"></i></div>
-								<h3>Regular Use</h3>
-								<p class="skill-desc">Technologies I use frequently depending on project context.</p>
-<!-- Skill keyword chip list for quick scanning. -->
-								<div class="skill-node-chips">
-									<span>Looker Studio</span>
-									<span>Supermetrics</span>
-									<span>Netigate</span>
-									<span>Hotjar</span>
-									<span>PiwikPro</span>
-									<span>Power Automate</span>
-									<span>Web APIs</span>
-									<span>Advanced Python / Forecasting</span>
-									<span>Data Ingestion Tools</span>
-									<span>Documentation &amp; Knowledge Tools</span>
-								</div>
+							<article class="technical-level technical-slide technical-slide--specific">
+								<header class="technical-level-header"><h3>Used in specific contexts</h3><p>Tools I bring in when the work calls for customer analysis, digital insights, automation or connections between systems.</p></header>
+								<section class="technical-platforms"><h4 class="technical-group-label">Platforms &amp; tools</h4><div class="technical-tools">
+									<div class="technical-tool"><img src="assets/media/icons/tools/looker.svg" alt=""><strong>Looker Studio</strong></div>
+									<div class="technical-tool"><img class="tool-logo-wide" src="assets/media/logo/New-SM-logo_Black.png" alt=""><strong>Supermetrics</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/android-chrome-512x512-1.png" alt=""><strong>Netigate</strong></div>
+									<div class="technical-tool"><img src="assets/media/icons/tools/hotjar.svg" alt=""><strong>Hotjar</strong></div>
+									<div class="technical-tool"><img class="tool-logo-wide" src="assets/media/logo/piwikpro-logo.webp" alt=""><strong>Piwik PRO</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/Microsoft_Power_Automate.svg.webp" alt=""><strong>Power Automate</strong></div>
+									<div class="technical-tool"><img class="tool-logo-wide" src="assets/media/logo/BigQuery-Logo.webp" alt=""><strong>BigQuery</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/sap-logo-png_seeklogo-465583.png" alt=""><strong>SAP</strong></div>
+								</div></section><section class="technical-methods"><h4 class="technical-group-label">Methods &amp; practices</h4><div class="technical-method-grid"><span>Web APIs</span><span>Advanced Python</span><span>Documentation &amp; Knowledge Tools</span></div></section>
 							</article>
-<!-- Single skill node card with icon, summary, and chips. -->
-							<article class="skill-node">
-<!-- Icon container for a skill node. -->
-								<div class="skill-node-icon"><i data-lucide="sparkles" aria-hidden="true"></i></div>
-								<h3>Actively Exploring</h3>
-								<p class="skill-desc">Areas I actively develop and experiment with.</p>
-<!-- Skill keyword chip list for quick scanning. -->
-								<div class="skill-node-chips">
-									<span>Machine Learning Workflows</span>
-									<span>Backend Development (.NET, APIs)</span>
-									<span>Web &amp; UI (HTML/CSS/JS)</span>
-									<span>Netlify</span>
-									<span>Custom Domain</span>
-									<span>ASP.NET Core</span>
-									<span>Web API</span>
-									<span>EF Core</span>
-									<span>SQL Server</span>
-									<span>JWT</span>
-									<span>Swagger</span>
-									<span>Postman</span>
-									<span>Flask</span>
-									<span>Jinja2</span>
-									<span>Avalonia UI</span>
-									<span>PySpark</span>
-									<span>C#</span>
-									<span>.NET</span>
-								</div>
+							<article class="technical-level technical-slide technical-slide--developing">
+								<header class="technical-level-header"><h3>Currently developing</h3><p>Technologies I am deepening through education, experimentation and practical development projects.</p></header>
+								<section class="technical-platforms"><h4 class="technical-group-label">Platforms &amp; tools</h4><div class="technical-tools">
+									<div class="technical-tool"><img src="assets/media/icons/tools/dotnet.svg" alt=""><strong>.NET</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/Csharp_Logo.png" alt=""><strong>C#</strong></div>
+									<div class="technical-tool"><span class="tool-logo tool-logo--dotnet">A</span><strong>ASP.NET Core</strong></div>
+									<div class="technical-tool"><span class="tool-logo tool-logo--dotnet">EF</span><strong>EF Core</strong></div>
+									<div class="technical-tool"><img src="assets/media/icons/tools/flask.svg" alt=""><strong>Flask</strong></div>
+									<div class="technical-tool"><img src="assets/media/icons/tools/postman.svg" alt=""><strong>Postman</strong></div>
+									<div class="technical-tool"><img src="assets/media/logo/HTML5_logo_and_wordmark.svg.webp" alt=""><strong>HTML, CSS &amp; JavaScript</strong></div>
+									<div class="technical-tool"><img class="tool-logo-wide" src="assets/media/logo/react-logo-freelogovectors.net_.png" alt=""><strong>React</strong></div>
+								</div></section><section class="technical-methods"><h4 class="technical-group-label">Methods &amp; practices</h4><div class="technical-method-grid"><span>Machine Learning Workflows</span><span>Backend Development</span><span>API Development</span></div></section><p class="technical-support"><strong>Also working with:</strong> JWT · Swagger · Jinja2 · Avalonia UI</p>
 							</article>
 						</div>
 					</div>
 				</section>
 
 <!-- Business skills section with collaboration and delivery strengths. -->
-			<section id="business-skills" class="section-business-skills wrapper">
-<!-- Inner layout container that controls content width and alignment. -->
+			<section id="business-skills" class="section-business-skills wrapper section-standard">
 				<div class="inner">
-					<h2 class="section-title">Business Skills</h2>
-<!-- Skill card flow layout with responsive spacing. -->
-					<div class="skill-flow">
-<!-- Single skill node card with icon, summary, and chips. -->
-						<article class="skill-node">
-<!-- Icon container for a skill node. -->
-							<div class="skill-node-icon"><i data-lucide="users" aria-hidden="true"></i></div>
-							<h3>Core Business Capabilities</h3>
-							<p class="skill-desc">What teams and clients rely on me for most.</p>
-<!-- Skill keyword chip list for quick scanning. -->
-							<div class="skill-node-chips">
-								<span>Customer &amp; Market Analysis</span>
-								<span>Decision Support</span>
-								<span>Business Analysis</span>
-								<span>Stakeholder Alignment</span>
-								<span>Customer Insights &amp; Segmentation</span>
-							</div>
-						</article>
-<!-- Single skill node card with icon, summary, and chips. -->
-						<article class="skill-node">
-<!-- Icon container for a skill node. -->
-							<div class="skill-node-icon"><i data-lucide="chart-no-axes-combined" aria-hidden="true"></i></div>
-							<h3>Delivery &amp; Collaboration</h3>
-							<p class="skill-desc">How I work with teams to move initiatives forward.</p>
-<!-- Skill keyword chip list for quick scanning. -->
-							<div class="skill-node-chips">
-								<span>Requirements &amp; Scope Definition</span>
-								<span>Workshops &amp; Facilitation</span>
-								<span>Agile Delivery</span>
-								<span>Process Improvement</span>
-								<span>Training &amp; Enablement</span>
-							</div>
-						</article>
-<!-- Single skill node card with icon, summary, and chips. -->
-						<article class="skill-node">
-<!-- Icon container for a skill node. -->
-							<div class="skill-node-icon"><i data-lucide="briefcase" aria-hidden="true"></i></div>
-							<h3>Strategy &amp; Governance</h3>
-							<p class="skill-desc">Long‑term direction, structure, and decision frameworks.</p>
-<!-- Skill keyword chip list for quick scanning. -->
-							<div class="skill-node-chips">
-								<span>Strategic Planning</span>
-								<span>Budgeting &amp; Forecasting</span>
-								<span>PMO &amp; Governance</span>
-								<span>Business Strategy</span>
-							</div>
-						</article>
-<!-- Single skill node card with icon, summary, and chips. -->
-						<article class="skill-node">
-<!-- Icon container for a skill node. -->
-							<div class="skill-node-icon"><i data-lucide="sparkles" aria-hidden="true"></i></div>
-							<h3>Learning &amp; Development</h3>
-							<p class="skill-desc">Areas I actively deepen through practice and education.</p>
-<!-- Skill keyword chip list for quick scanning. -->
-							<div class="skill-node-chips">
-								<span>Change Management</span>
-								<span>Leadership &amp; Facilitation</span>
-								<span>AI in Decision‑Making</span>
-							</div>
-						</article>
+					<div class="business-skills-layout">
+						<header class="business-skills-intro">
+							<p class="section-kicker">Business Skills</p>
+							<h2>Good decisions<br>start with clarity.</h2>
+							<p>I bring structure to questions that do not yet have an obvious answer. By listening, asking the right questions and connecting different perspectives, I help teams agree on what matters and turn that understanding into progress.</p>
+						</header>
+						<div class="business-skills-stories">
+							<article class="business-skill-story reveal-force" data-reveal-delay="0">
+								<figure><img src="assets/media/images/business-clarify-480.webp" srcset="assets/media/images/business-clarify-480.webp 480w, assets/media/images/business-clarify-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 2rem), 44vw" alt="Colleagues structuring information together around documents" loading="lazy" decoding="async"></figure>
+								<h3>Clarify &amp; define</h3>
+								<p>I listen for what people need, what the business is trying to achieve and where the real uncertainty sits. From there, I shape a clear question, a shared scope and a realistic way forward.</p>
+							</article>
+							<article class="business-skill-story reveal-force" data-reveal-delay="80">
+								<figure><img src="assets/media/images/business-analyse-480.webp" srcset="assets/media/images/business-analyse-480.webp 480w, assets/media/images/business-analyse-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 2rem), 44vw" alt="A team reviewing analysis and decision material" loading="lazy" decoding="async"></figure>
+								<h3>Analyse &amp; advise</h3>
+								<p>I combine data with business context to make patterns, choices and consequences easier to understand. The goal is always useful insight, not analysis for its own sake.</p>
+							</article>
+							<article class="business-skill-story reveal-force" data-reveal-delay="160">
+								<figure><img src="assets/media/images/business-align-480.webp" srcset="assets/media/images/business-align-480.webp 480w, assets/media/images/business-align-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 2rem), 44vw" alt="People aligning around shared planning material" loading="lazy" decoding="async"></figure>
+								<h3>Align &amp; deliver</h3>
+								<p>I create structure around priorities, responsibilities and delivery while making room for different perspectives. That helps people move forward with a clearer sense of direction and ownership.</p>
+							</article>
+							<article class="business-skill-story reveal-force" data-reveal-delay="240">
+								<figure><img src="assets/media/images/business-enable-480.webp" srcset="assets/media/images/business-enable-480.webp 480w, assets/media/images/business-enable-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 2rem), 44vw" alt="Hands taking notes together during a collaborative work session" loading="lazy" decoding="async"></figure>
+								<h3>Enable &amp; improve</h3>
+								<p>I care about what happens after a solution is delivered. Clear documentation, knowledge sharing and practical support make it easier for people to use, own and continue improving the work.</p>
+							</article>
+						</div>
 					</div>
 				</div>
 			</section>
 
 
 <!-- Reusable section wrapper that applies spacing and layout structure. -->
-			<section class="wrapper">
+			<section class="wrapper education-language-combo education-section section-standard">
 <!-- Inner layout container that controls content width and alignment. -->
 				<div class="inner">
-					<h2 class="section-title">Education &amp; Courses</h2>
+					<div class="education-panel">
+					<h2 class="section-title">Education &amp; Certifications</h2>
 <!-- Education group list containing institutions and credentials. -->
 					<div class="education-list">
 <!-- Single education group for one institution or provider. -->
@@ -432,17 +280,24 @@
 							</div>
 <!-- List of courses, certifications, or education records. -->
 								<ul class="education-items">
-									<li>Self-Leadership, Fundamentals &amp; Advanced</li>
-								<li>Programming with C# and .NET, Fundamentals</li>
-								<li>Programming with C# and .NET, Advanced</li>
-								<li>Web Application Development</li>
-								<li>Database Technology</li>
+								<li><a href="https://drive.google.com/file/d/1jE2yIM6hcwhXvib3c0eJtIxy5TsyYIb8/view?usp=sharing">.NET Developer with Cloud Specialization</a></li>
 							</ul>
 						</div>
 <!-- Single education group for one institution or provider. -->
 						<div class="education-group">
 <!-- Education provider logo container. -->
-							<div class="education-logo">
+							<div class="education-logo education-logo-emphasis">
+								<img src="assets/media/images/ith.jpg" alt="IT-Högskolan" width="1024" height="207"  decoding="async" loading="lazy">
+							</div>
+<!-- List of courses, certifications, or education records. -->
+							<ul class="education-items">
+								<li><a href="https://drive.google.com/file/d/1PJ2TcLasskzk2DnRSRTpEg4fQkM0zUHm/view">Python programming for AI development</a></li>
+							</ul>
+						</div>
+<!-- Single education group for one institution or provider. -->
+						<div class="education-group">
+<!-- Education provider logo container. -->
+							<div class="education-logo education-logo-emphasis">
 								<img src="assets/media/images/vgr.jpg" alt="Göteborgsregionen" width="880" height="266"  decoding="async" loading="lazy">
 							</div>
 <!-- List of courses, certifications, or education records. -->
@@ -453,7 +308,7 @@
 <!-- Single education group for one institution or provider. -->
 						<div class="education-group">
 <!-- Education provider logo container. -->
-							<div class="education-logo">
+							<div class="education-logo education-logo-emphasis">
 								<img src="assets/media/images/GS.jpg" alt="Göteborgs Stad" width="1952" height="1256"  decoding="async" loading="lazy">
 							</div>
 <!-- List of courses, certifications, or education records. -->
@@ -461,28 +316,18 @@
 								<li>Foundations of IT architecture and business development</li>
 							</ul>
 						</div>
-<!-- Single education group for one institution or provider. -->
-						<div class="education-group">
-<!-- Education provider logo container. -->
-							<div class="education-logo">
-								<img src="assets/media/images/ith.jpg" alt="IT-Högskolan" width="1024" height="207"  decoding="async" loading="lazy">
-							</div>
-<!-- List of courses, certifications, or education records. -->
-							<ul class="education-items">
-								<li><a href="https://drive.google.com/file/d/1PJ2TcLasskzk2DnRSRTpEg4fQkM0zUHm/view">Python programming for AI development</a></li>
-							</ul>
-						</div>
+					</div>
 					</div>
 				</div>
 			</section>
 
-<!-- Reusable section wrapper that applies spacing and layout structure. -->
-			<section class="wrapper">
-<!-- Inner layout container that controls content width and alignment. -->
+			<section class="wrapper education-language-combo languages-section section-standard">
 				<div class="inner">
+					<div class="languages-panel">
 					<h2 class="section-title">Languages</h2>
 <!-- Language proficiency section with structured language cards. -->
 					<section class="language-list">
+						<div class="language-slide">
 <!-- Single language card with level and context. -->
 						<div class="language-card">
 <!-- Language level badge container. -->
@@ -503,6 +348,8 @@
 								<p>Fluent</p>
 							</div>
 						</div>
+						</div>
+						<div class="language-slide">
 <!-- Single language card with level and context. -->
 						<div class="language-card">
 <!-- Language level badge container. -->
@@ -523,18 +370,22 @@
 								<p>Fluent</p>
 							</div>
 						</div>
+						</div>
 					</section>
+					</div>
 				</div>
 			</section>
 		</main>
 
 <!-- Site footer containing contact details, links, and social references. -->
-		<footer id="footer" class="site-footer no-form">
+		<footer id="footer" class="site-footer no-form portfolio-footer">
 <!-- Inner layout container that controls content width and alignment. -->
 			<div class="inner">
-				<h2 class="section-title">Get in touch</h2>
+				<div class="portfolio-footer-layout">
+					<div class="portfolio-footer-content">
+						<h2 class="section-title">Let’s build something meaningful together.</h2>
 <!-- Footer grid layout that organizes columns of information. -->
-				<div class="footer-grid">
+						<div class="footer-grid">
 <!-- Single footer column for grouped contact or navigation content. -->
 					<div class="footer-col">
 						<h3 class="footer-title">Location</h3>
@@ -558,12 +409,17 @@
 						<h3 class="footer-title">Socials</h3>
 						<p class="footer-item"><i data-lucide="linkedin" aria-hidden="true"></i><a href="https://linkedin.com/in/renata-patricia-stanca">LinkedIn</a></p>
 					</div>
-				</div>
+						</div>
 <!-- Footer copyright and closing brand statement list. -->
-				<ul class="copyright">
-					<li>Vision. Strategy. Implementation. Insight. Impact.</li>
-					<li>&copy; Untitled Inc. All rights reserved.</li>
-				</ul>
+						<ul class="copyright">
+							<li>Vision. Strategy. Implementation. Insight. Impact.</li>
+							<li>&copy; 2026 Patricia Stanca. All rights reserved.</li>
+						</ul>
+					</div>
+					<figure class="portfolio-footer-portrait">
+						<img src="assets/media/images/bildjag-svartvit-480.webp" srcset="assets/media/images/bildjag-svartvit-480.webp 480w, assets/media/images/bildjag-svartvit-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 2rem), 440px" alt="Patricia Stanca" width="1290" height="1602" loading="lazy" decoding="async">
+					</figure>
+				</div>
 			</div>
 		</footer>
 
@@ -575,7 +431,10 @@
 		<script src="assets/js/modules/search/events.js" defer></script>
 		<script src="assets/js/modules/search.js" defer></script>
 		<script src="assets/js/modules/header-dropdown.js" defer></script>
+		<script src="assets/js/modules/about-scroll-reset.js"></script>
 		<script src="assets/js/modules/scroll-reveal.js" defer></script>
+		<script src="assets/js/modules/technical-tabs.js" defer></script>
+		<script src="assets/js/modules/mobile-section-carousels.js" defer></script>
 		<script src="assets/js/main.js" defer></script>
 	</body>
 </html>

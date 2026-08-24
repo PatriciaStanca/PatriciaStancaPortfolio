@@ -1,11 +1,11 @@
 /* Defines the styles for Project reel: cinematic sequence built from one anchor image. */
 .section-project-reel {
-  --brand-green: #0f766e;
+  --brand-green: #365a52;
   --green-dark: #0a3f39;
   --green-deep: #072b26;
   --green-soft: #2f9689;
   --green-mist: #8fd2c8;
-  --green-line: rgba(164, 225, 215, 0.24);
+  --green-line: rgba(218, 212, 201, 0.24);
 
   --reel-text: #e8f8f5;
   --reel-transition: 340ms;
@@ -422,7 +422,7 @@
 .project-reel-vision-panel {
   width: min(92%, 520px);
   min-height: clamp(180px, 44%, 340px);
-  background: rgba(15, 118, 110, 0.76);
+  background: rgba(54, 90, 82, 0.76);
   border: 1px solid rgba(180, 236, 226, 0.22);
   padding: clamp(1.3rem, 2.8vw, 2.4rem);
   display: grid;

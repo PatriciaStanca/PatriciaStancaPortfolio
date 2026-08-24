@@ -1,0 +1,610 @@
+/* Homepage cinematic overrides loaded after modern.css. */
+body.page-index #hero.studio-hero .hero-eyebrow {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body.page-index #hero.studio-hero > .inner {
+  min-height: min(680px, calc(100vh - 88px)) !important;
+  padding-block: clamp(4rem, 7vw, 6rem) clamp(2.5rem, 5vw, 4rem) !important;
+}
+
+body.page-index #hero.studio-hero .hero-name {
+  max-width: 980px !important;
+  font-size: clamp(3.25rem, 6.4vw, 7.1rem) !important;
+  line-height: 0.94 !important;
+}
+
+body.page-index #hero.studio-hero .hero-role {
+  max-width: 650px !important;
+  margin-top: clamp(1rem, 1.8vw, 1.5rem) !important;
+}
+
+body.page-index #hero.studio-hero .hero-text {
+  transform: translateY(-28px);
+}
+
+body.page-index #selected-work .some-work-card-row {
+  display: contents;
+}
+
+body.page-index #selected-work .some-work-stage {
+  min-height: 220vh !important;
+  padding: 0 !important;
+  display: block !important;
+  overflow: visible !important;
+}
+
+body.page-index #selected-work .some-work-pin {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw !important;
+  min-height: 100vh;
+  display: block;
+  overflow: hidden;
+  padding: clamp(4.5rem, 7vw, 6.5rem) clamp(1rem, 4vw, 4rem);
+  background: #ffffff;
+  isolation: isolate;
+}
+
+body.page-index #selected-work .some-work-center {
+  position: absolute;
+  z-index: 5;
+  inset: 50% auto auto 50% !important;
+  width: min(560px, calc(100vw - 2.5rem)) !important;
+  max-width: 560px !important;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  pointer-events: auto;
+  transform: none !important;
+  transition: opacity 260ms ease, transform 260ms ease;
+  opacity: 1;
+  translate: -50% -50%;
+}
+
+body.page-index #selected-work .work-dots {
+  display: inline-flex !important;
+  gap: 0.18rem !important;
+  margin-bottom: 1.4rem !important;
+}
+
+body.page-index #selected-work .some-work-center .section-kicker {
+  margin-bottom: 0.55rem !important;
+}
+
+body.page-index #selected-work .some-work-center h2 {
+  max-width: 520px !important;
+  color: #171b1a !important;
+  font-size: clamp(2.4rem, 3.6vw, 3.75rem) !important;
+  font-weight: 560 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+}
+
+body.page-index #selected-work .some-work-center h2::after {
+  display: none !important;
+}
+
+body.page-index #selected-work .some-work-center p:not(.section-kicker) {
+  display: block !important;
+  max-width: 560px !important;
+  margin: 1.5rem 0 1.6rem !important;
+  color: #5a605e !important;
+  font-size: clamp(0.96rem, 1.15vw, 1.08rem) !important;
+  line-height: 1.75 !important;
+}
+
+body.page-index #selected-work .some-work-center .btn-primary {
+  display: inline-flex !important;
+}
+
+body.page-index #selected-work .floating-work-card {
+  left: 50% !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  --motion-x: 0px;
+  --motion-y: 0px;
+  --motion-rotate: 0deg;
+
+  z-index: 3;
+  aspect-ratio: 0.78 / 1 !important;
+  border-radius: 28px !important;
+  opacity: 1;
+  filter: saturate(0.96) contrast(1.04);
+  pointer-events: auto;
+  will-change: transform;
+  box-shadow: 0 26px 80px rgba(10, 24, 22, 0.2) !important;
+  transform:
+    translate3d(
+      calc(-50% + var(--motion-x)),
+      calc(-50% + var(--motion-y) + var(--parallax-y, 0px)),
+      0
+    )
+    rotate(var(--motion-rotate))
+    scale(var(--card-scale, 0.98)) !important;
+}
+
+body.page-index #selected-work .floating-work-card.is-cinematic-visible {
+  --card-scale: var(--active-card-scale, 1);
+}
+
+body.page-index #selected-work .floating-work-card:hover {
+  --card-scale: 1.035 !important;
+}
+
+body.page-index #selected-work .floating-work-card:hover strong {
+  transform: translateX(0.35rem);
+}
+
+body.page-index #selected-work .work-card-one,
+body.page-index #selected-work .work-card-three,
+body.page-index #selected-work .work-card-five {
+  width: clamp(250px, 26vw, 390px);
+}
+
+body.page-index #selected-work .work-card-two,
+body.page-index #selected-work .work-card-four,
+body.page-index #selected-work .work-card-six {
+  width: clamp(250px, 26vw, 390px);
+}
+
+body.page-index #selected-work .floating-work-card span {
+  bottom: 5rem !important;
+  left: clamp(1.1rem, 2vw, 1.55rem) !important;
+  right: clamp(1.1rem, 2vw, 1.55rem) !important;
+}
+
+body.page-index #selected-work .floating-work-card strong {
+  bottom: clamp(1.2rem, 2vw, 1.65rem) !important;
+  left: clamp(1.1rem, 2vw, 1.55rem) !important;
+  right: clamp(1.1rem, 2vw, 1.55rem) !important;
+  max-width: 85%;
+  font-size: clamp(1.35rem, 2vw, 2rem) !important;
+}
+
+body.page-index #selected-work .card-left {
+  transform-origin: 58% 48%;
+}
+
+body.page-index #selected-work .card-right {
+  transform-origin: 42% 48%;
+}
+
+@media (max-width: 980px) {
+  body.page-index #selected-work .some-work-stage {
+    min-height: 205vh !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  body.page-index #selected-work .some-work-pin {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100svh;
+    width: 100% !important;
+    display: block;
+    padding: clamp(2.5rem, 8vw, 4rem) 1rem;
+    overflow: hidden;
+  }
+
+  body.page-index #selected-work .some-work-card-row {
+    display: contents;
+  }
+
+  body.page-index #selected-work .some-work-center {
+    position: absolute;
+    inset: 50% auto auto 50% !important;
+    width: min(62vw, 360px) !important;
+    max-width: 360px !important;
+    margin: 0;
+    text-align: center;
+    justify-items: center;
+    opacity: 1;
+    translate: -50% -50%;
+    transform: none !important;
+  }
+
+  body.page-index #selected-work .work-dots {
+    margin-bottom: 1rem !important;
+  }
+
+  body.page-index #selected-work .some-work-center h2 {
+    max-width: 320px !important;
+    margin: 0 !important;
+    font-size: clamp(2.15rem, 7vw, 4.3rem) !important;
+  }
+
+  body.page-index #selected-work .some-work-center p:not(.section-kicker) {
+    max-width: 20rem !important;
+    margin: 0.8rem 0 1rem !important;
+    font-size: clamp(0.76rem, 2.4vw, 0.94rem) !important;
+    line-height: 1.48 !important;
+  }
+
+  body.page-index #selected-work .some-work-center .btn-primary {
+    min-height: 2.55rem;
+    padding-inline: 0.9rem;
+    font-size: clamp(0.72rem, 2.2vw, 0.86rem);
+  }
+
+  body.page-index #selected-work .floating-work-card,
+  body.page-index #selected-work .floating-work-card.is-cinematic-visible,
+  body.page-index #selected-work .floating-work-card:hover {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    aspect-ratio: 0.78 / 1 !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform:
+      translate3d(
+        calc(-50% + var(--motion-x)),
+        calc(-50% + var(--motion-y) + var(--parallax-y, 0px)),
+        0
+      )
+      rotate(var(--motion-rotate))
+      scale(var(--card-scale, 0.98)) !important;
+    width: clamp(138px, 27vw, 220px) !important;
+    max-width: 220px !important;
+    margin: 0 !important;
+    border-radius: 18px !important;
+    box-shadow: 0 16px 42px rgba(10, 24, 22, 0.14) !important;
+  }
+
+  body.page-index #selected-work .floating-work-card span {
+    bottom: 3.6rem !important;
+    left: 1rem !important;
+    right: 1rem !important;
+    font-size: 0.62rem !important;
+  }
+
+  body.page-index #selected-work .floating-work-card strong {
+    bottom: 1rem !important;
+    left: 1rem !important;
+    right: 1rem !important;
+    max-width: none;
+    font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.page-index #selected-work .some-work-stage {
+    min-height: 185vh !important;
+  }
+
+  body.page-index #selected-work .some-work-pin {
+    padding-inline: 0.75rem;
+  }
+
+  body.page-index #selected-work .floating-work-card,
+  body.page-index #selected-work .floating-work-card.is-cinematic-visible,
+  body.page-index #selected-work .floating-work-card:hover {
+    aspect-ratio: 0.78 / 1 !important;
+    width: clamp(116px, 34vw, 150px) !important;
+    border-radius: 16px !important;
+  }
+
+  body.page-index #selected-work .some-work-center h2 {
+    font-size: clamp(1.95rem, 10vw, 3rem) !important;
+  }
+
+  body.page-index #selected-work .some-work-center p:not(.section-kicker) {
+    font-size: 0.74rem !important;
+  }
+
+  body.page-index #selected-work .some-work-center .section-kicker {
+    font-size: 0.62rem !important;
+  }
+
+  body.page-index #selected-work .some-work-center .btn-primary {
+    min-height: 2.35rem;
+    padding-inline: 0.72rem;
+  }
+
+  body.page-index #selected-work .floating-work-card span {
+    bottom: 2.7rem !important;
+    font-size: 0.52rem !important;
+  }
+
+  body.page-index #selected-work .floating-work-card strong {
+    font-size: 0.82rem !important;
+  }
+}
+
+body.page-index .trusted-strip img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+body.page-index .trusted-strip .inner {
+  overflow: hidden !important;
+}
+
+body.page-index .trusted-logo-viewport {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+body.page-index .trusted-logo-list {
+  width: max-content !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: clamp(2rem, 4vw, 4.5rem) !important;
+  align-items: center !important;
+  animation: trusted-logo-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+body.page-index .trusted-logo-list:hover {
+  animation-play-state: paused;
+}
+
+body.page-index .trusted-strip li {
+  flex: 0 0 auto !important;
+}
+
+@keyframes trusted-logo-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - clamp(1rem, 2vw, 2.25rem)), 0, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  body.page-index .trusted-strip .inner {
+    display: block !important;
+  }
+
+  body.page-index .trusted-strip p {
+    margin-bottom: 1rem !important;
+  }
+
+  body.page-index .trusted-logo-list {
+    gap: 2.2rem !important;
+    animation-duration: 20s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-index #selected-work .some-work-stage {
+    min-height: auto !important;
+  }
+
+  body.page-index #selected-work .some-work-pin {
+    position: relative;
+    min-height: auto;
+  }
+
+  body.page-index #selected-work .floating-work-card {
+    opacity: 1 !important;
+    filter: none !important;
+    pointer-events: auto !important;
+  }
+
+  body.page-index .trusted-logo-list {
+    animation: none !important;
+  }
+}
+
+/* Keep the cinematic layout, but match About typography on iPad and mobile. */
+@media (min-width: 701px) and (max-width: 768px) {
+  body.page-index #selected-work .some-work-center h2 {
+    font-size: clamp(1.65rem, 4.5vw, 2.1rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.045em !important;
+    text-wrap: balance;
+  }
+
+  body.page-index #selected-work .some-work-center p:not(.section-kicker) {
+    margin-top: 18px !important;
+    font-size: clamp(0.82rem, 1.8vw, 0.95rem) !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (max-width: 700px) {
+  body.page-index #selected-work .some-work-center h2 {
+    font-size: clamp(1.35rem, 5.5vw, 1.7rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.045em !important;
+    text-wrap: balance;
+  }
+
+  body.page-index #selected-work .some-work-center p:not(.section-kicker) {
+    margin-top: 14px !important;
+    font-size: clamp(0.78rem, 3vw, 0.9rem) !important;
+    line-height: 1.48 !important;
+  }
+}
+
+/* Focused hero identity with a rotating description of end-to-end value. */
+body.page-index #hero.studio-hero .hero-name {
+  width: 100%;
+  max-width: 1220px !important;
+  font-size: clamp(2.9rem, 4.8vw, 5.3rem) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.page-index #hero.studio-hero .rotating-words {
+  min-height: 1.08em;
+  margin-top: 0.08em;
+  color: #365a52;
+}
+
+body.page-index #hero.studio-hero .rotating-words span {
+  animation: hero-value-cycle 15s infinite;
+}
+
+body.page-index #hero.studio-hero .rotating-words span:nth-child(1) { animation-delay: 0s; }
+body.page-index #hero.studio-hero .rotating-words span:nth-child(2) { animation-delay: 3s; }
+body.page-index #hero.studio-hero .rotating-words span:nth-child(3) { animation-delay: 6s; }
+body.page-index #hero.studio-hero .rotating-words span:nth-child(4) { animation-delay: 9s; }
+body.page-index #hero.studio-hero .rotating-words span:nth-child(5) { animation-delay: 12s; }
+
+@keyframes hero-value-cycle {
+  0%, 16% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  20%, 100% {
+    opacity: 0;
+    transform: translateY(-0.16em);
+  }
+}
+
+body.page-index #hero.studio-hero .hero-signature {
+  margin: clamp(1rem, 1.7vw, 1.35rem) auto 0;
+  color: #365a52;
+  font-size: clamp(0.72rem, 0.9vw, 0.84rem);
+  font-weight: 720;
+  letter-spacing: 0.11em;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  body.page-index #hero.studio-hero .hero-name {
+    font-size: clamp(1.75rem, 7.2vw, 2.35rem) !important;
+    line-height: 1 !important;
+  }
+
+  body.page-index #hero.studio-hero .rotating-words {
+    min-height: 2.08em;
+    margin-top: 0.18em;
+    align-items: start;
+  }
+
+  body.page-index #hero.studio-hero .rotating-words span {
+    max-width: 100%;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  body.page-index #hero.studio-hero .hero-signature {
+    max-width: 320px;
+    font-size: clamp(0.58rem, 2.2vw, 0.68rem);
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-index #hero.studio-hero .rotating-words span {
+    animation: none;
+  }
+}
+
+/* Larger hero hierarchy and character-by-character typewriter presentation. */
+body.page-index #hero.studio-hero .hero-name {
+  max-width: 1320px !important;
+  font-size: clamp(3rem, 4.75vw, 5.3rem) !important;
+}
+
+body.page-index #hero.studio-hero .hero-name > span:first-child {
+  font-size: 0.92em;
+}
+
+body.page-index #hero.studio-hero .rotating-words {
+  min-height: 1.18em;
+  font-size: 1.06em;
+  line-height: 1.02;
+}
+
+body.page-index #hero.studio-hero .rotating-words.is-typewriter > [data-hero-phrase] {
+  display: none !important;
+}
+
+body.page-index #hero.studio-hero .rotating-words .hero-typewriter-output {
+  position: static;
+  grid-area: 1 / 1;
+  display: block !important;
+  width: 100%;
+  opacity: 1;
+  transform: none;
+  animation: none !important;
+  text-align: center;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+body.page-index #hero.studio-hero .hero-typewriter-output::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0.86em;
+  margin-left: 0.08em;
+  border-left: 2px solid currentColor;
+  vertical-align: -0.04em;
+  animation: hero-typewriter-caret 760ms steps(1, end) infinite;
+}
+
+body.page-index #hero.studio-hero .rotating-words.is-holding .hero-typewriter-output::after {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes hero-typewriter-caret {
+  0%, 48% { opacity: 1; }
+  49%, 100% { opacity: 0; }
+}
+
+@media (max-width: 700px) {
+  body.page-index #hero.studio-hero .hero-name {
+    font-size: clamp(1.85rem, 7.5vw, 2.5rem) !important;
+  }
+
+  body.page-index #hero.studio-hero .hero-name > span:first-child {
+    font-size: 0.94em;
+  }
+
+  body.page-index #hero.studio-hero .rotating-words {
+    min-height: 2.2em;
+    height: 2.2em;
+    font-size: 1.05em;
+  }
+
+  body.page-index #hero.studio-hero .rotating-words .hero-typewriter-output {
+    align-self: start;
+    max-width: 100%;
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-index #hero.studio-hero .hero-typewriter-output::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  body.page-index #hero.studio-hero .hero-name {
+    font-size: clamp(2.15rem, 4.6vw, 3.2rem) !important;
+  }
+
+  body.page-index #hero.studio-hero .rotating-words {
+    min-height: 2.08em;
+    height: 2.08em;
+    font-size: 1.05em;
+  }
+
+  body.page-index #hero.studio-hero .rotating-words .hero-typewriter-output {
+    text-wrap: balance;
+  }
+}

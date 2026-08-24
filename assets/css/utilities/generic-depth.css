@@ -4,7 +4,7 @@ body.page-elements .site-main {
   position: relative;
   isolation: isolate;
   background-color: #ffffff;
-  background-image: linear-gradient(180deg, #ffffff 0%, #fcfffe 40%, #ffffff 100%);
+  background-image: linear-gradient(180deg, #ffffff 0%, #f7f7f5 40%, #ffffff 100%);
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@ body.page-elements .site-main::before {
   width: clamp(300px, 48vw, 760px);
   height: clamp(240px, 40vw, 560px);
   border-radius: 58% 42% 46% 54% / 52% 48% 52% 48%;
-  background: radial-gradient(circle at 40% 42%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 62%, transparent 84%);
+  background: radial-gradient(circle at 40% 42%, rgba(54, 90, 82, 0.12), rgba(54, 90, 82, 0.03) 62%, transparent 84%);
   filter: blur(2px);
   animation: ambient-shift 26s ease-in-out infinite alternate;
 }
@@ -37,7 +37,7 @@ body.page-elements .site-main::after {
   width: clamp(280px, 38vw, 620px);
   height: clamp(190px, 31vw, 420px);
   border-radius: 41% 59% 62% 38% / 55% 38% 62% 45%;
-  background: radial-gradient(circle at 50% 42%, rgba(164, 225, 215, 0.18), rgba(15, 118, 110, 0.03) 66%, transparent 84%);
+  background: radial-gradient(circle at 50% 42%, rgba(218, 212, 201, 0.18), rgba(54, 90, 82, 0.03) 66%, transparent 84%);
   animation: ambient-shift 21s ease-in-out infinite alternate-reverse;
 }
 
@@ -62,7 +62,7 @@ body.page-elements .site-main > .wrapper:first-of-type::before {
   width: clamp(180px, 22vw, 320px);
   height: clamp(130px, 18vw, 240px);
   border-radius: 60% 40% 52% 48% / 44% 56% 44% 56%;
-  background: radial-gradient(circle at 44% 48%, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03) 64%, transparent 82%);
+  background: radial-gradient(circle at 44% 48%, rgba(54, 90, 82, 0.12), rgba(54, 90, 82, 0.03) 64%, transparent 82%);
   filter: blur(1px);
   pointer-events: none;
   z-index: 0;
@@ -82,7 +82,7 @@ body.page-generic .intro-split::after {
   width: clamp(180px, 24vw, 340px);
   height: clamp(120px, 16vw, 220px);
   border-radius: 45% 55% 38% 62% / 60% 44% 56% 40%;
-  background: radial-gradient(circle at 48% 48%, rgba(164, 225, 215, 0.18), rgba(164, 225, 215, 0.02) 66%, transparent 84%);
+  background: radial-gradient(circle at 48% 48%, rgba(218, 212, 201, 0.18), rgba(218, 212, 201, 0.02) 66%, transparent 84%);
   pointer-events: none;
   z-index: -1;
 }

@@ -48,7 +48,7 @@
 /* Applies styling to .accordion-tag. */
 .accordion-tag {
   font-size: 0.75rem;
-  background: rgba(15, 118, 110, 0.12);
+  background: rgba(54, 90, 82, 0.12);
   color: var(--teal);
   padding: 0.3rem 0.6rem;
   border-radius: 999px;
@@ -175,7 +175,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #0F766E;
+  color: #365a52;
 }
 
 /* Applies styling to .accordion-content .project-text p. */
@@ -209,7 +209,7 @@
 /* Applies styling to .accordion-content .project-tools li. */
 .accordion-content .project-tools li {
   padding: 0.25rem 0.55rem;
-  background: rgba(15, 118, 110, 0.08);
+  background: rgba(54, 90, 82, 0.08);
   color: var(--teal);
   border-radius: 999px;
   font-size: 0.8rem;

@@ -91,15 +91,15 @@
 /* Applies styling to .page-elements .section-previous-work::before. */
 .page-elements .section-previous-work::before {
   background:
-    radial-gradient(54% 70% at 8% 22%, rgba(15, 118, 110, 0.1), transparent 74%),
-    radial-gradient(38% 48% at 93% 82%, rgba(164, 225, 215, 0.16), transparent 82%);
+    radial-gradient(54% 70% at 8% 22%, rgba(54, 90, 82, 0.1), transparent 74%),
+    radial-gradient(38% 48% at 93% 82%, rgba(218, 212, 201, 0.16), transparent 82%);
 }
 
 /* Applies styling to .page-elements .section-references::before. */
 .page-elements .section-references::before {
   background:
-    radial-gradient(42% 56% at 90% 14%, rgba(15, 118, 110, 0.09), transparent 74%),
-    radial-gradient(58% 72% at 6% 92%, rgba(164, 225, 215, 0.14), transparent 82%);
+    radial-gradient(42% 56% at 90% 14%, rgba(54, 90, 82, 0.09), transparent 74%),
+    radial-gradient(58% 72% at 6% 92%, rgba(218, 212, 201, 0.14), transparent 82%);
 }
 
 /* Applies styling to .page-elements .section-previous-work .inner, .page-elements .section-references .inner. */
@@ -189,8 +189,8 @@
 
 /* Applies styling to .role-chip. */
 .role-chip {
-  background: rgba(15, 118, 110, 0.1);
-  color: #0b5f58;
+  background: rgba(54, 90, 82, 0.1);
+  color: #242827;
   padding: 0.3rem 0.65rem;
   border-radius: 999px;
   font-size: 0.7rem;
@@ -260,7 +260,7 @@
   width: 74%;
   height: 92%;
   border-radius: 58% 42% 64% 36% / 46% 56% 44% 54%;
-  background: radial-gradient(circle, rgba(164, 225, 215, 0.1) 0%, rgba(164, 225, 215, 0) 72%);
+  background: radial-gradient(circle, rgba(218, 212, 201, 0.1) 0%, rgba(218, 212, 201, 0) 72%);
   pointer-events: none;
 }
 

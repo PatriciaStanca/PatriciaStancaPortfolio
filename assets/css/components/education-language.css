@@ -68,7 +68,7 @@
 
 /* Applies styling to .education-items a:focus-visible. */
 .education-items a:focus-visible {
-  outline: 2px solid rgba(15, 118, 110, 0.4);
+  outline: 2px solid rgba(54, 90, 82, 0.4);
   outline-offset: 2px;
   border-radius: 6px;
 }

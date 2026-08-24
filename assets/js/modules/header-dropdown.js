@@ -16,6 +16,8 @@
     const triggerRect = trigger.getBoundingClientRect();
     const offset = Math.max(0, triggerRect.left - navRect.left);
     nav.style.setProperty('--dropdown-offset', `${offset}px`);
+    nav.style.setProperty('--dropdown-backdrop-left', `${-navRect.left}px`);
+    nav.style.setProperty('--dropdown-backdrop-width', `${document.documentElement.clientWidth}px`);
   };
 
   let closeTimer = null;
