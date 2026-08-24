@@ -41,8 +41,9 @@
       !el.classList.contains('page-title')
       && !el.classList.contains('business-skills-layout')
       && !el.classList.contains('project-prototype')
+      && !el.classList.contains('project-archive-toggle')
       && !el.classList.contains('cinematic-reveal')
-      && !el.closest('.selected-transformations, [data-cinematic-stage]')
+      && !el.closest('.selected-transformations, [data-cinematic-stage], .project-archive-content')
       && all.indexOf(el) === index
     ));
 

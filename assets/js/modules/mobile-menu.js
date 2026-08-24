@@ -41,6 +41,11 @@ const hideMenu = () => {
 const toggleMenu = () => {
   if (!lockMenu()) return;
   const isOpen = body.classList.toggle('is-menu-visible');
+  if (isOpen && menu) {
+    menu.scrollTop = 0;
+    const inner = menu.querySelector('.inner');
+    if (inner) inner.scrollTop = 0;
+  }
   if (menuToggle) menuToggle.setAttribute('aria-expanded', String(isOpen));
 };
 

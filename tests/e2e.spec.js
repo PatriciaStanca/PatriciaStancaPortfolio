@@ -11,6 +11,20 @@ test('mobile menu toggles on small screens', async ({ page }) => {
   await expect(page.locator('body')).toHaveClass(/is-menu-visible/);
 });
 
+test('mobile menu opens at the top when the page is scrolled to the bottom', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('elements.html');
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+
+  await page.locator('.menu-toggle').click();
+  const menu = page.locator('#menu');
+  await expect(menu.getByRole('link', { name: 'Home' })).toBeVisible();
+  await expect(menu).toHaveJSProperty('scrollTop', 0);
+  const menuTop = await menu.evaluate((element) => element.getBoundingClientRect().top);
+  expect(menuTop).toBeGreaterThanOrEqual(0);
+  expect(menuTop).toBeLessThan(160);
+});
+
 test('contact form shows validation errors and allows resubmission', async ({ page }) => {
   await page.route('https://formspree.io/*', (route) =>
     route.fulfill({ status: 200, contentType: 'application/json', body: '{}' })
@@ -66,4 +80,13 @@ test('Previous Work uses the shared scroll reveal motion', async ({ page }) => {
   await expect(card).toHaveClass(/reveal/);
   await expect(card).toHaveClass(/is-visible/);
   await expect(card).toHaveCSS('translate', '0px');
+});
+
+test('expanded project archive does not use scroll reveal animation', async ({ page }) => {
+  await page.goto('elements.html');
+
+  const archiveToggle = page.getByRole('button', { name: /List of all projects/i });
+  await expect(archiveToggle).not.toHaveClass(/reveal/);
+  await archiveToggle.click();
+  await expect(page.locator('#work-project-archive .accordion-trigger').first()).not.toHaveClass(/reveal/);
 });
