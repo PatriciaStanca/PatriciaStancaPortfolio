@@ -93,6 +93,7 @@ test('Personal Projects navigation selects the personal project view', async ({ 
 });
 
 test('Previous Work stays stable without scroll reveal motion', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('elements.html');
 
   const previousWork = page.locator('#previous-work');
@@ -100,6 +101,13 @@ test('Previous Work stays stable without scroll reveal motion', async ({ page })
   const card = previousWork.locator('.role-card').first();
   await expect(previousWork.locator('.section-title')).not.toHaveClass(/reveal/);
   await expect(card).not.toHaveClass(/reveal/);
+  const titleToLogoGap = await previousWork.evaluate((section) => {
+    const title = section.querySelector('.section-title').getBoundingClientRect();
+    const logo = section.querySelector('.role-card-visual img').getBoundingClientRect();
+    return logo.top - title.bottom;
+  });
+  expect(titleToLogoGap).toBeGreaterThanOrEqual(14);
+  expect(titleToLogoGap).toBeLessThanOrEqual(48);
 });
 
 test('expanded project archive does not use scroll reveal animation', async ({ page }) => {
