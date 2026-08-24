@@ -20,13 +20,23 @@ const syncHeaderHeight = () => {
   body.style.setProperty('--header-height', `${header.offsetHeight}px`);
 };
 
+const resetOpenMenuPosition = (pageScroll) => {
+  if (!menu) return;
+  menu.scrollTop = 0;
+  const inner = menu.querySelector('.inner');
+  if (inner) inner.scrollTop = 0;
+  requestAnimationFrame(() => window.scrollTo({ top: pageScroll, behavior: 'auto' }));
+};
+
 syncHeaderHeight();
 window.addEventListener('resize', syncHeaderHeight);
 
 const showMenu = () => {
   if (lockMenu()) {
+    const pageScroll = window.scrollY;
     syncHeaderHeight();
     body.classList.add('is-menu-visible');
+    resetOpenMenuPosition(pageScroll);
     if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
   }
 };
@@ -40,12 +50,9 @@ const hideMenu = () => {
 
 const toggleMenu = () => {
   if (!lockMenu()) return;
+  const pageScroll = window.scrollY;
   const isOpen = body.classList.toggle('is-menu-visible');
-  if (isOpen && menu) {
-    menu.scrollTop = 0;
-    const inner = menu.querySelector('.inner');
-    if (inner) inner.scrollTop = 0;
-  }
+  if (isOpen) resetOpenMenuPosition(pageScroll);
   if (menuToggle) menuToggle.setAttribute('aria-expanded', String(isOpen));
 };
 

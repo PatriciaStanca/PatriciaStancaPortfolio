@@ -15,14 +15,17 @@ test('mobile menu opens at the top when the page is scrolled to the bottom', asy
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('elements.html');
   await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  const scrollBeforeOpen = await page.evaluate(() => window.scrollY);
 
   await page.locator('.menu-toggle').click();
   const menu = page.locator('#menu');
   await expect(menu.getByRole('link', { name: 'Home' })).toBeVisible();
   await expect(menu).toHaveJSProperty('scrollTop', 0);
   const menuTop = await menu.evaluate((element) => element.getBoundingClientRect().top);
+  const scrollAfterOpen = await page.evaluate(() => window.scrollY);
   expect(menuTop).toBeGreaterThanOrEqual(0);
   expect(menuTop).toBeLessThan(160);
+  expect(Math.abs(scrollAfterOpen - scrollBeforeOpen)).toBeLessThan(12);
 });
 
 test('contact form shows validation errors and allows resubmission', async ({ page }) => {
