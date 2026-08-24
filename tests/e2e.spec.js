@@ -11,6 +11,17 @@ test('mobile menu toggles on small screens', async ({ page }) => {
   await expect(page.locator('body')).toHaveClass(/is-menu-visible/);
 });
 
+test('homepage progress heading stays on one line on desktop', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto('index.html');
+
+  const lineCount = await page.getByRole('heading', { name: 'From complexity to practical progress.' }).evaluate((heading) => {
+    const styles = getComputedStyle(heading);
+    return heading.getBoundingClientRect().height / Number.parseFloat(styles.lineHeight);
+  });
+  expect(lineCount).toBeLessThanOrEqual(1.1);
+});
+
 test('mobile menu opens at the top when the page is scrolled to the bottom', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('elements.html');

@@ -769,7 +769,15 @@ body.page-elements #previous-work .role-chip:not(:last-child)::after {
 body.page-index .delivery-teaser h2 {
   max-width: 720px !important;
   margin-inline: auto !important;
-  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+@media (min-width: 900px) {
+  body.page-index .delivery-teaser h2 {
+    max-width: none !important;
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
 }
 
 .mobile-carousel-progress {
