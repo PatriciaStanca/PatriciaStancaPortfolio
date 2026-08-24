@@ -52,6 +52,17 @@ test('contact form shows validation errors and allows resubmission', async ({ pa
   await expect(page.locator('.form-feedback')).toHaveText('Thanks! Your message has been sent.');
 });
 
+test('contact intro places Contact Me before the image', async ({ page }) => {
+  await page.goto('contact.html');
+
+  const order = await page.locator('.contact-intro').evaluate((intro) =>
+    Array.from(intro.children).map((element) => element.className)
+  );
+  expect(order[0]).toContain('section-kicker');
+  expect(order[1]).toContain('contact-visual');
+  await expect(page.locator('.contact-intro .section-kicker')).toHaveText('Contact Me');
+});
+
 test('project archive stays compact until requested', async ({ page }) => {
   await page.goto('elements.html');
 
