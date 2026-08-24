@@ -49,3 +49,21 @@ test('project archive stays compact until requested', async ({ page }) => {
   await expect(workArchive.getByText('ASK Core', { exact: false }).first()).toBeVisible();
   await expect(workArchive.getByText('SAP ByDesign', { exact: false }).first()).toBeVisible();
 });
+
+test('Personal Projects navigation selects the personal project view', async ({ page }) => {
+  await page.goto('elements.html#personal-projects');
+
+  await expect(page.getByRole('button', { name: 'Personal' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByRole('button', { name: 'Work' })).toHaveAttribute('aria-pressed', 'false');
+});
+
+test('Previous Work uses the shared scroll reveal motion', async ({ page }) => {
+  await page.goto('elements.html');
+
+  const previousWork = page.locator('#previous-work');
+  await previousWork.scrollIntoViewIfNeeded();
+  const card = previousWork.locator('.role-card').first();
+  await expect(card).toHaveClass(/reveal/);
+  await expect(card).toHaveClass(/is-visible/);
+  await expect(card).toHaveCSS('translate', '0px');
+});

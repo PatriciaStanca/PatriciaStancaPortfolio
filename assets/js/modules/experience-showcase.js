@@ -162,7 +162,8 @@
     };
 
     const setMode = (nextMode) => {
-      if (!collections[nextMode] || nextMode === mode) return;
+      if (!collections[nextMode]) return;
+      if (nextMode === mode) return;
       mode = nextMode;
       activeIndex = -1;
       modeButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.projectMode === mode)));
@@ -173,7 +174,16 @@
       if (story.getBoundingClientRect().top < stickyTop) scrollTo({ top: storyTop - stickyTop, behavior: 'auto' });
     };
 
+    const syncModeWithLocation = ({ scroll = false } = {}) => {
+      const hash = window.location.hash;
+      if (hash !== '#personal-projects' && hash !== '#projects') return;
+      setMode(hash === '#personal-projects' ? 'personal' : 'work');
+      if (!scroll) return;
+      requestAnimationFrame(() => prototype.scrollIntoView({ block: 'start', behavior: 'auto' }));
+    };
+
     modeButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.projectMode)));
+    window.addEventListener('hashchange', () => syncModeWithLocation({ scroll: true }));
     archiveToggle?.addEventListener('click', () => {
       const expanded = archiveToggle.getAttribute('aria-expanded') !== 'true';
       archiveToggle.setAttribute('aria-expanded', String(expanded));
@@ -207,6 +217,7 @@
     document.body.classList.add('project-prototype-ready');
     configureStory();
     show(0, true);
+    syncModeWithLocation();
     updateFromScroll();
   });
 })();

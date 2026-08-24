@@ -123,15 +123,15 @@
 /* Applies styling to .reveal. */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 420ms ease-out, transform 420ms ease-out;
-  will-change: opacity, transform;
+  translate: 0 16px;
+  transition: opacity 420ms ease-out, translate 420ms ease-out;
+  will-change: opacity, translate;
 }
 
 /* Applies styling to .reveal.is-visible. */
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  translate: 0 0;
 }
 
 /* This changes the layout on prefers-reduced-motion: reduce screens. */
@@ -139,7 +139,7 @@
 /* Applies styling to .reveal. */
   .reveal {
     opacity: 1;
-    transform: none;
+    translate: none;
     transition: none;
   }
 }
