@@ -14,11 +14,21 @@ test('mobile menu toggles on small screens', async ({ page }) => {
 });
 
 test('first visible section renders immediately without reveal delay', async ({ page }) => {
-  for (const path of ['index.html', 'generic.html', 'elements.html', 'contact.html', 'cv.html']) {
+  for (const path of ['index.html', 'generic.html', 'elements.html', 'projects.html', 'contact.html', 'cv.html']) {
     await page.goto(path);
     await expect(page.locator('.site-main > section:first-child')).not.toHaveClass(/reveal/);
     await expect(page.locator('.site-main > section:first-child .reveal')).toHaveCount(0);
   }
+});
+
+test('projects page presents featured work and GitHub archive', async ({ page }) => {
+  await page.goto('projects.html');
+
+  await expect(page.getByRole('heading', { name: 'Things I have built, tested and learned from.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Freaky Fashion' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Stanca Bank API' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Stanca Blog API' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'See all repositories' })).toHaveAttribute('href', /github\.com\/PatriciaStanca/);
 });
 
 test('homepage progress heading stays on one line on desktop', async ({ page }) => {

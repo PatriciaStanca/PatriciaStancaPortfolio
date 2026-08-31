@@ -13,6 +13,11 @@
   status = 200
 
 [[redirects]]
+  from = "/projects"
+  to = "/projects.html"
+  status = 200
+
+[[redirects]]
   from = "/contact"
   to = "/contact.html"
   status = 200
@@ -48,6 +53,12 @@
 [[redirects]]
   from = "/elements.html"
   to = "/experience"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects.html"
+  to = "/projects"
   status = 301
   force = true
 
