@@ -31,7 +31,7 @@ const projects = {
     image: "assets/media/projects/freaky-fashion-poster.jpg",
     alt: "Freaky Fashion storefront",
     github: "https://github.com/PatriciaStanca/FreakyFashion-Fullstack",
-    live: "https://freakyfashion.patriciastanca.com",
+    live: "/freakyfashion",
   },
   "stanca-bank-api": {
     title: "Stanca Bank API",

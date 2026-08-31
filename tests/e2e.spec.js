@@ -53,6 +53,17 @@ test('every public repository has a project presentation', async ({ page }) => {
   }
 });
 
+test('Freaky Fashion stays inside the portfolio domain', async ({ page }) => {
+  await page.goto('freakyfashion.html');
+
+  await expect(page).toHaveTitle(/Freaky Fashion/);
+  await expect(page.locator('iframe[title="Freaky Fashion storefront"]')).toHaveAttribute(
+    'src',
+    'https://freakyfashion.patriciastanca.com',
+  );
+  await expect(page.getByRole('link', { name: 'Return to Patricia Stanca projects' })).toHaveAttribute('href', '/projects');
+});
+
 test('homepage progress heading stays on one line on desktop', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('index.html');
