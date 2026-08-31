@@ -1,0 +1,199 @@
+.project-case {
+  background: #f3f0e8;
+  color: #111;
+}
+
+.project-case__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  min-height: 100svh;
+  padding-top: 4.75rem;
+}
+
+.project-case__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem, 7vw, 8rem);
+}
+
+.project-case__back {
+  align-self: flex-start;
+  margin-bottom: clamp(3rem, 8vh, 7rem);
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-case__eyebrow,
+.project-case__label {
+  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.project-case h2 {
+  max-width: 10ch;
+  margin: 0;
+  font-size: clamp(3.5rem, 7.2vw, 8rem);
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+}
+
+.project-case__lead {
+  max-width: 36rem;
+  margin: 2rem 0 0;
+  color: #57554f;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.project-case__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2.5rem;
+}
+
+.project-case__actions a {
+  display: inline-flex;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #111;
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-case__actions a:first-child {
+  background: #111;
+  color: #fff;
+}
+
+.project-case__visual {
+  position: relative;
+  min-height: 42rem;
+  margin: 0;
+  overflow: hidden;
+  background: #1d1d1b;
+}
+
+.project-case__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-case__visual figcaption {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.45rem 0.65rem;
+  background: rgb(0 0 0 / 0.7);
+  color: #fff;
+  font-size: 0.65rem;
+}
+
+.project-case__visual figcaption a {
+  color: inherit;
+}
+
+.project-case__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: clamp(3rem, 10vw, 10rem);
+  padding: clamp(4rem, 9vw, 9rem);
+  background: #111;
+  color: #f7f2e9;
+}
+
+.project-case__body > div > p:last-child {
+  max-width: 54rem;
+  margin: 0;
+  color: #cbc8c0;
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  line-height: 1.5;
+}
+
+.project-case__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.project-case__tools li {
+  padding: 0.6rem 0.85rem;
+  border: 1px solid #5a5954;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.project-case__next {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(4rem, 9vw, 9rem);
+}
+
+.project-case__next p {
+  margin: 0;
+  color: #65625b;
+}
+
+.project-case__next a {
+  color: inherit;
+  font-size: clamp(1.6rem, 4vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 850px) {
+  .project-case__hero,
+  .project-case__body {
+    grid-template-columns: 1fr;
+  }
+
+  .project-case__hero {
+    padding-top: 4rem;
+  }
+
+  .project-case__copy {
+    min-height: 70svh;
+  }
+
+  .project-case__visual {
+    min-height: 65svh;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-case__copy,
+  .project-case__body,
+  .project-case__next {
+    padding: 5rem 1.25rem;
+  }
+
+  .project-case__copy {
+    min-height: auto;
+    padding-top: 7rem;
+  }
+
+  .project-case__back {
+    margin-bottom: 4rem;
+  }
+
+  .project-case__next {
+    display: block;
+  }
+
+  .project-case__next a {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}

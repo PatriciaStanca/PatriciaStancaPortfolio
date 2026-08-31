@@ -31,6 +31,28 @@ test('projects page presents featured work and GitHub archive', async ({ page })
   await expect(page.getByRole('link', { name: 'See all repositories' })).toHaveAttribute('href', /github\.com\/PatriciaStanca/);
 });
 
+test('every public repository has a project presentation', async ({ page }) => {
+  const projects = {
+    'freaky-fashion': 'Freaky Fashion',
+    'stanca-bank-api': 'Stanca Bank API',
+    'stanca-blog-api': 'Stanca Blog API',
+    'northwind-app': 'Northwind App',
+    'shotgun-game': 'Shotgun Game',
+    'address-book': 'AddressBook Avalonia',
+    'address-book-group': 'AddressBook Group',
+    blackjack: 'Blackjack',
+    'crypto-portfolio': 'Crypto Portfolio',
+    'python-chat': 'Python Chat',
+    'python-projects': 'Python Projects',
+  };
+
+  for (const [slug, title] of Object.entries(projects)) {
+    await page.goto(`project.html?project=${slug}`);
+    await expect(page.getByRole('heading', { name: title })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'View code on GitHub ↗' })).toHaveAttribute('href', /github\.com\/PatriciaStanca/);
+  }
+});
+
 test('homepage progress heading stays on one line on desktop', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('index.html');
