@@ -61,7 +61,7 @@ test('Freaky Fashion stays inside the portfolio domain', async ({ page }) => {
     'src',
     'https://freakyfashion.patriciastanca.com',
   );
-  await expect(page.getByRole('link', { name: 'Return to Patricia Stanca projects' })).toHaveAttribute('href', '/projects');
+  await expect(page.locator('body > header, body > footer, body > nav')).toHaveCount(0);
 });
 
 test('homepage progress heading stays on one line on desktop', async ({ page }) => {

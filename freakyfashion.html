@@ -28,58 +28,16 @@
       background: #f4efe7;
     }
 
-    .project-bar {
-      position: fixed;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      display: flex;
-      width: 100%;
-      min-height: 3.5rem;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.7rem clamp(1rem, 3vw, 2.5rem);
-      background: rgb(17 17 17 / 0.96);
-      color: #fff;
-      font: 700 0.78rem/1.2 Arial, sans-serif;
-      letter-spacing: 0.05em;
-    }
-
-    .project-bar a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .project-bar__links {
-      display: flex;
-      gap: 1.25rem;
-    }
-
     iframe {
       display: block;
       width: 100%;
-      height: calc(100% - 3.5rem);
-      margin-top: 3.5rem;
+      height: 100%;
       border: 0;
       background: #f4efe7;
-    }
-
-    @media (max-width: 560px) {
-      .project-bar__github {
-        display: none;
-      }
     }
   </style>
 </head>
 <body>
-  <header class="project-bar">
-    <a href="/projects" aria-label="Return to Patricia Stanca projects">← Patricia Stanca / Projects</a>
-    <nav class="project-bar__links" aria-label="Freaky Fashion project links">
-      <a class="project-bar__github" href="https://github.com/PatriciaStanca/FreakyFashion-Fullstack">View code ↗</a>
-      <a href="/project.html?project=freaky-fashion">About the project →</a>
-    </nav>
-  </header>
   <iframe
     src="https://freakyfashion.patriciastanca.com"
     title="Freaky Fashion storefront"
