@@ -31,7 +31,7 @@ const projects = {
     image: "assets/media/projects/freaky-fashion-poster.jpg",
     alt: "Freaky Fashion storefront",
     github: "https://github.com/PatriciaStanca/FreakyFashion-Fullstack",
-    live: "/freakyfashion",
+    live: "/fashion",
   },
   "stanca-bank-api": {
     title: "Stanca Bank API",
@@ -42,6 +42,7 @@ const projects = {
     image: "assets/media/images/BANKAPI-1200.webp",
     alt: "Stanca Bank API project presentation",
     github: "https://github.com/PatriciaStanca/StancaBankApi",
+    live: "/bank-api",
   },
   "stanca-blog-api": {
     title: "Stanca Blog API",
@@ -52,6 +53,7 @@ const projects = {
     image: "assets/media/images/StancaBlogApi-1200.webp",
     alt: "Stanca Blog API project presentation",
     github: "https://github.com/PatriciaStanca/StancaBlogApi",
+    live: "/blog",
   },
   "northwind-app": {
     title: "Northwind App",
@@ -62,6 +64,7 @@ const projects = {
     image: "assets/media/images/NorthwindApp (kopia).jpg",
     alt: "Northwind application project",
     github: "https://github.com/PatriciaStanca/NorthwindApp",
+    live: "/northwind",
   },
   "shotgun-game": {
     title: "Shotgun Game",
@@ -71,6 +74,7 @@ const projects = {
     tools: ["C#", ".NET", "Blazor WebAssembly", "CSS", "Game state"],
     ...pexels.game,
     github: "https://github.com/PatriciaStanca/ShotgunGame",
+    live: "/shotgun",
   },
   "address-book": {
     title: "AddressBook Avalonia",
@@ -80,6 +84,7 @@ const projects = {
     tools: ["C#", ".NET", "Avalonia UI", "Desktop UI", "Data modelling"],
     ...pexels.python,
     github: "https://github.com/PatriciaStanca/AddressBookAvalonia",
+    live: "/address-book",
   },
   "address-book-group": {
     title: "AddressBook Group",
@@ -89,6 +94,7 @@ const projects = {
     tools: ["C#", ".NET", "Avalonia UI", "Git", "Team collaboration"],
     ...pexels.python,
     github: "https://github.com/PatriciaStanca/AddressBookAvaloniaGroup",
+    live: "/address-book-group",
   },
   blackjack: {
     title: "Blackjack",
@@ -98,6 +104,7 @@ const projects = {
     tools: ["Python", "Flask", "Jinja", "HTML", "CSS", "Sessions"],
     ...pexels.cards,
     github: "https://github.com/PatriciaStanca/blackjack.py",
+    live: "/blackjack",
   },
   "crypto-portfolio": {
     title: "Crypto Portfolio",
@@ -107,6 +114,7 @@ const projects = {
     tools: ["Python", "SQLite", "Click", "CoinGecko API", "CSV", "Dataclasses"],
     ...pexels.crypto,
     github: "https://github.com/PatriciaStanca/sqlite3",
+    live: "/crypto-portfolio",
   },
   "python-chat": {
     title: "Python Chat",
@@ -116,6 +124,7 @@ const projects = {
     tools: ["Python", "Program structure", "Learning project"],
     ...pexels.python,
     github: "https://github.com/PatriciaStanca/python_chatt",
+    live: "/python-chat",
   },
   "python-projects": {
     title: "Python Projects",
@@ -125,6 +134,7 @@ const projects = {
     tools: ["Python", "Functions", "Control flow", "Learning exercises"],
     ...pexels.python,
     github: "https://github.com/PatriciaStanca/Projects_py",
+    live: "/python-lab",
   },
 };
 

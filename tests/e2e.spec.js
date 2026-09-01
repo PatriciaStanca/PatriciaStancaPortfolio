@@ -57,11 +57,87 @@ test('Freaky Fashion stays inside the portfolio domain', async ({ page }) => {
   await page.goto('freakyfashion.html');
 
   await expect(page).toHaveTitle(/Freaky Fashion/);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://patriciastanca.com/fashion');
   await expect(page.locator('iframe[title="Freaky Fashion storefront"]')).toHaveAttribute(
     'src',
     'https://freakyfashion.patriciastanca.com',
   );
   await expect(page.locator('body > header, body > footer, body > nav')).toHaveCount(0);
+});
+
+test('Shotgun is a playable standalone project under the portfolio domain', async ({ page }) => {
+  await page.goto('/shotgun/');
+  await expect(page).toHaveTitle(/Shotgun/);
+  await page.getByRole('button', { name: 'Enter the arena' }).click();
+  await expect(page.getByRole('heading', { name: /Neon District/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: /Shoot/ })).toBeDisabled();
+  await page.getByRole('button', { name: /Load/ }).click();
+  await expect(page.getByRole('button', { name: /Shoot/ })).toBeEnabled();
+  await expect(page.getByText(/You: Load/)).toBeVisible();
+});
+
+test('every remaining GitHub project has an interactive domain-ready demo', async ({ page }) => {
+  const demos = {
+    blackjack: 'Blackjack',
+    northwind: 'Northwind',
+    'bank-api': 'Stanca Bank',
+    blog: 'Stanca Journal',
+    'address-book': 'AddressBook',
+    'address-book-group': 'AddressBook Team',
+    'crypto-portfolio': 'Crypto Portfolio',
+    'python-chat': 'Python Chat',
+    'python-lab': 'Python Lab',
+  };
+
+  for (const [slug, title] of Object.entries(demos)) {
+    await page.goto(`/demos/index.html?project=${slug}`);
+    await expect(page).toHaveTitle(new RegExp(title));
+    await expect(page.locator('main')).toBeVisible();
+    await expect(page.getByRole('link', { name: 'View original code on GitHub ↗' })).toHaveAttribute(
+      'href',
+      /github\.com\/PatriciaStanca/,
+    );
+  }
+});
+
+test('project demos provide their promised interactions', async ({ page }) => {
+  await page.goto('/demos/index.html?project=blackjack');
+  await page.getByRole('button', { name: 'Deal cards' }).click();
+  await expect(page.getByRole('button', { name: 'Hit' })).toBeEnabled();
+
+  await page.goto('/demos/index.html?project=northwind');
+  await page.getByPlaceholder('Search products').fill('Chai');
+  await expect(page.locator('#product-rows tr')).toHaveCount(1);
+
+  await page.goto('/demos/index.html?project=bank-api');
+  await page.getByPlaceholder('Amount in SEK').fill('500');
+  await page.getByRole('button', { name: 'Transfer' }).click();
+  await expect(page.getByText('Demo transfer')).toBeVisible();
+
+  await page.goto('/demos/index.html?project=blog');
+  await page.getByRole('button', { name: 'Data' }).click();
+  await expect(page.locator('#post-grid .card')).toHaveCount(1);
+
+  await page.goto('/demos/index.html?project=address-book');
+  await expect(page.getByRole('heading', { name: 'Maya Lind' })).toBeVisible();
+
+  await page.goto('/demos/index.html?project=address-book-group');
+  await page.getByRole('button', { name: 'Add collaboration note' }).click();
+  await expect(page.getByRole('button', { name: /Collaboration note added/ })).toBeVisible();
+
+  await page.goto('/demos/index.html?project=crypto-portfolio');
+  await page.getByPlaceholder('Coin amount').fill('2');
+  await page.getByRole('button', { name: 'Calculate' }).click();
+  await expect(page.locator('#portfolio-value')).toHaveText('$124,900.00');
+
+  await page.goto('/demos/index.html?project=python-chat');
+  await page.getByPlaceholder('Write a message').fill('Hello from the portfolio');
+  await page.getByRole('button', { name: 'Send' }).click();
+  await expect(page.getByText('Hello from the portfolio')).toBeVisible();
+
+  await page.goto('/demos/index.html?project=python-lab');
+  await page.getByRole('button', { name: 'Flask routes' }).click();
+  await expect(page.getByText('/contact', { exact: true })).toBeVisible();
 });
 
 test('homepage progress heading stays on one line on desktop', async ({ page }) => {

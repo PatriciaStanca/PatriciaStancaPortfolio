@@ -30,3 +30,6 @@ CV/*
 CV/cv/*
 !CV/cv/Patricia Stanca - EN.pdf
 !CV/cv/Patricia Stanca - Se.pdf
+
+# Local work projects are organized here but are not part of the portfolio repo.
+/kodprojekt/

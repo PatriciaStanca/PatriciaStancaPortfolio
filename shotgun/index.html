@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shotgun — A tactical duel by Patricia Stanca</title>
+  <meta name="description" content="Play Shotgun, a fast tactical browser duel built from Patricia Stanca's original Blazor game rules.">
+  <meta name="theme-color" content="#090b12">
+  <link rel="canonical" href="https://patriciastanca.com/shotgun">
+  <link rel="stylesheet" href="/shotgun/shotgun.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="game-header">
+    <a class="brand" href="/shotgun" aria-label="Shotgun home">
+      <span class="brand-mark">S</span>
+      <span><strong>SHOTGUN</strong><small>Tactical duel</small></span>
+    </a>
+    <a class="portfolio-link" href="/projects">More projects <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="game-title">
+      <p class="eyebrow">One decision. Every round.</p>
+      <h1 id="game-title">Read your opponent.<br><em>Own the moment.</em></h1>
+      <p class="intro-copy">Load your weapon, block an attack or take the shot. Reach three rounds and the shotgun ends everything.</p>
+      <button class="start-button" id="start-game" type="button">Enter the arena <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="arena" id="arena" aria-labelledby="arena-title" hidden>
+      <div class="arena-topline">
+        <div><p class="eyebrow">Live match</p><h2 id="arena-title">Neon District · 02:17</h2></div>
+        <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true">Sound on</button>
+      </div>
+
+      <div class="battlefield">
+        <div class="fighter fighter-player" id="player-fighter">
+          <div class="fighter-label"><span>You</span><strong id="player-status">Ready</strong></div>
+          <div class="fighter-figure" aria-hidden="true"><span class="fighter-head"></span><span class="fighter-body"></span><span class="fighter-arm"></span></div>
+          <div class="ammo" role="group" aria-label="Your ammunition"><span>Ammo</span><div class="ammo-rounds" id="player-ammo"></div></div>
+        </div>
+
+        <div class="versus" aria-hidden="true"><span>Round</span><strong id="round-number">01</strong></div>
+
+        <div class="fighter fighter-cpu" id="cpu-fighter">
+          <div class="fighter-label"><span>CPU</span><strong id="cpu-status">Watching</strong></div>
+          <div class="fighter-figure" aria-hidden="true"><span class="fighter-head"></span><span class="fighter-body"></span><span class="fighter-arm"></span></div>
+          <div class="ammo" role="group" aria-label="CPU ammunition"><span>Ammo</span><div class="ammo-rounds" id="cpu-ammo"></div></div>
+        </div>
+
+        <p class="photo-credit">Photo by <a href="https://www.pexels.com/photo/neons-and-signs-in-city-at-night-12284665/">billow926 on Pexels</a></p>
+      </div>
+
+      <div class="game-console">
+        <div class="round-message" aria-live="polite"><span id="message-kicker">Choose your move</span><strong id="round-message">The CPU is already thinking.</strong></div>
+        <div class="actions" role="group" aria-label="Game actions">
+          <button type="button" data-action="load"><span class="action-icon">↻</span><span><strong>Load</strong><small>Gain 1 ammo</small></span><kbd>1</kbd></button>
+          <button type="button" data-action="block"><span class="action-icon">◇</span><span><strong>Block</strong><small>Stop a shot</small></span><kbd>2</kbd></button>
+          <button type="button" data-action="shoot"><span class="action-icon">→</span><span><strong>Shoot</strong><small>Costs 1 ammo</small></span><kbd>3</kbd></button>
+          <button type="button" data-action="shotgun"><span class="action-icon">✦</span><span><strong>Shotgun</strong><small>Costs 3 ammo</small></span><kbd>4</kbd></button>
+        </div>
+        <div class="rules"><span>Load beats nothing</span><span>Block stops shoot</span><span>Shoot beats load</span><span>Shotgun beats all</span></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="result" id="result-dialog">
+    <p class="eyebrow" id="result-kicker">Match complete</p>
+    <h2 id="result-title">You won.</h2>
+    <p id="result-copy"></p>
+    <div><button id="play-again" type="button">Play again</button><a href="/projects">Explore more projects</a></div>
+  </dialog>
+
+  <footer><span>Game concept &amp; development by Patricia Stanca</span><span>Built from the original C# and Blazor project</span></footer>
+  <script src="/shotgun/shotgun.js" defer></script>
+</body>
+</html>

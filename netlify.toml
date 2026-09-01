@@ -18,6 +18,67 @@
   status = 200
 
 [[redirects]]
+  from = "/fashion"
+  to = "/freakyfashion.html"
+  status = 200
+
+[[redirects]]
+  from = "/freakyfashion"
+  to = "/fashion"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/shotgun"
+  to = "/shotgun/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blackjack"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/northwind"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/bank-api"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/address-book"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/address-book-group"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/crypto-portfolio"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/python-chat"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/python-lab"
+  to = "/demos/index.html"
+  status = 200
+
+[[redirects]]
   from = "/contact"
   to = "/contact.html"
   status = 200
