@@ -23,12 +23,6 @@
   status = 200
 
 [[redirects]]
-  from = "/insidegrid"
-  to = "/InsideGrid"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/fashion"
   to = "/freakyfashion.html"
   status = 200
