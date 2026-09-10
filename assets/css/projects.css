@@ -4,23 +4,19 @@
 }
 
 .projects-hero .inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
-  gap: clamp(2rem, 7vw, 8rem);
-  align-items: end;
+  display: block;
 }
 
 .projects-hero .page-title {
-  max-width: 12ch;
-  margin-bottom: 0;
+  max-width: 900px;
 }
 
 .projects-intro {
-  max-width: 38rem;
+  max-width: 56rem;
   margin: 0;
-  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
-  line-height: 1.65;
-  color: #4b4b47;
+  font: inherit;
+  line-height: inherit;
+  color: var(--slate);
 }
 
 .projects-featured {
@@ -177,10 +173,6 @@
 }
 
 @media (max-width: 900px) {
-  .projects-hero .inner {
-    grid-template-columns: 1fr;
-  }
-
   .portfolio-project,
   .portfolio-project:nth-child(even) {
     grid-template-columns: 1fr;
